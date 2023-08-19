@@ -1,0 +1,52 @@
+.Sports{
+background-color: aqua;
+height: 80vh;
+width: 100vw;
+position: relative;
+display: grid;
+grid-template-columns: auto auto;
+align-items: center;
+justify-content: space-evenly;
+}
+.target-sports{
+    background-color:antiquewhite;
+    height: 60vh;
+    width: 25vw;
+    margin: 2rem;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px ;
+}
+.target-sports .img{
+    background-color: brown;
+    height: 75%;
+    width: 100%;
+    margin: 0;
+}
+.target-sports .text{
+    background-color: white;
+    height:25vh;
+    width: 25vw;
+    text-align: center;
+    transition: all 0.5s;
+    display: grid;
+    grid-template-columns: auto;
+}
+.target-sports:hover .text{
+    transform: translateY(-10vh);
+    transition: all 0.5s;
+}
+.target-sports .img img{
+    height: 100%;
+    width: 100%;
+}
+.target-sports .text span{
+ font-size: 1.5rem;
+  color:gray;
+  margin-top: 1em;
+}
+.target-sports .text a{
+    border: none;
+    padding: 0.1em;
+    color: #2196fe;
+    cursor: pointer;
+}

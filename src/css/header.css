@@ -1,0 +1,72 @@
+.header {
+  height: 12vh;
+  width: 100vw;
+  background: rgb(53,31,173);
+  background: linear-gradient(90deg, rgba(53,31,173,1) 13%, rgba(30,86,255,0.7357317927170868) 73%, rgba(0,212,255,0) 100%);
+}
+.div-img {
+  height: 100%;
+  width: 30vh;
+  margin-left: 3px;
+  display: inline-block;
+}
+.div-img img {
+  width: 150px;
+  height: 100%;
+}
+.localidad {
+  height: 80%;
+  width: 10vh;
+  background-color: gold;
+  margin-top: auto;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  display: inline-block;
+  float: right;
+  margin-right: 7px;
+  margin-top: 16px;
+}
+.localidad img {
+  width: 90%;
+  height: 100%;
+  padding: 5%;
+}
+.funcionario {
+  height: 80%;
+  width: 10vh;
+  background-color: gold;
+  margin-top: auto;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  display: inline-block;
+  float: right;
+  margin-right: 5px;
+  margin-top: 16px;
+}
+.funcionario img {
+  width: 100%;
+  height: 90%;
+  padding: 5%;
+}
+.barra-redes {
+  background-color: gold;
+  height: 3vh;
+  width: auto;
+}
+.div-redes {
+  background-color: gold;
+  height: 8vh;
+  width: 15vw;
+  margin-left: 0.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 30;
+  position: absolute;
+}
+.div-redes a {
+  padding: 0.9em;
+  color: black;
+  margin: 0;
+}

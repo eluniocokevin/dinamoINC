@@ -1,0 +1,50 @@
+.localidades {
+    transform: translateX(2000px);
+    transition: all 2s;
+    min-height: 479px;
+    width: 264px;
+    z-index: 400;
+    position: absolute;
+    background-color: black;
+    opacity: .9;
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    right: 0;
+   }
+   .localidades.show {
+     transform: translateX(-0px);
+     transition: all 2s;
+     min-height: 479px;
+     width: 264px;
+     z-index: 400;
+     position: absolute;
+     background-color: black;
+     opacity: .9;
+     display: grid;
+     grid-template-columns: auto;
+     text-align: center;
+     right: 0;
+   }
+   a{
+    text-decoration: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-top: 1em;
+   }
+   a:hover{
+    color:#277ed0;
+   }
+   .a-button{
+    background-color: chocolate;
+    height: fit-content;
+    width: fit-content;
+    margin:0;
+    padding:0.2em;
+    cursor: pointer;
+   }
+   .a-button i{
+    font-size: x-large;
+    color: white;
+   }
