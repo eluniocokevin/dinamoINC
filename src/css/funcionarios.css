@@ -37,7 +37,7 @@ svg{
     fill: #fff;
 }
 
-.logo {
+.logoe {
   flex: 1;
   width: 100%;
   display: flex;
@@ -46,7 +46,7 @@ svg{
   background-color: #000;
 
 }
-.img {
+.imge {
   width: 100%;
   padding-top: 100%;
   background-color: #fff;

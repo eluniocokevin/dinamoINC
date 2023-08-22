@@ -1,42 +1,44 @@
-*{
-  margin: 0;
-  padding: 0;
-}
 
 .footer {
   background-color: #222233;
-  min-height: 35vh;
-  height: auto;
+
+  height: 40vh;
   flex-wrap: wrap;
-  width: 100vw;
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 .dinamo {
-  min-height: 35vh;
-  width: 25vw;
-  display: flex;
-  flex-direction: column;
+ 
+  height: auto;
   flex-wrap: wrap;
+  width: 25vw;
+  text-align: center;
+  display: inline-block;
 }
 .dinamo h4 {
   color: white;
-  margin: 2rem auto;
-  font-size: 30px;
+  padding: 1em;
+  width: fit-content;
+  margin: 0;
+  margin: auto;
 }
 .dinamo p {
   color: white;
-  margin: .8rem auto;
+  margin: 0;
+  width: fit-content;
+  margin: auto;
 }
 .logo {
   height: 35vh;
   width: 30vw;
   display: inline-block;
 }
-.logo .cont-img {
-  height: 100%;
+.logo .img {
+  height: 25vh;
   width: 100%;
 }
-.logo .cont-img img {
+.logo .img img {
   width: 100%;
   height: 100%;
 }
@@ -46,8 +48,9 @@
   display: flex;
   justify-content: space-around;
   margin-top: 1em;
+  POSITION: relative;
 }
-.logo .redes a {
+.logo,.redes, .social-icon {
   color: white;
 }
 .logo .redes a:hover {
@@ -55,26 +58,139 @@
   color: #2196fe;
 }
 .contacto {
-  color: gray;
-  min-height: 35vh;
-  width: 25vw;
-  height: auto;
-  display: flex;
-  margin: auto;
-}
-.contacto .cosas{
-  width: 90%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
-}
 
+  height: auto;
+  flex-wrap: wrap;
+  width: 25vw;
+  display: inline-block;
+  color: rgb(232, 232, 232);
+  text-align: center;
+padding-top: 4%;
+}
+.footer, h3{
+font-size: medium;
+padding-top:3% ;
+
+}
 .copyright {
   height: 5vh;
-  width: 100vw;
+  width: 100%;
   background-color: black;
   color: #ffffff;
   text-align: center;
 }
+
+span{
+
+font-size: small;
+}
+
+
+
+
+@media screen and (min-width:700px) and (max-width:900px){
+.footer {
+  background-color: #222233;
+  height: 35vh;
+  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.footer, h3{
+  font-size: small;
+  padding-top:3% ;
+  
+    }
+    .logo .redes {
+   
+      margin-top: 0em;
+  }
+    
+  .logo .img {
+    height: 14vh !IMPORTANT;
+    width: 100%;
+}
+
+
+    }
+
+    @media screen and (min-width:600px) and (max-width:700px){
+
+      .footer, h3{
+        font-size: small;
+        padding-top:3% ;
+        
+          }
+          .footer {
+            background-color: #222233;
+            height: 28vh;
+            flex-wrap: wrap;
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .logo .redes {
+   
+          margin-top: 0em;
+      }
+      .logo .img {
+        height: 14vh !IMPORTANT;
+        width: 100%;
+    }
+          }
+
+    @media screen and (min-width:400px) and (max-width:600px){
+
+      .footer, h3{
+        font-size: 9px;
+        padding-top:1% ;
+
+            } 
+            .footer {
+              background-color: #222233;
+              height: 28vh;
+              flex-wrap: wrap;
+              width: 100%;
+              display: grid;
+              grid-template-columns: auto auto auto;
+          }
+          .logo .redes {
+   
+            margin-top: 0em;
+        }
+        .logo .img {
+          height: 14vh !IMPORTANT;
+          width: 100%;
+      }
+        }
+    
+    
+
+@media screen and (min-width:0px) and (max-width:400px){
+.footer, h3{
+  font-size: 9px;
+  padding-top:3% ; }
+
+  .footer {
+    background-color: #222233;
+    height: 21vh;
+    flex-wrap: wrap;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.logo .redes {
+   
+  margin-top: 0em;
+}
+.logo .img {
+height: 14vh !IMPORTANT;
+width: 100%;
+}
+}  
+.logo .img {
+  height: 20vh;
+  width: 100%;
+}
+
