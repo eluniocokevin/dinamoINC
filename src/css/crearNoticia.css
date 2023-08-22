@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.contenedor_noticia{
+    height: 100vh;
+    width: 75vw;
+    background-color:brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: grid;
+    grid-template-columns: auto;
+    width: 50%;
+    height: 80vh;
+    background-color: bisque;
+}
+.in{
+    margin: 0;
+    padding: 0.9em;
+    width: fit-content;
+    border: none;
+    outline: none;
+}
+label{
+    margin-top: 0.5em;
+}
+textarea{
+    resize: none;
+    outline: none;
+}
+h2{
+    margin: auto;
+}
+.file{
+    cursor: pointer;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    background: white;
+    padding: 20px;
+}
