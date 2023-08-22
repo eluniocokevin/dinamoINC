@@ -4,7 +4,7 @@ function Sports() {
     <>
       <div className="Sports">
         <div className="target-sports">
-          <div className="img">
+          <div className="cont-img">
             <img src="src/assets/terrestre.jpg" alt="" />
           </div>
           <div className="text">
@@ -14,7 +14,7 @@ function Sports() {
         </div>
 
         <div className="target-sports">
-          <div className="img">
+          <div className="cont-img">
             <img src="src/assets/remo.jpg" alt="" />
           </div>
           <div className="text">
