@@ -17,7 +17,9 @@ const handleButton=()=>{
 }
 
   return (
-    <>
+    
+      <>
+    <div className="fullheader">
       <div className="header">
       <div className={`login-funcionarios ${showLogin ? "show" : ""}`}>
         <LoginFuncionarios/>
@@ -28,30 +30,44 @@ const handleButton=()=>{
       </div>
 
         <div className="div-img">
-          <img src="src/assets/logo_escudo.svg" alt="logo de mi web" />
+        <a href="https://www.soriano.gub.uy/"><img src="src/assets/logo_escudo.svg" alt="logo de mi web" /></a> 
         </div>
-        <div className="funcionario" onClick={toggleLogin}>
-          <img src="src/assets/funcionario.svg" alt="imagen funcionarios" />
+
+
+        
+        <div className="menu">
+            <a href="#" className="zoom" id="menuButton"><img src="src/assets/list.svg" /></a>
+            <div className="dropdown-content" id="dropdownContent">
+              <a href="#">Terrestres</a>
+              <a href="#">Acuaticas</a>
+            </div>
+          </div>
+
+          <script src="script.js"></script>
+        
+        <div class="funcionario" onClick={toggleLogin}>
+           <a href="" class="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
         </div>
-        <div className="localidad"  onClick={toggleLocation}>
-          <img src="src/assets/LOCALIDADES.png" alt="imagen localidad" />
+        <div class="localidad" onClick={toggleLocation}>
+           <a href="" class="zoom"> <img src="src/assets/LOCALIDADES.png" alt="imagen localidad" /></a>
         </div>
       </div>
       
       <div className="barra-redes"></div>
       <div className="div-redes">
-        <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured">
-          <i className="bi bi-youtube"></i>
+      <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" class="social-icon youtube" >
+            <img src="src/assets/youtube.svg" />
         </a>
-        <a href="https://www.facebook.com/intendenciasoriano">
-          <i className="bi bi-facebook"></i>
+        <a href="https://www.facebook.com/intendenciasoriano" class="social-icon facebook">
+            <img src="src/assets/facebook.svg"/>
         </a>
-        <a href="https://www.instagram.com/sorianofertil/">
-          <i className="bi bi-instagram"></i>
+        <a href="https://www.instagram.com/sorianofertil/" class="social-icon instagram">
+            <img src="src/assets/instagram.svg"/>
         </a>
-        <a href="">
-          <i className="bi bi-twitter"></i>
+        <a href="https://twitter.com/sorianofertil?lang=es" class="social-icon twitter">
+            <img src="src/assets/twitter.svg"/>
         </a>
+      </div>
       </div>
     </>
   );
