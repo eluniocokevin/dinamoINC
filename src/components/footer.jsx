@@ -16,17 +16,17 @@ function Footer() {
             <img src="src/assets/logo_escudo.svg" alt="" />
           </div>
           <div className="redes">
-          <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" class="social-icon youtube" >
-                    <img src="src/assets/youtube.svg" />
+          <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" class="social-icone youtube" >
+                    <img src="src/assets/youtubew.svg" />
                 </a>
-                <a href="https://www.facebook.com/intendenciasoriano" class="social-icon facebook">
-                    <img src="src/assets/facebook.svg"/>
+                <a href="https://www.facebook.com/intendenciasoriano" class="social-icone facebook">
+                    <img src="src/assets/facebookw.svg"/>
                 </a>
-                <a href="https://www.instagram.com/sorianofertil/" class="social-icon instagram">
-                    <img src="src/assets/instagram.svg"/>
+                <a href="https://www.instagram.com/sorianofertil/" class="social-icone instagram">
+                    <img src="src/assets/instagramw.svg"/>
                 </a>
-                <a href="https://twitter.com/sorianofertil?lang=es" class="social-icon twitter">
-                    <img src="src/assets/twitter.svg"/>
+                <a href="https://twitter.com/sorianofertil?lang=es" class="social-icone twitter">
+                    <img src="src/assets/twitterw.svg"/>
                 </a>
           </div>
         </div>

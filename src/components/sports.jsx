@@ -8,7 +8,7 @@ function Sports() {
             <img src="src/assets/terrestre.jpg" alt="" />
           </div>
           <div className="text">
-            <span>Deportes terrestres</span>
+            <span>Deportes Anuales</span>
             <a href="/terrestres">Ver más</a>
           </div>
         </div>
@@ -18,7 +18,7 @@ function Sports() {
             <img src="src/assets/remo.jpg" alt="" />
           </div>
           <div className="text">
-            <span>Deportes acuaticos</span>
+            <span>Actividades Temporales</span>
             <a href="acuaticos">Ver más</a>
           </div>
         </div>

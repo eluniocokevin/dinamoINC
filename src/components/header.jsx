@@ -46,10 +46,10 @@ const handleButton=()=>{
           <script src="script.js"></script>
         
         <div class="funcionario" onClick={toggleLogin}>
-           <a href="" class="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
+           <a class="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
         </div>
         <div class="localidad" onClick={toggleLocation}>
-           <a href="" class="zoom"> <img src="src/assets/LOCALIDADES.png" alt="imagen localidad" /></a>
+           <a class="zoom"> <img src="src/assets/LOCALIDADES.png" alt="imagen localidad" /></a>
         </div>
       </div>
       
