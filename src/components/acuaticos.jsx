@@ -1,10 +1,11 @@
 import Header from "./header";
 import Footer from "./footer";
+import Actividad from "./actividad";
 function Acuaticos (){
 return(
     <>
     <Header/>
-    <h1>Acuaticos</h1>
+    <Actividad/>
     <Footer/>
     </>
 );
