@@ -13,7 +13,7 @@ justify-content: space-evenly;
 }
 .target-sports{
     width: 25%;
-    height: 50%;
+    height: 60%;
     box-shadow: 3px 3px 5px ;
     display: flex;
     flex-direction: column;

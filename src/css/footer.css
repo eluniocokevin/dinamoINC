@@ -50,7 +50,7 @@
   margin-top: 1em;
   POSITION: relative;
 }
-.logo,.redes, .social-icon {
+.logo,.redes, .social-icone {
   color: white;
 }
 .logo .redes a:hover {
@@ -72,6 +72,50 @@ font-size: medium;
 padding-top:3% ;
 
 }
+.social-icone {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.social-icone:hover {
+  transform: scale(1.5); /* Escala el ícono al 120% */
+}
+.zoom:hover {
+  transform: scale(1.1); /* Escala el ícono al 120% */
+}
+
+
+/* Estilos para los pseudo elementos en la animación */
+.social-icone::before,
+.social-icone::after {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Color transparente de fondo */
+z-index: -1; /* Detrás del ícono principal */
+margin-top: 150%;
+}
+
+/* Animación al pasar el mouse */
+.social-icone:hover::before {
+  background-color: rgba(255, 255, 255, 0.89); /* Color de fondo con transparencia */
+  justify-content: center;
+  align-items: center;
+  height: 0.1vh;
+
+}
+
+.social-icone:hover::after {
+  background-color: rgba(193, 60, 60, 0.0); /* Color de fondo con transparencia */
+  justify-content: center;
+  align-items: center;
+  height:0.1vh;
+  }
+
 .copyright {
   height: 5vh;
   width: 100%;

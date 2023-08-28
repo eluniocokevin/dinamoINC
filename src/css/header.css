@@ -28,7 +28,7 @@
   }
   
   .localidad {
-      height: 91%;
+      height: 86%;
       width: 10vh;
       background-color: #FDE68A;
       margin-top: auto;
@@ -50,7 +50,7 @@
   }
   
   .funcionario {
-      height: 91%;
+      height: 86%;
       width: 10vh;
       background-color: #FDE68A;
       margin-top: auto;
@@ -169,7 +169,7 @@ margin-top: 150%;
   display: block;
 }
 
-
+ 
 @media screen and (min-width:700px) and (max-width:900px){
 
   .localidad,.localidad img, .funcionario , .funcionario img,.div-redes{
