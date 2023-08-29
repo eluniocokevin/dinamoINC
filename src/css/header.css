@@ -8,6 +8,7 @@
       background: rgb(49, 85, 135);
       background: linear-gradient(90deg, rgba(49, 85, 135) 13%, rgba(169, 182, 200) 73%);
      opacity: 95%;
+    
   }
   .menu{
       display: flex;
