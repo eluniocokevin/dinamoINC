@@ -1,12 +1,11 @@
-import Header from "./header";
-import Footer from "./footer";
+
 import '../css/actividad.css';
 
 function Actividad(){
 return(
     <>
  <div className="titulo">
-      <h1>Actividades Anuales</h1>
+      <h1>Actividades Temporales</h1>
     </div>
     <div className="cuerpo">
       <div className="actividadesa">

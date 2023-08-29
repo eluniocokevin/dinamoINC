@@ -5,11 +5,11 @@ function Sports() {
       <div className="Sports">
         <div className="target-sports">
           <div className="cont-img">
-            <img src="src/assets/terrestre.jpg" alt="" />
+            <img src="src/assets/futbola.jpg" alt="" />
           </div>
           <div className="text">
             <span>Deportes Anuales</span>
-            <a href="/terrestres">Ver más</a>
+            <a href="terrestres">Ver más</a>
           </div>
         </div>
 

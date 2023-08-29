@@ -5,17 +5,16 @@ function Noticias() {
       <div className="conteiner-noticias">
         <div className="target-noticias">
           <div className="img">
-            <img src="src/assets/terrestre.jpg" alt="" />
+            <img src="src/assets/noticia1.jpg" alt="" />
           </div>
+          <div className="type"><h7>Remo</h7></div>
           <div className="info">
             <div className="text">
-              <h3>Titulo noticia</h3>
+              <h3>Se inagura el centro de alto rendimiento del Club De Remeros Mercedes</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                consequuntur possimus explicabo suscipit, molestias dolorum
-                cupiditate saepe? Voluptate nesciunt consequuntur delectus
-                aspernatur pariatur explicabo quo ab. Libero quidem odio
-                voluptas!
+              El  Club de Remeros Mercedes inauguró la obra de su Centro Deportivo Integrado  un amplio 
+              edificio junto al río Negro que pretende convertirse  en un centro de alto
+               rendimiento no solamente para deportistas de esa institución, sino también de la región.
               </p>
             </div>
           </div>
@@ -23,88 +22,83 @@ function Noticias() {
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="" alt="" />
+            <img src="src/assets/yoga.jpg" alt="" />
           </div>
+          <div className="type"><h7>Yoga</h7></div>
           <div className="info">
             <div className="text">
-              <h3>Titulo noticia</h3>
+              <h3>Encuentro de Yoga: un espacio para la conexión y la participación</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                consequuntur possimus explicabo suscipit, molestias dolorum
-                cupiditate saepe? Voluptate nesciunt consequuntur delectus
-                aspernatur pariatur explicabo quo ab. Libero quidem odio
-                voluptas Lorem ipsum, dolor sit amet co
+              En el marco del Día Internacional del Yoga, se concretó una linda instancia 
+              con más de 50 personas en Sociedad Italiana de Mercedes. Impulsamos permanentemente hábitos saludables.
               </p>
             </div>
           </div>
-          <span>30/5/2024</span>
+          <span>28/6/2023</span>
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="" alt="" />
-             
+            <img src="src/assets/corre.jpeg" alt="" />
           </div>
+          <div className="type"><h7>Atletismo</h7></div>
           <div className="info">
             <div className="text">
-              <h3>Titulo noticia</h3>
+              <h3>Última fecha de las 8 de Soriano en Cardona</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                consequuntur possimus explicabo suscipit, molestias dolorum
-                cupiditate saepe? Voluptate nesciunt consequuntur delectus
-                aspernatur pariatur explicabo quo ab. Libero quidem odio
-                voluptas Lorem ipsum, dolor sit amet co
+              Un gran cierre para un competición que recorrió en sus diversas etapas distintos puntos del departamento,
+               impulsando el ánimo deportivo de las personas que participaron activamente de la misma.
               </p>
             </div>
           </div>
-          <span>30/5/2024</span>
+          <span>24/6/2023</span>
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="" alt="" />
+            <img src="src/assets/skate.jpeg" alt="" />
           </div>
+          <div className="type"><h7>Skate</h7></div>
           <div className="info">
             <div className="text">
-              <h3>Titulo noticia</h3>
+              <h3>Pateando la pista: inauguramos Skate Park Mercedes</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                consequuntur possimus explicabo suscipit, molestias dolorum
-                cupidit
+              Una destacada e innovadora obra con incidencia deportiva y recreativa que ha significado una importante inversión
+               impulsada por la Intendencia. Un espacio renovado para disfrutar y preservar.
               </p>
             </div>
           </div>
-          <span>30/5/2024</span>
+          <span>30/5/2023</span>
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="" alt="" />
+            <img src="src/assets/futbolfem.jpg" alt="" />
           </div>
+          <div className="type"><h7>Futbol</h7></div>
           <div className="info">
             <div className="text">
-              <h3>Titulo noticia</h3>
+              <h3>Partido amistoso del plantel femenino U2030</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                consequuntur possimus explicabo suscipit, molestias dolorum
-                cupiditate saepe? Voluptate nesciunt consequuntur delectus
-                aspernatur pariatur explicabo quo ab. Libero quidem odio
-                voluptas Lorem ipsum, dolor sit amet co
+              Las integrantes del Proyecto U2030, se enfrentaron amistosamente con su similares de Laureles, 
+              en la ciudad de Fray Bentos. Una instancia que promueve la aptitud deportiva y la confraternidad.
               </p>
             </div>
           </div>
-          <span>30/5/2024</span>
+          <span>02/4/2024</span>
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="" alt="" />
+            <img src="src/assets/skateestreno.jpg" alt="" />
           </div>
+          <div className="type"><h7>Skate</h7></div>
           <div className="info">
             <div className="text">
-              <h3>Titulo noticia</h3>
+              <h3>Se inaugura Skate Park Mercedes</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                consequuntur possimus explicabo suscipit, molestias dolorum
-                cupiditate saepe? Voluptate nesciunt consequuntur delectus
-                aspernatur pariatur explicabo quo ab. Libero quidem odio
-                voluptas Lorem ipsum, dolor sit amet co
+              La obra será finalmente inaugurada el próximo domingo 23 de julio, a la hora 11 en Manzana 19. 
+              En esa ocasión, habrá diversas demostraciones y un cierre final con bandas en vivo.
+
+ 
+
+
               </p>
             </div>
           </div>
