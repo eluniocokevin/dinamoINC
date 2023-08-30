@@ -30,7 +30,7 @@
   margin: auto;
 }
 .logo {
-  height: 35vh;
+  height: auto;
   width: 30vw;
   display: inline-block;
 }
