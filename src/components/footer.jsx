@@ -1,9 +1,9 @@
-import styles from "../css/footer.module.css";
+import "../css/footer.css";
 function Footer() {
   return (
     <>
-      <div className={`${styles.footer}`}>
-        <div className={`${styles.dinamo}`}>
+      <div className="footer">
+        <div className="dinamo">
           <h4>Dynamo INC</h4>
           <p>Natanael Fernandez</p>
           <p>Javier Hernandez</p>
@@ -11,26 +11,26 @@ function Footer() {
           <p>Kevin Correa</p>
           <p>Diego Lopez</p>
         </div>
-        <div className={`${styles.logo}`}>
-          <div className={`${styles.img}`}>
+        <div className="logo">
+          <div className="img">
             <img src="src/assets/logo_escudo.svg" alt="" />
           </div>
-          <div className={`${styles.redes}`}>
-          <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" class={`${styles.social_icone} ${styles.youtube}`} >
+          <div className="redes">
+          <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" className="social-icone youtube" >
                     <img src="src/assets/youtubew.svg" />
                 </a>
-                <a href="https://www.facebook.com/intendenciasoriano" class={`${styles.social_icone} ${styles.facebook}`}>
+                <a href="https://www.facebook.com/intendenciasoriano" className="social-icone facebook">
                     <img src="src/assets/facebookw.svg"/>
                 </a>
-                <a href="https://www.instagram.com/sorianofertil/" class={`${styles.social_icone} ${styles.instagrame}`}>
+                <a href="https://www.instagram.com/sorianofertil/" className="social-icone instagram">
                     <img src="src/assets/instagramw.svg"/>
                 </a>
-                <a href="https://twitter.com/sorianofertil?lang=es" class={`${styles.social_icone} ${styles.twitter}`}>
+                <a href="https://twitter.com/sorianofertil?lang=es" className="social-icone twitter">
                     <img src="src/assets/twitterw.svg"/>
                 </a>
           </div>
         </div>
-        <div className={`${styles.contacto}`}>
+        <div className="contacto">
         <h3>CONTACTO </h3>
             <h3>Mercedes-Soriano, Eusebio Giménez 643.</h3> 
             <h3>intendencia@soriano.gub.uy</h3>
@@ -39,7 +39,7 @@ function Footer() {
           </div>
        
       </div>
-      <div className={`${styles.copyright}`}>
+      <div className="copyright">
         <span>Copyright © 2023 Dynamo INC </span>
       </div>
     </>

@@ -25,7 +25,7 @@ const handleButton=()=>{
         <LoginFuncionarios/>
       </div>
       <div className={`localidades ${showlocation ? "show" : ""}`}>
-        <a className="a-button" onClick={handleButton}><i class="bi bi-x"></i></a>
+        <a className="a-button" onClick={handleButton}><i className="bi bi-x"></i></a>
         <Localidades/>
       </div>
 
@@ -45,26 +45,26 @@ const handleButton=()=>{
 
           <script src="script.js"></script>
         
-        <div class="funcionario" onClick={toggleLogin}>
-           <a class="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
+        <div className="funcionario" onClick={toggleLogin}>
+           <a className="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
         </div>
-        <div class="localidad" onClick={toggleLocation}>
-           <a class="zoom"> <img src="src/assets/LOCALIDADES.png" alt="imagen localidad" /></a>
+        <div className="localidad" onClick={toggleLocation}>
+           <a className="zoom"> <img src="src/assets/LOCALIDADES.png" alt="imagen localidad" /></a>
         </div>
       </div>
       
       <div className="barra-redes"></div>
       <div className="div-redes">
-      <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" class="social-icon youtube" >
+      <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" className="social-icon youtube" >
             <img src="src/assets/youtube.svg" />
         </a>
-        <a href="https://www.facebook.com/intendenciasoriano" class="social-icon facebook">
+        <a href="https://www.facebook.com/intendenciasoriano" className="social-icon facebook">
             <img src="src/assets/facebook.svg"/>
         </a>
-        <a href="https://www.instagram.com/sorianofertil/" class="social-icon instagram">
+        <a href="https://www.instagram.com/sorianofertil/" className="social-icon instagram">
             <img src="src/assets/instagram.svg"/>
         </a>
-        <a href="https://twitter.com/sorianofertil?lang=es" class="social-icon twitter">
+        <a href="https://twitter.com/sorianofertil?lang=es" className="social-icon twitter">
             <img src="src/assets/twitter.svg"/>
         </a>
       </div>
