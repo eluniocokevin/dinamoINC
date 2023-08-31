@@ -35,7 +35,7 @@ html {
 
 
 .carrousel .grande {
-  width:278%;
+  width: 200%;
   HEIGHT: 64vh;
   z-index: 10!important;
   display: flex;
@@ -49,8 +49,8 @@ html {
 
 
 .carrousel .imgc {
-  width: calc( 100% / 2 - 0em);
-  min-height: 10vh;
+  width: calc( 100% / 2);
+  min-height: 80vh;
 transition: all 0.4s ease;
 
   background-color: var(--blanco);
@@ -85,3 +85,12 @@ transition: all 0.4s ease;
 .carrousel .punto.activo {
   background-color: rgb(255, 255, 255);
 }
+
+
+
+  
+
+@media screen and (min-width:0px) and (max-width:900px){
+ .carrousel .punto{ margin-top: -10%;}
+ 
+ }
