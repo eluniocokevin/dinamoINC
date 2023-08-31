@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+    --blanco: #303030;
+    
+  }
+}
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+.carrousel {
+  width: 100%;
+  max-width: 120em;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+
+.carrousel .grande {
+  width:278%;
+  HEIGHT: 64vh;
+  z-index: 10!important;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+
+
+.carrousel .imgc {
+  width: calc( 100% / 2 - 0em);
+  min-height: 10vh;
+transition: all 0.4s ease;
+
+  background-color: var(--blanco);
+  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
+}
+
+.carrousel .puntos {
+  width: 100%;
+  padding: 0.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1000 !important;
+
+}
+
+ul {
+  list-style: none;
+}
+.carrousel .punto {
+  width: 1em;
+  height: 1em;
+  margin: 1em 1em 0;
+transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: var(--blanco);
+ 
+}
+
+.carrousel .punto.activo {
+  background-color: rgb(255, 255, 255);
+}
