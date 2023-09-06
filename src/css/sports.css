@@ -83,14 +83,16 @@ justify-content: space-evenly;
         margin-left: 0;
         display: flex;
         justify-content: space-around;
+        flex-direction: column;
+       
       
       
     }
     .target-sports {
         margin-left: 0;
-        width: 45%;
+        width: 55%;
         height: 50%;
-      
+        margin-top: 10%;
       
     }
 

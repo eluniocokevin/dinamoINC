@@ -65,7 +65,7 @@ transition: all 0.4s ease;
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1000 !important;
+  z-index: 20 !important;
 
 }
 
@@ -92,5 +92,13 @@ transition: all 0.4s ease;
 
 @media screen and (min-width:0px) and (max-width:900px){
  .carrousel .punto{ margin-top: -10%;}
- 
+.carrousel .grande{
+height: 50vh;
+ }
+ .carrousel .imgc {
+
+min-height: 50vh;
+
+
+}
  }
