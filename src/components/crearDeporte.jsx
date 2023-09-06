@@ -2,9 +2,10 @@ import styles from "../css/crearDeporte.module.css";
 
 
 function CrearDeporte(){
+    return(<>estas creando un deporte</>);
     return(<>
-    
-    
+
+
     <div className={`${styles.tabla}`}>
         <div className={`${styles.h1}`}><h1 >Deportes</h1></div>
 
@@ -35,7 +36,7 @@ function CrearDeporte(){
                   </g>
                 </svg>
             </div>
-            
+
           </div> </div>
         </div>
 
@@ -125,8 +126,8 @@ function CrearDeporte(){
         </div>
 
     </div>
-    
-    
+
+
     </>);
 }
 export default CrearDeporte;

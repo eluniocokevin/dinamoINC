@@ -1,25 +1,23 @@
 
-import '../css/actividad.css';
+import styles from '../css/actividad.module.css';
 
 function Actividad(){
 return(
     <>
- <div className="titulo">
-      <h1>Actividades Temporales</h1>
-    </div>
-    <div className="cuerpo">
-      <div className="actividadesa">
-        <div className="tarjeta-actividad">
-          <div className="izquierda">
-            <div className="imagenac">
-              <img className="imagenac" src="src/assets/futbola.jpg" alt="imagen actividad" />
+
+    
+     
+        <div className={`${styles.tarjetaactividad}`}>
+          <div className={`${styles.izquierda}`}>
+            <div className={`${styles.imagenac}`}>
+              <img className={`${styles.imagenac}`} src="src/assets/futbola.jpg" alt="imagen actividad" />
             </div>
-            <div className="fecha">
+            <div className={`${styles.fecha}`}>
               <p>Fecha: De 1/01/2024 a 12/31/2024</p>
             </div>
           </div>
-          <div className="derecha">
-            <div className="texto">
+          <div className={`${styles.derecha}`}>
+            <div className={`${styles.texto}`}>
               <h2>Futbol</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolor harum necessitatibus dignissimos
@@ -27,8 +25,8 @@ return(
                 laborum cumque itaque?
               </p>
             </div>
-            <div className="boton">
-              <a className="btn" href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
+            <div className={`${styles.boton}`}>
+              <a className={`${styles.btn}`} href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
                 <p>Ubicación</p>
                 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -38,9 +36,9 @@ return(
   viewBox="1067.5 1594.5 41 41"
   height="30"
 >
-  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className="icon" rx="0" ry="0">
+  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className={`${styles.icon}`} rx="0" ry="0">
     <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74f4831">
-      <g className="fills" id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
+      <g className={`${styles.fills}`} id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
         <path
           rx="0"
           ry="0"
@@ -52,12 +50,12 @@ return(
   </g>
 </svg>
 </a>
-              <a className="btn" href="formulario.html">
+              <a className={`${styles.btn}`} href="formulario.html">
                 <p>Inscribirse</p>
                 <svg xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" style={{ WebkitPrintColorAdjust: 'exact' }} id="screenshot-33974a92-cec0-8016-8002-e29df2e96217" version="1.1" viewBox="1298.216 1596.608 38.951 40.405" height="30">
-  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className="icon" rx="0" ry="0">
+  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${styles.icon}`} rx="0" ry="0">
     <g id="shape-33974a92-cec0-8016-8002-e29df2eb3a7c">
-      <g className="fills" id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
+      <g className={`${styles.fills}`} id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
         <path
           rx="0"
           ry="0"
@@ -79,29 +77,29 @@ return(
             </div>
           </div>
         </div>
-      </div>
-    </div>
+   
+ 
 
 
 
-    <div className="cuerpom">
-  <div className="actividadesam">
-    <div className="tarjeta-actividadm">
-      <div className="titulom">
+    <div className={`${styles.cuerpom}`}>
+  <div className={`${styles.actividadesam}`}>
+    <div className={`${styles.tarjetaactividadm}`}>
+      <div className={`${styles.titulom}`}>
         <h2>Futbol</h2>
       </div>
-      <div className="imagenacm">
-        <img className="imagenacm" src="src/assets/futbola.jpg" alt="imagen actividad" />
+      <div className={`${styles.imagenacm}`}>
+        <img className={`${styles.imagenacm}`} src="src/assets/futbola.jpg" alt="imagen actividad" />
       </div>
-      <div className="textom">
+      <div className={`${styles.textom}`}>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolor harum necessitatibus dignissimos laudantium,
           dolores accusamus impedit qui illum, reprehenderit, eum aliquam! Qui possimus, reiciendis vero a laborum cumque itaque?
         </p>
       </div>
-      <div className="boton">
+      <div className={`${styles.boton}`}>
     
-              <a className="btn" href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
+              <a className={`${styles.btn}`}href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
                 <p>Ubicación</p>
                 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -111,9 +109,9 @@ return(
   viewBox="1067.5 1594.5 41 41"
   height="30"
 >
-  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className="icon" rx="0" ry="0">
+  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className={`${styles.icon}`}rx="0" ry="0">
     <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74f4831">
-      <g className="fills" id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
+      <g className={`${styles.fills}`}id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
         <path
           rx="0"
           ry="0"
@@ -125,12 +123,12 @@ return(
   </g>
 </svg>
 </a>
-       <a className="btn" href="formulario.html">
+       <a className={`${styles.btn}`} href="formulario.html">
                 <p>Inscribirse</p>
                 <svg xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" style={{ WebkitPrintColorAdjust: 'exact' }} id="screenshot-33974a92-cec0-8016-8002-e29df2e96217" version="1.1" viewBox="1298.216 1596.608 38.951 40.405" height="30">
-  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className="icon" rx="0" ry="0">
+  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${styles.icon}`} rx="0" ry="0">
     <g id="shape-33974a92-cec0-8016-8002-e29df2eb3a7c">
-      <g className="fills" id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
+      <g className={`${styles.fills}`} id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
         <path
           rx="0"
           ry="0"
@@ -143,7 +141,7 @@ return(
 </svg>
 </a>
       </div>
-      <div className="fecham">
+      <div className={`${styles.fecham}`}>
         <p>Fecha: De 1/01/2024 a 12/31/2024</p>
       </div>
     </div>

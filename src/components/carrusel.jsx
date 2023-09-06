@@ -12,17 +12,17 @@ function Carrusel() {
     <>
       <div className="carrousel">
         <div className="grande">
-        <img src="src/assets/nautico.jpg" alt="Imagen 1" class="imgc"/>
+        <img src="src/assets/nautico.jpg" alt="Imagen 1" className="imgc"/>
         
-        <img src="src/assets/puerto.jpg" alt="Imagen 2" class="imgc"/>
-       <img src="src/assets/puerto.jpg" alt="Imagen 3" class="imgc"/>
+        <img src="src/assets/puerto.jpg" alt="Imagen 2" className="imgc"/>
+       <img src="src/assets/puerto.jpg" alt="Imagen 3" className="imgc"/>
         </div>
        
         <ul className="puntos">
         
-            <li class="punto activo"></li>
-            <li class="punto"></li>
-            <li class="punto"></li>
+            <li className="punto activo"></li>
+            <li className="punto"></li>
+            <li className="punto"></li>
    
         </ul>
       </div>
