@@ -1,7 +1,7 @@
 
 .footer {
   background-color: #222233;
-
+ 
   height: 40vh;
   flex-wrap: wrap;
   width: 100%;
@@ -30,7 +30,7 @@
   margin: auto;
 }
 .logo {
-  height: 35vh;
+  height: auto;
   width: 30vw;
   display: inline-block;
 }
@@ -50,7 +50,7 @@
   margin-top: 1em;
   POSITION: relative;
 }
-.logo,.redes, .social_icone {
+.logo,.redes, .social-icone {
   color: white;
 }
 .logo .redes a:hover {
@@ -72,7 +72,7 @@ font-size: medium;
 padding-top:3% ;
 
 }
-.social_icone {
+.social-icone {
   display: inline-block;
   margin: 0 10px;
   font-size: 24px;
@@ -80,7 +80,7 @@ padding-top:3% ;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-.social_icone:hover {
+.social-icone:hover {
   transform: scale(1.5); /* Escala el ícono al 120% */
 }
 .zoom:hover {
@@ -89,8 +89,8 @@ padding-top:3% ;
 
 
 /* Estilos para los pseudo elementos en la animación */
-.social_icone::before,
-.social_icone::after {
+.social-icone::before,
+.social-icone::after {
   content: '';
   position: fixed;
   width: 100%;
@@ -101,7 +101,7 @@ margin-top: 150%;
 }
 
 /* Animación al pasar el mouse */
-.social_icone:hover::before {
+.social-icone:hover::before {
   background-color: rgba(255, 255, 255, 0.89); /* Color de fondo con transparencia */
   justify-content: center;
   align-items: center;
@@ -109,7 +109,7 @@ margin-top: 150%;
 
 }
 
-.social_icone:hover::after {
+.social-icone:hover::after {
   background-color: rgba(193, 60, 60, 0.0); /* Color de fondo con transparencia */
   justify-content: center;
   align-items: center;

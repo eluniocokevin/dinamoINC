@@ -15,7 +15,9 @@
       display: flex;
       justify-content: right;
       display: none;
+      
   }
+  
   .div-img {
       height: 100%;
       width: 30vh;
