@@ -14,8 +14,8 @@ function Carrusel() {
         <div className="grande">
         <img src="src/assets/nautico.jpg" alt="Imagen 1" className="imgc"/>
         
-        <img src="src/assets/puerto.jpg" alt="Imagen 2" className="imgc"/>
-       <img src="src/assets/puerto.jpg" alt="Imagen 3" className="imgc"/>
+        <img src="src/assets/agua.jpg" alt="Imagen 2" className="imgc"/>
+       <img src="src/assets/arena.jpg" alt="Imagen 3" className="imgc"/>
         </div>
        
         <ul className="puntos">

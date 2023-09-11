@@ -2,7 +2,7 @@ import styles from "../css/crearDeporte.module.css";
 
 
 function CrearDeporte(){
-    return(<>estas creando un deporte</>);
+   
     return(<>
 
 

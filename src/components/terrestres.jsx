@@ -2,11 +2,16 @@ import Header from "./header";
 import Footer from "./footer";
 import Actividad from "./actividad";
 import Evento from "./evento";
+import Mapa from "./mapa";
 import styles from '../css/actividad.module.css';
 function Terrestres (){
 return(
     <>
+  
     <Header/>
+
+    <Mapa/>
+ 
     <div className={`${styles.titulo}`}>
       <h1>Actividades Anuales</h1>
     </div>

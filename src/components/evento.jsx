@@ -8,34 +8,34 @@ return(
 
 
 
-<div class={`${styles.tarjetaevento}`}>
-<div class={`${styles.imagene}`}>
-  <img class={`${styles.imagene}`}src="src/assets/eventoremo.png" alt="imagen actividad"/>
-  <p class={`${styles.tipo}`}>Remo</p>
+<div className={`${styles.tarjetaevento}`}>
+<div className={`${styles.imagene}`}>
+  <img className={`${styles.imagene}`}src="src/assets/eventoremo.png" alt="imagen actividad"/>
+  <p className={`${styles.tipo}`}>Remo</p>
 </div>
 
-<div class={`${styles.textoe}`}>
+<div className={`${styles.textoe}`}>
   <h2>Se realizará la 4ta fecha del circuito nacional de remo</h2><br/>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.</p>
 </div>
-<div class={`${styles.fechae}`}><p>02/09/2023</p></div>
+<div className={`${styles.fechae}`}><p>02/09/2023</p></div>
 </div>
 
 
-<div class={`${styles.cuerpom}`}>
-<div class={`${styles.eventos}`}>
+<div className={`${styles.cuerpom}`}>
+<div className={`${styles.eventos}`}>
   
-  <div class={`${styles.tarjetaevento}`}>
-  <div class={`${styles.imagene}`}>
-    <img class={`${styles.imagene}`}src="src/assets/eventoremo.png" alt="imagen actividad"/>
-    <p class={`${styles.tipo}`}>Remo</p>
+  <div className={`${styles.tarjetaevento}`}>
+  <div className={`${styles.imagene}`}>
+    <img className={`${styles.imagene}`}src="src/assets/eventoremo.png" alt="imagen actividad"/>
+    <p className={`${styles.tipo}`}>Remo</p>
   </div>
   
-  <div class={`${styles.textoe}`}>
+  <div className={`${styles.textoe}`}>
     <h2>Se realizará la 4ta fecha del circuito nacional de remo</h2><br/>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.</p>
   </div>
-  <div class={`${styles.fechae}`}><p>02/09/2023</p></div>
+  <div className={`${styles.fechae}`}><p>02/09/2023</p></div>
   </div>
   
   </div>
