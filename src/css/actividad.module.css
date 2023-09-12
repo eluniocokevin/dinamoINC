@@ -22,6 +22,7 @@
 
 
 
+
 .actividadesa{
 width: 70%;
 height: 100%;
@@ -73,11 +74,10 @@ padding-left: 2%;
 display:flex;
 transition: transform 0.3s ease; 
 }
-.btn, .p{
+.btn p{
 color: white;
 text-decoration: none !important;
 font-size: 15px;
-
 }
 
 .izquierda{

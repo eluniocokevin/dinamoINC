@@ -1,0 +1,115 @@
+:root {
+	--primario: #c5da0a;
+	--gris-claro: #B8B8B8;
+	--sombra: 0 0 13px 0 rgba(185,185,185, .25);
+}
+
+
+
+.titulo {
+	color: #3a3a3a;
+	font-weight: 700;
+	text-align: center;
+	margin: 60px 0;
+}
+.todo{width: 90%;}
+.centrado{display: flex; justify-content: center;}
+
+/*! =================================================*/
+/*! ============= Categorias ============= */
+/*! =================================================*/
+.titulos{margin-bottom: 10%; width: 100%; padding-top: 20vh;}
+
+/*! =================================================*/
+/*! ============= Contenedor Preguntas ============= */
+/*! =================================================*/
+.contenedor-preguntas {
+	display: none;
+	grid-template-columns: 1fr;
+	gap: 40px;
+}
+
+.contenedor-preguntas.activo {
+	display: grid;
+}
+
+.contenedor-pregunta {
+	background: #4c79ba;
+	padding: 40px;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: .3s ease all;
+	cursor: pointer;
+}
+
+.contenedor-pregunta:hover {
+	box-shadow: var(--sombra);
+}
+
+.contenedor-pregunta.activa {
+	border: 2px solid var(--primario);
+}
+
+/*! =================================================*/
+/*! ============= Preguntas ============= */
+/*! =================================================*/
+.pregunta {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 20px;
+	color: aliceblue;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pregunta img {
+	width: 14px;
+}
+
+.respuesta {
+	color: #ffffff;
+	line-height: 30px;
+	max-height: 0;
+	opacity: 0;
+	transition: .3s ease all;
+}
+
+.contenedor-pregunta.activa .respuesta {
+	opacity: 20;
+	margin-top: 20px;
+}
+
+.contenedor-pregunta.activa img {
+	transform: rotate(45deg);
+}
+
+/*! =================================================*/
+/*! ============= Responsive Design ============= */
+/*! =================================================*/
+@media screen and (max-width: 820px){
+	.categorias {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.categoria {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+	}
+
+	.categoria svg {
+		width: 30px;
+		margin-right: 10px;
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.categorias {
+		grid-template-columns: 1fr;
+	}
+}
