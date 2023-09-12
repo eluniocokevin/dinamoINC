@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import Acuaticos from './components/acuaticos.jsx'
 import Terrestres from './components/terrestres.jsx'
+import Preguntas from './components/preguntas.jsx'
 import Eventos from './components/eventos.jsx'
 import Funcionarios from './components/funcionarios.jsx'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
   {
     path:'/',
     element:<App/>
+  },
+  {
+    path:'/preguntas',
+    element:<Preguntas/>
   },
   {
     path:'/terrestres',
