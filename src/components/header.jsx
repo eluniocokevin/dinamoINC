@@ -49,7 +49,7 @@ const handleButton=()=>{
            <a className="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
         </div>
         <div className="localidad" onClick={toggleLocation}>
-           <a className="zoom"> <img src="src/assets/LOCALIDADES.png" alt="imagen localidad" /></a>
+           <a className="zoom"> <img src="src/assets/preguntas2.png" alt="imagen localidad" /></a>
         </div>
       </div>
       

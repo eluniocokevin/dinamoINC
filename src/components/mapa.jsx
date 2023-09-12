@@ -4,11 +4,27 @@ import { TileLayer } from 'react-leaflet/TileLayer';
 import { useMap } from 'react-leaflet/hooks';
 import { Popup,Marker } from 'react-leaflet';
 import style from '../css/leaflet.css';
+
+ 
+
+
 function Mapa() {
+  const center = [-33.505271, -57.808147];
+  const maxBounds = [
+    [center[0] - 0.7, center[1] - 0.7], // Esquina superior izquierda
+    [center[0] + 0.7, center[1] + 0.7]  // Esquina inferior derecha
+  ];
+
+  
+  const mapOptions = {
+    maxBounds: maxBounds,
+    maxBoundsViscosity: 1, // Ajusta este valor según tus necesidades (0 a 1)
+  }
+    
     return (
       <>
 <div className='mapa'>
-<MapContainer center={[-33.505271, -57.808147]} zoom={9} scrollWheelZoom={false}>
+<MapContainer center={[-33.505271, -57.808147]} zoom={9} scrollWheelZoom={false} {...mapOptions}>
   <TileLayer
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
