@@ -52,7 +52,7 @@ flex-direction: column;
 .texto{
 margin-top: 5%;
 width: 90%;
-height: 85%;
+height: 90%;
 }
 
 .boton{
@@ -245,7 +245,7 @@ align-items: center;
     background-color: rgb(240, 240, 240);
     margin-top: 10%;
     width: 95%;
-    height:90vh;
+    height:70vh;
     border-radius: 5px;
     box-shadow: rgb(61, 62, 63) 3px 3px 6px 0px ;
     display: flex;
@@ -264,7 +264,8 @@ flex-direction: column;
 }
 .textom{
 width: 90%;
-height: 60%;
+height: auto;
+margin-bottom: 10px;
 }
 
 .boton{
@@ -277,7 +278,7 @@ margin-bottom: 2%;
 }
 .btn{
 background-color: #27649e;
-height: 80%;
+height: 3rem;
 width: auto;
 border-radius:3px;
 text-align: left;
@@ -286,7 +287,7 @@ align-items: center;
 padding-left: 2%;
 display:flex;
 transition: transform 0.3s ease; 
-
+margin-top: 10px;
 }
 .btnm, .p{
 color: white;
