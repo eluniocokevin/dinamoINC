@@ -14,16 +14,57 @@ return(
     </div>
     <div className={`${styles.cuerpo}`}>   
     <div className={`${styles.actividadesa}`}>   
-    <Actividad/></div>
+    <Actividad
+    img='futbola.jpg'
+    fecha='Del 01/01/23 al 12/12/2023'
+		deporte='Futbol'
+	  descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
+		/>
+    </div>
     <div className={`${styles.eventos}`}>  
-    <Evento/></div>
+    <Evento
+    img='eventoremo.PNG'
+		deporte='Remo'
+		titulo='Se realizará la 4ta fecha del circuito nacional de remo'
+    descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
+		fecha='02/09/2023'
+		/>
+
+<Evento
+    img='sorianodeptofertil.PNG'
+		deporte='Remo'
+		titulo='Se realizará la 4ta fecha del circuito nacional de remo'
+    descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
+		fecha='02/09/2023'
+		/>
+
+
+    </div>
     </div>
 
     <div className={`${styles.cuerpom}`}>   
     <div className={`${styles.actividadesam}`}>   
-    <Actividad/></div>
+    <Actividad
+    img='futbola.jpg'
+    fecha='Del 01/01/23 al 12/12/2023'
+		deporte='Futbol'
+	  descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
+		/></div>
     <div className={`${styles.eventosm}`}>  
-    <Evento/></div>
+    <Evento
+    img='eventoremo.PNG'
+		deporte='Remo'
+		titulo='Se realizará la 4ta fecha del circuito nacional de remo'
+    descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
+		fecha='02/09/2023'
+		/>
+    <Evento
+    img='sorianodeptofertil.PNG'
+		deporte='Remo'
+		titulo='Se realizará la 4ta fecha del circuito nacional de remo'
+    descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
+		fecha='02/09/2023'
+		/></div>
     </div>
 
     <Footer/>

@@ -1,7 +1,7 @@
 
 import styles from '../css/actividad.module.css';
 
-function Actividad(){
+function Actividad(props){
 return(
     <>
 
@@ -10,19 +10,17 @@ return(
         <div className={`${styles.tarjetaactividad}`}>
           <div className={`${styles.izquierda}`}>
             <div className={`${styles.imagenac}`}>
-              <img className={`${styles.imagenac}`} src="src/assets/futbola.jpg" alt="imagen actividad" />
+              <img className={`${styles.imagenac}`} src={`src/assets/${props.img}`} alt="imagen actividad" />
             </div>
             <div className={`${styles.fecha}`}>
-              <p>Fecha: De 1/01/2024 a 12/31/2024</p>
+              <p>{props.fecha}</p>
             </div>
           </div>
           <div className={`${styles.derecha}`}>
             <div className={`${styles.texto}`}>
-              <h2>Futbol</h2>
+              <h2>{props.deporte}</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolor harum necessitatibus dignissimos
-                laudantium, dolores accusamus impedit qui illum, reprehenderit, eum aliquam! Qui possimus, reiciendis vero a
-                laborum cumque itaque?
+              {props.descripcion}
               </p>
             </div>
             <div className={`${styles.boton}`}>
@@ -86,15 +84,14 @@ return(
   <div className={`${styles.actividadesam}`}>
     <div className={`${styles.tarjetaactividadm}`}>
       <div className={`${styles.titulom}`}>
-        <h2>Futbol</h2>
+     <h2>{props.deporte}</h2> 
       </div>
       <div className={`${styles.imagenacm}`}>
-        <img className={`${styles.imagenacm}`} src="src/assets/futbola.jpg" alt="imagen actividad" />
+        <img className={`${styles.imagenacm}`} src={`src/assets/${props.img}`} alt="imagen actividad" />
       </div>
       <div className={`${styles.textom}`}>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolor harum necessitatibus dignissimos laudantium,
-          dolores accusamus impedit qui illum, reprehenderit, eum aliquam! Qui possimus, reiciendis vero a laborum cumque itaque?
+        {props.descripcion}
         </p>
       </div>
       <div className={`${styles.boton}`}>
@@ -142,7 +139,7 @@ return(
 </a>
       </div>
       <div className={`${styles.fecham}`}>
-        <p>Fecha: De 1/01/2024 a 12/31/2024</p>
+        <p>{props.fecha}</p>
       </div>
     </div>
   </div>

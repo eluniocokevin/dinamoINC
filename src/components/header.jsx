@@ -25,8 +25,8 @@ const handleButton=()=>{
         <LoginFuncionarios/>
       </div>
       <div className={`localidades ${showlocation ? "show" : ""}`}>
-        <a className="a-button" onClick={handleButton}><i className="bi bi-x"></i></a>
-        <Localidades/>
+        <a  className="a-button" onClick={handleButton}><i className="bi bi-x"></i></a>
+       
       </div>
 
         <div className="div-img">
@@ -39,7 +39,7 @@ const handleButton=()=>{
             <a href="#" className="zoom" id="menuButton"><img src="src/assets/list.svg" /></a>
             <div className="dropdown-content" id="dropdownContent">
               <a href="#" onClick={toggleLogin}>Login</a>
-              <a href="#" onClick={toggleLocation}>Localidad</a>
+              <a href="preguntas" >Preguntas</a>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ const handleButton=()=>{
            <a className="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
         </div>
         <div className="localidad" onClick={toggleLocation}>
-           <a className="zoom"> <img src="src/assets/preguntas2.png" alt="imagen localidad" /></a>
+           <a href="preguntas" className="zoom"> <img src="src/assets/preguntas2.png" alt="imagen localidad" /></a>
         </div>
       </div>
       
