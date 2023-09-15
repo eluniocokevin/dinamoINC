@@ -5,7 +5,7 @@ function Noticias() {
       <div className="conteiner-noticias">
         <div className="target-noticias">
           <div className="img">
-            <img src="src/assets/noticia1.jpg" alt="" />
+            <img src="/noticia1.jpg" alt="" />
           </div>
           <div className="type"><h7>Remo</h7></div>
           <div className="info">
@@ -22,7 +22,7 @@ function Noticias() {
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="src/assets/yoga.jpg" alt="" />
+            <img src="/yoga.jpg" alt="" />
           </div>
           <div className="type"><h7>Yoga</h7></div>
           <div className="info">
@@ -38,7 +38,7 @@ function Noticias() {
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="src/assets/corre.jpeg" alt="" />
+            <img src="/corre.jpeg" alt="" />
           </div>
           <div className="type"><h7>Atletismo</h7></div>
           <div className="info">
@@ -54,7 +54,7 @@ function Noticias() {
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="src/assets/skate.jpeg" alt="" />
+            <img src="/SKATE.jpeg" alt="" />
           </div>
           <div className="type"><h7>Skate</h7></div>
           <div className="info">
@@ -70,7 +70,7 @@ function Noticias() {
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="src/assets/futbolfem.jpg" alt="" />
+            <img src="/futbolfem.jpg" alt="" />
           </div>
           <div className="type"><h7>Futbol</h7></div>
           <div className="info">
@@ -86,7 +86,7 @@ function Noticias() {
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="src/assets/skateestreno.jpg" alt="" />
+            <img src="/skateestreno.jpg" alt="" />
           </div>
           <div className="type"><h7>Skate</h7></div>
           <div className="info">

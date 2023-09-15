@@ -17,7 +17,7 @@ function Pregunta(props){
     return(
         <div className="contenedor-preguntas activo">
         <div className={`contenedor-pregunta ${preguntasActivas.includes(0) ? 'activa' : ''}`} onClick={() => togglePregunta(0)}>
-          <p className="pregunta">{props.pregunta}<img src="src/assets/suma.svg" alt="Abrir Respuesta" /></p>
+          <p className="pregunta">{props.pregunta}<img src="/suma.svg" alt="Abrir Respuesta" /></p>
   
             <p className="respuesta">{props.respuesta}</p>
         

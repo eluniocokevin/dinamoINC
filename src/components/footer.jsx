@@ -13,20 +13,20 @@ function Footer() {
         </div>
         <div className={`${styles.logo}`}>
           <div className={`${styles.img}`}>
-            <img src="src/assets/logo_escudo.svg" alt="" />
+            <img src="/logo_escudo.svg" alt="" />
           </div>
           <div className={`${styles.redes}`}>
           <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" className={`${styles.social_icone} ${styles.youtube}`} >
-                    <img src="src/assets/youtubew.svg" />
+                    <img src="/youtubew.svg" />
                 </a>
                 <a href="https://www.facebook.com/intendenciasoriano" className={`${styles.social_icone} ${styles.facebook}`}>
-                    <img src="src/assets/facebookw.svg"/>
+                    <img src="/facebookw.svg"/>
                 </a>
                 <a href="https://www.instagram.com/sorianofertil/" className={`${styles.social_icone} ${styles.instagrame}`}>
-                    <img src="src/assets/instagramw.svg"/>
+                    <img src="/instagramw.svg"/>
                 </a>
                 <a href="https://twitter.com/sorianofertil?lang=es" className={`${styles.social_icone} ${styles.twitter}`}>
-                    <img src="src/assets/twitterw.svg"/>
+                    <img src="/twitterw.svg"/>
                 </a>
           </div>
         </div>

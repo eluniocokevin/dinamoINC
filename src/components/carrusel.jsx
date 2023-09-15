@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'; 
 import '../css/carrusel.css';
 
-
 function Carrusel() {
   useEffect(() => {
   
@@ -12,10 +11,9 @@ function Carrusel() {
     <>
       <div className="carrousel">
         <div className="grande">
-        <img src="src/assets/nautico.jpg" alt="Imagen 1" className="imgc"/>
-        
-        <img src="src/assets/agua.jpg" alt="Imagen 2" className="imgc"/>
-       <img src="src/assets/arena.jpg" alt="Imagen 3" className="imgc"/>
+        <img src="/nautico.jpg" alt="Imagen 1" className="imgc"/>
+       <img src="/agua.JPG" alt="Imagen 2" className="imgc"/>
+       <img src="/arena.JPG" alt="Imagen 3" className="imgc"/>
         </div>
        
         <ul className="puntos">

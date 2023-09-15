@@ -44,7 +44,7 @@ function LoginFuncionarios() {
   return (
     <>
       <div className="img">
-        <img src="src/assets/sorianodeptofertil.png" alt="" />
+        <img src="/sorianodeptofertil.png" alt="" />
       </div>
       <h2>¡Ingrese como funcionario!</h2>
       <form>

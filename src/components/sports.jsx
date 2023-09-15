@@ -5,7 +5,7 @@ function Sports() {
       <div className="Sports">
         <div className="target-sports">
           <div className="cont-img">
-            <img src="src/assets/futbola.jpg" alt="" />
+            <img src="/futbola.jpg" alt="" />
           </div>
           <div className="text">
             <span>Deportes Anuales</span>
@@ -15,7 +15,7 @@ function Sports() {
 
         <div className="target-sports">
           <div className="cont-img">
-            <img src="src/assets/remo.jpg" alt="" />
+            <img src="/remo.jpg" alt="" />
           </div>
           <div className="text">
             <span>Actividades Temporales</span>

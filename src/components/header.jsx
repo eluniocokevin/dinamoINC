@@ -30,13 +30,13 @@ const handleButton=()=>{
       </div>
 
         <div className="div-img">
-        <a href="https://www.soriano.gub.uy/"><img src="src/assets/logo_escudo.svg" alt="logo de mi web" /></a> 
+        <a href="https://www.soriano.gub.uy/"><img src="/logo_escudo.svg" alt="logo de mi web" /></a> 
         </div>
 
 
         
         <div className="menu">
-            <a href="#" className="zoom" id="menuButton"><img src="src/assets/list.svg" /></a>
+            <a href="#" className="zoom" id="menuButton"><img src="/list.svg" /></a>
             <div className="dropdown-content" id="dropdownContent">
               <a href="#" onClick={toggleLogin}>Login</a>
               <a href="preguntas" >Preguntas</a>
@@ -46,26 +46,26 @@ const handleButton=()=>{
           <script src="script.js"></script>
         
         <div className="funcionario" onClick={toggleLogin}>
-           <a className="zoom"> <img src="src/assets/funcionario.svg" alt="imagen funcionarios" /></a>
+           <a className="zoom"> <img src="/funcionario.svg" alt="imagen funcionarios" /></a>
         </div>
         <div className="localidad" onClick={toggleLocation}>
-           <a href="preguntas" className="zoom"> <img src="src/assets/preguntas2.png" alt="imagen localidad" /></a>
+           <a href="preguntas" className="zoom"> <img src="/preguntas2.png" alt="imagen localidad" /></a>
         </div>
       </div>
       
       <div className="barra-redes"></div>
       <div className="div-redes">
       <a href="https://www.youtube.com/channel/UCJy8LxMOrPTqkbpPciC-unQ/featured" className="social-icon youtube" >
-            <img src="src/assets/youtube.svg" />
+            <img src="/youtube.svg" />
         </a>
         <a href="https://www.facebook.com/intendenciasoriano" className="social-icon facebook">
-            <img src="src/assets/facebook.svg"/>
+            <img src="/facebook.svg"/>
         </a>
         <a href="https://www.instagram.com/sorianofertil/" className="social-icon instagram">
-            <img src="src/assets/instagram.svg"/>
+            <img src="/instagram.svg"/>
         </a>
         <a href="https://twitter.com/sorianofertil?lang=es" className="social-icon twitter">
-            <img src="src/assets/twitter.svg"/>
+            <img src="/twitter.svg"/>
         </a>
       </div>
       </div>
