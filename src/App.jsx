@@ -1,7 +1,7 @@
 import Header from './components/header'
 import Carrusel from './components/carrusel'
 import Sports from './components/sports'
-import Relleno from './components/relleno'
+import Valores from './components/valores'
 import Noticias from './components/noticias'
 import Footer from './components/footer'
 
@@ -11,7 +11,7 @@ function App() {
       <Header/>
       <Carrusel/>
       <Sports/>
-      <Relleno/>
+      <Valores/>
       <Noticias/>
       <Footer/>
     </>
