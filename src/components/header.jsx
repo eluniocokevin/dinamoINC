@@ -30,7 +30,7 @@ const handleButton=()=>{
       </div>
 
         <div className="div-img">
-        <a href="https://www.soriano.gub.uy/"><img src="/logo_escudo.svg" alt="logo de mi web" /></a> 
+        <a href="/"><img src="/logo_escudo.svg" alt="logo de mi web" /></a> 
         </div>
 
 
