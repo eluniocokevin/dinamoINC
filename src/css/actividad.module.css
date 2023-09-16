@@ -334,7 +334,8 @@ height: auto;
 box-shadow: rgb(61, 62, 63) 3px 3px 6px 0px ;
 margin-bottom:10% ;
 }
-
+.tarjetaevento p{width: 100%;}
+.fechae{margin-right: 0;}
 .imagene{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;

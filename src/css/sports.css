@@ -33,8 +33,10 @@ justify-content: space-evenly;
 }
 .cont-img img{
     margin: auto;
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .target-sports .text{
