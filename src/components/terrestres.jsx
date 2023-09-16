@@ -34,9 +34,9 @@ return(
 		/>
 
 <Evento
-    img='sorianodeptofertil.PNG'
+    img='SKATE.jpeg'
 		deporte='Skate'
-		titulo='Se realizará la 4ta fecha del circuito nacional de remo'
+		titulo='Pateando la pista: inauguramos Skate Park Mercedes'
     descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
 		fecha='02/09/2023'
 		/>
