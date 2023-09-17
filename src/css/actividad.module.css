@@ -16,12 +16,24 @@
 
 .cuerpo{
     display: flex;
-    justify-content: flex-start;
+    width: 100%;
     height: auto;
+    flex-direction: column;
 }
 
+.iconosa{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
 
-
+.fila{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+}
 
 .actividadesa{
 width: 70%;
@@ -29,6 +41,11 @@ height: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+}
+
+.iconos{
+    width: 100%;
+    height: 10vh;
 }
 
 .tarjetaactividad{
@@ -208,8 +225,8 @@ width:90%;
 margin-left: 5%;
 }
 
-  
-        }
+
+}
 
 
 @media screen and (min-width:0px) and (max-width:636px){
@@ -230,6 +247,13 @@ margin-left: 5%;
     align-items: center;
     height: auto;
     width: 100%;
+}
+
+.iconosm{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
 }
 
 
