@@ -12,7 +12,7 @@ function Sports() {
             <a href="terrestres">Ver más</a>
           </div>
         </div>
-
+        
         <div className="target-sports">
           <div className="cont-img">
             <img src="/remo.jpg" alt="" />
