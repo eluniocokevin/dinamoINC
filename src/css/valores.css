@@ -3,16 +3,17 @@
     height: auto;
     width: 100%;
     display: flex;
-    align-items: start;
-    margin-bottom: 15vh;
-    margin-top: 15vh;
+    justify-content: center;
+    background: #dedede;
 }
 .vision{
-width: 33%;
-height: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15vh 0;
 }
 
 .mision{
@@ -21,7 +22,9 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
+    justify-content: center;
+    margin: 15vh 0;
+}
 
 .valores{
     width: 33%;
@@ -29,7 +32,9 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
+    justify-content: center;
+    margin: 15vh 0;
+}
 
 .imge{
     height: auto;
@@ -38,14 +43,20 @@ align-items: center;
     align-items: center;
     margin-bottom: 3vh;
 }
-.mision .imge{margin-bottom: 1.7vh;}
-.valores .imge{margin-bottom: 1.7vh;}
+.mision .imge{
+    margin-bottom: 1.7vh;
+}
+.valores .imge{
+    margin-bottom: 1.7vh;
+}
 .tex{
     width: 70%; 
 text-align: center;
     
 }
-.conte img{width: 9vh;}
+.conte img{
+    width: 9vh;
+}
 .titu{
    margin-bottom: 2vh;
     text-align: center;
@@ -53,7 +64,9 @@ text-align: center;
     justify-content: center;
 }
 
-.conte h1{color: white;}
+.conte h1{
+    color: white;
+}
 .valores h1{
     background-color: #FDE78F; 
     width: 25vw;
@@ -80,33 +93,26 @@ text-align: center;
 .tex{width: 90%;}
 .vision{
     width: 100%;
-    margin-bottom: 5vh;
-   }
-    
+    margin: 10vh 0 0 0;
+}
 .mision{
     width: 100%;
-    margin-bottom: 5vh;
-       }
-    
+    margin: 5vh 0 0 0;
+}
 .valores{
     width: 100%;
-    margin-bottom: 5vh;
-     }
-    
+    margin: 5vh 0;
+}
  .valores h1{
-  
     width: 50vw;
   
 }
 .mision h1{
- 
     width: 50vw;
   
 }
 .vision h1{
-
     width: 50vw;
-
 }
 
 
