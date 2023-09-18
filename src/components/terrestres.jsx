@@ -55,7 +55,14 @@ return(
             img='futbola.jpg'
             fecha='Del 01/01/23 al 12/12/2023'
             deporte='Futsal'
-            descripcion='Pacticas de futsal recreativo dictadas por Luciano acosta en el club atletico praga martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
+            descripcion='Pacticas de futsal recreativo dictadas por Luciano Acosta en el club atletico praga martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
+            />
+
+       <Actividad
+            img='remo3.jpg'
+            fecha='Del 01/01/23 al 12/11/2023'
+            deporte='Remo'
+            descripcion='Pacticas de remo recreativo dictadas por Pablo Camessaca en el puerto martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
             />
         </div>
 
@@ -120,6 +127,12 @@ return(
             deporte='Futbol'
             descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'
           />
+          <Actividad
+            img='img3v.jpg'
+            fecha='Del 01/01/23 al 12/11/2023'
+            deporte='Remo'
+            descripcion='Pacticas de remo recreativo dictadas por Pablo Camessaca en el puerto martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
+            />
         </div>
         <div className={`${styles.eventosm}`}>  
           <Evento
