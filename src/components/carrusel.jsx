@@ -147,7 +147,7 @@ function Carrusel() {
                 key={item.id}
                 className={index === currentIndex ? 'active' : ''}
               >
-                <img src={item.imgUrl} alt={`Slide ${index}`} />
+                <img className='img-carrusel' src={item.imgUrl} alt={`Slide ${index}`} />
               </li>
             ))}
           </ul>
