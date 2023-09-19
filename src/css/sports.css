@@ -95,7 +95,7 @@
 @media screen and (min-width:500px) and (max-width:636px){
 
 .Sports{
-    height: 100vh;
+    height: 115vh;
     margin-left: 0;
     display: flex;
     justify-content: space-around;
@@ -118,7 +118,7 @@
 
 @media screen and (min-width:450px) and (max-width:500px){
 .Sports{
-    height: 87vh;
+    height: 93vh;
     margin-left: 0;
     display: flex;
     justify-content: space-around;
