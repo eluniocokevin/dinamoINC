@@ -97,7 +97,7 @@ padding-top:3% ;
   height: 100%;
   background-color: rgba(0, 0, 0, 0); /* Color transparente de fondo */
 z-index: -1; /* Detrás del ícono principal */
-margin-top: 150%;
+margin-top: 165%;
 }
 
 /* Animación al pasar el mouse */
