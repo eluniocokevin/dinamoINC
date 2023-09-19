@@ -3,7 +3,7 @@ function Sports() {
   return (
     <>
       <div className="Sports">
-        <div className="target-sports">
+        <div className="target-sports target1">
           <div className="cont-img">
             <img src="/futbola.jpg" alt="" />
           </div>
@@ -13,7 +13,7 @@ function Sports() {
           </div>
         </div>
         
-        <div className="target-sports">
+        <div className="target-sports target2">
           <div className="cont-img">
             <img src="/remo.jpg" alt="" />
           </div>
