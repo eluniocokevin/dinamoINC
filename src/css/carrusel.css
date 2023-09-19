@@ -64,12 +64,10 @@ li {
   left: 32px;
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: #fffa;
   z-index: 1;
   cursor: pointer;
-  background-color: #fff4;
   border-radius: 50%;
-  box-shadow: #000 0 0 2px 0px;
 }
 
 .rightArrow {
@@ -83,14 +81,11 @@ li {
   right: 32px;
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: #fffa;
   z-index: 1;
   cursor: pointer;
-  background-color: #fff4;
   border-radius: 50%;
-  box-shadow: #000 0 0 2px 0px;
 }
-
 
 .carrousel-cont-img {
   width: 100%;
