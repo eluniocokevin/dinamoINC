@@ -116,7 +116,35 @@
 
 }
 
-@media screen and (min-width:460px) and (max-width:500px){
+@media screen and (min-width:450px) and (max-width:500px){
+.Sports{
+    height: 87vh;
+    margin-left: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.target-sports:hover .text{
+    transform: translateY(0);
+}
+.target-sports {
+    margin-top: 10%;
+    width: 55%;
+    height: 50%;
+}
+.target1{
+    margin-top: 25%;
+}
+.target2{
+    margin-bottom: 30%;
+}
+
+
+}
+
+
+
+@media screen and (min-width:400px) and (max-width:450px){
     
 .Sports{
     height: 80vh;
@@ -142,7 +170,7 @@
 }
 
 
-@media screen and (min-width:0px) and (max-width:460px){
+@media screen and (min-width:0px) and (max-width:400px){
     
 .Sports{
     height: 80vh;
