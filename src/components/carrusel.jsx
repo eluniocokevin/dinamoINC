@@ -52,7 +52,7 @@
 
 
 import React, { useEffect, useRef, useState } from 'react';
-import { data } from '../data';
+import { data } from '/data';
 import '../css/carrusel.css';
 
 function Carrusel() {
