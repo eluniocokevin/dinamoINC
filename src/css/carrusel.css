@@ -13,9 +13,7 @@ li {
   display: inline;
 }
 
-img {
-  margin-top: -16px;
-}
+
 
 /* Main container */
 
@@ -36,7 +34,7 @@ img {
 .dots-container {
   width: 100%;
   position: absolute;
-  margin-top: -70px;
+  margin-top: -60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +97,7 @@ img {
   height: 100%;
   overflow: hidden;
 } 
-.carrousel-cont-img>ul, li, img{
+.carrousel-cont-img>ul, li, .img-carrusel{
   width: 100%;
   height: 100%;
   transition: all ease .7s;
