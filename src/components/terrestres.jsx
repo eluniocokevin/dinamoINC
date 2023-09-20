@@ -3,7 +3,7 @@ import Footer from "./footer";
 import Actividad from "./actividad";
 import Evento from "./evento";
 import Mapa from "./mapa";
-import styles from '../css/actividad.module.css';
+import stylesTerrestres from '../css/actividad.module.css';
 import Iconos from "./iconos";
 function Terrestres (){
 return(
@@ -13,14 +13,14 @@ return(
 
     <Mapa/>
  
-    <div className={`${styles.titulo}`}>
+    <div className={`${stylesTerrestres.titulo}`}>
       <h1>Actividades Anuales</h1>
     </div>
-  <div className={`${styles.cuerpo}`}>
+  <div className={`${stylesTerrestres.cuerpo}`}>
 
     
 
-      <div className={`${styles.iconosa}`}>
+      <div className={`${stylesTerrestres.iconosa}`}>
         <Iconos
           deporte='NATACIÓN'
           img='natacion.png'
@@ -48,9 +48,9 @@ return(
 
       </div>
     
-      <div className={`${styles.fila}`}>
+      <div className={`${stylesTerrestres.fila}`}>
         
-        <div className={`${styles.actividadesa}`}>
+        <div className={`${stylesTerrestres.actividadesa}`}>
           <Actividad
             img='futbola.jpg'
             fecha='Del 01/01/23 al 12/12/2023'
@@ -66,7 +66,7 @@ return(
             />
         </div>
 
-        <div className={`${styles.eventos}`}>  
+        <div className={`${stylesTerrestres.eventos}`}>  
           <Evento
             img='eventoremo.PNG'
             deporte='Remo'
@@ -86,9 +86,9 @@ return(
       </div>
     </div>
 
-    <div className={`${styles.cuerpom}`}>  
+    <div className={`${stylesTerrestres.cuerpom}`}>  
 
-      <div className={`${styles.iconosm}`}>
+      <div className={`${stylesTerrestres.iconosm}`}>
         <Iconos
             deporte='NATACIÓN'
             img='natacion.png'
@@ -116,11 +116,11 @@ return(
 
       </div>
 
-    <div className={`${styles.filam}`}>
+    <div className={`${stylesTerrestres.filam}`}>
 
     
 
-        <div className={`${styles.actividadesm}`}>   
+        <div className={`${stylesTerrestres.actividadesm}`}>   
           <Actividad
             img='futbola.jpg'
             fecha='Del 01/01/23 al 12/12/2023'
@@ -134,7 +134,7 @@ return(
             descripcion='Pacticas de remo recreativo dictadas por Pablo Camessaca en el puerto martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
             />
         </div>
-        <div className={`${styles.eventosm}`}>  
+        <div className={`${stylesTerrestres.eventosm}`}>  
           <Evento
             img='eventoremo.PNG'
             deporte='Remo'

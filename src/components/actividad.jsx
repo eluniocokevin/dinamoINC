@@ -1,5 +1,5 @@
 
-import styles from '../css/actividad.module.css';
+import stylesActividad from '../css/actividad.module.css';
 
 function Actividad(props){
 return(
@@ -7,24 +7,24 @@ return(
 
     
      
-        <div className={`${styles.tarjetaactividad}`}>
-          <div className={`${styles.izquierda}`}>
-            <div className={`${styles.imagenac}`}>
-              <img className={`${styles.imagenac}`} src={`/${props.img}`} alt="imagen actividad" />
+        <div className={`${stylesActividad.tarjetaactividad}`}>
+          <div className={`${stylesActividad.izquierda}`}>
+            <div className={`${stylesActividad.imagenac}`}>
+              <img className={`${stylesActividad.imagenac}`} src={`/${props.img}`} alt="imagen actividad" />
             </div>
-            <div className={`${styles.fecha}`}>
+            <div className={`${stylesActividad.fecha}`}>
               <p>{props.fecha}</p>
             </div>
           </div>
-          <div className={`${styles.derecha}`}>
-            <div className={`${styles.texto}`}>
+          <div className={`${stylesActividad.derecha}`}>
+            <div className={`${stylesActividad.texto}`}>
               <h2>{props.deporte}</h2>
               <p>
               {props.descripcion}
               </p>
             </div>
-            <div className={`${styles.boton}`}>
-              <a className={`${styles.btn}`} href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
+            <div className={`${stylesActividad.boton}`}>
+              <a className={`${stylesActividad.btn}`} href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
                 <p>Ubicación</p>
                 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +34,9 @@ return(
   viewBox="1067.5 1594.5 41 41"
   height="30"
 >
-  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className={`${styles.icon}`} rx="0" ry="0">
+  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`} rx="0" ry="0">
     <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74f4831">
-      <g className={`${styles.fills}`} id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
+      <g className={`${stylesActividad.fills}`} id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
         <path
           rx="0"
           ry="0"
@@ -48,12 +48,12 @@ return(
   </g>
 </svg>
 </a>
-              <a className={`${styles.btn}`} href="formulario.html">
+              <a className={`${stylesActividad.btn}`} href="formulario.html">
                 <p>Inscribirse</p>
                 <svg xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" style={{ WebkitPrintColorAdjust: 'exact' }} id="screenshot-33974a92-cec0-8016-8002-e29df2e96217" version="1.1" viewBox="1298.216 1596.608 38.951 40.405" height="30">
-  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${styles.icon}`} rx="0" ry="0">
+  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`} rx="0" ry="0">
     <g id="shape-33974a92-cec0-8016-8002-e29df2eb3a7c">
-      <g className={`${styles.fills}`} id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
+      <g className={`${stylesActividad.fills}`} id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
         <path
           rx="0"
           ry="0"
@@ -80,23 +80,23 @@ return(
 
 
 
-    <div className={`${styles.cuerpom}`}>
-  <div className={`${styles.actividadesam}`}>
-    <div className={`${styles.tarjetaactividadm}`}>
-      <div className={`${styles.titulom}`}>
+    <div className={`${stylesActividad.cuerpom}`}>
+  <div className={`${stylesActividad.actividadesam}`}>
+    <div className={`${stylesActividad.tarjetaactividadm}`}>
+      <div className={`${stylesActividad.titulom}`}>
      <h2>{props.deporte}</h2> 
       </div>
-      <div className={`${styles.imagenacm}`}>
-        <img className={`${styles.imagenacm}`} src={`/${props.img}`} alt="imagen actividad" />
+      <div className={`${stylesActividad.imagenacm}`}>
+        <img className={`${stylesActividad.imagenacm}`} src={`/${props.img}`} alt="imagen actividad" />
       </div>
-      <div className={`${styles.textom}`}>
+      <div className={`${stylesActividad.textom}`}>
         <p>
         {props.descripcion}
         </p>
       </div>
-      <div className={`${styles.boton}`}>
+      <div className={`${stylesActividad.boton}`}>
     
-              <a className={`${styles.btn}`}href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
+              <a className={`${stylesActividad.btn}`}href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
                 <p>Ubicación</p>
                 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -106,9 +106,9 @@ return(
   viewBox="1067.5 1594.5 41 41"
   height="30"
 >
-  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className={`${styles.icon}`}rx="0" ry="0">
+  <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`}rx="0" ry="0">
     <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74f4831">
-      <g className={`${styles.fills}`}id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
+      <g className={`${stylesActividad.fills}`}id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
         <path
           rx="0"
           ry="0"
@@ -120,12 +120,12 @@ return(
   </g>
 </svg>
 </a>
-       <a className={`${styles.btn}`} href="formulario.html">
+       <a className={`${stylesActividad.btn}`} href="formulario.html">
                 <p>Inscribirse</p>
                 <svg xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" style={{ WebkitPrintColorAdjust: 'exact' }} id="screenshot-33974a92-cec0-8016-8002-e29df2e96217" version="1.1" viewBox="1298.216 1596.608 38.951 40.405" height="30">
-  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${styles.icon}`} rx="0" ry="0">
+  <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`} rx="0" ry="0">
     <g id="shape-33974a92-cec0-8016-8002-e29df2eb3a7c">
-      <g className={`${styles.fills}`} id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
+      <g className={`${stylesActividad.fills}`} id="fills-33974a92-cec0-8016-8002-e29df2eb3a7c">
         <path
           rx="0"
           ry="0"
@@ -138,7 +138,7 @@ return(
 </svg>
 </a>
       </div>
-      <div className={`${styles.fecham}`}>
+      <div className={`${stylesActividad.fecham}`}>
         <p>{props.fecha}</p>
       </div>
     </div>

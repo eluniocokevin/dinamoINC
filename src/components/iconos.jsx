@@ -1,4 +1,4 @@
-import styles from "../css/iconos.module.css";
+import stylesIconos from "../css/iconos.module.css";
 
 
 function Iconos (props) {    
@@ -6,10 +6,10 @@ function Iconos (props) {
 return(
 <>
 
-    <div className={`${styles.deporte}`}>
-        <div className={`${styles.cont}`}>
+    <div className={`${stylesIconos.deporte}`}>
+        <div className={`${stylesIconos.cont}`}>
         <p>{props.deporte}</p>
-        <img className={`${styles.img}`} src={`/${props.img}`} alt="" />
+        <img className={`${stylesIconos.img}`} src={`/${props.img}`} alt="" />
         </div>
     </div>
 

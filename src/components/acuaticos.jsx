@@ -4,7 +4,7 @@ import Actividad from "./actividad";
 import Evento from "./evento";
 import Mapa from "./mapa";
 import Iconos from "./iconos";
-import styles from '../css/actividad.module.css';
+import stylesAcuaticos from '../css/actividad.module.css';
 function Acuaticos (){
 return(
   <>
@@ -12,14 +12,14 @@ return(
 
   <Mapa/>
 
-  <div className={`${styles.titulo}`}>
+  <div className={`${stylesAcuaticos.titulo}`}>
     <h1>Actividades Anuales</h1>
   </div>
-<div className={`${styles.cuerpo}`}>
+<div className={`${stylesAcuaticos.cuerpo}`}>
 
   
 
-    <div className={`${styles.iconosa}`}>
+    <div className={`${stylesAcuaticos.iconosa}`}>
       <Iconos
         deporte='NATACIÓN'
         img='natacion.png'
@@ -47,9 +47,9 @@ return(
 
     </div>
   
-    <div className={`${styles.fila}`}>
+    <div className={`${stylesAcuaticos.fila}`}>
       
-      <div className={`${styles.actividadesa}`}>
+      <div className={`${stylesAcuaticos.actividadesa}`}>
         <Actividad
           img='futbola.jpg'
           fecha='Del 01/01/23 al 12/12/2023'
@@ -65,7 +65,7 @@ return(
           />
       </div>
 
-      <div className={`${styles.eventos}`}>  
+      <div className={`${stylesAcuaticos.eventos}`}>  
         <Evento
           img='eventoremo.PNG'
           deporte='Remo'
@@ -85,9 +85,9 @@ return(
     </div>
   </div>
 
-  <div className={`${styles.cuerpom}`}>  
+  <div className={`${stylesAcuaticos.cuerpom}`}>  
 
-    <div className={`${styles.iconosm}`}>
+    <div className={`${stylesAcuaticos.iconosm}`}>
       <Iconos
           deporte='NATACIÓN'
           img='natacion.png'
@@ -115,11 +115,11 @@ return(
 
     </div>
 
-  <div className={`${styles.filam}`}>
+  <div className={`${stylesAcuaticos.filam}`}>
 
   
 
-      <div className={`${styles.actividadesm}`}>   
+      <div className={`${stylesAcuaticos.actividadesm}`}>   
         <Actividad
           img='futbola.jpg'
           fecha='Del 01/01/23 al 12/12/2023'
@@ -133,7 +133,7 @@ return(
           descripcion='Pacticas de remo recreativo dictadas por Pablo Camessaca en el puerto martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
           />
       </div>
-      <div className={`${styles.eventosm}`}>  
+      <div className={`${stylesAcuaticos.eventosm}`}>  
         <Evento
           img='eventoremo.PNG'
           deporte='Remo'
