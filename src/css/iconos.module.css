@@ -12,6 +12,12 @@
     border-radius: 40px;
     margin: 20px 10px;
     text-align: center;
+    transition: all ease .3s;
+}
+.deporte:hover{
+    transform: scale(1.1);
+    box-shadow: #aaa 0 0 10px 0px;
+
 }
 .deporte .cont{
     width: 100%;
