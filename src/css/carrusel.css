@@ -54,14 +54,33 @@ li {
 
 /* Arrows */
 .leftArrow {
-  width: 60px;
-  height: 60px;
+  width: auto;
+  height: auto;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   position: absolute;
   top: 50%;
-  left: 32px;
+  left: 5%;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fffa;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 50%;
+}.leftArrow:hover{
+  color: #fff;
+  transform: scale(1.2);
+}
+.rightArrow {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 5%;
   font-size: 50px;
   font-weight: 700;
   color: #fffa;
@@ -69,22 +88,9 @@ li {
   cursor: pointer;
   border-radius: 50%;
 }
-
-.rightArrow {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  right: 32px;
-  font-size: 50px;
-  font-weight: 700;
-  color: #fffa;
-  z-index: 1;
-  cursor: pointer;
-  border-radius: 50%;
+.rightArrow:hover{
+  color: #fff;
+  transform: scale(1.2);
 }
 
 .carrousel-cont-img {
