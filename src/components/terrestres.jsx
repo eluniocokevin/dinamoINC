@@ -86,6 +86,9 @@ return(
       </div>
     </div>
 
+
+{/*---------------mobile-----------------*/}
+
     <div className={`${stylesTerrestres.cuerpom}`}>  
 
       <div className={`${stylesTerrestres.iconosm}`}>

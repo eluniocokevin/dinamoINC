@@ -99,13 +99,13 @@ return(
               <a className={`${stylesActividad.btn}`}href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
                 <p>Ubicación</p>
                 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
-  width="30"
-  version="1.1"
-  viewBox="1067.5 1594.5 41 41"
-  height="30"
->
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  width="30"
+                  version="1.1"
+                  viewBox="1067.5 1594.5 41 41"
+                  height="30"
+                >
   <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74d71ca" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`}rx="0" ry="0">
     <g id="shape-d1c45c01-21bf-80bd-8002-e91ef74f4831">
       <g className={`${stylesActividad.fills}`}id="fills-d1c45c01-21bf-80bd-8002-e91ef74f4831">
