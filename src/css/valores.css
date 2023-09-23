@@ -127,11 +127,12 @@ h1 {
 
   margin-top: 10vh;
   margin-bottom: 80px;
-  color: #395B8B;
   text-align: center;
 
 }
-
+.valores{ color: #FDE78F;}
+.mision{ color: #97D796;}
+.vision{ color: #6b89dd;}
 
 
 .cards-grid p {
