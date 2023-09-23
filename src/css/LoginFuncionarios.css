@@ -26,7 +26,7 @@ input{
      margin: auto;
      margin-top: 5em;
      margin-bottom: 3em;
-     background-color: #277ed0;
+     background-color: #395B8B;
      color: white;
      border-width:0 ;
      padding: 0.6em;
@@ -41,7 +41,7 @@ input{
    }
    
    .login-funcionarios.show {
-     transform: translateX(0px);
+    transform:translate(5px,5px);
      transition: all 2s;
      min-height: 479px;
      width: 264px;
@@ -49,6 +49,26 @@ input{
      position: absolute;
     background-color: white;
     text-align: center;
+    border-radius: 10px;
 
    }
-   
+   .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #284369;
+    font-size: 2em;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.close {
+    width: 50%;
+    height: 50%;
+}
