@@ -67,6 +67,7 @@ input{
     border-bottom-left-radius: 20px;
     cursor: pointer;
     z-index: 1;
+    border-top-right-radius: 10px;
 }
 .close {
     width: 50%;
