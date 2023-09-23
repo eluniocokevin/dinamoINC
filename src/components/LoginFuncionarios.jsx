@@ -1,16 +1,20 @@
 import "../css/LoginFuncionarios.css";
-import { useRef } from "react";
+import { useRef} from "react";
 
 function LoginFuncionarios() {
+  
   const refCedula = useRef(null);
   const refContrasena = useRef(null);
+
   const url = "http://localhost/archivos/registrar.php";
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       cedula: refCedula.current.value,
       contrasena: refContrasena.current.value,
+      
     };
+  
 
     try {
       const res = await fetch(url, {
@@ -40,12 +44,15 @@ function LoginFuncionarios() {
       console.error("Error:", error);
     }
   };
-
+ 
   return (
     <>
       <div className="img">
-        <img src="/sorianodeptofertil.png" alt="" />
+        <img src="/sorianodeptofertil.png" alt="icono soriano" />
       </div>
+      <span className="icon-close">
+        <img src="/cross2.png" className="close" alt="cerrar"/>
+    </span>
       <h2>¡Ingrese como funcionario!</h2>
       <form>
         <input ref={refCedula} type="text" placeholder="Cedula" />
@@ -54,6 +61,7 @@ function LoginFuncionarios() {
           Ingresar
         </button>
       </form>
+
     </>
   );
 }
