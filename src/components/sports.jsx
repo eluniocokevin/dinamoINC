@@ -15,7 +15,7 @@ function Sports() {
         
         <div className="target-sports target2">
           <div className="cont-img">
-            <img src="/remo.jpg" alt="" />
+            <img src="/remo3.jpg" alt="" />
           </div>
           <div className="text">
             <span>Actividades Temporales</span>
