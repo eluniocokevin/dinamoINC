@@ -6,6 +6,22 @@
 }
 .mapa{padding-top: 13vh;}
 
+
+.texto_deportes{
+	text-align: center;
+}
+.boton{
+	background-color: #38c;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 0 4px;
+}
+
+
+
+
 @media screen and (min-width:0px) and (max-width:900px){
 	.leaflet-container {
 	 max-height: 45vh;
