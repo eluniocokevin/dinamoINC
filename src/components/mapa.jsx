@@ -32,91 +32,91 @@ function Mapa() {
   
   <Marker position={[-33.250953044554095, -58.0295996290304]}>
     <Popup>
-    Deportes en <br /> Mercedes
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'>Mercedes</div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.5300, -58.2170]}>
     <Popup>
-    Deportes en <br /> Dolores
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Dolores </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.62241826051648, -57.57199068758437]}>
     <Popup>
-    Deportes en <br /> Risso
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Risso </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.601577148845024, -57.626995878335535]}>
     <Popup>
-    Deportes en <br /> Egaña
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Egaña </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.8650252848595, -57.37303854222891]}>
     <Popup>
-    Deportes en <br /> Cardona
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Cardona </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.79039122144177, -57.48958745651217]}>
     <Popup>
-    Deportes en <br /> Santa Catalina
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Santa Catalina </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.6967784000407, -57.53376805212432]}>
     <Popup>
-    Deportes en <br /> Rodó
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Rodó </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.50933235235269, -57.800851050023084]}>
     <Popup>
-    Deportes en <br /> Palmitas
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Palmitas </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.398101058564684, -58.31770708137367]}>
     <Popup>
-    Deportes en <br /> Villa Soriano
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Villa Soriano </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.69900269672159, -58.111733824090244]}>
     <Popup>
-    Deportes en <br /> Cañada Nieto
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Cañada Nieto </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.06136836232029, -57.45812142654608]}>
     <Popup>
-    Deportes en <br /> Palmar
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Palmar </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.82986631876721, -57.789428536832816]}>
     <Popup>
-    Deportes en <br /> Lares y Perseverano
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Lares y Perseverano </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.809577519404506, -58.26537095818607]}>
     <Popup>
-    Deportes en <br /> Agraciada
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Agraciada </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.828728, -58.022985]}>
     <Popup>
-    Deportes en <br /> Palo Solo
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Palo Solo </div>
     </Popup>
   </Marker>
 
   <Marker position={[-33.119399, -57.632369]}>
     <Popup>
-    Deportes en <br /> Villa Darwin
+    <div className='texto_deportes'>Deportes en</div> <div className='boton'> Villa Darwin </div>
     </Popup>
   </Marker>
 
