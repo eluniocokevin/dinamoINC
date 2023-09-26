@@ -80,25 +80,36 @@ padding-top:3% ;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-.social_icone:hover {
-  transform: scale(1.5); /* Escala el ícono al 120% */
+
+
+
+.redes a img{
+  margin-top: 100%;
+  width: 150%;
 }
-.zoom:hover {
-  transform: scale(1.1); /* Escala el ícono al 120% */
+.redes a svg{
+  margin-top: 50%;
+  width: 100%;
+}
+
+
+
+.social_icone:hover {
+  transform: scale(1.3); /* Escala el ícono al 120% */
 }
 
 
 /* Estilos para los pseudo elementos en la animación */
-.social_icone::before,
-.social_icone::after {
+.social_icone::before{
   content: '';
   position: fixed;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* Color transparente de fondo */
-z-index: -1; /* Detrás del ícono principal */
-margin-top: 165%;
+  z-index: -1;
+  margin-top: 160%;
 }
+
+
+
 
 /* Animación al pasar el mouse */
 .social_icone:hover::before {
@@ -108,13 +119,6 @@ margin-top: 165%;
   height: 0.1vh;
 
 }
-
-.social_icone:hover::after {
-  background-color: rgba(193, 60, 60, 0.0); /* Color de fondo con transparencia */
-  justify-content: center;
-  align-items: center;
-  height:0.1vh;
-  }
 
 .copyright {
   height: 5vh;
@@ -128,6 +132,32 @@ span{
 
 font-size: small;
 }
+
+
+
+.youtube:hover{
+  fill: #f00;
+}
+
+
+
+.facebook:hover{
+  fill: #33f;
+}
+
+.instagrame:hover{
+  fill: #d6249f;
+  border-radius: 10px;
+}
+
+
+
+.twitter:hover{
+  fill: #2196fe;
+}
+
+
+
 
 
 
