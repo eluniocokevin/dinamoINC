@@ -67,7 +67,7 @@ function Preguntas() {
 		
 		<Pregunta
 		pregunta='¿Las actividades tienen costo?'
-		respuesta='Las actividade son completamente gratis para todos los que quieran participar'
+		respuesta='Las actividades son completamente gratis para todos los que quieran participar'
 		/>
 </div>
 <div className='contacto'>
