@@ -38,8 +38,8 @@ const handleButton=()=>{
         <div className="menu">
             <a href="#" className="zoom" id="menuButton"><img src="/list.svg" /></a>
             <div className="dropdown-content" id="dropdownContent">
-              <a href="#" onClick={toggleLogin}>Login</a>
-              <a href="preguntas" >Preguntas</a>
+              <a href="#" onClick={toggleLogin}>Login <img  className="menuimg1" src="/funcionario.svg" alt="imagen funcionarios" /></a>
+              <a href="preguntas" >Preguntas <img className="menuimg2" src="/preguntas2.png" alt="imagen localidad" /></a>
             </div>
           </div>
 
