@@ -101,6 +101,7 @@
     justify-content: space-around;
     flex-direction: column;
     padding-bottom: 10vh;
+    padding-top: 5vh;
 }
 .target-sports:hover .text{
     transform: translateY(0);
@@ -125,6 +126,7 @@
     justify-content: space-around;
     flex-direction: column;
     padding-bottom: 10vh;
+    padding-top: 5vh;
 }
 .target-sports:hover .text{
     transform: translateY(0);
@@ -155,6 +157,7 @@
     justify-content: space-around;
     flex-direction: column;
     padding-bottom: 10vh;
+    padding-top: 5vh;
 }
 .target-sports:hover .text{
     transform: translateY(0);
@@ -176,6 +179,7 @@
 @media screen and (min-width:0px) and (max-width:400px){
     
 .Sports{
+    padding-top: 5vh;
     height: 80vh;
     margin-left: 0;
     display: flex;
