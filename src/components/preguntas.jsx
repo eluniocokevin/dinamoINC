@@ -14,8 +14,11 @@ function Preguntas() {
  <Header/>
  <div className="centrado">
  <div className="todo">
- <div className="titulos">   
-			<h1>Preguntas Frecuentes</h1><br/>
+ <div className="titulos"> 
+ <div className='imagen'>  
+ <img className="preguntado" src="/pregunta.png" alt="preguntas icon" /> 
+</div>
+			<h1>Preguntas Frecuentes   </h1>
 			
 			<h3>
 				Hemos recopilado algunas de las preguntas frecuentes que se 
