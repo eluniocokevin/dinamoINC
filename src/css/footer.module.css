@@ -1,15 +1,17 @@
 
 .footer {
   background-color: #222233;
- 
   height: 35vh;
   flex-wrap: wrap;
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
 }
+.footer, h3{
+font-size: medium;
+padding-top:3% ;
+}
 .dinamo {
- 
   height: auto;
   flex-wrap: wrap;
   width: 30vw;
@@ -20,8 +22,8 @@
   color: white;
   padding: 1em;
   width: fit-content;
-  margin: 0;
   margin: auto;
+  margin-top: 15%;
 }
 .dinamo p {
   color: white;
@@ -29,6 +31,7 @@
   width: fit-content;
   margin: auto;
 }
+
 .logo {
   height: auto;
   width: 30vw;
@@ -43,81 +46,67 @@
   height: 100%;
 }
 .logo .redes {
-  height: auto;
   width: 100%;
+  height: auto;
   display: flex;
-  justify-content: space-around;
-  margin-top: 1em;
-  POSITION: relative;
+  align-items: center;
 }
 .logo,.redes, .social_icone {
   color: white;
+}
+.redes a, svg{
+  margin: auto;
 }
 .logo .redes a:hover {
   cursor: pointer;
   color: #2196fe;
 }
-.contacto {
-
-  height: auto;
-  flex-wrap: wrap;
-  width: 25vw;
-  display: inline-block;
-  color: rgb(232, 232, 232);
-  text-align: center;
-padding-top: 4%;
-}
-.footer, h3{
-font-size: medium;
-padding-top:3% ;
-
-}
 .social_icone {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 24px;
+  width: 20%;
+  height: auto;
   color: #333;
   text-decoration: none;
-  transition: transform 0.3s ease;
 }
 
+/* .social_icone:hover {
+  transform: scale(1.3);
+} */
 
-
-.redes a img{
-  margin-top: 100%;
-  width: 150%;
+.social_icone svg{
+  width: 80%;
 }
-.redes a svg{
-  margin-top: 50%;
-  width: 100%;
-}
-
-
-
-.social_icone:hover {
-  transform: scale(1.3); /* Escala el ícono al 120% */
-}
-
-
 /* Estilos para los pseudo elementos en la animación */
-.social_icone::before{
+
+/* .social_icone::before{
   content: '';
   position: fixed;
   width: 100%;
   z-index: -1;
-  margin-top: 160%;
-}
-
-
+  margin-top: 120%;
+  
+} */
 
 
 /* Animación al pasar el mouse */
+
+/* 
 .social_icone:hover::before {
-  background-color: rgba(255, 255, 255, 0.89); /* Color de fondo con transparencia */
+  background-color: rgba(255, 255, 255, 0.89);
   justify-content: center;
   align-items: center;
   height: 0.1vh;
+} */
 
+.contacto { 
+  height: auto;
+  width: 25vw;
+  display: inline-block;
+  color: rgb(232, 232, 232);
+  text-align: center;
+  padding-top: 4%;
+}
+.contacto :first-child{
+  margin-top: 15%;
 }
 
 .copyright {
@@ -129,40 +118,65 @@ padding-top:3% ;
 }
 
 span{
-
-font-size: small;
+  font-size: small;
 }
+
+
+
+
+
+
+
+
+@media screen and (min-width:700px){
+
+.social_icone {
+  width: auto;
+  height: auto;
+  display: flex;
+  font-size: 24px;
+  color: #333;
+  background-color: #222;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 10px 1px #555;
+  transition: all linear .2s;
+}
+
 
 
 
 .youtube:hover{
-  fill: #f00;
+  background-color: #f00;
+  box-shadow: 0 0 10px 1px #eee;
+  border-radius: 50%;
 }
 
-
-
 .facebook:hover{
-  fill: #33f;
+  background-color:  #33f;
+  box-shadow: 0 0 10px 1px #eee;
+  border-radius: 50%;
 }
 
 .instagrame:hover{
-  fill: #d6249f;
-  border-radius: 10px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0 0 10px 1px #eee;
+  border-radius: 50%;
 }
 
 
 
 .twitter:hover{
-  fill: #2196fe;
+  background-color: #2196fe;
+  box-shadow: 0 0 10px 1px #eee;
+  border-radius: 50%;
+}
 }
 
 
-
-
-
-
-
 @media screen and (min-width:700px) and (max-width:900px){
+
 .footer {
   background-color: #222233;
   height: 25vh;
@@ -174,135 +188,162 @@ font-size: small;
 .footer, h3{
   font-size: small;
   padding-top:3% ;
-  
-    }
-    .logo .redes {
-   
-      margin-top: 0em;
-  }
-    
-  .logo .img {
-    height: 14vh !IMPORTANT;
-    width: 100%;
 }
 
+.logo .img {
+  height: 14vh;
+  width: 100%;
+}
+.logo .redes{
+  width: 100%;
+}
+.redes a{
+  margin: auto;
+}
+.redes a svg{ 
+  width: 100%;
+}
+}
 
-    }
+@media screen and (min-width:600px) and (max-width:700px){
 
-    @media screen and (min-width:600px) and (max-width:700px){
+.footer {
+  background-color: #222233;
+  height: 22vh;
+  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+} 
+.footer, h3{
+  font-size: small;
+  padding-top:3% ;
 
-      .footer, h3{
-        font-size: small;
-        padding-top:3% ;
-        
-          }
-          .footer {
-            background-color: #222233;
-            height: 22vh;
-            flex-wrap: wrap;
-            width: 100%;
-            display: grid;
-            grid-template-columns: auto auto auto;
-        }
-        .logo .redes {
-   
-          margin-top: 0em;
-      }
-      .logo .img {
-        height: 14vh !IMPORTANT;
-        width: 100%;
-    }
-          }
+}
+.logo .img {
+  height: 14vh;
+  width: 100%;
+}
+.logo .redes{
+  width: 100%;
+}
+.redes a{
+  margin: auto;
+}
+.redes a svg{ 
+  width: 100%;
+}
+}
 
-    @media screen and (min-width:400px) and (max-width:600px){
+@media screen and (min-width:400px) and (max-width:600px){
+.footer {
+  background-color: #222233;
+  height: 22vh;
+  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.footer, h3{
+  font-size: small;
+} 
+.logo .img {
+  height: 12vh;
+  width: 100%;
+}
+.logo .redes{
+  width: 100%;
+}
+.redes a{
+  width: 20%;
+  margin: auto;
+}
+.redes a svg{ 
+  width: 100%;
+}
 
-      .footer, h3{
-        font-size: 9px;
-        padding-top:1% ;
-
-            } 
-            .footer {
-              background-color: #222233;
-              height: 22vh;
-              flex-wrap: wrap;
-              width: 100%;
-              display: grid;
-              grid-template-columns: auto auto auto;
-          }
-          .logo .redes {
-   
-            margin-top: 0em;
-        }
-        .logo .img {
-          height: 14vh !IMPORTANT;
-          width: 100%;
-      }
-        }
+}
     
     
 
 @media screen and (min-width:350px) and (max-width:400px){
-  .redes{
-    width: 100%;
-  }
-  .redes a svg{ 
-   width: 300%;
-  }
+.footer {
+  background-color: #222233;
+  height: 20vh;
+  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
 .footer, h3{
   font-size: 9px;
-  padding-top:3% ; }
-.logo .redes{
-  width: 100%;
-  margin-right: 30%;
-}
-  .footer {
-    background-color: #222233;
-    height: 20vh;
-    flex-wrap: wrap;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-.logo .redes {
-   
-  margin-top: 0em;
+  padding-top:3% ;
 }
 .logo .img {
-height: 14vh !IMPORTANT;
-width: 100%;
+  height: 10vh;
+  width: 100%;
 }
+.logo .redes{
+  width: 100%;
+}
+.redes a{
+  width: 20%;
+  margin: auto;
+}
+.redes a svg{ 
+  width: 100%;
+}
+
 }  
 
 
 @media screen and (min-width:0px) and (max-width:350px){  
-  .redes{
-    width: 100%;
-  }
-  .redes a svg{ 
-   width: 450%;
-  }
-  .footer, h3{
-    font-size: 9px;
-    padding-top:3% ; }
-  .logo .redes{
-    width: 100%;
-    margin-right: 30%;
-  }
-    .footer {
-      background-color: #222233;
-      height: 20vh;
-      flex-wrap: wrap;
-      width: 100%;
-      display: grid;
-      grid-template-columns: auto auto auto;
-  }
-  .logo .redes {
-     
-    margin-top: 0em;
-  }
-  .logo .img {
-  height: 14vh !IMPORTANT;
+.footer {
+  background-color: #222233;
+  height: 20vh;
+  flex-wrap: wrap;
   width: 100%;
-  }
-  
- }
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-size: 9px;
+}
+.dinamo h4 {
+  margin-top: 45%;
+}
+
+.contacto :first-child{
+  margin-top: 45%;
+}
+.footer, h3{
+  font-size: 9px;
+  padding-top:3% ;
+}
+.logo .img {
+  height: 10vh;
+  width: 100%;
+}
+.logo .redes{
+  width: 100px;
+  justify-content: space-between;
+}
+.logo .redes {
+  margin-top: 0em;
+}
+
+.redes a{
+  width: 20%;
+  margin: 0;
+}
+.redes a svg{ 
+  width: 100%;
+}
+
+}
+
+@media screen and (min-width:0px) and (max-width:290px){
+
+.logo .redes{
+  width: 100px;
+  justify-content: center;
+}
+}
