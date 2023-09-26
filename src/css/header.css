@@ -17,6 +17,14 @@
     display: none;
     
 }
+.menuimg1{
+  margin-left: 1%;
+  height: 25px;
+}
+.menuimg2{
+  margin-left: 1%;
+  height: 25px;
+}
 
 .div-img {
     height: 100%;
@@ -66,10 +74,15 @@
     margin-top: 1%;
   
 }
+.menu .dropdown-content{
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
 
+}
 .zoom {
   display:table-cell;
   transition: transform 0.3s ease; 
+ 
 }
 .funcionario img {
   width: 90%;
