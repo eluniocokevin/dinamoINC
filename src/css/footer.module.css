@@ -12,7 +12,7 @@
  
   height: auto;
   flex-wrap: wrap;
-  width: 25vw;
+  width: 30vw;
   text-align: center;
   display: inline-block;
 }
@@ -241,11 +241,20 @@ font-size: small;
     
     
 
-@media screen and (min-width:0px) and (max-width:400px){
+@media screen and (min-width:350px) and (max-width:400px){
+  .redes{
+    width: 100%;
+  }
+  .redes a svg{ 
+   width: 300%;
+  }
 .footer, h3{
   font-size: 9px;
   padding-top:3% ; }
-
+.logo .redes{
+  width: 100%;
+  margin-right: 30%;
+}
   .footer {
     background-color: #222233;
     height: 20vh;
@@ -263,8 +272,37 @@ height: 14vh !IMPORTANT;
 width: 100%;
 }
 }  
-.logo .img {
-  height: 20vh;
-  width: 100%;
-}
 
+
+@media screen and (min-width:0px) and (max-width:350px){  
+  .redes{
+    width: 100%;
+  }
+  .redes a svg{ 
+   width: 450%;
+  }
+  .footer, h3{
+    font-size: 9px;
+    padding-top:3% ; }
+  .logo .redes{
+    width: 100%;
+    margin-right: 30%;
+  }
+    .footer {
+      background-color: #222233;
+      height: 20vh;
+      flex-wrap: wrap;
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto;
+  }
+  .logo .redes {
+     
+    margin-top: 0em;
+  }
+  .logo .img {
+  height: 14vh !IMPORTANT;
+  width: 100%;
+  }
+  
+ }
