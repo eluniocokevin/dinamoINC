@@ -7,7 +7,7 @@ function Noticias() {
           <div className="img">
             <img src="/noticia1.jpg" alt="" />
           </div>
-          <div className="type"><h7>Remo</h7></div>
+          <div className="type"><h6>Remo</h6></div>
           <div className="info">
             <div className="text">
               <h3>Se inagura el centro de alto rendimiento del Club De Remeros Mercedes</h3>
@@ -24,7 +24,7 @@ function Noticias() {
           <div className="img">
             <img src="/yoga.jpg" alt="" />
           </div>
-          <div className="type"><h7>Yoga</h7></div>
+          <div className="type"><h6>Yoga</h6></div>
           <div className="info">
             <div className="text">
               <h3>Encuentro de Yoga: un espacio para la conexión y la participación</h3>
@@ -40,7 +40,7 @@ function Noticias() {
           <div className="img">
             <img src="/corre.jpeg" alt="" />
           </div>
-          <div className="type"><h7>Atletismo</h7></div>
+          <div className="type"><h6>Atletismo</h6></div>
           <div className="info">
             <div className="text">
               <h3>Última fecha de las 8 de Soriano en Cardona</h3>
@@ -56,7 +56,7 @@ function Noticias() {
           <div className="img">
             <img src="/SKATE.jpeg" alt="" />
           </div>
-          <div className="type"><h7>Skate</h7></div>
+          <div className="type"><h6>Skate</h6></div>
           <div className="info">
             <div className="text">
               <h3>Pateando la pista: inauguramos Skate Park Mercedes</h3>
@@ -72,7 +72,7 @@ function Noticias() {
           <div className="img">
             <img src="/futbolfem.jpg" alt="" />
           </div>
-          <div className="type"><h7>Futbol</h7></div>
+          <div className="type"><h6>Futbol</h6></div>
           <div className="info">
             <div className="text">
               <h3>Partido amistoso del plantel femenino U2030</h3>
@@ -88,7 +88,7 @@ function Noticias() {
           <div className="img">
             <img src="/skateestreno.jpg" alt="" />
           </div>
-          <div className="type"><h7>Skate</h7></div>
+          <div className="type"><h6>Skate</h6></div>
           <div className="info">
             <div className="text">
               <h3>Se inaugura Skate Park Mercedes</h3>
