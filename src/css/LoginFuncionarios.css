@@ -52,8 +52,8 @@
 }
 .cont_logo .img{
     display: flex;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 80%;
     margin: auto;
 }
 .img img {
