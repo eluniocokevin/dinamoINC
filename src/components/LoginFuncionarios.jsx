@@ -47,21 +47,25 @@ function LoginFuncionarios() {
  
   return (
     <>
-      <div className="img">
-        <img src="/sorianodeptofertil.png" alt="icono soriano" />
-      </div>
       <span className="icon-close">
         <img src="/cross2.png" className="close" alt="cerrar"/>
-    </span>
+      </span>
+
+      <div className="cont_logo">
+        <div className="img">
+          <img src="/sorianodeptofertil.png" alt="icono soriano" />
+        </div>
+
+      </div>
       <h2>¡Ingrese como funcionario!</h2>
       <form className="form">
 
         <div className="input1">
-          <input className="input" type="text" ref={refCedula} required/>
+          <input className="input" type="text" ref={refCedula} required />
           <label class="lbl-nombre">
             <span class="text-nomb">Cedula</span>
           </label>
-          <span className="cont_ico"><img className="ico1" src="/user.svg" alt="" /></span>
+          <div className="cont_ico"><img className="ico1" src="/user.svg" alt="" /></div>
         </div>
 
         <div className="input2">
@@ -69,7 +73,7 @@ function LoginFuncionarios() {
           <label class="lbl-nombre2">
             <span class="text-nomb2">Contraseña</span>
           </label>
-          <span className="cont_ico"><img className="ico2" src="/code.svg" alt="" /></span>
+          <div className="cont_ico"><img className="ico2" src="/code.svg" alt="" /></div>
         </div>
 
 
