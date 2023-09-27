@@ -54,12 +54,36 @@ function LoginFuncionarios() {
         <img src="/cross2.png" className="close" alt="cerrar"/>
     </span>
       <h2>¡Ingrese como funcionario!</h2>
-      <form>
-        <input ref={refCedula} type="text" placeholder="Cedula" />
-        <input ref={refContrasena} type="password" placeholder="Contraseña" />
-        <button onClick={handleSubmit} type="submit">
-          Ingresar
-        </button>
+      <form className="form">
+
+        <div className="input1">
+          <input className="input" type="text" ref={refCedula} required/>
+          <label class="lbl-nombre">
+            <span class="text-nomb">Cedula</span>
+          </label>
+          <span className="cont_ico"><img className="ico1" src="/user.svg" alt="" /></span>
+        </div>
+
+        <div className="input2">
+          <input className="input" type="text" ref={refCedula} required/>
+          <label class="lbl-nombre2">
+            <span class="text-nomb2">Contraseña</span>
+          </label>
+          <span className="cont_ico"><img className="ico2" src="/code.svg" alt="" /></span>
+        </div>
+
+
+
+
+        {/* <input className="input" ref={refCedula} type="text" placeholder="Cedula" />
+        <input className="input" ref={refContrasena} type="password" placeholder="Contraseña" /> */}
+        
+        
+        <div className="cont_btn_login">
+          <button className="boton_login" onClick={handleSubmit} type="submit">
+            Ingresar
+          </button>
+        </div>
       </form>
 
     </>
