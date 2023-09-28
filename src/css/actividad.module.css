@@ -7,7 +7,6 @@
     display:none;
 }
 .titulo, .h1{
-    padding-top:10% ;
     width: 100%;
     text-align: center;
    font-size: xx-large;
@@ -49,12 +48,12 @@
 }
 
 .tarjetaactividad{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
     margin-top: 10%;
     width: 90%;
     height: 35vh;
-    border-radius: 5px;
-    box-shadow: rgb(61, 62, 63) 3px 3px 6px 0px ;
+    border-radius: 20px;
+    box-shadow: rgb(61, 62, 63) 0 0 10px 1px ;
     display: flex;
     justify-content: flex-start;
 }
@@ -89,7 +88,8 @@
     align-items: center;
     padding-left: 2%;
     display:flex;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px 2px #888;    
 }
 .btn p{
     color: white;
@@ -104,7 +104,7 @@
     align-items: center !important;
 }
 .imagenac{
-    border-radius: 5px;
+    border-radius: 10px;
     width: 100%;
     height: 90%;
     align-items: center;
@@ -128,6 +128,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 0 0 2rem 0;
 }
 
 .tarjetaevento{
@@ -165,7 +166,11 @@ margin-bottom: 5%;
 }
 
 .btn:hover {
+    transition: all linear .2s;
     transform: scale(1.1); /* Escala el ícono al 120% */
+    background-color: #2191af;
+    box-shadow: #000 0 0 10px 1px;
+    border-radius: 5px;
   }
  
 
@@ -198,7 +203,6 @@ width: auto;
     display:none;
 }
 .titulo, .h1{
-    padding-top:20% ;
     font-size: larger;
 }
     
@@ -225,7 +229,6 @@ width: auto;
     display: none;
 }
 .titulo, .h1{
-    padding-top:25%;
     font-size: larger;
 }
    
@@ -261,9 +264,9 @@ width: auto;
     align-items: center;
     margin: 10% 0;
     padding-bottom: 20px;
-    background-color: rgb(240, 240, 240);
-    box-shadow: rgb(61, 62, 63) 3px 3px 6px 0px;
-    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: rgb(61, 62, 63) 0 0 10px 1px;
+    border-radius: 20px;
 }
 .titulom{
     margin-top: 5%;
