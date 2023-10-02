@@ -5,6 +5,10 @@ import stylesFuncionarios from "../css/funcionarios.module.css";
 import CrearNoticia from "./crearnoticia";
 import CrearEvento from "./crearEvento";
 import CrearDeporte from "./crearDeporte";
+import EditarUsuarios from "./editarUsuarios";
+
+
+
 function Funcionarios() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
@@ -20,23 +24,42 @@ function Funcionarios() {
   }
   const [mostrarCrearNoticia, setMostrarCrearNoticia] = useState(false);
   const [mostrarCrearEvento, setMostrarCrearEvento] = useState(false);
-  const [mostrarCrearDeporte, setMostrarCrearDeporte] = useState(false);
+  const [mostrarCrearDeporte, setMostrarCrearDeporte] = useState(true);
+  const [mostrarUsuario, setMostrarUsuarios] = useState(false);
+
+
+
+
+
     const handleNoticia = () => {
-      setMostrarCrearEvento(false)
+      setMostrarCrearEvento(false);
       setMostrarCrearDeporte(false);
+      setMostrarUsuarios(false);
       setMostrarCrearNoticia(!mostrarCrearNoticia);
     }
     const handleEvento=()=>{
         setMostrarCrearNoticia(false);
         setMostrarCrearDeporte(false);
+        setMostrarUsuarios(false);
         setMostrarCrearEvento(!mostrarCrearEvento);
     }
     const handleDeporte=()=>{
         setMostrarCrearNoticia(false);
-        setMostrarCrearEvento(false)
+        setMostrarCrearEvento(false);
+        setMostrarUsuarios(false);
         setMostrarCrearDeporte(!mostrarCrearDeporte);
     }
 
+    const handleUsuario=()=>{
+      setMostrarCrearNoticia(false);
+      setMostrarCrearDeporte(false);
+      setMostrarCrearEvento(false);
+      setMostrarUsuarios(!mostrarUsuario);
+    }
+
+
+
+    
   return (
     <>
     
@@ -56,33 +79,19 @@ function Funcionarios() {
 
           <div className={stylesFuncionarios.med}>
             <div className={`${stylesFuncionarios.inicio} ${stylesFuncionarios.elem}`}><h1></h1></div>
-            <div className={`${stylesFuncionarios.deportes} ${stylesFuncionarios.elem}`}><h1><a onClick={handleDeporte}>Deportes</a></h1></div>
-            <div className={`${stylesFuncionarios.eventos} ${stylesFuncionarios.elem}`}><h1><a onClick={handleEvento}>Eventos</a></h1></div>
-            <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} `}><h1><a onClick={handleNoticia}>Noticias</a></h1></div>
-            <div className={`${stylesFuncionarios.elem}`}><h1></h1></div>
+            <div className={`${stylesFuncionarios.deportes} ${stylesFuncionarios.elem} ${mostrarCrearDeporte ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleDeporte}>Deportes</a></h1></div>
+            <div className={`${stylesFuncionarios.eventos} ${stylesFuncionarios.elem} ${mostrarCrearEvento ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleEvento}>Eventos</a></h1></div>
+            <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarCrearNoticia ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleNoticia}>Noticias</a></h1></div>
+            <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
           </div>
 
 
           <div className={`${stylesFuncionarios.der}`}>
             <div className={`${stylesFuncionarios.inicio} ${stylesFuncionarios.elem}`}>
-              <svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="80" xmlns="http://www.w3.org/2000/svg"  id="screenshot-a23732a4-08d0-80a5-8002-f21c76667f9b" version="1.1" viewBox="841 594 80 80" height="80">
-                <g id="shape-a23732a4-08d0-80a5-8002-f21c76667f9b">
-                  <g className="fills" id="fills-a23732a4-08d0-80a5-8002-f21c76667f9b">
-                    <path rx="0" ry="0"  d="M841.000,674.000C871.118,674.000,921.000,639.867,921.000,594.000L921.000,594.000L921.000,674.000L841.000,674.000ZL841.000,674.000Z">
-                    </path>
-                  </g>
-                </g>
-              </svg>
+              
             </div>
             <div className={`${stylesFuncionarios.deportes} ${stylesFuncionarios.elem}`}></div>
-            <div className={`${stylesFuncionarios.elem}`}><svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="80" xmlns="http://www.w3.org/2000/svg"  id="screenshot-a23732a4-08d0-80a5-8002-f21d0ac97003" version="1.1" viewBox="841 804 80 80" height="80">
-              <g id="shape-a23732a4-08d0-80a5-8002-f21d0ac97003">
-                <g className={`${stylesFuncionarios.fills}`} id="fills-a23732a4-08d0-80a5-8002-f21d0ac97003">
-                  <path rx="0" ry="0"  d="M921.000,884.000C921.000,853.882,886.867,804.000,841.000,804.000L841.000,804.000L921.000,804.000L921.000,884.000ZL921.000,884.000Z">
-                  </path>
-                </g>
-              </g>
-            </svg></div>
+            <div className={`${stylesFuncionarios.elem}`}></div>
             <div className={`${stylesFuncionarios.elem}`}></div>
             <div className={`${stylesFuncionarios.elem}`}></div>
           </div>
@@ -96,6 +105,7 @@ function Funcionarios() {
         {mostrarCrearNoticia && <CrearNoticia />}
         {mostrarCrearEvento && <CrearEvento/>}
         {mostrarCrearDeporte && <CrearDeporte/>}
+        {mostrarUsuario && <EditarUsuarios/>}
       </div>
     </div>
 

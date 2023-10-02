@@ -69,7 +69,7 @@ function LoginFuncionarios() {
         </div>
 
         <div className="input2">
-          <input className="input" type="text" ref={refCedula} required/>
+          <input className="input" type="text" ref={refContrasena} required/>
           <label class="lbl-nombre2">
             <span class="text-nomb2">Contraseña</span>
           </label>
