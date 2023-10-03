@@ -47,9 +47,6 @@ function LoginFuncionarios() {
  
   return (
     <>
-      <span className="icon-close">
-        <img src="/cross2.png" className="close" alt="cerrar"/>
-      </span>
 
       <div className="cont_logo">
         <div className="img">

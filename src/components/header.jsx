@@ -16,12 +16,26 @@ const handleButton=()=>{
   setLocation(false);
 }
 
+const closeLogin = ()=>{
+  setShowLogin((prevShowLogin) => !prevShowLogin);
+}
+
+
+
+const algo = document.getElementById('cerrar');
+
   return (
     
       <>
     <div className="fullheader">
       <div className="header">
-      <div className={`login-funcionarios ${showLogin ? "show" : ""}`}>
+
+      
+
+      <div className={`login-funcionarios ${showLogin ? "show" : ""}`} id="algo">
+        <div id="cerrar" onClick={closeLogin} className="icon-close">
+          <img src="/cross2.png" alt="cosa" className="close"/>
+        </div>
         <LoginFuncionarios/>
       </div>
       <div className={`localidades ${showlocation ? "show" : ""}`}>
