@@ -130,15 +130,22 @@ h1 {
   text-align: center;
 
 }
-.valores{ color: #FDE78F;}
-.mision{ color: #97D796;}
-.vision{ color: #6b89dd;}
+.valores {
+  color: #FDE78F;
+}
 
+.mision {
+  color: #97D796;
+}
+
+.vision {
+  color: #6b89dd;
+}
 
 .cards-grid p {
   margin: 0;
-padding-right: 10px;
-padding-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   color: white;
 }
 
@@ -187,9 +194,31 @@ padding-left: 10px;
   text-align: center;
   display: grid;
   place-items: center;
-  background-color: #395B8B;
   transform: rotateY(180deg);
 }
+
+.card_back_vision{
+  background-color: #395B8B;
+}
+
+.card_back_mision{
+  background-color: #51944f;
+}
+
+.card_back_valores {
+  background-color: #e0c341;
+}
+
+
+
+
+
+
+
+
+
+
+
 .flip-card:hover .flip-card-inner {
   transform: rotateY(-180deg);
 }

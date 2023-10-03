@@ -65,14 +65,15 @@
     width: 35%;
     height: 1.8rem;
     margin: auto;
-    background-color: rgba(28, 53, 130, 0.81);
+    background-color: #2e5287;
     font-size: 1.3rem;
     border-radius: 13px;
     /* color: #2196fe; */
     cursor: pointer;
 }.target-sports .text a:hover{
-    color: #000;
-    background-color: rgb(165, 167, 233);
+    color: #fff;
+    background-color: #2277ca;
+    /* background-color: #3cb79f; */
 }
 
 
