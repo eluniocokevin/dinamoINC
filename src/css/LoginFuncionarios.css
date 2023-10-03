@@ -21,28 +21,6 @@
     margin: 5px;
 }
 
-.icon-close {
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    background: #284369;
-    color: #ffffff;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 10px;
-    cursor: pointer;
-}
-.close {
-    width: 50%;
-    height: 50%;
-}
-
 .cont_logo{
     height: 20vh;
     width: 70%;
