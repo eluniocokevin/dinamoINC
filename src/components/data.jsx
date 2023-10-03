@@ -6,6 +6,6 @@ export const data = [
     id: 2, imgUrl: "/agua.JPG"
 },
 {
-    id: 3, imgUrl: "/arena.JPG"
+    id: 3, imgUrl: "/arena.webp"
 },
 ];

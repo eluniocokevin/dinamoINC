@@ -86,7 +86,7 @@ function Noticias() {
         </div>
         <div className="target-noticias">
           <div className="img">
-            <img src="/skateestreno.jpg" alt="" />
+            <img src="/skateestreno.webp" alt="" />
           </div>
           <div className="type"><h6>Skate</h6></div>
           <div className="info">

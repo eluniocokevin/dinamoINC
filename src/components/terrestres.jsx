@@ -52,7 +52,7 @@ return(
         
         <div className={`${stylesTerrestres.actividadesa}`}>
           <Actividad
-            img='futbola.jpg'
+            img='futbola.webp'
             fecha='Del 01/01/23 al 12/12/2023'
             deporte='FUTSAL'
             descripcion='Pacticas de futsal recreativo dictadas por Luciano Acosta en el club atletico praga martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
@@ -68,7 +68,7 @@ return(
 
         <div className={`${stylesTerrestres.eventos}`}>  
           <Evento
-            img='eventoremo.PNG'
+            img='eventoremo.webp'
             deporte='Remo'
             titulo='Se realizará la 4ta fecha del circuito nacional de remo'
             descripcion='En las costas del Rio Negro este 2 de septiembre se realizará la 4ta fecha del circuito nacional de remo, en la cual participarán más de 16 clubes de todo el país. Las competencias empezarán a las 8:00hs y culminará aproximadamente a las 17:00hs, habra stands de comidas de la sub comisión de remo y demas sorteos.'
@@ -125,13 +125,13 @@ return(
 
         <div className={`${stylesTerrestres.actividadesm}`}>   
           <Actividad
-            img='futbola.jpg'
+            img='futbola.webp'
             fecha='Del 01/01/23 al 12/12/2023'
             deporte='FUTSAL'
             descripcion='Pacticas de futsal recreativo dictadas por Luciano Acosta en el club atletico praga martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs.'
           />
           <Actividad
-            img='img3v.jpg'
+            img='img3v.webp'
             fecha='Del 01/01/23 al 12/11/2023'
             deporte='REMO'
             descripcion='Pacticas de remo recreativo dictadas por Pablo Camessaca en el puerto martes y viernes de 9:30hs a 11:30hs en la mañana y por la tarde de 14:00hs a 16:00hs'
@@ -139,7 +139,7 @@ return(
         </div>
         <div className={`${stylesTerrestres.eventosm}`}>  
           <Evento
-            img='eventoremo.PNG'
+            img='eventoremo.webp'
             deporte='Remo'
             titulo='Se realizará la 4ta fecha del circuito nacional de remo'
             descripcion='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nisi placeat laudantium necessitatibus corrupti id aspernatur qui soluta eaque enim, facere sed, quos quis voluptate quidem nam, nemo minima itaque.'

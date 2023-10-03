@@ -5,7 +5,7 @@ function Sports() {
       <div className="Sports">
         <div className="target-sports target1">
           <div className="cont-img">
-            <img src="/futbola.jpg" alt="" />
+            <img src="/futbola.webp" alt="" />
           </div>
           <div className="text">
             <span>Deportes Anuales</span>
