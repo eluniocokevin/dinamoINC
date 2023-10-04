@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import stylesFuncionarios from "../css/funcionarios.module.css";
-import CrearNoticia from "./crearnoticia";
+import CrearNoticia from "./crearNoticia";
 import CrearEvento from "./crearEvento";
 import CrearDeporte from "./crearDeporte";
 import EditarUsuarios from "./editarUsuarios";
