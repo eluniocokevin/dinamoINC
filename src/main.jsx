@@ -7,6 +7,7 @@ import Terrestres from './components/terrestres.jsx'
 import Preguntas from './components/preguntas.jsx'
 import Eventos from './components/eventos.jsx'
 import Funcionarios from './components/funcionarios.jsx'
+import Formulario from './components/formulario.jsx'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
       path:'/funcionarios',
       element:<Funcionarios/>
+  },
+  {
+    path:'/formulario',
+    element:<Formulario/>
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
