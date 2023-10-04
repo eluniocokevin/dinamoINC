@@ -39,7 +39,6 @@ const algo = document.getElementById('cerrar');
         <LoginFuncionarios/>
       </div>
       <div className={`localidades ${showlocation ? "show" : ""}`}>
-        <a  className="a-button" onClick={handleButton}><i className="bi bi-x"></i></a>
        
       </div>
 
