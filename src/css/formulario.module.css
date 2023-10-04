@@ -1,0 +1,240 @@
+.form_h1 {
+    text-align: center;
+    padding-bottom: 5%;
+    padding-top: 10%;
+    font-size: 65px;
+    text-shadow: 2px 4px 5px #777;
+    color: #f5d54e;
+}
+.formulario {
+    height: 100vh;
+    width: 100%;
+    background-color: #1e809ec9;
+}
+
+.form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #18BFDD;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 0px #000a;
+    color: #eee;
+}
+
+.form .form_label,.form_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 2rem;
+}
+.form .form_label{
+    margin-top: 1%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form .form_input{
+
+    margin-bottom: 1%;
+    border: none;
+    outline: none;
+    transition: all ease-out .2s;
+    background-color: #18BFDD;
+    border-bottom: #000 solid 1px;
+    color: #66666dee;
+}
+
+.form_input:focus{
+    background-color: #fff9;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.form_input::-webkit-inner-spin-button {
+    display: none;
+}
+.form_input::-webkit-outer-spin-button {
+    display: none;
+}
+
+.form .form_btns{
+    width: 90%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+
+
+.form_btn_check{
+    fill: #09ff00;
+}
+.form_btn_cancel{
+    display: flex;
+    fill: #f00404;
+    border-radius: 50%;
+}
+.form .form_button{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #2e5287ee;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius:6px;
+    padding: 0 0 0 5px;
+}
+.form_button:hover {
+    transition: all linear .2s;
+    transform: scale(1.1); /* Escala el ícono al 120% */
+    background-color: #2191af;
+    box-shadow: #000 0 0 10px 1px;
+    border-radius: 5px;
+  }
+ 
+
+
+@media screen and (min-width:1200px) and (max-width:1450px){
+
+.form_btn_check{
+    flex: 2 1;
+}
+.form_btn_cancel{
+    flex: 2 1;
+}
+}
+
+
+@media screen and (min-width:700px) and (max-width:900px){
+.form_h1 {
+    text-align: center;
+    padding-top: 24%;
+    font-size: 30px;
+}
+
+.form_button, .form_btn_check,.form_btn_cancel{
+    font-size: 10px;
+    width: 100px;
+}
+.form .form_button{
+    width: 35%;
+}
+.form .form_label{
+    margin-top: 1%;
+    font-size: 14px;
+    font-weight: bold;
+    width: 40%;
+}
+.volver .form_button{
+
+    height: 4vh;
+    width: 15vw;
+    border-radius:10px ;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:700px){
+.form_h1{
+    padding-top: 23%;
+    font-size: 30px;
+}
+.form_button, .form_btn_check,.form_btn_cancel{
+    font-size: 10px;
+    width: 100px;
+}
+.form .form_button{
+    width: 35%;
+}
+.form .form_label{
+    font-size: 15px;
+    width: 70%;
+}
+.form .form_btns{
+    margin-top: 10%;
+    width: 50%;
+}
+.form .form_input{
+    height:4vh;
+    width: 50%;
+}  
+.volver .form_button{
+    height: 4vh;
+    width: 20vw;
+    border-radius:10px ;
+} 
+}
+
+
+@media screen and (min-width:400px) and (max-width:600px){
+.form_h1{
+padding-top: 30%;
+font-size: 30px;
+}
+    
+.form_button, .form_btn_check,.form_btn_cancel{
+font-size: 10px;
+width: 100px;
+}
+.form .form_button{
+width: 48%;
+}
+
+.form .form_label{
+font-size: 15px;
+width: 70%;
+}
+.form .form_btns{
+margin-top: 10%;
+width: 50%;
+}
+.form .form_input{
+    height:4vh;
+    width: 50%;
+}   
+
+}
+        
+        
+
+@media screen and (min-width:0px) and (max-width:400px){
+.form_h1{
+padding-top: 30%;
+font-size: 30px;
+}
+.form_button, .form_btn_check,.form_btn_cancel{
+font-size: 10px;
+width: 100px;
+}
+.form .form_button{
+width: 35%;
+}
+.form .form_label{
+font-size: 15px;
+width: 70%;
+}
+.form .form_btns{
+margin-top: 10%;
+width: 80%;
+}
+    
+.form .form_input{
+    height:4vh;
+    width: 50%;
+}   
+.volver .form_button{
+height: 4vh;
+width: 35vw;
+border-radius:10px ;
+} 
+}
+    
