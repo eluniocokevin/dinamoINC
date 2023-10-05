@@ -66,47 +66,31 @@ function Funcionarios() {
 
     <div className={stylesFuncionarios.fila}>
 
-      <aside>
-          <div className={stylesFuncionarios.logo}>
-              <div className={stylesFuncionarios.img}>
+      <aside className={stylesFuncionarios.barra}>
+        <div className={stylesFuncionarios.logo}>
+            <div className={stylesFuncionarios.img}>
 
-              </div>
-          </div>
+            </div>
+        </div>
 
 
         <div className={`${stylesFuncionarios.cosas}`}>
-          <div className={stylesFuncionarios.iz}></div>
-
-          <div className={stylesFuncionarios.med}>
-            <div className={`${stylesFuncionarios.inicio} ${stylesFuncionarios.elem}`}><h1></h1></div>
-            <div className={`${stylesFuncionarios.deportes} ${stylesFuncionarios.elem} ${mostrarCrearDeporte ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleDeporte}>Deportes</a></h1></div>
-            <div className={`${stylesFuncionarios.eventos} ${stylesFuncionarios.elem} ${mostrarCrearEvento ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleEvento}>Eventos</a></h1></div>
-            <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarCrearNoticia ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleNoticia}>Noticias</a></h1></div>
-            <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
-          </div>
-
-
-          <div className={`${stylesFuncionarios.der}`}>
-            <div className={`${stylesFuncionarios.inicio} ${stylesFuncionarios.elem}`}>
-              
-            </div>
-            <div className={`${stylesFuncionarios.deportes} ${stylesFuncionarios.elem}`}></div>
-            <div className={`${stylesFuncionarios.elem}`}></div>
-            <div className={`${stylesFuncionarios.elem}`}></div>
-            <div className={`${stylesFuncionarios.elem}`}></div>
-          </div>
-
+              <div className={`${stylesFuncionarios.deportes} ${stylesFuncionarios.elem} ${mostrarCrearDeporte ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleDeporte}>Deportes</a></h1></div>
+              <div className={`${stylesFuncionarios.eventos} ${stylesFuncionarios.elem} ${mostrarCrearEvento ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleEvento}>Eventos</a></h1></div>
+              <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarCrearNoticia ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleNoticia}>Noticias</a></h1></div>
+              <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
         </div>
        
 
       </aside>
 
-      <div id="crear">
+      <div id="crear" className={`${stylesFuncionarios.crear}`}>
         {mostrarCrearNoticia && <CrearNoticia />}
         {mostrarCrearEvento && <CrearEvento/>}
         {mostrarCrearDeporte && <CrearDeporte/>}
         {mostrarUsuario && <EditarUsuarios/>}
       </div>
+
     </div>
 
 
