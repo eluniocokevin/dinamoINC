@@ -5,7 +5,7 @@
 .cuerpom{
     display:none;
 }
-.titulo, .h1{
+.titulo, .h2{
     width: 100%;
     text-align: center;
    font-size: xx-large;
@@ -56,6 +56,9 @@
     display: flex;
     justify-content: flex-start;
 }
+.tarjetaactividad .p{
+    color: #4b4b4b;
+}
 .derecha{
     width: 55%;
     border-top-right-radius: 5px;
@@ -90,7 +93,7 @@
     transition: transform 0.3s ease;
     box-shadow: 0 0 10px 2px #888;    
 }
-.btn p{
+.btn .p{
     color: white;
     text-decoration: none !important;
     font-size: 15px;
@@ -180,7 +183,12 @@ margin-bottom: 5%;
 
 /*----------mobile----------*/
   
-
+.tarjetaactividadm .p{
+    color: #4b4b4d;
+}
+.a .p{
+    color: #fff;
+}
 @media screen and (min-width:700px) and (max-width:900px){
 .cuerpom{
      display:none;
@@ -352,7 +360,7 @@ width: auto;
     box-shadow: rgb(61, 62, 63) 3px 3px 6px 0px ;
     margin-bottom:10% ;
 }
-.tarjetaevento p{
+.tarjetaevento .p{
     width: 100%;
 }
 .fechae{
@@ -389,7 +397,7 @@ width: auto;
     width: 45%;
     justify-content: center;
 }
-.btn p{
+.btn .p{
     font-size: 13px;
 }
 
