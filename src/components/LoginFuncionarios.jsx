@@ -1,4 +1,4 @@
-import "../css/LoginFuncionarios.css";
+import stylesHeader from "../css/header.module.css";
 import { useRef} from "react";
 
 function LoginFuncionarios() {
@@ -48,29 +48,29 @@ function LoginFuncionarios() {
   return (
     <>
 
-      <div className="cont_logo">
-        <div className="img">
-          <img src="/sorianodeptofertil.png" alt="icono soriano" />
+      <div className={`${stylesHeader.cont_logo}`}>
+        <div className={`${stylesHeader.cont_img}`}>
+          <img className={`${stylesHeader.img}`} src="/sorianodeptofertil.png" alt="icono soriano" />
         </div>
 
       </div>
-      <h2>¡Ingrese como funcionario!</h2>
-      <form className="form">
+      <h2 className={`${stylesHeader.h2}`}>¡Ingrese como funcionario!</h2>
+      <form className={`${stylesHeader.form}`}>
 
-        <div className="input1">
-          <input className="input" type="text" ref={refCedula} required />
-          <label class="lbl-nombre">
-            <span class="text-nomb">Cedula</span>
+        <div className={`${stylesHeader.input1}`}>
+          <input className={`${stylesHeader.input}`} type="text" ref={refCedula} required />
+          <label class={`${stylesHeader.lbl_nombre}`}>
+            <span class={`${stylesHeader.text_nomb}`}>Cedula</span>
           </label>
-          <div className="cont_ico"><img className="ico1" src="/user.svg" alt="" /></div>
+          <div className={`${stylesHeader.cont_ico}`}><img className={`${stylesHeader.ico1}`} src="/user.svg" alt="" /></div>
         </div>
 
-        <div className="input2">
-          <input className="input" type="text" ref={refContrasena} required/>
-          <label class="lbl-nombre2">
-            <span class="text-nomb2">Contraseña</span>
+        <div className={`${stylesHeader.input2}`}>
+          <input className={`${stylesHeader.input}`} type="text" ref={refContrasena} required/>
+          <label class={`${stylesHeader.lbl_nombre2}`}>
+            <span class={`${stylesHeader.text_nomb2}`}>Contraseña</span>
           </label>
-          <div className="cont_ico"><img className="ico2" src="/code.svg" alt="" /></div>
+          <div className={`${stylesHeader.cont_ico}`}><img className={`${stylesHeader.ico2}`} src="/code.svg" alt="" /></div>
         </div>
 
 
@@ -80,8 +80,8 @@ function LoginFuncionarios() {
         <input className="input" ref={refContrasena} type="password" placeholder="Contraseña" /> */}
         
         
-        <div className="cont_btn_login">
-          <button className="boton_login" onClick={handleSubmit} type="submit">
+        <div className={`${stylesHeader.cont_btn_login}`}>
+          <button className={`${stylesHeader.boton_login}`} onClick={handleSubmit} type="submit">
             Ingresar
           </button>
         </div>

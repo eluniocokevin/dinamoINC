@@ -13,19 +13,19 @@ return(
           <img className={`${stylesActividad.imagenac}`} src={`/${props.img}`} alt="imagen actividad" />
         </div>
         <div className={`${stylesActividad.fecha}`}>
-          <p>{props.fecha}</p>
+          <p className={`${stylesActividad.p}`}>{props.fecha}</p>
         </div>
       </div>
       <div className={`${stylesActividad.derecha}`}>
         <div className={`${stylesActividad.texto}`}>
-          <h2>{props.deporte}</h2>
-          <p>
+          <h2 className={`${stylesActividad.h2}`}>{props.deporte}</h2>
+          <p className={`${stylesActividad.p}`}>
             {props.descripcion}
           </p>
         </div>
-        <div className={`${stylesActividad.boton}`}>
-          <a className={`${stylesActividad.btn}`} href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
-            <p>Ubicación</p>
+        <div className={`${stylesActividad.boton} ${stylesActividad.a}`}>
+          <a className={`${stylesActividad.btn} ${stylesActividad.a}`} href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
+            <p className={`${stylesActividad.p}`}>Ubicación</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -48,8 +48,8 @@ return(
               </g>
             </svg>
           </a>
-          <a className={`${stylesActividad.btn}`} href="formulario">
-            <p>Inscribirse</p>
+          <a className={`${stylesActividad.btn} ${stylesActividad.a}`} href="formulario">
+            <p className={`${stylesActividad.p}`}>Inscribirse</p>
             <svg xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" style={{ WebkitPrintColorAdjust: 'exact' }} id="screenshot-33974a92-cec0-8016-8002-e29df2e96217" version="1.1" viewBox="1298.216 1596.608 38.951 40.405" height="30">
               <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`} rx="0" ry="0">
                 <g id="shape-33974a92-cec0-8016-8002-e29df2eb3a7c">
@@ -90,14 +90,14 @@ return(
             <img className={`${stylesActividad.imagenacm}`} src={`/${props.img}`} alt="imagen actividad" />
           </div>
           <div className={`${stylesActividad.textom}`}>
-            <p>
+            <p className={`${stylesActividad.p}`}>
               {props.descripcion}
             </p>
           </div>
           <div className={`${stylesActividad.boton}`}>
 
-            <a className={`${stylesActividad.btn}`} href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
-              <p>Ubicación</p>
+            <a className={`${stylesActividad.btn} ${stylesActividad.a}`} href="https://goo.gl/maps/9nekR7SRYQ8yVAop7">
+              <p className={`${stylesActividad.p}`}>Ubicación</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -120,8 +120,8 @@ return(
                 </g>
               </svg>
             </a>
-            <a className={`${stylesActividad.btn}`} href="formulario.html">
-              <p>Inscribirse</p>
+            <a className={`${stylesActividad.btn} ${stylesActividad.a}`} href="formulario.html">
+              <p className={`${stylesActividad.p}`}>Inscribirse</p>
               <svg xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" style={{ WebkitPrintColorAdjust: 'exact' }} id="screenshot-33974a92-cec0-8016-8002-e29df2e96217" version="1.1" viewBox="1298.216 1596.608 38.951 40.405" height="30">
                 <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`} rx="0" ry="0">
                   <g id="shape-33974a92-cec0-8016-8002-e29df2eb3a7c">
@@ -139,7 +139,7 @@ return(
             </a>
           </div>
           <div className={`${stylesActividad.fecham}`}>
-            <p>{props.fecha}</p>
+            <p className={`${stylesActividad.p}`}>{props.fecha}</p>
           </div>
         </div>
       </div>
