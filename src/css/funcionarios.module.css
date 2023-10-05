@@ -9,21 +9,23 @@ body{
 
 .crear{
     display: flex;
-    height: 100%;
+    height: auto;
     width: 80vw;
-    background-color: gold;
+    flex-direction: column;
 }
 .cont_tabla{
     display: none;
 }
 
 
-aside{
+.barra{
     background-image: radial-gradient(circle at center, #12be96 0%, #05a2bc 100%);
     width: 20vw;
+    max-width: 280px;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 svg{
     fill: #fff;
@@ -58,45 +60,77 @@ svg{
     height: 5rem;
 }
 
-
 .cosas{
-    display: flex;
-    flex-direction: row;
-    height: 70%;
-}
-.iz{
-    width: 20%;
-    height: 100%;
-}
-.med{
-    width: 60%;
+    width: 85%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-.med .elem{
+.cosas :first-child{
+    margin-top: 5rem;
+}
+.cosas .elem{
     display: flex;
     height: 5rem;
+    width: 100%;
 }
-.med .elem h1{
+.cosas .elem .h1{
     font-size: 30px;
     margin: auto;
+    cursor: pointer;
 }
-.med{
+.cosas{
     color: #fff;
 }
-.med .activo{
+.cosas .activo{
     background-color: #fff;
     border-radius: 40px;
 }
 
-.med .activo >h1>.btn_aside{
+.cosas .activo >h1>.btn_aside{
     color: #12be96
 }
-.der{
-    flex: 1 1;
-    height: 100%;
+
+
+
+
+@media screen and (min-width:0px) and (max-width: 1200px){
+
+.fila{
+    background-color: #aff;
+    flex-wrap: wrap;
+    height: auto;
 }
-.der .elem{
-    height: 5rem;
+.barra{
+    width: 100%;
+    max-width: none;
+    height: 20vh;
+    flex-direction: row;
+
+}
+.logo{
+    min-width: 175px;
+    max-width: 175px;
+}
+
+
+.cosas{
+    width: 80vw;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cosas .elem{
+    width: 23%;
+}
+.cosas :first-child{
+    margin-top: 0;
+}
+
+.crear{
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+}
 }
