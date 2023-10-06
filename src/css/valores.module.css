@@ -107,7 +107,10 @@ button:focus {
   outline: 0;
 }
 
-.cards_grid
+.cards_grid{
+  background-color: #faf7f7;
+  border-top: 1px solid #ffffff;
+}
 .photo,
 embed,
 audio,
@@ -117,10 +120,15 @@ video {
 margin-top: 10vh;
   max-width: 90%;
   height: auto;
-  
   vertical-align: middle;
 }
 
+.touch .tocarimg{
+  height: 40px;
+  padding-bottom: 10vh;
+opacity: 80%;
+display: none;
+}
 
 
 .h1 {
@@ -216,13 +224,12 @@ margin-top: 10vh;
 
 
 
-
-
 .flip_card:hover .flip_card_inner {
   transform: rotateY(-180deg);
 }
 
 @media screen and (min-width:636px) and (max-width:870px){
+
 .flip_card {
   width: 30%;
   height: 100%;
@@ -237,6 +244,9 @@ margin-top: 10vh;
  }
 
  @media screen and (min-width:450px) and (max-width:636px){
+  .touch .tocarimg{
+    display:flex;
+  }
 .cards_grid {
   padding-top: 10vh;
   flex-direction: column;
@@ -253,7 +263,7 @@ margin-top: 10vh;
 .h1 {
 
   margin-top: 10vh;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
 
 }
@@ -291,7 +301,7 @@ video {
 
 .h1 {
   margin-top: 10vh;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 }
 
@@ -312,7 +322,7 @@ video {
 .h1 {
 
   margin-top: 10vh;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 
 
 }

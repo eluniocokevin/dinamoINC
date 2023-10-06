@@ -7,6 +7,7 @@
     grid-template-columns: auto auto auto;
     justify-content: space-around;
     background-color: #efefef;
+    border-top: solid 1px #fff;
 }
 .target_noticias{
     background-color: #fcfcfc;
