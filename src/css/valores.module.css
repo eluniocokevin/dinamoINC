@@ -293,7 +293,9 @@ video {
   width: 100%;
   height: 230vh;
 }
-
+.touch .tocarimg{
+  display:flex;
+}
 .flip_card {
   width: 70%;
   height: 70vh;
@@ -312,6 +314,9 @@ video {
   align-items: center;
   width: 100%;
   height: 280vh;
+}
+.touch .tocarimg{
+  display:flex;
 }
 
 .flip_card {
