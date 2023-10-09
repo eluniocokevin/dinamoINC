@@ -1,17 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-
 /*tabla*/
-
-.actividad h2{
-    text-overflow: ellipsis;
-    max-height: 10vh;
-    white-space: nowrap;
-    overflow: hidden;
-}
 
 .tabla{
     display: flex;
@@ -19,7 +6,7 @@
     min-height: 100vh;
     flex-direction: column;
 }
-.tabla .h1{
+.tabla .cont_h1{
     display: flex;
     width: 80vw;
     height: 20vh;
@@ -27,7 +14,7 @@
     color: aqua;
     font-size: 40px;
 }
-.h1 h1{ 
+.cont_h1 .h1{ 
     margin: auto;
 }
 /*------Atributos------*/
@@ -48,6 +35,7 @@
 }
 
 .agregar{
+    width: 20vw ;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -80,7 +68,7 @@
 
 
 
- /*------Atributos------*/
+ /*------Las tablas que se veen------*/
 
 .actividades{
     color: #000;
@@ -101,9 +89,6 @@
     width: 10%;
     text-align: center;
 }
-h2{
-    margin: auto;
-}
 .btns{
     width: 7vw;
     height: 8vh;
@@ -121,6 +106,7 @@ h2{
 }
 .btn_edit{
     background-color: #0af;
+    margin: auto;
 }
 .btn_del{
     background-color: #f00;    
@@ -137,12 +123,12 @@ h2{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     color: #000;
+    margin-left: 20vw;
 }
 
-.agrega form{
+.agrega .form{
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -151,29 +137,31 @@ h2{
     border-radius: 10px;
 }
 
-form h1{
+.form .h1{
     text-align: center;
     margin-bottom: 10%;
 }
 
-form input,label{
+.form .input,.label{
     width: 80%;
     margin: auto;
     border-radius: 15px;
     text-align: center;
 }
-form input{
+.form .input{
     height: 2rem;
     font-size: 20px;
-    outline: none;
     margin-top: 1%;
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 1px 0px #000;
 }
-form label{
+.form .label{
     font-size: 20px;
     margin-bottom: 0;
 }
 
-.agrega form .div_btns{
+.agrega .form .div_btns{
     width: 60%;
     height: 2.5rem;
     display: flex;
@@ -183,13 +171,26 @@ form label{
 .div_btns{
     margin-top: 2%;
 }
-.div_btns button{
+.div_btns .button{
     display: flex;
     font-size: 20px;
     border-radius: 10px;
     align-items: center;
-    padding: 1%;
-    background: #fff;
+    background: #2e5287;
+    color: #fff;
+    border: #999 solid 1px;
+}
+.button .svg{
+    margin: 0 2px;
+}
+
+.btn_cancelar .svg{
+    fill: #f00;
+}
+.btn_agregar .svg{
+    background-color: #0f0;
+    fill: #fff;
+    border-radius: 50%;
 }
 
 /*------------
@@ -198,15 +199,28 @@ media querys
 ------------
 ------------*/
 
+.cont_tabla{
+    display: none;
+}
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+.tabla_mobile{
+    width: 60%;
+}
+.tabla_mobile_cerrada{
+    width: 60%;
+}
+}
 
 @media screen and (min-width:0px) and (max-width: 1200px){
 
+.tabla{
+    display: none;
+}
+
 .cont_tabla{
-    background: linear-gradient(#25b3a3, #10bce2);
     display: flex;
     width: 100vw;
     height: 50vh;
-        
 }
 
 .tabla_mobile{
@@ -218,7 +232,7 @@ media querys
 .fila1{
     background-color: #b8b8b8;
     display: flex;
-    width: 60%;
+    width: 40%;
     height: 15%;
     margin: auto;
     border-top-left-radius: 10px;
@@ -230,7 +244,7 @@ media querys
     flex: 1;
     
 }
-.fila1 p{
+.fila1 .p{
     margin: auto;
     font-weight: bold;
 }
@@ -264,7 +278,7 @@ media querys
     margin: auto;
 }
 
-.actividad p{
+.actividad .p{
     width: 100%;
 }
 .actividad .izquierda{
@@ -277,7 +291,6 @@ media querys
     text-align: left;
 }
 
-
 .fila3{
     background-color: #fff;
     width: 100%;
@@ -285,7 +298,8 @@ media querys
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;
-
+    border: 1px #ccc solid;
+    box-sizing: border-box;
 }
 
 .fila3 .espacio{
@@ -298,7 +312,7 @@ media querys
     border-bottom-right-radius: 10px;
 }
 
-.fila3 .edit{
+.fila3 .edit_m{
     background-color: #50a3a0;
     min-width: 30px;
     height: 50%;
@@ -306,7 +320,7 @@ media querys
     border-radius: 10px;
 }
 
-.fila3 .del{
+.fila3 .del_m{
     background-color: #cf4c69;
     min-width: 30px;
     height: 50%;
@@ -314,17 +328,18 @@ media querys
     border-radius: 10px;
 }
 
-.fila3 .arriba{
+.btn_arriba .arriba{
     min-width: 60px;
+    max-width: 60%;
     height: 60%;
-    padding: 10px;
-    border-radius: 10px;
+    border-radius: 50%;
+    fill: #000;
+    cursor: pointer;
 }
-
 
 .tabla_mobile_cerrada{
     width: 80%;
-    height: 60%;
+    height: 80%;
     margin: auto;
 }
 
@@ -341,9 +356,8 @@ media querys
 .fila1_cerrada .actividad_mobile{
     display: flex;
     flex: 1;
-    
 }
-.fila1_cerrada p{
+.fila1_cerrada .p{
     margin: auto;
     font-weight: bold;
 }
@@ -371,11 +385,13 @@ media querys
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;
+    border: 1px #ccc solid;
+    box-sizing: border-box;
 }
 .fila3_cerrada .espacio{
     width: 20%;
 }
-.fila3_cerrada p{
+.fila3_cerrada .p{
     display: flex;
     width: 60%;
     align-items: center;
@@ -393,15 +409,12 @@ media querys
 .fila3_cerrada .abajo{
     width: 60%;
     height: 60%;
+    fill: #000;
+    cursor: pointer;
 }
 
+.agrega{
+    margin: 0 35%;
 }
 
-@media screen and (min-width: 767px) and (max-width: 1200px) {
-.tabla_mobile{
-    width: 60%;
-}
-.tabla_mobile_cerrada{
-    width: 60%;
-}
 }

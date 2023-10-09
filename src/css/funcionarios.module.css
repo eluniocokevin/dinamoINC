@@ -40,7 +40,7 @@ svg{
   background-color: #000;
 
 }
-.img{
+.logo .img{
   width: 100%;
   padding-top: 100%;
   background-color: #fff;
@@ -93,8 +93,12 @@ svg{
 }
 
 
-
-
+.zoom{
+    display: none;
+}
+.dropdown_content{
+    display: none;
+}
 @media screen and (min-width:0px) and (max-width: 1200px){
 
 .fila{
@@ -114,7 +118,6 @@ svg{
     max-width: 175px;
 }
 
-
 .cosas{
     width: 80vw;
     height: 100%;
@@ -133,4 +136,56 @@ svg{
     height: auto;
     flex-direction: column;
 }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+.cosas{
+    display: none;
+}
+
+
+.barra{
+    justify-content: space-between  ;
+}
+
+
+.menu .zoom{
+    width: 100px;
+    display: flex;
+    margin-right: 20px;
+}
+
+
+.zoom .img{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    height: 100%;
+    width: auto;
+}
+
+.logo .img{
+    width: 150px;
+    padding-top: 150px;
+    
+}
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 350px){
+
+.logo{
+    display: none;
+}
+
+.barra{
+    justify-content: center;
+}
+.menu .zoom{
+    margin: 0;
+}
+
 }
