@@ -83,12 +83,14 @@ function Funcionarios() {
         <div className={`${stylesFuncionarios.menu}`}>
           <a className={`${stylesFuncionarios.a} ${stylesFuncionarios.zoom}`} href="#"  id="menuButton"><img className={`${stylesFuncionarios.img}`} src="/list.svg" /></a>
           <div className={`${stylesFuncionarios.dropdown_content}`} id="dropdownContent">
-          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleDeporte}>Deportes</a>
-          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleEvento}>Eventos</a>
-          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleNoticia}>Noticias</a>
-          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleUsuario}>Usuarios</a>
+          <a className={`${stylesFuncionarios.a}`} href="#">Login </a>
+              <a className={`${stylesFuncionarios.a}`} href="preguntas" >Preguntas </a>
           </div>
         </div>
+      
+
+
+
 
       </aside>
 
