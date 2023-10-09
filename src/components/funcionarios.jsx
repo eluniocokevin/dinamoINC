@@ -80,7 +80,15 @@ function Funcionarios() {
               <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarCrearNoticia ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleNoticia}>Noticias</a></h1></div>
               <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
         </div>
-       
+        <div className={`${stylesFuncionarios.menu}`}>
+          <a className={`${stylesFuncionarios.a} ${stylesFuncionarios.zoom}`} href="#"  id="menuButton"><img className={`${stylesFuncionarios.img}`} src="/list.svg" /></a>
+          <div className={`${stylesFuncionarios.dropdown_content}`} id="dropdownContent">
+          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleDeporte}>Deportes</a>
+          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleEvento}>Eventos</a>
+          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleNoticia}>Noticias</a>
+          <a className={`${stylesFuncionarios.btn_menu}`} onClick={handleUsuario}>Usuarios</a>
+          </div>
+        </div>
 
       </aside>
 
