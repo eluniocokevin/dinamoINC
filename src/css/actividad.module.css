@@ -91,7 +91,8 @@
     padding-left: 2%;
     display:flex;
     transition: transform 0.3s ease;
-    box-shadow: 0 0 10px 2px #888;    
+    box-shadow: 0 0 10px 2px #888;
+    text-decoration: none;
 }
 .btn .p{
     color: white;
