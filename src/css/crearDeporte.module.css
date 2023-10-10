@@ -220,20 +220,22 @@ media querys
 .cont_tabla{
     display: flex;
     width: 100vw;
-    height: 50vh;
+    height: auto;
+    margin: 2rem 0;
 }
 
 .tabla_mobile{
     width: 80%;
-    height: 80%;
-    margin: auto;
+    height: auto;
+    margin: auto;    
+    transition: .5s ease ;
 }
 
 .fila1{
     background-color: #b8b8b8;
     display: flex;
     width: 40%;
-    height: 15%;
+    height: 2.5rem;
     margin: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -259,19 +261,33 @@ media querys
 .fila2{
     background-color: #efefef;
     width: 100%;
-    height: 70%;
+    height: 2.5rem;
     display: flex;
     flex-direction: column;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    transition: .5s ease ;
+    align-items: center;
+}
+.fila2 .p{
+    font-size: 0px;
+}
+.activo{
+    height: 30vh;
+    transition: .5s ease ;
+}
+.activo .p{
+    font-size: 18px;
+}
+.activo .h1{
+    font-size: 0px;
 }
 
-.fila2 .actividad{
+.activo .actividad{
     font-size: 18px;
     background: #fff;
     display: flex;
     width: 90%;
-    height: 15%;
     align-items: center;
     border: 1px solid #000;
     border-radius: 12px;
@@ -314,30 +330,69 @@ media querys
 
 .fila3 .edit_m{
     background-color: #50a3a0;
-    min-width: 30px;
-    height: 50%;
-    padding: 10px;
+    width: 100%;
+    height: 90%;
+    padding:0 5px;
     border-radius: 10px;
 }
 
 .fila3 .del_m{
     background-color: #cf4c69;
-    min-width: 30px;
-    height: 50%;
-    padding: 10px;
+    width: 100%;
+    height: 90%;
+    padding: 0 5px;
     border-radius: 10px;
 }
 
-.btn_arriba .arriba{
-    min-width: 60px;
-    max-width: 60%;
+.btn_arriba_abajo .arriba, .abajo{
+    width: 100%;
     height: 60%;
     border-radius: 50%;
     fill: #000;
     cursor: pointer;
+    transition: .5s ease;
 }
 
-.tabla_mobile_cerrada{
+.btn_arriba_abajo .arriba{
+    transform: rotate(180deg);
+}
+
+.agrega{
+    margin: 0;
+    justify-content: center;
+}
+
+.agrega .form{
+    width: 60%;
+}
+
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 500px){
+
+.tabla_mobile{
+    width: 95%;
+}
+
+
+.fila1 .p, .activo .p{
+    font-size: .9rem;
+}
+.activo .actividad{
+    height: 1.5rem;
+    padding-left: 4px;
+}
+.agrega .form{
+    width: 90%;
+}
+
+}
+
+
+/* asdfasdf awsedfasd fa */
+/* .tabla_mobile_cerrada{
     width: 80%;
     height: 80%;
     margin: auto;
@@ -420,4 +475,4 @@ media querys
 
 
 }
-
+ */

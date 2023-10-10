@@ -39,7 +39,7 @@ svg{
   align-items: center;
 }
 .logo .img{
-  width: 100%;
+  width: 90%;
   background-color: #fff;
   position: relative;
   margin: 5% auto;
@@ -148,7 +148,7 @@ svg{
 
 
 .menu .zoom{
-    width: 100px;
+    width: 80px;
     display: flex;
     margin-right: 20px;
 }
@@ -186,7 +186,7 @@ svg{
 }
 
 .logo{
-    height: 100%;
+    height: 90%;
     width: auto;
 }
 
@@ -195,15 +195,13 @@ svg{
 
 @media screen and (min-width: 0px) and (max-width: 350px){
 
-.logo{
-    display: none;
-}
 
 .barra{
-    justify-content: center;
+    justify-content: space-between;
 }
 .menu .zoom{
-    margin: 0;
+    width: 70px;
+    margin: 0 10px;
 }
 
 }
