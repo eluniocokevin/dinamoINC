@@ -3,6 +3,21 @@ import stylesCrearDeporte from "../css/crearDeporte.module.css";
 
 function CrearDeporte(){
    
+  const boton = document.getElementById("miBoton");
+
+  // Verifica si el elemento fue encontrado antes de agregar el evento
+  if (boton) {
+    boton.addEventListener("click", function() {
+      // Tu código aquí
+    });
+  } else {
+    console.log("El elemento con el ID 'miBoton' no se encontró en el DOM.");
+  }
+
+
+
+
+
     return(<>
 
 {/* Acá aparecen los deportes */}
@@ -148,7 +163,7 @@ function CrearDeporte(){
           </div>
         </div>
 
-        <div className={`${stylesCrearDeporte.fila2}`}>
+        <div className={`${stylesCrearDeporte.fila2} ${stylesCrearDeporte.activo}`}>
           <div className={`${stylesCrearDeporte.actividad}`}><p className={`${stylesCrearDeporte.izquierda} ${stylesCrearDeporte.p}`}>Docente:</p> <p className={`${stylesCrearDeporte.derecha} ${stylesCrearDeporte.p}`}>Diego Lugano</p></div>
           <div className={`${stylesCrearDeporte.actividad}`}><p className={`${stylesCrearDeporte.izquierda} ${stylesCrearDeporte.p}`}>Lugar:</p> <p className={`${stylesCrearDeporte.derecha} ${stylesCrearDeporte.p}`}>Plaza deportes</p></div>
           <div className={`${stylesCrearDeporte.actividad}`}><p className={`${stylesCrearDeporte.izquierda} ${stylesCrearDeporte.p}`}>Fecha:</p> <p className={`${stylesCrearDeporte.derecha} ${stylesCrearDeporte.p}`}>1/6/23</p></div>
@@ -182,7 +197,7 @@ function CrearDeporte(){
           <div className={`${stylesCrearDeporte.espacio}`}></div>
           <div className={`${stylesCrearDeporte.espacio}`}></div>
           <div className={`${stylesCrearDeporte.brn_del_m} ${stylesCrearDeporte.espacio}`}>
-            <svg className={`${stylesCrearDeporte.del_m} ${stylesCrearDeporte.svg}`} xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="17.901" xmlns="http://www.w3.org/2000/svg"  id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3" version="1.1" viewBox="2381.054 585.184 17.901 16.865" height="16.865">
+            <svg className={`${stylesCrearDeporte.del_m} ${stylesCrearDeporte.svg}`} xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="40" xmlns="http://www.w3.org/2000/svg"  id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3" version="1.1" viewBox="2381.054 585.184 17.901 16.865" height="16.865">
               <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">
                 <g class="fills" id="fills-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">
                   <path rx="0" ry="0"  d="M2398.454,600.997L2391.444,600.997L2398.064,594.034C2398.622,593.454,2398.935,592.663,2398.934,591.839C2398.935,591.027,2398.621,590.249,2398.064,589.686L2394.644,586.073C2393.499,584.884,2391.654,584.888,2390.514,586.084L2381.934,595.086C2380.801,596.291,2380.801,598.229,2381.934,599.434L2383.414,600.999L2381.554,600.999C2381.278,600.999,2381.054,601.234,2381.054,601.524C2381.054,601.814,2381.278,602.049,2381.554,602.049L2398.454,602.049C2398.731,602.049,2398.955,601.814,2398.955,601.523C2398.955,601.232,2398.731,600.997,2398.454,600.997ZZM2391.214,586.819C2391.974,586.041,2393.184,586.041,2393.944,586.819L2397.364,590.431C2397.730,590.803,2397.936,591.315,2397.934,591.849C2397.934,592.389,2397.729,592.907,2397.364,593.288L2391.724,599.211L2385.574,592.742ZM2390.024,600.997L2384.824,600.997L2382.644,598.686C2381.897,597.896,2381.897,596.620,2382.644,595.830L2384.874,593.488L2391.024,599.947Z">
@@ -241,7 +256,7 @@ function CrearDeporte(){
         <div className={`${stylesCrearDeporte.espacio}`}></div>
         <p className={`${stylesCrearDeporte.p}`}>6hs A 10hs</p>
         <div className={`${stylesCrearDeporte.btn_abajo}`}>
-          <svg className={`${stylesCrearDeporte.abajo}`} xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="19.866" xmlns="http://www.w3.org/2000/svg"  id="screenshot-fc514b5e-bea0-802b-8002-f23cb262ec63" version="1.1" viewBox="3085.067 1251.067 19.866 19.866" height="19.866">
+          <svg className={`${stylesCrearDeporte.abajo} `} xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" width="19.866" xmlns="http://www.w3.org/2000/svg"  id="miBoton" version="1.1" viewBox="3085.067 1251.067 19.866 19.866" height="19.866">
             <g id="shape-fc514b5e-bea0-802b-8002-f23cb262ec63"  rx="0" ry="0">
               <g id="shape-fc514b5e-bea0-802b-8002-f23cb262ec64"  rx="0" ry="0">
                 <g id="shape-fc514b5e-bea0-802b-8002-f23cb2635a8e">

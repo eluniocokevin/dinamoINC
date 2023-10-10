@@ -68,9 +68,7 @@ function Funcionarios() {
 
       <aside className={stylesFuncionarios.barra}>
         <div className={stylesFuncionarios.logo}>
-            <div className={stylesFuncionarios.img}>
-
-            </div>
+          <img className={stylesFuncionarios.img}  src="/LOGO actual.svg" alt="logo empresa Dynamo" />
         </div>
 
 
@@ -80,11 +78,14 @@ function Funcionarios() {
               <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarCrearNoticia ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleNoticia}>Noticias</a></h1></div>
               <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
         </div>
+        
         <div className={`${stylesFuncionarios.menu}`}>
           <a className={`${stylesFuncionarios.a} ${stylesFuncionarios.zoom}`} href="#"  id="menuButton"><img className={`${stylesFuncionarios.img}`} src="/list.svg" /></a>
           <div className={`${stylesFuncionarios.dropdown_content}`} id="dropdownContent">
-          <a className={`${stylesFuncionarios.a}`} href="#">Login </a>
-              <a className={`${stylesFuncionarios.a}`} href="preguntas" >Preguntas </a>
+          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleDeporte}>Deportes</a>
+          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleEvento}>Eventos</a>
+          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleNoticia}>Noticias</a>
+          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleUsuario}>Usuarios</a>
           </div>
         </div>
       
@@ -120,7 +121,7 @@ function Funcionarios() {
         </div>
       </div>
 
-      <div class={`${stylesFuncionarios.fila2}`}>
+      <div class={`${stylesFuncionarios.fila2}  ${mostrarCrearDeporte ? stylesFuncionarios.activo : ''}`}>
         <div class={`${stylesFuncionarios.actividad}`}><p class={`${stylesFuncionarios.izquierda}`}>Docente:</p> <p class={`${stylesFuncionarios.derecha}`}>Diego Lugano</p></div>
         <div class={`${stylesFuncionarios.actividad}`}><p class={`${stylesFuncionarios.izquierda}`}>Lugar:</p> <p class={`${stylesFuncionarios.derecha}`}>Plaza deportes</p></div>
         <div class={`${stylesFuncionarios.actividad}`}><p class={`${stylesFuncionarios.izquierda}`}>Fecha:</p> <p class={`${stylesFuncionarios.derecha}`}>1/6/23</p></div>
