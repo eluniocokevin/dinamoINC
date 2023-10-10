@@ -120,7 +120,7 @@ return(
                 </g>
               </svg>
             </a>
-            <a className={`${stylesActividad.btn} ${stylesActividad.a}`} href="formulario.html">
+            <a className={`${stylesActividad.btn} ${stylesActividad.a}`} href="formulario">
               <p className={`${stylesActividad.p}`}>Inscribirse</p>
               <svg xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" style={{ WebkitPrintColorAdjust: 'exact' }} id="screenshot-33974a92-cec0-8016-8002-e29df2e96217" version="1.1" viewBox="1298.216 1596.608 38.951 40.405" height="30">
                 <g id="shape-33974a92-cec0-8016-8002-e29df2e96217" style={{ fill: '#000000' }} className={`${stylesActividad.icon}`} rx="0" ry="0">
