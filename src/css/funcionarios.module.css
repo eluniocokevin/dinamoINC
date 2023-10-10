@@ -19,7 +19,7 @@ body{
 
 
 .barra{
-    background-image: radial-gradient(circle at center, #12be96 0%, #05a2bc 100%);
+   background: #000;
     width: 20vw;
     max-width: 280px;
     height: 100vh;
@@ -37,12 +37,9 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
-
 }
 .logo .img{
   width: 100%;
-  padding-top: 100%;
   background-color: #fff;
   position: relative;
   margin: 5% auto;
@@ -89,7 +86,7 @@ svg{
 }
 
 .cosas .activo >h1>.btn_aside{
-    color: #12be96
+   color:#000;
 }
 
 
@@ -175,6 +172,7 @@ svg{
     padding: 10px;
     text-decoration: none;
     color: #333;
+    cursor: pointer;
   }
   
   .menu:hover .dropdown_content {
@@ -192,11 +190,6 @@ svg{
     width: auto;
 }
 
-.logo .img{
-    width: 150px;
-    padding-top: 150px;
-    
-}
 
 }
 
