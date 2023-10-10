@@ -1,6 +1,6 @@
 
 .Sports{
-    background-color: #efefef;
+    background-color: #fde68a;
     height: 50vh;
     width: 100%;
     display: flex;
@@ -16,6 +16,8 @@
     background-color: #fff;
     box-shadow: 2px 2px 7px ;
     padding-bottom: 16px;
+    margin-top: -350px;
+    z-index: 50;
 }
 .target_sports .cont_img{
     background-color: #ececec;
@@ -89,8 +91,8 @@
 @media screen and (min-width:636px) and (max-width:900px){
     
 .target_sports {
-    width: 40%;
-    
+    width: 37%;
+    margin: -350px 20px 0;
 }
    
 }
@@ -99,12 +101,11 @@
 
 .Sports{
     height: 115vh;
-    margin-left: 0;
+    margin: 0;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     padding-bottom: 10vh;
-    padding-top: 5vh;
 }
 .target_sports:hover .text{
     transform: translateY(0);
