@@ -59,16 +59,16 @@ function LoginFuncionarios() {
 
         <div className={`${stylesHeader.input1}`}>
           <input className={`${stylesHeader.input}`} type="text" ref={refCedula} required />
-          <label class={`${stylesHeader.lbl_nombre}`}>
-            <span class={`${stylesHeader.text_nomb}`}>Cedula</span>
+          <label className={`${stylesHeader.lbl_nombre}`}>
+            <span className={`${stylesHeader.text_nomb}`}>Cedula</span>
           </label>
           <div className={`${stylesHeader.cont_ico}`}><img className={`${stylesHeader.ico1}`} src="/user.svg" alt="" /></div>
         </div>
 
         <div className={`${stylesHeader.input2}`}>
           <input className={`${stylesHeader.input}`} type="text" ref={refContrasena} required/>
-          <label class={`${stylesHeader.lbl_nombre2}`}>
-            <span class={`${stylesHeader.text_nomb2}`}>Contraseña</span>
+          <label className={`${stylesHeader.lbl_nombre2}`}>
+            <span className={`${stylesHeader.text_nomb2}`}>Contraseña</span>
           </label>
           <div className={`${stylesHeader.cont_ico}`}><img className={`${stylesHeader.ico2}`} src="/code.svg" alt="" /></div>
         </div>

@@ -13,7 +13,7 @@ return(
   <Mapa/>
 
   <div className={`${stylesAcuaticos.titulo}`}>
-    <h1>Actividades Anuales</h1>
+    <h1>Actividades Temporales</h1>
   </div>
 <div className={`${stylesAcuaticos.cuerpo}`}>
 
