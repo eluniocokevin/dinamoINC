@@ -13,6 +13,8 @@ return(
             <img className={`${stylesform.formuimg}`} src="/formu.png" alt="formulario icono" />
         </div>
         <form className={`${stylesform.form}`} action="code.php" method="POST">
+
+            <div className={`${stylesform.personales}`}>
             <label className={`${stylesform.form_label}`}for="">Ingrese su cédula</label>
             <input className={`${stylesform.form_input}`} type="number" max="99999999" name="cedula" id="cedula" placeholder="12345678" required />
 
@@ -34,6 +36,23 @@ return(
             <label className={`${stylesform.form_label}`} for="carnet_salud">Cargar imagen de carnet de salud</label>
             <input className={`${stylesform.form_input}`} type="file" accept="image/*" name="carnet_salud" id="carnet_salud" required />
 
+            <label className={`${stylesform.form_label}`}for="">Ingrese domicilio</label>
+            <input className={`${stylesform.form_input}`} type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required />
+            </div>
+
+            <div className={`${stylesform.medico}`}>
+            <div className={`${stylesform.medico1}`}>
+            <label className={`${stylesform.form_label}`}for="">Asistencia Médica</label>
+            <input  className={`${stylesform.form_input}`}  type="radio" name="asistencia" id="asistencia" required /> Si
+            <input className={`${stylesform.form_input}`} type="radio" name="asistencia" id="asistencia" required /> No
+            <label className={`${stylesform.form_label}`}for="">Cual</label>
+            <input className={`${stylesform.form_input}`} type="text" name="asistencianombre" id="asistencianombre" placeholder="Asistencia" required />
+            </div>
+
+            <label className={`${stylesform.form_label}`}for="">Ingrese domicilio</label>
+            <input className={`${stylesform.form_input}`} type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required />
+
+            </div>
 
 
 
