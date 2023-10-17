@@ -20,7 +20,7 @@
     height: auto;
     width: 100%;
     background-color: #f6f6f6c9;
-    padding-bottom: 20px;
+    padding-bottom: 80px;
 }
 
 .form {
@@ -66,6 +66,8 @@
     background-color: #fff9;
     border-radius: 10px;
     border: none;
+    text-align: left;
+    padding-left: 10px;
 
 }
 
@@ -150,6 +152,9 @@
 }
 
 @media screen and (min-width:600px) and (max-width:700px){
+
+
+    
 .form_h1{
  font-size: 40px;
 }
@@ -165,7 +170,7 @@
 
 .form .form_input{
     height:4vh;
-    width: 50%;
+    width: 90%;
 }  
 
 }
@@ -175,6 +180,9 @@
 .form_h1{
 
 font-size: 27px;
+}
+.form{
+    width: 60%;
 }
 
 .formuimg{
@@ -202,20 +210,23 @@ width: 150%;
         
 
 @media screen and (min-width:0px) and (max-width:400px){
+.form{
+width: 60%;
+}
     
-    .titulo{
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    .form_h1{
- font-size: 30px;
-        }
+.titulo{
+flex-direction: column-reverse;
+align-items: center;
+}
+.form_h1{
+font-size: 30px;
+}
         
-        .formuimg{
-            height: auto;
-            width: 70px;
-            margin-left: 15px;
-        }
+.formuimg{
+height: auto;
+width: 70px;
+margin-left: 15px;
+}
 
 .form .form_label{
 font-size: 12px;
@@ -223,12 +234,12 @@ width: 170%;
 }
     
 .form .form_input{
-    height:4vh;
-
+height:4vh;
+width: 130%;
 }   
 .form .form_button{
-    width: 80px;
-    margin-left: 5px;
+width: 80px;
+margin-left: 5px;
 }
 }
     
