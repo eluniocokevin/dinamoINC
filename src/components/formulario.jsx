@@ -15,20 +15,25 @@ return(
         <form className={`${stylesform.form}`} action="code.php" method="POST">
 
             <div className={`${stylesform.personales}`}>
-            <label className={`${stylesform.form_label}`}for="">Ingrese su cédula</label>
-            <input className={`${stylesform.form_input}`} type="number" max="99999999" name="cedula" id="cedula" placeholder="12345678" required />
-
+            
             <label className={`${stylesform.form_label}`}for="">Ingrese su nombre</label>
             <input className={`${stylesform.form_input}`} type="text" name="nombre" id="nombre" placeholder="Nombre" required />
 
             <label className={`${stylesform.form_label}`}for="">Ingrese apellido</label>
             <input className={`${stylesform.form_input}`} type="text" name="apellido" id="apellido" placeholder="Apellido" required />
 
-            <label className={`${stylesform.form_label}`}for="">Ingrese su celular</label>
-            <input className={`${stylesform.form_input}`} type="number" max="99999999" name="celular" id="celular" placeholder="12345678" required />
-
             <label className={`${stylesform.form_label}`}for="">Ingrese su fecha de nacimiento</label>
             <input className={`${stylesform.form_input}`} type="date" min="1930-12-12" max="2020-01-01" name="fecha_nacimiento" id="fecha_nacimiento" required />
+
+            <label className={`${stylesform.form_label}`}for="">Ingrese su cédula</label>
+            <input className={`${stylesform.form_input}`} type="number" max="99999999" name="cedula" id="cedula" placeholder="12345678" required />
+
+
+            <div className={`${stylesform.sexo}`}>
+            <label className={`${stylesform.form_label}`}for="">Sexo</label>
+            <input  className={`${stylesform.form_input}`}  type="radio" name="sexo" id="sexo" Value="M" required />M
+            <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexo" Value="F" required />F
+            </div>
 
             <label className={`${stylesform.form_label}`} for="cedula">Cargar imagen de cédula</label>
             <input className={`${stylesform.form_input}`} type="file" accept="image/*" name="cedula" id="cedula" required />
@@ -38,20 +43,49 @@ return(
 
             <label className={`${stylesform.form_label}`}for="">Ingrese domicilio</label>
             <input className={`${stylesform.form_input}`} type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required />
+
+            <label className={`${stylesform.form_label}`}for="">Ingrese su celular</label>
+            <input className={`${stylesform.form_input}`} type="number" max="99999999" name="celular" id="celular" placeholder="12345678" required />
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
 
             <div className={`${stylesform.medico}`}>
             <div className={`${stylesform.medico1}`}>
             <label className={`${stylesform.form_label}`}for="">Asistencia Médica</label>
-            <input  className={`${stylesform.form_input}`}  type="radio" name="asistencia" id="asistencia" required /> Si
-            <input className={`${stylesform.form_input}`} type="radio" name="asistencia" id="asistencia" required /> No
+            <input  className={`${stylesform.form_input}`}  type="radio" name="asistencia" id="asistencia" Value="si" required /> Si
+            <input className={`${stylesform.form_input}`} type="radio" name="asistencia" id="asistencia" Value="no" required /> No
             <label className={`${stylesform.form_label}`}for="">Cual</label>
             <input className={`${stylesform.form_input}`} type="text" name="asistencianombre" id="asistencianombre" placeholder="Asistencia" required />
             </div>
 
-            <label className={`${stylesform.form_label}`}for="">Ingrese domicilio</label>
-            <input className={`${stylesform.form_input}`} type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required />
+          
+            <label className={`${stylesform.form_label}`}for="">Enfermedades que tiene o ha tenido</label>
+            <div className={`${stylesform.enfermedades}`} >
+            <div className={`${stylesform.diabetes}`}>
+            <p className={`${stylesform.p}`}> Diabetes</p>
+            <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="diabetes"/> 
+            </div>
+            <div className={`${stylesform.hipertension}`}>
+            <p className={`${stylesform.p}`}> Hipertensión</p>
+            <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="hipertension"/> 
+            </div>
+            <div className={`${stylesform.asma}`}>
+            <p className={`${stylesform.p}`}> Asma</p>
+            <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="asma"/> 
+            </div>
 
+            </div>
             </div>
 
 
