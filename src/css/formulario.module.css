@@ -49,6 +49,30 @@ display: flex;
 align-items: center;
 }
 
+.sexo{
+padding-top: 10px;
+padding-bottom: 10px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.enfermedades{
+display: flex;
+flex-direction: row;  
+align-items: center;  
+}
+.enfermedades .p{
+    width: auto;   
+}
+.enfermedades .form_input{
+    width: 40px; 
+}
+.diabetes,.hipertension,.asma{
+display: flex;    
+align-items: center;
+}
+
 
 .form .form_label,.form_input {
     display: flex;
