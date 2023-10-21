@@ -36,44 +36,6 @@
     box-shadow: 0 5px 30px 0px #000a;
     color: #eee;
 }
-
-.medico{
-padding-top: 20px;
-display: flex;
-flex-direction: column;
-width: 100%;
-}
-
-.medico1{
-display: flex;   
-align-items: center;
-}
-
-.sexo{
-padding-top: 10px;
-padding-bottom: 10px;
-display: flex;
-flex-direction: row;
-align-items: center;
-}
-
-.enfermedades{
-display: flex;
-flex-direction: row;  
-align-items: center;  
-}
-.enfermedades .p{
-    width: auto;   
-}
-.enfermedades .form_input{
-    width: 40px; 
-}
-.diabetes,.hipertension,.asma{
-display: flex;    
-align-items: center;
-}
-
-
 .form .form_label,.form_input {
     display: flex;
     justify-content: center;
@@ -88,7 +50,6 @@ align-items: center;
 }
 
 .form .form_input{
-
     margin-bottom: 1%;
     border: none;
     outline: none;
@@ -104,8 +65,7 @@ align-items: center;
     border-radius: 10px;
     border: none;
     text-align: left;
-    padding-left: 10px;
-
+    text-indent: 10px;
 }
 
 .form_input::-webkit-inner-spin-button {
@@ -114,6 +74,171 @@ align-items: center;
 .form_input::-webkit-outer-spin-button {
     display: none;
 }
+
+.medico{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.medico1{
+    display: flex;   
+    align-items: center;
+    flex-wrap: wrap;
+}
+.medico1 .form_label{
+    width: 20%;
+}
+.medico1 .form_input{
+    width: 40%;
+}
+.medico1 .asis_medica{
+    width: 100%;
+    font-size: 25px;
+}
+
+.radio_no, .radio_si {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.radio_no .form_input, .radio_si .form_input{
+    width: 40px;
+}
+
+
+
+.sexo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.enfermedades{
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.enfermedades .p{
+    width: auto;   
+}
+.enfermedades .form_input{
+    width: 1.9rem;
+}
+.diabetes,.hipertension,.asma, .alergias{
+    display: flex;    
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.otros{
+    display: flex;
+    width: 70%;
+    height: 2rem;
+    align-items: center;
+}
+.otros .otros_input{
+    width: 100%;
+    background: transparent;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid  #000;
+    text-indent: 5px;
+}
+
+.otros_input:focus{
+    border-bottom: #fff solid 1px;
+    outline: none;
+}
+
+.lentes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.usa_lentes{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+}
+.usa_lentes .p{
+    width: 25%;
+    align-self: center;
+}
+.usa_lentes .form_input{
+    width: 1.9rem;
+}
+
+
+
+
+.tipo_lentes{
+    display: flex;
+    width: 70%;
+}
+.tipo_lentes .p{
+    width: 30%;
+    align-self: center;
+}
+.tipo_lentes .input_tipo_lentes{
+    width: 70%;
+    background: transparent;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid  #000;
+    font-size: 1rem;
+    text-indent: 5px;
+    transition: all .5s ease;
+}
+.tipo_lentes .input_tipo_lentes:focus{
+    border-bottom: #fff solid 1px;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 0px;
+    
+}
+
+
+
+
+/*lñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñlkjasdñlfkjñadlskjfñlaksdjflñasdkjfñlaksdjfñlkajsñflkjdsñlkjfñldskjfañlkjsdfñllñasdkjfñlak*/
+
+
+/* Estilo básico del botón */
+.custom_file_upload {
+    background-color: #3498db;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+
+
+
+  /* Estilo oculto del elemento de entrada de archivo */
+  .hidden {
+    display: none;
+  }
+
+
+/*lñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñllñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñlkjasdñfkjñadlskjfñlaksdjflñasdkjfñlak*/
+
+
+
+
+
+
+
+
 
 .form .form_btns{
     width: 90%;
