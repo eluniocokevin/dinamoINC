@@ -91,6 +91,10 @@ return(
                         <p className={`${stylesform.p}`}> Alergias</p>
                         <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="alergias"/> 
                     </div>
+                    <div className={`${stylesform.fracturas}`}>
+                        <p className={`${stylesform.p}`}> Fracutras</p>
+                        <input className={`${stylesform.form_input}`} type="checkbox" name="fractura" id="fractura" value="fractura"/> 
+                    </div>
                     <div className={`${stylesform.otros}`}>
                         <p className={`${stylesform.p}`}> Otros: </p>
                         <input className={`${stylesform.otros_input}`} type="text" name="enfermedad" id="enfermedad"/> 
@@ -109,12 +113,26 @@ return(
                     </div>
                 </div>
 
+                <div className={`${stylesform.permiso}`}>
+                    <div className={`${stylesform.enunciado_permiso}`}>
+                    <p>Yo <input type="text" id="nombretutor"/> en mi caracter de <input type="text" id="roltutor"/> autorizo a mi hijo/a a practicar actividades deportivas y recreativas promovidas
+                     por la División Deportes y Recreación de la intendencia de Soriano, deslindando a esta repartición municipalde todo tipo de responsabilidad relacionada con 
+                    enfermedades o lesiones o accidentes o perdida de valores materiales (vestimenta,calzado,dinero,etc.) que mi hijo/a pudiera sufrir realizando actividades en este marco de trabajo. </p>
+                    </div>
+                </div>
+                    <div className={`${stylesform.firmas}`}>
+                    <label className={`${stylesform.form_label}`}for="">Ingrese Lugar</label>
+                    <input className={`${stylesform.form_input}`} type="text" name="lugar" id="lugar" placeholder="Lugar"/>
+
+                    <label className={`${stylesform.form_label}`}for="">Ingrese fecha actual</label>
+                    <input className={`${stylesform.form_input}`} type="date" name="fecha_permiso" id="fecha_permiso" />
 
 
-
-
-            </div>
-
+                 
+                    </div>
+                    <label className={`${stylesform.form_label}`}for="">CI Tutor</label>
+                    <input className={`${stylesform.form_input}`} type="text" name="ci_tutor" id="ci_tutor" placeholder="CI tutor"/>
+                </div>
 
 
 
