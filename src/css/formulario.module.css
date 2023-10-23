@@ -216,11 +216,14 @@
 
 /* Estilo básico del botón */
 .custom_file_upload {
-    background-color: #3498db;
+    background-color: #fff;
     cursor: pointer;
+    color: #484a4bc0;
     border-radius: 5px;
+    font-size:11px  !important;
 }
-  
+
+
 
 
 
@@ -233,8 +236,20 @@
 /*lñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñllñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñlkjasdñfkjñadlskjfñlaksdjflñasdkjfñlak*/
 
 
+.permiso{
+padding-top: 40px;
+padding-bottom: 10px;
+}
+.enunciado_permiso{
+padding-bottom: 30px;
+}
 
-
+.firmas .form_input{
+width: 130px;
+}
+.firmas{
+display: flex;
+}
 
 
 
