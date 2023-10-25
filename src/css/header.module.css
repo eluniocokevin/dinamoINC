@@ -375,6 +375,8 @@
   outline: 0px;
   overflow: hidden;
 }
+
+
 .form .lbl_nombre2 {
   position: absolute;
   width: 70%;
@@ -409,10 +411,20 @@
   font-size: 14px;
   color: #2ecece;
 }
+
+
 .form .input:focus+.lbl_nombre2:after,
 .form .input:valid+.lbl_nombre2:after {
   transform: translateX(0%);
 }
+
+
+.input1[data-error='true'] label:after, .input2[data-error='true'] label:after{
+  border-bottom: red solid 3px !important;
+}
+
+
+
 
 /*Iconos del input 2*/
 
