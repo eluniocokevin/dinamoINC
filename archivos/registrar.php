@@ -8,7 +8,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $servidor = "localhost";
 $usuario = "root";
 $password = "";
-$bd = "funcionarios";
+$bd = "funcionario";
 
 $conexion = mysqli_connect($servidor, $usuario, $password, $bd);
 
@@ -32,7 +32,7 @@ if ($method === "POST") {
 
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        if (password_verify($contrasena, $row["contrasena"])  && $row["rol"] === "administrador"){
+        if ($contrasena === $row["contrasena"]  && $row["rol"] === "administrador"){
             session_start();
             $_SESSION["usuario"] = $cedula;
             $usuarioRol = $row['rol'];
