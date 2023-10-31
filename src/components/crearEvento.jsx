@@ -1,11 +1,169 @@
 import stylesCrearEvento from "../css/crearEvento.module.css";
+import { useState } from "react";
 
 function CrearEvento(){
+
+
+  const [titulo, setTitulo] = useState('');
+  const [Descripcion, setDescripcion] = useState('');
+  const [fecha, setFecha] = useState('');
+  const [archivo, setArchivo] = useState(null);
+
+ 
+ const handleSubmitForm = async(e)=>{
+  e.preventDefault();
+  const localidad = document.getElementById('localidad').value;
+  const option = document.getElementById('option').value;
+  const formData = new FormData();
+  formData.append('titulo', titulo);
+  formData.append('descripcion', Descripcion);
+  formData.append('fecha', fecha);
+  formData.append('archivo', archivo);
+  formData.append('tabla',localidad);
+  formData.append('option',option);
+
+  try {
+    const response = await fetch('http://localhost/archivos/eventos/subirEvento.php', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      console.log('Evento creado con éxito');
+
+      setTitulo('');
+      setDescripcion('');
+      setFecha('');
+      setArchivo(null);
+       
+      document.getElementById('file').value = '';
+    } else {
+
+      console.error('Error al crear la noticia');
+    }
+  } catch (error) {
+    console.error('Error en la solicitud:', error);
+  }
+ }
+  /*  */
+  const abrirEvento =()=>{
+   const form = document.getElementById('sombra');
+    form.style.translate='0';
+  }
+  const cerrarEvento =()=>{
+    const form = document.getElementById('sombra');
+    form.style.translate='-4000px';
+  }
+
+
     return(
         <>
 
 
     {/* Acá aparecen los eventos */}
+
+
+          <div id="sombra" className={`${stylesCrearEvento.sombra_modal}`}>
+              <form onSubmit={handleSubmitForm} className={`${stylesCrearEvento.form_modal}`}>
+                <div onClick={cerrarEvento} className={`${stylesCrearEvento.cerrar_form_modal}`}>
+                  <img className={`${stylesCrearEvento.cerrar_form_img_modal}`} src="/cross2.png" alt="" />
+                </div>
+                <input className={`${stylesCrearEvento.input_modal}`} onChange={(e)=>{setTitulo(e.target.value)}} placeholder="Titulo del evento" type="text" />
+                <input className={`${stylesCrearEvento.input_modal}`} type="text" placeholder="Nombre del deporte" />
+                <textarea className={`${stylesCrearEvento.textarea_modal}`} onChange={(e)=>{setDescripcion(e.target.value)}}  placeholder="Descripcion del evento"cols="30" rows="10"></textarea>
+                <p className={`${stylesCrearEvento.p_modal}`}>Fecha del evento</p>
+                <input className={`${stylesCrearEvento.input_modal}`} onChange={(e)=>{setFecha(e.target.value)}} type="date" />
+                <p className={`${stylesCrearEvento.p_modal}`}>escoja si el evento sera temporal o anual</p>
+                <select className={`${stylesCrearEvento.select_modal}`} id="option">
+                  <option value="s">select</option>
+                  <option value="temporal">Temporal</option>
+                  <option value="anual">Anual</option>
+                </select>
+                <p className={`${stylesCrearEvento.p_modal}`}>Escoja la localidad en donde se realiza el evento</p>
+                <select name="Localidad" id="localidad">
+                  <option value="s">select</option>
+                  <option value="dolores">Dolores</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="risso">Risso</option>
+                  <option value="egaña">Egaña</option>
+                  <option value="cardona">Cardona</option>
+                  <option value="santacatalina">Santa Catalina</option>
+                  <option value="rodo">Rodó</option>
+                  <option value="palmitas">Palmitas</option>
+                  <option value="villasoriano">Villa Soriano</option>
+                  <option value="cañadanieto">Cañada Nieto</option>
+                  <option value="palmar">Palmar</option>
+                  <option value="laresyperseverano">Lares y Perseverano</option>
+                  <option value="agraciada">Agraciada</option>
+                  <option value="palosolo">Palo Solo</option>
+                  <option value="villadarwin">Villa Darwin</option>
+                </select>
+                <p className={`${stylesCrearEvento.p_modal}`}>Seleccione una imagen para la portada del evento</p>
+                <input className={`${stylesCrearEvento.input_modal}`} onChange={(e)=>{setArchivo(e.target.files[0])}} type="file" name="" id="file" />
+                <button className={`${stylesCrearEvento.button_modal}`} >Enviar</button>
+            </form>
+          </div>
+       { /*  <div className={`${stylesCrearEvento.filtro}`}> 
+             <h2>filtrar los eventos</h2>
+             <h5>El evento es temporal o anual?</h5>
+             <select  id="option">
+            <option value="s">select</option>
+            <option value="temporal">Temporal</option>
+            <option value="anual">Anual</option>
+          </select>
+          <h5>De que ciudad es su evento?</h5>
+          <select name="Localidad" id="localidad">
+            <option value="s">select</option>
+            <option value="dolores">Dolores</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="risso">Risso</option>
+            <option value="egaña">Egaña</option>
+            <option value="cardona">Cardona</option>
+            <option value="santacatalina">Santa Catalina</option>
+            <option value="rodo">Rodó</option>
+            <option value="palmitas">Palmitas</option>
+            <option value="villasoriano">Villa Soriano</option>
+            <option value="cañadanieto">Cañada Nieto</option>
+            <option value="palmar">Palmar</option>
+            <option value="laresyperseverano">Lares y Perseverano</option>
+            <option value="agraciada">Agraciada</option>
+            <option value="palosolo">Palo Solo</option>
+            <option value="villadarwin">Villa Darwin</option>
+          </select>
+          <button>buscar</button>
+    </div>*/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <div className={`${stylesCrearEvento.tabla}`}>
@@ -21,7 +179,7 @@ function CrearEvento(){
           <div className={`${stylesCrearEvento.atributo} ${stylesCrearEvento.agregar}`}>
             <div className={`${stylesCrearEvento.btn_add}`}>
               <div className={`${stylesCrearEvento.add}`}>
-                <svg className={`${stylesCrearEvento.svg_add}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
+                <svg onClick={abrirEvento}   className={`${stylesCrearEvento.svg_add}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" rx="0" ry="0">
                     <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
                       <g className={`${stylesCrearEvento.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
