@@ -61,22 +61,26 @@ function CrearEvento(){
     form.style.transform = 'translateX(-2000px)';
   }
 
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      cerrarEvento();
+    }
+  });
 
 
 //Esto es para que no se pueda enviar datos con la primera opcion seleccionadada en el select
 //No funciona XDDD
-
 // document.addEventListener("DOMContentLoaded", function() {
   
-//   document.getElementById("form").addEventListener("submit", function(event) {
-//     var select = document.getElementById("localidad"); 
-//     var selectedOption = select.options[select.selectedIndex];
+// document.getElementById("form").addEventListener("submit", function(event) {
+//   var select = document.getElementById("localidad"); 
+//    var selectedOption = select.options[select.selectedIndex];
     
-//     if (selectedOption.value === "s") { // Verifica si la opción seleccionada tiene el valor "s" (primera opción)
-//       alert("Por favor, seleccione una opción válida antes de enviar el formulario.");
-//       event.preventDefault(); // Detiene el envío del formulario.
-//     }
-//   });
+//  if (selectedOption.value === "s") { // Verifica si la opción seleccionada tiene el valor "s" (primera opción)
+//     alert("Por favor, seleccione una opción válida antes de enviar el formulario.");
+//     event.preventDefault(); // Detiene el envío del formulario.
+// }
+// });
 
 // }); 
 
