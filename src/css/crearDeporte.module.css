@@ -11,7 +11,7 @@
     width: 80vw;
     height: 20vh;
     text-align: center;
-    color: #000;
+    color: #2F5386;
     font-size: 40px;
 }
 .cont_h1 .h1{ 
@@ -55,6 +55,7 @@
     padding-top: 60%;
     background-color: #0f0;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .svg_add{
@@ -68,7 +69,7 @@
 
 
 
- /*------Las tablas que se veen------*/
+ /*-------------------------------------Las tablas que se veen-----------------------------------------------------------*/
 
 .actividades{
     color: #000;
@@ -118,23 +119,42 @@
     margin: auto;
 }
 
-/*-------agregar-------*/
+/*-------agregar---------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------*/
 .agrega{
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
     display: flex;
+    position: absolute;
     align-items: center;
+    justify-content: center;
     color: #000;
-    margin-left: 20vw;
+    transition: ease 1s;
+    transform: translateX(-2000px);
 }
-
+.agrega .cerrar{
+    height: 3em;
+    width: 3em;
+    background-color: red;
+    cursor: pointer;
+    transition: all 1s;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-self: end;
+}
+.cerrar .img_cerrar{
+    height: 100%;
+    width: 100%;
+}
 .agrega .form{
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 70%;
+    width: 40%;
+    height: 90%;
     border: #000 solid 2px;
     border-radius: 10px;
+    background-color: #efefef;
 }
 
 .form .h1{
@@ -142,11 +162,10 @@
     margin-bottom: 10%;
 }
 
-.form .input,.label{
+.form .input,.label, .textarea{
     width: 80%;
     margin: auto;
     border-radius: 15px;
-    text-align: center;
 }
 .form .input{
     height: 2rem;
@@ -155,12 +174,52 @@
     outline: none;
     border: none;
     box-shadow: 0 2px 1px 0px #000;
+    text-indent: 10px;
 }
 .form .label{
     font-size: 20px;
     margin-bottom: 0;
+    text-align: center;
+}
+.form .textarea{
+    margin: auto;
+    font-size: 20px;
+    margin-top: 1%;
+    outline: none;
+    border: none;
+    text-indent: 10px;
 }
 
+.form .select{
+    width: 80%;
+    height: 2rem;
+    font-size: 20px;
+    margin: 1% auto 0;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 15px;
+    text-indent: 10px;
+}
+
+
+
+/* Estilo básico del botón */
+.custom_file_upload {
+    background-color: #fff;
+    cursor: pointer;
+    color: #484a4bc0;
+    border-radius: 5px;
+    font-size:20px;
+}
+
+
+/* Estilo oculto del elemento de entrada de archivo */
+.hidden {
+display: none;
+}
+
+
+/*------form batns--------*/
 .agrega .form .div_btns{
     width: 60%;
     height: 2.5rem;
@@ -179,6 +238,7 @@
     background: #2e5287;
     color: #fff;
     border: #999 solid 1px;
+    cursor: pointer;
 }
 .button .svg{
     margin: 0 2px;
@@ -193,11 +253,12 @@
     border-radius: 50%;
 }
 
-/*------------
-------------
+
+/*--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 media querys
-------------
-------------*/
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------*/
 
 .cont_tabla{
     display: none;
@@ -220,22 +281,20 @@ media querys
 .cont_tabla{
     display: flex;
     width: 100vw;
-    height: auto;
-    margin: 2rem 0;
+    height: 50vh;
 }
 
 .tabla_mobile{
     width: 80%;
-    height: auto;
-    margin: auto;    
-    transition: .5s ease ;
+    height: 80%;
+    margin: auto;
 }
 
 .fila1{
     background-color: #b8b8b8;
     display: flex;
     width: 40%;
-    height: 2.5rem;
+    height: 15%;
     margin: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -261,33 +320,19 @@ media querys
 .fila2{
     background-color: #efefef;
     width: 100%;
-    height: 2.5rem;
+    height: 70%;
     display: flex;
     flex-direction: column;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transition: .5s ease ;
-    align-items: center;
-}
-.fila2 .p{
-    font-size: 0px;
-}
-.activo{
-    height: 30vh;
-    transition: .5s ease ;
-}
-.activo .p{
-    font-size: 18px;
-}
-.activo .h1{
-    font-size: 0px;
 }
 
-.activo .actividad{
+.fila2 .actividad{
     font-size: 18px;
     background: #fff;
     display: flex;
     width: 90%;
+    height: 15%;
     align-items: center;
     border: 1px solid #000;
     border-radius: 12px;
@@ -330,69 +375,30 @@ media querys
 
 .fila3 .edit_m{
     background-color: #50a3a0;
-    width: 100%;
-    height: 90%;
-    padding:0 5px;
+    min-width: 30px;
+    height: 50%;
+    padding: 10px;
     border-radius: 10px;
 }
 
 .fila3 .del_m{
     background-color: #cf4c69;
-    width: 100%;
-    height: 90%;
-    padding: 0 5px;
+    min-width: 30px;
+    height: 50%;
+    padding: 10px;
     border-radius: 10px;
 }
 
-.btn_arriba_abajo .arriba, .abajo{
-    width: 100%;
+.btn_arriba .arriba{
+    min-width: 60px;
+    max-width: 60%;
     height: 60%;
     border-radius: 50%;
     fill: #000;
     cursor: pointer;
-    transition: .5s ease;
 }
 
-.btn_arriba_abajo .arriba{
-    transform: rotate(180deg);
-}
-
-.agrega{
-    margin: 0;
-    justify-content: center;
-}
-
-.agrega .form{
-    width: 60%;
-}
-
-}
-
-
-
-@media screen and (min-width: 0px) and (max-width: 500px){
-
-.tabla_mobile{
-    width: 95%;
-}
-
-
-.fila1 .p, .activo .p{
-    font-size: .9rem;
-}
-.activo .actividad{
-    height: 1.5rem;
-    padding-left: 4px;
-}
-.agrega .form{
-    width: 90%;
-}
-
-}
-
-
-/* asdfasdf awsedfasd fa */
-/* .tabla_mobile_cerrada{
+.tabla_mobile_cerrada{
     width: 80%;
     height: 80%;
     margin: auto;
@@ -475,4 +481,3 @@ media querys
 
 
 }
- */
