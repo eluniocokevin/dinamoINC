@@ -241,6 +241,7 @@ return(
               fecha={actividad.fecha}
               deporte={actividad.deporte}
               descripcion={actividad.descripcion}
+              ubicacion={actividad.ubicacion}
             />
           ))) : (<p>no has seleccionado ninguna localidad</p>)}
 
@@ -276,72 +277,6 @@ return(
     </div>
   </div>
 
-{/* ----------------mobile------------------- */}
-
-
-  <div className={`${stylesAcuaticos.cuerpom}`}>  
-
-    <div className={`${stylesAcuaticos.iconosm}`}>
-      <Iconos
-          deporte='NATACIÓN'
-          img='natacion.png'
-        />
-        <Iconos
-          deporte='REMO'
-          img='remo.png'
-        />
-        <Iconos
-          deporte='CANOTAJE'
-          img='canoa.png'
-        />
-        <Iconos
-        deporte='BAILE'
-        img='baile.png'
-        />
-        <Iconos
-        deporte='YOGA'
-        img='yoga.png'
-        />
-        <Iconos
-        deporte='KARATE'
-        img='karate.png'
-        />
-
-    </div>
-
-  <div className={`${stylesAcuaticos.filam}`}>
-
-  
-
-      <div className={`${stylesAcuaticos.actividadesm}`}> 
-        
-      {Localidad?( Actividades.map((actividad)=>(
-            <Actividad
-              img={`data:image/jpeg;base64, ${actividad.imagen_base64}`}
-              fecha={actividad.fecha}
-              deporte={actividad.deporte}
-              descripcion={actividad.descripcion}
-            />
-          ))) : (<p>no has seleccionado ninguna localidad</p>)}
-
-
-      </div>
-      <div className={`${stylesAcuaticos.eventosm}`}>  
-   
-      {Localidad ?( Eventos.map((evento)=>(
-            <Evento
-              key={evento.id}
-              img={`data:image/jpeg;base64, ${evento.imagen_base64}`}
-              deporte={evento.deporte}
-              titulo={evento.titulo}
-              descripcion={evento.info}
-              fecha={evento.fecha}
-            />
-          ))) : (<p>no has seleccionado ninguna localidad</p>)}
-
-      </div>
-    </div>
-  </div>
   <Footer/>
   </>
 );

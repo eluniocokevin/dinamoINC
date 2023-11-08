@@ -55,6 +55,7 @@
     padding-top: 60%;
     background-color: #0f0;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .svg_add{
@@ -68,7 +69,7 @@
 
 
 
- /*------Las tablas que se veen------*/
+ /*-------------------------------------Las tablas que se veen-----------------------------------------------------------*/
 
 .actividades{
     color: #000;
@@ -118,23 +119,42 @@
     margin: auto;
 }
 
-/*-------agregar-------*/
+/*-------agregar---------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------*/
 .agrega{
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
     display: flex;
+    position: absolute;
     align-items: center;
+    justify-content: center;
     color: #000;
-    margin-left: 20vw;
+    transition: ease 1s;
+    transform: translateX(-2000px);
 }
-
+.agrega .cerrar{
+    height: 3em;
+    width: 3em;
+    background-color: red;
+    cursor: pointer;
+    transition: all 1s;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-self: end;
+}
+.cerrar .img_cerrar{
+    height: 100%;
+    width: 100%;
+}
 .agrega .form{
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 70%;
+    width: 40%;
+    height: 90%;
     border: #000 solid 2px;
     border-radius: 10px;
+    background-color: #efefef;
 }
 
 .form .h1{
@@ -142,11 +162,10 @@
     margin-bottom: 10%;
 }
 
-.form .input,.label{
+.form .input,.label, .textarea{
     width: 80%;
     margin: auto;
     border-radius: 15px;
-    text-align: center;
 }
 .form .input{
     height: 2rem;
@@ -155,12 +174,52 @@
     outline: none;
     border: none;
     box-shadow: 0 2px 1px 0px #000;
+    text-indent: 10px;
 }
 .form .label{
     font-size: 20px;
     margin-bottom: 0;
+    text-align: center;
+}
+.form .textarea{
+    margin: auto;
+    font-size: 20px;
+    margin-top: 1%;
+    outline: none;
+    border: none;
+    text-indent: 10px;
 }
 
+.form .select{
+    width: 80%;
+    height: 2rem;
+    font-size: 20px;
+    margin: 1% auto 0;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 15px;
+    text-indent: 10px;
+}
+
+
+
+/* Estilo básico del botón */
+.custom_file_upload {
+    background-color: #fff;
+    cursor: pointer;
+    color: #484a4bc0;
+    border-radius: 5px;
+    font-size:20px;
+}
+
+
+/* Estilo oculto del elemento de entrada de archivo */
+.hidden {
+display: none;
+}
+
+
+/*------form batns--------*/
 .agrega .form .div_btns{
     width: 60%;
     height: 2.5rem;
@@ -179,6 +238,7 @@
     background: #2e5287;
     color: #fff;
     border: #999 solid 1px;
+    cursor: pointer;
 }
 .button .svg{
     margin: 0 2px;
@@ -193,11 +253,12 @@
     border-radius: 50%;
 }
 
-/*------------
-------------
+
+/*--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 media querys
-------------
-------------*/
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------*/
 
 .cont_tabla{
     display: none;
@@ -337,87 +398,7 @@ media querys
     cursor: pointer;
 }
 
-.tabla_mobile_cerrada{
-    width: 80%;
-    height: 80%;
-    margin: auto;
-}
-
-.fila1_cerrada{
-    background-color: #b8b8b8;
-    display: flex;
-    width: 60%;
-    height: 15%;
-    margin: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.fila1_cerrada .actividad_mobile{
-    display: flex;
-    flex: 1;
-}
-.fila1_cerrada .p{
-    margin: auto;
-    font-weight: bold;
-}
-.act-localidad{
-    border-left: #000 1px solid;
-}
-.act_deporte{
-    border-right: #000 1px solid;
-}
-
-.fila2_cerrada{
-    background-color: #efefef;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    flex-direction: column;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.fila3_cerrada{
-    background-color: #fff;
-    width: 100%;
-    height: 20%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    border: 1px #ccc solid;
-    box-sizing: border-box;
-}
-.fila3_cerrada .espacio{
-    width: 20%;
-}
-.fila3_cerrada .p{
-    display: flex;
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-.fila3_cerrada .btn_abajo{
-    width: 20%;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-.fila3_cerrada .abajo{
-    width: 60%;
-    height: 60%;
-    fill: #000;
-    cursor: pointer;
-}
-
-.agrega{
-    margin: 0 35%;
-}
 
 
 
 }
-

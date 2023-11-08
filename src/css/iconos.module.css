@@ -5,8 +5,8 @@
 
 .deporte{
     display: flex;
-    width: 12%;
-    padding-top: 12%;
+    width: 100%;
+    padding-top: 100%;
     padding: 5px;
     border: 4px #000 solid;
     border-radius: 40px;
@@ -30,36 +30,4 @@
 .img{
     width: 80%;
     height: 80%;
-}
-
-
-
-@media screen  and (min-width:700px) and (max-width:900px){
-.deporte{
-    width: 20%;
-    padding-top: 20%;
-    padding: 10px;
-}
-}
-
-@media screen and (min-width:636px) and (max-width:700px){
-
-    .deporte{
-        width: 30%;
-        padding-top: 30%;
-        padding: 10px;
-        margin: 10px auto;
-    }
-
-}
-
-@media screen and (min-width:0px) and (max-width:636px){
-
-    .deporte{
-        width: 30%;
-        padding-top: 30%;
-        padding: 10px;
-        margin: 10px auto;
-    }
-    
 }

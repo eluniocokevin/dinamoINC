@@ -1,43 +1,63 @@
-import React, { Component } from 'react';
 import stylesContacto from "../css/contact.module.css"
+import React, { useState } from 'react';
+function Contacto(){
+const [nombre, setNombre] = useState('');
+const [email, setEmail] = useState('');
+const [telefono, setTelefono] = useState('');
+const [asunto, setAsunto] = useState('');
+const [mensaje, setMensaje] = useState('')
 
-class Contacto extends Component {
-constructor(props) {
-  super(props);
-  this.state = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  };
-}
 
-handleChange = (e) => {
-  const { name, value } = e.target;
-  this.setState({ [name]: value });
-};
-
-handleSubmit = (e) => {
+ 
+const handleSubmitForm = async(e)=>{
   e.preventDefault();
-  // Aquí puedes manejar la lógica para enviar el formulario, como enviar los datos a un servidor.
-  // Por ahora, solo mostraremos los datos en la consola.
-  console.log(this.state);
-};
+  const formData = new FormData();
+  formData.append('nombre', nombre);
+  formData.append('email', email);
+  formData.append('telefono', telefono);
+  formData.append('asunto', asunto);
+  formData.append('mensaje',mensaje);
+ 
 
-render() {
+  try {
+    const response = await fetch('http://localhost/archivos2/contacto/subirContacto.php', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      console.log('Evento creado con éxito');
+
+      setNombre('');
+      setEmail('');
+      setTelefono('');
+      setAsunto('');
+      setMensaje('');
+    
+       
+      document.getElementById('file').value = '';
+    } else {
+
+      console.error('Error al crear la noticia');
+    }
+  } catch (error) {
+    console.error('Error en la solicitud:', error);
+  }
+ }
+
+
   return (
+    <>
     <div className={`${stylesContacto.contact_form_container}`}>
       
-      <form className={`${stylesContacto.form}`} onSubmit={this.handleSubmit}>
+      <form className={`${stylesContacto.form}`}  onSubmit={handleSubmitForm} >
         <div className={`${stylesContacto.form_group}`}>
-          <label className={`${stylesContacto.label}`} htmlFor="name">Nombre:</label>
+          <label className={`${stylesContacto.label}`}  htmlFor="name">Nombre:</label>
           <input className={`${stylesContacto.input}`}
             type="text"
             id="name"
             name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
+            value={nombre} onChange={(e)=>{setNombre(e.target.value)}}
             required
           />
         </div>
@@ -47,9 +67,7 @@ render() {
             type="email"
             id="email"
             name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
+            value={email} onChange={(e)=>{setEmail(e.target.value)}}
           />
         </div>
         <div className={`${stylesContacto.form_group}`}>
@@ -58,8 +76,7 @@ render() {
             type="tel"
             id="phone"
             name="phone"
-            value={this.state.phone}
-            onChange={this.handleChange}
+            value={telefono} onChange={(e)=>{setTelefono(e.target.value)}}
           />
         </div>
         <div className={`${stylesContacto.form_group}`}>
@@ -68,8 +85,7 @@ render() {
             type="text"
             id="subject"
             name="subject"
-            value={this.state.subject}
-            onChange={this.handleChange}
+            value={asunto} onChange={(e)=>{setAsunto(e.target.value)}}
           />
         </div>
         <div className={`${stylesContacto.form_group}`}>
@@ -77,16 +93,16 @@ render() {
           <textarea className={`${stylesContacto.textarea}`}
             id="message"
             name="message"
-            value={this.state.message}
-            onChange={this.handleChange}
+            value={mensaje} onChange={(e)=>{setMensaje(e.target.value)}}
             required
           ></textarea>
         </div>
         <button className={`${stylesContacto.button}`} type="submit">Enviar</button>
       </form>
     </div>
-  );
-}
-}
+  
+  </>);
+ }
+
 
 export default Contacto;

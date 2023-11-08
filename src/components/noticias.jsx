@@ -1,8 +1,53 @@
 import stylesNoticias from "../css/noticias.module.css";
-function Noticias() {
+import React, { useState, useEffect } from "react";
+
+  function Noticias() {
+    const [noticias, setNoticias] = useState([]);
+  
+    useEffect(() => {
+      // Realiza una solicitud GET al archivo PHP que obtiene las noticias
+      fetch("http://localhost/archivos2/noticias/recibirNoticia.php")
+        .then((response) => response.json())
+        .then((data) => setNoticias(data))
+        .catch((error) => console.error("Error al obtener las noticias:", error));
+    }, []);
   return (
     <>
+
+
+
+
+
       <div className={`${stylesNoticias.conteiner_noticias}`}>
+      {noticias.map((noticia) => (
+        <div className={`${stylesNoticias.target_noticias}`} key={noticia.id}>
+          <div className={`${stylesNoticias.cont_img}`}>
+            <img className={`${stylesNoticias.img}`}
+              src={`data:image/jpeg;base64, ${noticia.imagen_base64}`}
+              alt=""
+            />
+          </div>
+          <div className={`${stylesNoticias.type}`}><h6 className={`${stylesNoticias.h6}`}>{noticia.deporte}</h6></div>
+          <div className={`${stylesNoticias.info}`}>
+            <div className={`${stylesNoticias.text}`}>
+              <h3 className={`${stylesNoticias.h3}`}>{noticia.titulo}</h3>
+              <p className={`${stylesNoticias.p}`}>{noticia.descripcion}</p>
+            </div>
+          </div>
+          <span className={`${stylesNoticias.span}`}>{noticia.fecha}</span>
+        </div>
+      ))}
+
+
+
+
+
+
+
+
+
+
+        
         <div className={`${stylesNoticias.target_noticias}`}>
           <div className={`${stylesNoticias.cont_img}`}>
             <img className={`${stylesNoticias.img}`} src="/noticia1.jpg" alt="" />

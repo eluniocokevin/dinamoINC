@@ -14,7 +14,6 @@ function CrearEvento(){
  const handleSubmitForm = async(e)=>{
   e.preventDefault();
   const localidad = document.getElementById('localidad').value;
-  const option = document.getElementById('option').value;
   const formData = new FormData();
   formData.append('titulo', titulo);
   formData.append('deporte', deporte);
@@ -22,10 +21,10 @@ function CrearEvento(){
   formData.append('fecha', fecha);
   formData.append('archivo', archivo);
   formData.append('localidad',localidad);
-  formData.append('option',option);
+
 
   try {
-    const response = await fetch('http://localhost/archivos/eventos/subirEvento.php', {
+    const response = await fetch('http://localhost/archivos2/eventos/subirEvento.php', {
       method: 'POST',
       body: formData,
     });
@@ -379,12 +378,7 @@ function CrearEvento(){
           <input className={`${stylesCrearEvento.input}`} onChange={(e)=>{setFecha(e.target.value)}} type="date" />
 
 
-          <label className={`${stylesCrearEvento.label}`} htmlFor="">Seleccione si el evento es temporal o anual</label>
-          <select className={`${stylesCrearEvento.select}`} id="option">
-            <option className={`${stylesCrearEvento.option}`} value="s">select</option>
-            <option className={`${stylesCrearEvento.option}`} value="temporal">Temporal</option>
-            <option className={`${stylesCrearEvento.option}`} value="anual">Anual</option>
-          </select>
+      
 
           <label className={`${stylesCrearEvento.label}`} htmlFor="">Localidad</label>
           <select className={`${stylesCrearEvento.select}`} name="Localidad" id="localidad">

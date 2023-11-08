@@ -22,9 +22,9 @@ function Funcionarios() {
       </>
     );
   }
-  const [mostrarCrearNoticia, setMostrarCrearNoticia] = useState(false);
-  const [mostrarCrearEvento, setMostrarCrearEvento] = useState(false);
   const [mostrarCrearDeporte, setMostrarCrearDeporte] = useState(true);
+  const [mostrarCrearEvento, setMostrarCrearEvento] = useState(false);
+  const [mostrarCrearNoticia, setMostrarCrearNoticia] = useState(false);
   const [mostrarUsuario, setMostrarUsuarios] = useState(false);
 
 
@@ -32,30 +32,31 @@ function Funcionarios() {
 
 
     const handleNoticia = () => {
-      setMostrarCrearEvento(false);
       setMostrarCrearDeporte(false);
-      setMostrarUsuarios(false);
+      setMostrarCrearEvento(false);
       setMostrarCrearNoticia(!mostrarCrearNoticia);
+      setMostrarUsuarios(false);
     }
     const handleEvento=()=>{
-        setMostrarCrearNoticia(false);
-        setMostrarCrearDeporte(false);
-        setMostrarUsuarios(false);
-        setMostrarCrearEvento(!mostrarCrearEvento);
+      setMostrarCrearDeporte(false);
+      setMostrarCrearEvento(!mostrarCrearEvento);
+      setMostrarCrearNoticia(false);
+      setMostrarUsuarios(false);
     }
     const handleDeporte=()=>{
-        setMostrarCrearNoticia(false);
-        setMostrarCrearEvento(false);
-        setMostrarUsuarios(false);
-        setMostrarCrearDeporte(!mostrarCrearDeporte);
+      setMostrarCrearDeporte(!mostrarCrearDeporte);
+      setMostrarCrearEvento(false);
+      setMostrarCrearNoticia(false);
+      setMostrarUsuarios(false);
     }
 
     const handleUsuario=()=>{
-      setMostrarCrearNoticia(false);
       setMostrarCrearDeporte(false);
       setMostrarCrearEvento(false);
+      setMostrarCrearNoticia(false);
       setMostrarUsuarios(!mostrarUsuario);
     }
+
 
 
 
@@ -82,15 +83,13 @@ function Funcionarios() {
         <div className={`${stylesFuncionarios.menu}`}>
           <a className={`${stylesFuncionarios.a} ${stylesFuncionarios.zoom}`} href="#"  id="menuButton"><img className={`${stylesFuncionarios.img}`} src="/list.svg" /></a>
           <div className={`${stylesFuncionarios.dropdown_content}`} id="dropdownContent">
-          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleDeporte}>Deportes</a>
-          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleEvento}>Eventos</a>
-          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleNoticia}>Noticias</a>
-          <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleUsuario}>Usuarios</a>
+            <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleDeporte}>Deportes</a>
+            <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleEvento}>Eventos</a>
+            <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleNoticia}>Noticias</a>
+            <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleUsuario}>Usuarios</a>
           </div>
         </div>
       
-
-
 
 
       </aside>
