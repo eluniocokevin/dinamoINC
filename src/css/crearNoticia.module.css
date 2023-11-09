@@ -3,7 +3,7 @@
 .tabla{
     display: flex;
     width: 80vw;
-    min-height: 100vh;
+    height: auto;
     flex-direction: column;
 }
 .tabla .cont_h1{
