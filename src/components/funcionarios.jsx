@@ -1,12 +1,12 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import stylesFuncionarios from "../css/funcionarios.module.css";
 import CrearNoticia from "./crearNoticia";
 import CrearEvento from "./crearEvento";
 import CrearDeporte from "./crearDeporte";
 import EditarUsuarios from "./editarUsuarios";
-
+import NoticiasAdmin from "./noticiasAdmins";
 
 
 function Funcionarios() {
@@ -60,6 +60,18 @@ function Funcionarios() {
 
 
 
+
+
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      fetch('http://localhost/archivos2/noticias/recibirNoticia.php')
+        .then((response) => response.json())
+        .then((data) => setData(data))
+        .catch((error) => console.error("Error al obtener los datos:", error));
+    }, []);
+
     
   return (
     <>
@@ -95,8 +107,20 @@ function Funcionarios() {
       </aside>
 
       <div id="crear" className={`${stylesFuncionarios.crear}`}>
-        {mostrarCrearNoticia && <CrearNoticia />}
-        {mostrarCrearEvento && <CrearEvento/>}
+        {mostrarCrearNoticia && <NoticiasAdmin />}
+        {mostrarCrearNoticia && data.map((noticia) => (
+          <CrearNoticia
+            key={noticia.id}
+            titulo={noticia.titulo}
+            deporte={noticia.deporte}
+            descripcion={noticia.descripcion}
+            fecha={noticia.fecha}
+            imagen={noticia.imagen}
+          />
+        )) }
+
+        {mostrarCrearEvento && <CrearEvento
+        />}
         {mostrarCrearDeporte && <CrearDeporte/>}
         {mostrarUsuario && <EditarUsuarios/>}
       </div>
