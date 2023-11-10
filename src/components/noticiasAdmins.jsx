@@ -6,13 +6,7 @@ import React, { useState,useEffect } from 'react';
 function noticiasAdmins (){
 
 
-    useEffect(() => {
-        // Realiza una solicitud GET al archivo PHP que obtiene las noticias
-        fetch("http://localhost/archivos2/noticias/subirNoticia.php")
-          .then((response) => response.json())
-          .then((data) => setNoticias(data))
-          .catch((error) => console.error("Error al obtener las noticias:", error));
-      }, []);
+
   
   
     const [titulo, setTitulo] = useState('');

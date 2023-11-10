@@ -110,7 +110,7 @@ function Funcionarios() {
         {mostrarCrearNoticia && <NoticiasAdmin />}
         {mostrarCrearNoticia && data.map((noticia) => (
           <CrearNoticia
-            key={noticia.id}
+            id={noticia.id}
             titulo={noticia.titulo}
             deporte={noticia.deporte}
             descripcion={noticia.descripcion}
