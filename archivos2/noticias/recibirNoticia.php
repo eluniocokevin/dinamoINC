@@ -15,7 +15,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $sql = "SELECT id, titulo,deporte, descripcion, fecha, TO_BASE64(imagen) as imagen_base64 FROM noticia";
+    $sql = "SELECT id, titulo,deporte, descripcion, fecha, TO_BASE64(imagen) as imagen_base64 FROM noticia order by fecha desc";
 
     $stmt = $conn->query($sql);
     $noticias = $stmt->fetchAll(PDO::FETCH_ASSOC);
