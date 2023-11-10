@@ -36,7 +36,11 @@ if ($method === "POST") {
             $_SESSION["usuario"] = $cedula;
             $usuarioRol = $row['rol'];
             echo json_encode(array("success"=>true, "role" => $usuarioRol));
-        } else {
+        }
+        else if ($row["rol"] === "denegado"  || $row["contraseña"] === 1){
+        echo json_encode(array("error" => "Inyección SQL Detectada Guardando IP"));}  
+        
+        else {
             echo json_encode(array("error" => "Credenciales incorrectas"));
         }
     } else {
