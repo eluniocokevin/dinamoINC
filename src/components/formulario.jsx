@@ -1,8 +1,113 @@
 import stylesform from "../css/formulario.module.css";
 import Header from "./header";
 import Footer from "./footer";
+import React, { useState } from 'react';
 
 function Formulario () {
+
+        const [nombre, setNombre] = useState('');
+        const [apellido, setApellido] = useState('');
+        const [ci, setCi] = useState('');
+        const [nacimiento, setNacimiento] = useState('');
+        const [sexo, setSexo] = useState('');
+        const [cedulafoto, setCedulafoto] = useState(null); 
+        const [carnetfoto, setCarnetfoto] = useState(null);
+        const [domicilio, setDomicilio] = useState('');
+        const [celular, setCelular] = useState('');
+        const [asistencia, setAsistencia] = useState('');
+        const [asistencianombre, setAsistencianombre] = useState('');
+        const [diabetes, setDiabetes] = useState(false);
+        const [hipertension, setHipertension] = useState(false);
+        const [asma, setAsma] = useState(false);
+        const [alergias, setAlergias] = useState(false);
+        const [fracturas, setFracturas] = useState(false);
+        const [otros, setOtros] = useState('');
+        const [lentes, setLentes] = useState(false);
+        const [tipolentes, setTipolentes] = useState('');
+        const [nombretutor, setNombretutor] = useState('');
+        const [roltutor, setRoltutor] = useState('');
+        const [lugar, setLugar] = useState('');
+        const [citutor, setCitutor] = useState('');
+      
+        const handleFormSubmit = async (e) => {
+            e.preventDefault();
+          
+            const formData = new FormData();
+            formData.append('nombre', nombre);
+            formData.append('apellido', apellido);
+            formData.append('ci', ci);
+            formData.append('nacimiento', nacimiento);
+            formData.append('sexo', sexo);
+            formData.append('cedulafoto', cedulafoto);
+            formData.append('carnetfoto', carnetfoto);
+            formData.append('domicilio', domicilio);
+            formData.append('celular', celular);
+            formData.append('asistencia', asistencia);
+            formData.append('asistencianombre', asistencianombre);
+            formData.append('diabetes', diabetes);
+            formData.append('hipertension', hipertension);
+            formData.append('asma', asma);
+            formData.append('alergias', alergias);
+            formData.append('fracturas', fracturas);
+            formData.append('otros', otros);
+            formData.append('lentes', lentes);
+            formData.append('tipolentes', tipolentes);
+            formData.append('nombretutor', nombretutor);
+            formData.append('roltutor', roltutor);
+            formData.append('lugar', lugar);
+            formData.append('citutor', citutor);
+          
+            try {
+              const response = await fetch('http://localhost/archivos2/usuarios/subirUsuario.php', {
+                method: 'POST',
+                body: formData,
+              });
+          
+              if (response.ok) {
+                console.log('Noticia creada con éxito');
+          
+                // Reset form fields after successful submission
+                setNombre('');
+                setApellido('');
+                setCi('');
+                setNacimiento('');
+                setSexo('');
+                setCedulafoto(null);
+                setCarnetfoto(null);
+                setDomicilio('');
+                setCelular('');
+                setAsistencia('');
+                setAsistencianombre('');
+                setDiabetes(false);
+                setHipertension(false);
+                setAsma(false);
+                setAlergias(false);
+                setFracturas(false);
+                setOtros('');
+                setLentes(false);
+                setTipolentes('');
+                setNombretutor('');
+                setRoltutor('');
+                setLugar('');
+                setCitutor('');
+          
+    
+                document.getElementById('file').value = '';
+              } else {
+                const errorData = await response.json();
+                setError(true);
+                setErrorMsg(errorData.response);
+                console.error('Error al crear la noticia');
+              }
+            } catch (error) {
+              console.error('Error en la solicitud:', error);
+            }
+          };
+
+
+
+
+
 return(
     <>
 <Header/>
@@ -12,130 +117,117 @@ return(
             <h1 className={`${stylesform.form_h1}`}>Formulario de actividad</h1>
             <img className={`${stylesform.formuimg}`} src="/formu.png" alt="formulario icono" />
         </div>
-        <form className={`${stylesform.form}`} action="code.php" method="POST">
+        <form className={`${stylesform.form}`} id="form" onSubmit={handleFormSubmit} >
 
             <div className={`${stylesform.personales}`}>
             
-                <label className={`${stylesform.form_label}`}for="">Ingrese su nombre</label>
-                <input className={`${stylesform.form_input}`} type="text" name="nombre" id="nombre" placeholder="Nombre" required />
+<label className={`${stylesform.form_label}`} htmlFor="nombre">Ingrese su nombre</label>
+<input className={`${stylesform.form_input}`} type="text" name="nombre" id="nombre" placeholder="Nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} required />
 
-                <label className={`${stylesform.form_label}`}for="">Ingrese apellido</label>
-                <input className={`${stylesform.form_input}`} type="text" name="apellido" id="apellido" placeholder="Apellido" required />
+<label className={`${stylesform.form_label}`} htmlFor="apellido">Ingrese apellido</label>
+<input className={`${stylesform.form_input}`} type="text" name="apellido" id="apellido" placeholder="Apellido" value={apellido} onChange={(e) => setApellido(e.target.value)} required />
 
-                <label className={`${stylesform.form_label}`}for="">Ingrese su fecha de nacimiento</label>
-                <input className={`${stylesform.form_input}`} type="date" min="1930-12-12" max="2020-01-01" name="fecha_nacimiento" id="fecha_nacimiento" required />
+<label className={`${stylesform.form_label}`} htmlFor="fecha_nacimiento">Ingrese su fecha de nacimiento</label>
+<input className={`${stylesform.form_input}`} type="date" min="1930-12-12" max="2020-01-01" name="fecha_nacimiento" id="fecha_nacimiento" value={nacimiento} onChange={(e) => setNacimiento(e.target.value)} required />
 
-                <label className={`${stylesform.form_label}`}for="">Ingrese su cédula</label>
-                <input className={`${stylesform.form_input}`} type="number" max="99999999" name="cedula" id="cedula" placeholder="12345678" required />
+<label className={`${stylesform.form_label}`} htmlFor="cedula">Ingrese su cédula</label>
+<input className={`${stylesform.form_input}`} type="number" max="99999999" name="cedula" id="cedula" placeholder="12345678" value={ci} onChange={(e) => setCi(e.target.value)} required />
 
+<div className={`${stylesform.sexo}`}>
+  <label className={`${stylesform.form_label}`} htmlFor="sexo">Sexo</label>
+  <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexoM" value="M" checked={sexo === 'M'} onChange={() => setSexo('M')} required />M
+  <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexoF" value="F" checked={sexo === 'F'} onChange={() => setSexo('F')} required />F
+</div>
 
-                <div className={`${stylesform.sexo}`}>
-                    <label className={`${stylesform.form_label}`}for="">Sexo</label>
-                    <input  className={`${stylesform.form_input}`}  type="radio" name="sexo" id="sexo" Value="M" required />M
-                    <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexo" Value="F" required />F
-                </div>
+<label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`} htmlFor="cedulaImg"> Cargar imagen de cédula
+  <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="" />
+</label>
+<input className={`${stylesform.hidden}`} type="file" accept="image/*" name="cedula" id="cedulaImg" onChange={(e) => setCedulafoto(e.target.files[0])} required />
 
-                <label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`}htmlFor="cedulaImg"> Cargar imagen de cédula
-                <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="" />
-                </label>
-                <input className={`${stylesform.hidden}`} type="file" accept="image/*" name="cedula" id="cedulaImg" required />
+<label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`} htmlFor="carnet_salud">Cargar imagen de carnet de salud
+  <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="" />
+</label>
+<input className={`${stylesform.hidden}`} type="file" accept="image/*" name="carnet_salud" id="carnet_salud" onChange={(e) => setCarnetfoto(e.target.files[0])} required />
 
-                <label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`}htmlFor="carnet_salud">Cargar imagen de carnet de salud
-                    <img className={`${stylesform}`} src="/public/file-earmark.svg" alt="" />
-                </label>
-                <input className={`${stylesform.hidden}`} type="file" accept="image/*" name="carnet_salud" id="carnet_salud" required />
+<label className={`${stylesform.form_label}`} htmlFor="domicilio">Ingrese domicilio</label>
+<input className={`${stylesform.form_input}`} type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value={domicilio} onChange={(e) => setDomicilio(e.target.value)} required />
 
-                <label className={`${stylesform.form_label}`}for="">Ingrese domicilio</label>
-                <input className={`${stylesform.form_input}`} type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required />
-
-                <label className={`${stylesform.form_label}`}for="">Ingrese su celular</label>
-                <input className={`${stylesform.form_input}`} type="number" max="99999999" name="celular" id="celular" placeholder="12345678" required />
+<label className={`${stylesform.form_label}`} htmlFor="celular">Ingrese su celular</label>
+<input className={`${stylesform.form_input}`} type="number" max="99999999" name="celular" id="celular" placeholder="12345678" value={celular} onChange={(e) => setCelular(e.target.value)} required />
 
             </div>
 
             <div className={`${stylesform.medico}`}>
-                <div className={`${stylesform.medico1}`}>
-                    <label className={`${stylesform.form_label} ${stylesform.asis_medica}`}for="">Asistencia Médica</label>
+  <div className={`${stylesform.medico1}`}>
+    <label className={`${stylesform.form_label} ${stylesform.asis_medica}`} htmlFor="">Asistencia Médica</label>
 
-                    <div className={`${stylesform.radio_si}`}>
-                    <label className={`${stylesform.form_label} ${stylesform.label_si}`}>Si</label>
-                    <input  className={`${stylesform.form_input} ${stylesform.input_si}`}  type="radio" name="asistencia" id="asistencia" Value="si" required />
-                    </div>
-                    
-                    <div className={`${stylesform.radio_no}`}>
-                        <label className={`${stylesform.form_label} ${stylesform.label_no}`}>No</label>
-                        <input className={`${stylesform.form_input} ${stylesform.input_no}`} type="radio" name="asistencia" id="asistencia" Value="no" required />
-                    </div>
-                    
-                    
-                    <label className={`${stylesform.form_label} `}for="">Cual:</label>
-                    <input className={`${stylesform.form_input}`} type="text" name="asistencianombre" id="asistencianombre" placeholder="Asistencia" required />
-                </div>
+    <div className={`${stylesform.radio_si}`}>
+      <label className={`${stylesform.form_label} ${stylesform.label_si}`}>Si</label>
+      <input className={`${stylesform.form_input} ${stylesform.input_si}`} type="radio" name="asistencia" id="asistenciaSi" value="si" onChange={(e) => setAsistencia(e.target.value)} required />
+    </div>
 
-            
-                <label className={`${stylesform.form_label}`}for="">Enfermedades que tiene o ha tenido</label>
-                <div className={`${stylesform.enfermedades}`} >
-                    <div className={`${stylesform.diabetes}`}>
-                        <p className={`${stylesform.p}`}> Diabetes</p>
-                        <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="diabetes"/> 
-                    </div>
-                    <div className={`${stylesform.hipertension}`}>
-                        <p className={`${stylesform.p}`}> Hipertensión</p>
-                        <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="hipertension"/> 
-                    </div>
-                    <div className={`${stylesform.asma}`}>
-                        <p className={`${stylesform.p}`}> Asma</p>
-                        <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="asma"/> 
-                    </div>
-                    <div className={`${stylesform.alergias}`}>
-                        <p className={`${stylesform.p}`}> Alergias</p>
-                        <input className={`${stylesform.form_input}`} type="checkbox" name="enfermedad" id="enfermedad" value="alergias"/> 
-                    </div>
-                    <div className={`${stylesform.fracturas}`}>
-                        <p className={`${stylesform.p}`}> Fracutras</p>
-                        <input className={`${stylesform.form_input}`} type="checkbox" name="fractura" id="fractura" value="fractura"/> 
-                    </div>
-                    <div className={`${stylesform.otros}`}>
-                        <p className={`${stylesform.p}`}> Otros: </p>
-                        <input className={`${stylesform.otros_input}`} type="text" name="enfermedad" id="enfermedad"/> 
-                    </div>
+    <div className={`${stylesform.radio_no}`}>
+      <label className={`${stylesform.form_label} ${stylesform.label_no}`}>No</label>
+      <input className={`${stylesform.form_input} ${stylesform.input_no}`} type="radio" name="asistencia" id="asistenciaNo" value="no" onChange={(e) => setAsistencia(e.target.value)} required />
+    </div>
 
-                </div>
+    <label className={`${stylesform.form_label}`} htmlFor="asistencianombre">Cual:</label>
+    <input className={`${stylesform.form_input}`} type="text" name="asistencianombre" id="asistencianombre" placeholder="Asistencia" value={asistencianombre} onChange={(e) => setAsistencianombre(e.target.value)} required />
+  </div>
 
-                <div className={`${stylesform.lentes}`}>
-                    <div className={`${stylesform.usa_lentes}`}>
-                        <p className={`${stylesform.p}`}>Usa lentes:</p>
-                        <input className={`${stylesform.form_input}`} type="checkbox" name="lentes" id="lentes" value="lentes"/>
-                    </div>
-                    <div className={`${stylesform.tipo_lentes}`}>
-                        <p className={`${stylesform.p}`}>De que tipo?</p>
-                        <input className={`${stylesform.input_tipo_lentes}`} type="text" name="lentes" id="lentes"/>
-                    </div>
-                </div>
+  <label className={`${stylesform.form_label}`} htmlFor="enfermedades">Enfermedades que tiene o ha tenido</label>
+  <div className={`${stylesform.enfermedades}`}>
+    <div className={`${stylesform.diabetes}`}>
+      <p className={`${stylesform.p}`}> Diabetes</p>
+      <input className={`${stylesform.form_input}`} type="checkbox" name="diabetes" id="enfermedadDiabetes" checked={diabetes} onChange={() => setDiabetes(!diabetes)} value="diabetes" />
+    </div>
+    <div className={`${stylesform.hipertension}`}>
+      <p className={`${stylesform.p}`}> Hipertensión</p>
+      <input className={`${stylesform.form_input}`} type="checkbox" name="hipertension" id="enfermedadHipertension" checked={hipertension} onChange={() => setHipertension(!hipertension)} value="hipertension" />
+    </div>
+    <div className={`${stylesform.asma}`}>
+      <p className={`${stylesform.p}`}> Asma</p>
+      <input className={`${stylesform.form_input}`} type="checkbox" name="asma" id="enfermedadAsma" checked={asma} onChange={() => setAsma(!asma)} value="asma" />
+    </div>
+    <div className={`${stylesform.alergias}`}>
+      <p className={`${stylesform.p}`}> Alergias</p>
+      <input className={`${stylesform.form_input}`} type="checkbox" name="alergias" id="enfermedadAlergias" checked={alergias} onChange={() => setAlergias(!alergias)} value="alergias" />
+    </div>
+    <div className={`${stylesform.fracturas}`}>
+      <p className={`${stylesform.p}`}> Fracturas</p>
+      <input className={`${stylesform.form_input}`} type="checkbox" name="fractura" id="fractura" checked={fracturas} onChange={() => setFracturas(!fracturas)} value="fractura" />
+    </div>
+    <div className={`${stylesform.otros}`}>
+      <p className={`${stylesform.p}`}> Otros: </p>
+      <input className={`${stylesform.otros_input}`} type="text" name="otros" id="enfermedadOtros" value={otros} onChange={(e) => setOtros(e.target.value)} />
+    </div>
+  </div>
 
-                <div className={`${stylesform.permiso}`}>
-                    <div className={`${stylesform.enunciado_permiso}`}>
-                    <p>Yo <input type="text" id="nombretutor"/> en mi caracter de <input type="text" id="roltutor"/> autorizo a mi hijo/a a practicar actividades deportivas y recreativas promovidas
-                     por la División Deportes y Recreación de la intendencia de Soriano, deslindando a esta repartición municipalde todo tipo de responsabilidad relacionada con 
-                    enfermedades o lesiones o accidentes o perdida de valores materiales (vestimenta,calzado,dinero,etc.) que mi hijo/a pudiera sufrir realizando actividades en este marco de trabajo. </p>
-                    </div>
-                </div>
-                    <div className={`${stylesform.firmas}`}>
-                    <label className={`${stylesform.form_label}`}for="">Ingrese Lugar</label>
-                    <input className={`${stylesform.form_input}`} type="text" name="lugar" id="lugar" placeholder="Lugar"/>
+  <div className={`${stylesform.lentes}`}>
+    <div className={`${stylesform.usa_lentes}`}>
+      <p className={`${stylesform.p}`}>Usa lentes:</p>
+      <input className={`${stylesform.form_input}`} type="checkbox" name="lentes" id="lentes" checked={lentes} onChange={() => setLentes(!lentes)} value="lentes" />
+    </div>
+    <div className={`${stylesform.tipo_lentes}`}>
+      <p className={`${stylesform.p}`}>De qué tipo?</p>
+      <input className={`${stylesform.input_tipo_lentes}`} type="text" name="tipo_lentes" id="tipo_lentes" value={tipolentes} onChange={(e) => setTipolentes(e.target.value)} />
+    </div>
+  </div>
 
-                    <label className={`${stylesform.form_label}`}for="">Ingrese fecha actual</label>
-                    <input className={`${stylesform.form_input}`} type="date" name="fecha_permiso" id="fecha_permiso" />
+  <div className={`${stylesform.permiso}`}>
+    <div className={`${stylesform.enunciado_permiso}`}>
+      <p>Yo <input type="text" id="nombretutor" value={nombretutor} onChange={(e) => setNombretutor(e.target.value)} /> en mi carácter de <input type="text" id="roltutor" value={roltutor} onChange={(e) => setRoltutor(e.target.value)} /> autorizo a mi hijo/a a practicar actividades deportivas y recreativas promovidas por la División Deportes y Recreación de la intendencia de Soriano, deslindando a esta repartición municipal de todo tipo de responsabilidad relacionada con enfermedades o lesiones o accidentes o pérdida de valores materiales (vestimenta, calzado, dinero, etc.) que mi hijo/a pudiera sufrir realizando actividades en este marco de trabajo.</p>
+    </div>
+  </div>
 
+  <div className={`${stylesform.firmas}`}>
+    <label className={`${stylesform.form_label}`} htmlFor="lugar">Ingrese Lugar</label>
+    <input className={`${stylesform.form_input}`} type="text" name="lugar" id="lugar" placeholder="Lugar" value={lugar} onChange={(e) => setLugar(e.target.value)} />
+  </div>
 
-                 
-                    </div>
-                    <label className={`${stylesform.form_label}`}for="">CI Tutor</label>
-                    <input className={`${stylesform.form_input}`} type="text" name="ci_tutor" id="ci_tutor" placeholder="CI tutor"/>
-                </div>
-
-
-
+  <label className={`${stylesform.form_label}`} htmlFor="ci_tutor">CI Tutor</label>
+  <input className={`${stylesform.form_input}`} type="text" name="ci_tutor" id="ci_tutor" placeholder="CI tutor" value={citutor} onChange={(e) => setCitutor(e.target.value)} />
+</div>
 
 
             <div className={`${stylesform.form_btns}`}>
