@@ -52,8 +52,7 @@
     background-color: rgb(245, 245, 245);
     margin-top: 10%;
     width: 90%;
-    min-height: 35vh;
-    height: auto;
+    height: 35vh;
     border-radius: 20px;
     box-shadow: rgb(61, 62, 63) 0 0 10px 1px ;
     display: flex;
@@ -76,7 +75,7 @@
     height: 90%;
 }
 
-.botones{
+.boton{
     width:100%;
     height: 15%;
     display: flex;
@@ -109,7 +108,7 @@
     flex-direction: column !important; 
     align-items: center !important;
 }
-.imagenac, .img{
+.imagenac{
     border-radius: 10px;
     width: 100%;
     height: 90%;
@@ -198,56 +197,6 @@ margin-bottom: 5%;
 @media screen and (min-width:0px) and (max-width:900px){
 
 
-/* ------------actividad------------ */
-.actividadesa{
-    width: 100%;
-}
-
-.tarjetaactividad{
-    width: 90vw;
-    min-height: 50vh;
-    height: auto;
-    flex-direction: column;
-}
-.izquierda{
-    width: 100%;
-    min-height: 25vh;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-.imagenac{
-    width: 90%;
-    min-height: 15vh;
-    margin: 5px auto;
-}
-
-.img{
-    display: flex;
-    width: 90%;
-    height: 100%;
-    margin: auto;
-}
-.fecha{
-    display: flex;
-    margin: 20px 0 0 15px;
-}
-
-.derecha{
-    width: 100%;
-    min-height: 25vh;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-.derecha .texto{
-    min-height: 20vh;
-
-}
-.derecha .botones{
-    margin: 10px 0;
-}
-
-
-
 .titulo, .h1{
     font-size: larger;
 }
@@ -257,7 +206,6 @@ margin-bottom: 5%;
     flex-direction: column;
 }
 
-/* -------------eventos------------ */
 .eventos{
     width: 70%;
     align-self: center;
@@ -306,12 +254,4 @@ margin-bottom: 5%;
 .eventos{
     width: 100%;
 }
-}
-
-@media screen and (min-width: 500px) and (max-width: 900px){
-
-.tarjetaactividad{
-    width: 70%;
-}
-
 }

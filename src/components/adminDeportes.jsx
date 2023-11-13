@@ -88,7 +88,7 @@ return(
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.agregar}`}>
             <div className={`${stylesCrearDeporte.btn_add}`}>
               <div onClick={abrirDeporte} className={`${stylesCrearDeporte.add}`}>
-                <svg className={`${stylesCrearDeporte.svg_add}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
+                <svg className={`${stylesCrearDeporte.svg_add}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" rx="0" ry="0">
                     <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
                       <g className={`${stylesCrearDeporte.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
@@ -168,7 +168,7 @@ return(
           </select>
 
 
-          <label className={`${stylesCrearDeporte.label} ${stylesCrearDeporte.custom_file_upload}`} for="file"> Subir imagen de portada
+          <label className={`${stylesCrearDeporte.label} ${stylesCrearDeporte.custom_file_upload}`}htmlFor="file"> Subir imagen de portada
               <img className={`${stylesCrearDeporte.img}`} src="/public/file-earmark.svg" alt="" />
           </label>
           <input className={`${stylesCrearDeporte.hidden}`} onChange={(e)=>{setArchivo(e.target.files[0])}} type="file" accept="image/*"id="file" required />
@@ -177,9 +177,9 @@ return(
 
           <div className={`${stylesCrearDeporte.div_btns}`}>
             <button onClick={cerrarDeporte} className={`${stylesCrearDeporte.btn_cancelar} ${stylesCrearDeporte.button}`}>
-              Cancelar <svg className={`${stylesCrearDeporte.svg}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef9151833b03" version="1.1" viewBox="1401.652 2681 30 30" height="30">
+              Cancelar <svg className={`${stylesCrearDeporte.svg}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef9151833b03" version="1.1" viewBox="1401.652 2681 30 30" height="30">
                 <g id="shape-c5eece6e-48df-8016-8002-ef9151833b03">
-                  <g class="fills" id="fills-c5eece6e-48df-8016-8002-ef9151833b03">
+                  <g className="fills" id="fills-c5eece6e-48df-8016-8002-ef9151833b03">
                     <path rx="0" ry="0" d="M1416.652,2681.000C1408.369,2681.000,1401.652,2687.717,1401.652,2696.000C1401.652,2704.283,1408.369,2711.000,1416.652,2711.000C1424.936,2711.000,1431.652,2704.283,1431.652,2696.000C1431.652,2687.717,1424.936,2681.000,1416.652,2681.000ZZM1422.190,2701.699L1419.981,2701.689L1416.652,2697.721L1413.328,2701.685L1411.114,2701.695C1410.967,2701.695,1410.847,2701.578,1410.847,2701.427C1410.847,2701.364,1410.870,2701.304,1410.910,2701.253L1415.266,2696.064L1410.910,2690.877C1410.870,2690.828,1410.847,2690.767,1410.847,2690.703C1410.847,2690.556,1410.967,2690.435,1411.114,2690.435L1413.328,2690.445L1416.652,2694.413L1419.977,2690.449L1422.187,2690.439C1422.334,2690.439,1422.455,2690.556,1422.455,2690.706C1422.455,2690.770,1422.431,2690.830,1422.391,2690.881L1418.042,2696.067L1422.395,2701.257C1422.435,2701.307,1422.458,2701.367,1422.458,2701.431C1422.458,2701.578,1422.338,2701.699,1422.190,2701.699ZZ">
                     </path>
                   </g>
@@ -187,34 +187,34 @@ return(
               </svg>
             </button>
             <button className={`${stylesCrearDeporte.btn_agregar} ${stylesCrearDeporte.button}`} type="submit">
-              Agregar <svg className={`${stylesCrearDeporte.svg}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="29.023" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef8dfd3e07c1" version="1.1" viewBox="1726.792 2678 29.023 30" height="30">
+              Agregar <svg className={`${stylesCrearDeporte.svg}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="29.023" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef8dfd3e07c1" version="1.1" viewBox="1726.792 2678 29.023 30" height="30">
                 <g id="shape-c5eece6e-48df-8016-8002-ef8dfd3e07c1" rx="0" ry="0">
                   <g id="shape-c5eece6e-48df-8016-8002-ef8dfd3e07c0">
-                    <g class="fills" id="fills-c5eece6e-48df-8016-8002-ef8dfd3e07c0">
+                    <g className="fills" id="fills-c5eece6e-48df-8016-8002-ef8dfd3e07c0">
                       <rect fill="none" rx="14.511278195488671" ry="14.511278195488671" x="1726.7919799498748" y="2677.9999922487805" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" width="29.022556390977343" height="30">
                       </rect>
                     </g>
                   </g>
                   <g id="shape-c5eece6e-48df-8016-8002-ef8dfd3e07c2" rx="0" ry="0">
                     <g id="shape-c5eece6e-48df-8016-8002-ef8dfd3e07c3">
-                      <g class="fills" id="fills-c5eece6e-48df-8016-8002-ef8dfd3e07c3">
+                      <g className="fills" id="fills-c5eece6e-48df-8016-8002-ef8dfd3e07c3">
                         <path rx="0" ry="0" d="M1744.592,2693.569L1741.853,2693.569L1741.853,2696.400C1741.853,2696.713,1741.608,2696.966,1741.306,2696.966C1741.003,2696.966,1740.758,2696.713,1740.758,2696.400L1740.758,2693.569L1738.019,2693.569C1737.716,2693.569,1737.471,2693.315,1737.471,2693.002C1737.471,2692.690,1737.716,2692.436,1738.019,2692.436L1740.758,2692.436L1740.758,2689.605C1740.758,2689.292,1741.003,2689.039,1741.306,2689.039C1741.608,2689.039,1741.853,2689.292,1741.853,2689.605L1741.853,2692.436L1744.592,2692.436C1744.895,2692.436,1745.140,2692.690,1745.140,2693.002C1745.140,2693.315,1744.895,2693.569,1744.592,2693.569ZZ">
                         </path>
                       </g>
-                      <g id="strokes-c5eece6e-48df-8016-8002-ef8dfd3e07c3" class="strokes">
-                        <g class="stroke-shape">
+                      <g id="strokes-c5eece6e-48df-8016-8002-ef8dfd3e07c3" className="strokes">
+                        <g className="stroke-shape">
                           <path rx="0" ry="0" d="M1744.592,2693.569L1741.853,2693.569L1741.853,2696.400C1741.853,2696.713,1741.608,2696.966,1741.306,2696.966C1741.003,2696.966,1740.758,2696.713,1740.758,2696.400L1740.758,2693.569L1738.019,2693.569C1737.716,2693.569,1737.471,2693.315,1737.471,2693.002C1737.471,2692.690,1737.716,2692.436,1738.019,2692.436L1740.758,2692.436L1740.758,2689.605C1740.758,2689.292,1741.003,2689.039,1741.306,2689.039C1741.608,2689.039,1741.853,2689.292,1741.853,2689.605L1741.853,2692.436L1744.592,2692.436C1744.895,2692.436,1745.140,2692.690,1745.140,2693.002C1745.140,2693.315,1744.895,2693.569,1744.592,2693.569ZZ">
                           </path>
                         </g>
                       </g>
                     </g>
                     <g id="shape-c5eece6e-48df-8016-8002-ef8dfd3e07c4">
-                      <g class="fills" id="fills-c5eece6e-48df-8016-8002-ef8dfd3e07c4">
+                      <g className="fills" id="fills-c5eece6e-48df-8016-8002-ef8dfd3e07c4">
                         <path rx="0" ry="0" d="M1741.306,2704.250C1736.903,2704.251,1732.934,2701.510,1731.249,2697.306C1729.564,2693.102,1730.495,2688.263,1733.608,2685.045C1736.721,2681.828,1741.402,2680.865,1745.469,2682.607C1749.536,2684.349,1752.188,2688.452,1752.187,2693.002C1752.179,2699.211,1747.312,2704.243,1741.306,2704.250ZZM1741.306,2682.884C1737.347,2682.883,1733.777,2685.347,1732.261,2689.128C1730.746,2692.908,1731.582,2697.260,1734.381,2700.154C1737.180,2703.048,1741.390,2703.915,1745.048,2702.349C1748.705,2700.784,1751.091,2697.095,1751.091,2693.002C1751.086,2687.418,1746.708,2682.891,1741.306,2682.884ZZ">
                         </path>
                       </g>
-                      <g id="strokes-c5eece6e-48df-8016-8002-ef8dfd3e07c4" class="strokes">
-                        <g class="stroke-shape">
+                      <g id="strokes-c5eece6e-48df-8016-8002-ef8dfd3e07c4" className="strokes">
+                        <g className="stroke-shape">
                           <path rx="0" ry="0" d="M1741.306,2704.250C1736.903,2704.251,1732.934,2701.510,1731.249,2697.306C1729.564,2693.102,1730.495,2688.263,1733.608,2685.045C1736.721,2681.828,1741.402,2680.865,1745.469,2682.607C1749.536,2684.349,1752.188,2688.452,1752.187,2693.002C1752.179,2699.211,1747.312,2704.243,1741.306,2704.250ZZM1741.306,2682.884C1737.347,2682.883,1733.777,2685.347,1732.261,2689.128C1730.746,2692.908,1731.582,2697.260,1734.381,2700.154C1737.180,2703.048,1741.390,2703.915,1745.048,2702.349C1748.705,2700.784,1751.091,2697.095,1751.091,2693.002C1751.086,2687.418,1746.708,2682.891,1741.306,2682.884ZZ">
                           </path>
                         </g>
@@ -237,7 +237,7 @@ return(
 
 
     <div onClick={abrirDeporte} className={`${stylesCrearDeporte.add_m}`}>
-      <svg className={`${stylesCrearDeporte.svg_add_m}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
+      <svg className={`${stylesCrearDeporte.svg_add_m}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
         <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" rx="0" ry="0">
           <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
             <g className={`${stylesCrearDeporte.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">

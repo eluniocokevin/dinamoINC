@@ -35,12 +35,12 @@ return(
                     <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexo" Value="F" required />F
                 </div>
 
-                <label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`} for="cedulaImg"> Cargar imagen de cédula
+                <label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`}htmlFor="cedulaImg"> Cargar imagen de cédula
                 <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="" />
                 </label>
                 <input className={`${stylesform.hidden}`} type="file" accept="image/*" name="cedula" id="cedulaImg" required />
 
-                <label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`} for="carnet_salud">Cargar imagen de carnet de salud
+                <label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`}htmlFor="carnet_salud">Cargar imagen de carnet de salud
                     <img className={`${stylesform}`} src="/public/file-earmark.svg" alt="" />
                 </label>
                 <input className={`${stylesform.hidden}`} type="file" accept="image/*" name="carnet_salud" id="carnet_salud" required />

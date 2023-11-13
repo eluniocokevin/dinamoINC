@@ -17,6 +17,10 @@
 .cont_h1 .h1{ 
     margin: auto;
 }
+.img{
+    height: 40px;
+    width: 80px;
+    }
 /*------Atributos------*/
 .atributos{
     color: #000;
