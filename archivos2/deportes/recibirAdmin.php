@@ -13,10 +13,9 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $localidad = $_GET['localidad'];
-    $deporte = $_GET['deporte'];
+
    
-    $sql = "SELECT id,deporte, descripcion,  fecha, ubicacion, loclidad, TO_BASE64(imagen) AS imagen_base64 FROM deporte where option1='anual' and localidad= '$localidad' and deporte='$deporte'";
+    $sql = "SELECT id,deporte, descripcion,  fecha, ubicacion, localidad, TO_BASE64(imagen) AS imagen_base64 FROM deporte";
 
     $stmt = $conn->query($sql);
     $eventos = $stmt->fetchAll(PDO::FETCH_ASSOC);
