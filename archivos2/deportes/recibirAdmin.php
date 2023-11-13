@@ -15,7 +15,7 @@ try {
 
 
    
-    $sql = "SELECT id,deporte, descripcion,  fecha, ubicacion, localidad, TO_BASE64(imagen) AS imagen_base64 FROM deporte";
+    $sql = "SELECT id,deporte, descripcion,  fecha, ubicacion, localidad, TO_BASE64(imagen) AS imagen_base64 FROM deporte order by fecha desc";
 
     $stmt = $conn->query($sql);
     $eventos = $stmt->fetchAll(PDO::FETCH_ASSOC);
