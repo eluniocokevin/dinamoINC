@@ -1,1 +1,28 @@
-dsa
+
+CREATE TABLE `usuario` (
+  `ci` int(8) DEFAULT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `apellido` varchar(100) DEFAULT NULL,
+  `nacimiento` date DEFAULT NULL,
+  `sexo` varchar(10) DEFAULT NULL,
+  `cedulafoto` longblob DEFAULT NULL,
+  `carnetfoto` longblob DEFAULT NULL,
+  `domicilio` varchar(40) DEFAULT NULL,
+  `celular` int(9) DEFAULT NULL,
+  `asistencia` varchar(2) DEFAULT NULL,
+  `asistencianombre` varchar(255) DEFAULT NULL,
+  `diabetes` varchar(2) DEFAULT NULL,
+  `hipertension` varchar(2) DEFAULT NULL,
+  `asma` varchar(2) DEFAULT NULL,
+  `alergias` varchar(2) DEFAULT NULL,
+  `fracturas` varchar(2) DEFAULT NULL,
+  `otros` varchar(255) DEFAULT NULL,
+  `lentes` varchar(2) DEFAULT NULL,
+  `tipolentes` varchar(255) DEFAULT NULL,
+  `nombretutor` varchar(100) DEFAULT NULL,
+  `roltutor` varchar(100) DEFAULT NULL,
+  `lugar` varchar(100) DEFAULT NULL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
+  `citutor` int(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+COMMIT;
