@@ -72,6 +72,8 @@ function CrearNoticia( props ) {
 
 
   const handleFormDelete = async (id) => {
+
+
     const confirmDelete = window.confirm("¿Estás seguro de que deseas eliminar esta noticia?");
   
     if (!confirmDelete) {

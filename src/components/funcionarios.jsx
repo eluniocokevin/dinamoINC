@@ -6,7 +6,9 @@ import CrearNoticia from "./crearNoticia";
 import CrearEvento from "./crearEvento";
 import CrearDeporte from "./crearDeporte";
 import EditarUsuarios from "./editarUsuarios";
-import NoticiasAdmin from "./noticiasAdmins";
+import AdminNoticias from "./adminNoticias";
+import AdminDeportes from "./adminDeportes";
+import AdminEventos from "./adminEventos";
 
 
 function Funcionarios() {
@@ -63,14 +65,31 @@ function Funcionarios() {
 
 
 
-    const [data, setData] = useState([]);
+    const [dataNoticia, setDataNoticia] = useState([]);
+    const [dataDeporte, setDataDeporte] = useState([]);
+    const [dataEvento, setDataEvento] = useState([]);
 
     useEffect(() => {
       fetch('http://localhost/archivos2/noticias/recibirNoticia.php')
         .then((response) => response.json())
-        .then((data) => setData(data))
+        .then((dataNoticia) => setDataNoticia(dataNoticia))
         .catch((error) => console.error("Error al obtener los datos:", error));
     }, []);
+
+    useEffect(() => {
+      fetch('http://localhost/archivos2/deportes/recibirAdmin.php')
+        .then((response) => response.json())
+        .then((dataDeporte) => setDataDeporte(dataDeporte))
+        .catch((error) => console.error("Error al obtener los datos:", error));
+    }, []);
+
+    useEffect(() => {
+      fetch('http://localhost/archivos2/eventos/recibirEventos.php')
+        .then((response) => response.json())
+        .then((dataEvento) => setDataEvento(dataEvento))
+        .catch((error) => console.error("Error al obtener los datos:", error));
+    }, []);
+
 
     
   return (
@@ -107,8 +126,8 @@ function Funcionarios() {
       </aside>
 
       <div id="crear" className={`${stylesFuncionarios.crear}`}>
-        {mostrarCrearNoticia && <NoticiasAdmin />}
-        {mostrarCrearNoticia && data.map((noticia) => (
+        {mostrarCrearNoticia && <AdminNoticias />}
+        {mostrarCrearNoticia && dataNoticia.map((noticia) => (
           <CrearNoticia
             id={noticia.id}
             titulo={noticia.titulo}
@@ -119,9 +138,32 @@ function Funcionarios() {
           />
         )) }
 
-        {mostrarCrearEvento && <CrearEvento
-        />}
-        {mostrarCrearDeporte && <CrearDeporte/>}
+        {mostrarCrearEvento && <CrearEvento />}
+        {mostrarCrearEvento && dataEvento.map((evento) => (
+          <CrearEvento
+            id={evento.id}
+            titulo={evento.titulo}
+            deporte={evento.deporte}
+            descripcion={evento.descripcion}
+            localidad={evento.localidad}
+            fecha={evento.fecha}
+            imagen={evento.imagen}
+          />
+        )) }
+
+
+        {mostrarCrearDeporte && <AdminDeportes />}
+        {mostrarCrearDeporte && dataDeporte.map((deporte) => (
+          <CrearDeporte
+            id={deporte.id}
+            deporte={deporte.deporte}
+            descripcion={deporte.descripcion}
+            fecha={deporte.fecha}
+            imagen={deporte.imagen}
+            localidad={deporte.localidad}
+          />
+        )) }
+        
         {mostrarUsuario && <EditarUsuarios/>}
       </div>
 
