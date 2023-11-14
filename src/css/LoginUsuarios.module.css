@@ -1,0 +1,262 @@
+
+/* -----------Login Funcionarios */
+
+.login_funcionarios {
+    max-width: 264px;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-1000px);
+    transition: all 1s;
+  
+  }
+  .login_funcionarios.show {
+    max-width: 264px;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    background: #efefef;
+    transform: translate(0px, 0px);
+    transition: all 1s ease;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+  }
+  
+  .cont_logo{
+    height: 20vh;
+    width: 70%;
+    margin: auto;
+    margin: 1em auto;
+    display: flex;
+  }
+  .cont_logo .cont_img{
+    display: flex;
+    height: auto;
+    width: 80%;
+    margin: auto;
+  }
+  .cont_img .img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .login_funcionarios .h2{
+    margin: 10% auto 0;
+    font-size: larger;
+  }
+  
+  
+  .form {
+    width: 100%;
+    height: 50%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /*Input 1*/
+  
+  .form .input1 {
+    width: 70%;
+    height: 2rem;
+    margin: 1rem auto;
+  }
+  .form .input {
+    width: 100%;
+    height: 2rem;
+    background: none;
+    color: #333;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #777 solid 1px;
+    outline: 0px;
+    overflow: hidden;
+  }
+  .form .lbl_nombre {
+    position: absolute;
+    width: 70%;
+    height: 2rem;
+    margin: 1px 0 0 -70%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .input:focus {
+    border-bottom: none;
+  }
+  .form .lbl_nombre:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  .text_nomb {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #333;
+  }
+  .form .input:focus+.lbl_nombre .text_nomb,
+  .form .input:valid+.lbl_nombre .text_nomb {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #2ecece;
+  }
+  .form .input:focus+.lbl_nombre:after,
+  .form .input:valid+.lbl_nombre:after {
+    transform: translateX(0%);
+  }
+  
+  /*Icono del input 1*/
+  
+  .cont_ico{
+    width: 20px;
+    height: 20px;
+    margin-top: -2rem;
+    margin-left: 85%;
+  }
+  
+  
+  .cont_ico .ico1 {
+    height: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  /*Input 2*/
+  
+  .form .input2 {
+    width: 70%;
+    height: 2rem;
+    margin: 1rem auto;
+  }
+  .form .input {
+    width: 100%;
+    height: 2rem;
+    background: none;
+    color: #333;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #777 solid 1px;
+    outline: 0px;
+    overflow: hidden;
+  }
+  
+  
+  .form .lbl_nombre2 {
+    position: absolute;
+    width: 70%;
+    height: 2rem;
+    margin: 1px 0 0 -70%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .input:focus {
+    border-bottom: none !important;
+  }
+  .form .lbl_nombre2:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  .text_nomb2 {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #333;
+  }
+  .form .input:focus+.lbl_nombre2 .text_nomb2,
+  .form .input:valid+.lbl_nombre2 .text_nomb2 {
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #2ecece;
+  }
+  
+  
+  .form .input:focus+.lbl_nombre2:after,
+  .form .input:valid+.lbl_nombre2:after {
+    transform: translateX(0%);
+  }
+  
+  
+  .input1[data-error='true'] label:after, .input2[data-error='true'] label:after{
+    border-bottom: red solid 3px !important;
+  }
+  
+  
+  
+  
+  /*Iconos del input 2*/
+  
+  
+  .cont_ico{
+    width: 20px;
+    height: 20px;
+    margin-top: -1.5rem;
+  }
+  
+  
+  .cont_ico .ico2 {
+    height: 20px;
+  }
+  
+  
+  
+  /*saca el border-bottom del input*/
+  .form .input:focus,
+  .form .input:valid {
+    border: none;
+    
+  }
+  
+  /*Boton*/
+  
+  .cont_btn_login {
+    width: auto;
+    margin: auto;
+    display: flex;
+    border-width: 0;
+    margin: 2rem auto;
+  
+  }
+  
+  .boton_login {
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2e5287;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 0 0 10px 0px #fff;
+    cursor: pointer;
+  }
+  
+  .boton_login:hover {
+    background-color: #26ccca;
+    box-shadow: #777 0 0 10px 0px;
+    color: #333;
+  }
+  
+  

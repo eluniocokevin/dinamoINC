@@ -164,6 +164,88 @@ margin-bottom: 5%;
 .tarjetaevento:hover{
     transform: translateY(-15px);
 }
+
+
+
+
+
+
+
+
+.icon_close {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background: #284369;
+    color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+  }
+  .close {
+    width: 50%;
+    height: 50%;
+  }
+
+
+
+
+
+.login_funcionarios {
+    max-width: 264px;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-1000px);
+    transition: all 1s;
+  
+}
+.login_funcionarios.show {
+    max-width: 264px;
+    height: auto;
+    z-index: 400;
+    position: fixed;
+    background: #efefef;
+    transform: translate(0px, 0px);
+    transition: all 1s ease;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------mobile----------*/
 .a .p{
     color: #fff;
