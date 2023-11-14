@@ -91,7 +91,74 @@ function Funcionarios() {
     }, []);
 
 
-    
+
+    const fetchNoticia = async () => {
+      try {
+        const response = await fetch('http://localhost/archivos2/noticias/recibirNoticia.php');
+        if (response.ok) {
+          const data = await response.json();
+          setDataNoticia(data);
+        } else {
+          console.error('Error al obtener la noticia');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
+      }
+    };
+  
+    useEffect(() => {
+      fetchNoticia();
+    }, []);
+    useEffect(() => {
+      const intervalId = setInterval(fetchNoticia, 1000);
+      return () => clearInterval(intervalId);
+    }, []); 
+
+
+    const fetchDeporte = async () => {
+      try {
+        const response = await fetch('http://localhost/archivos2/deportes/recibirAdmin.php');
+        if (response.ok) {
+          const data = await response.json();
+          setDataDeporte(data);
+        } else {
+          console.error('Error al obtener del deporte');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
+      }
+    };
+  
+    useEffect(() => {
+      fetchDeporte();
+    }, []);
+    useEffect(() => {
+      const intervalId = setInterval(fetchDeporte, 1000);
+      return () => clearInterval(intervalId);
+    }, []); 
+
+    const fetchEvento = async () => {
+      try {
+        const response = await fetch('http://localhost/archivos2/eventos/recibirEvento.php');
+        if (response.ok) {
+          const data = await response.json();
+          setDataEvento(data);
+        } else {
+          console.error('Error al obtener del evento');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
+      }
+    };
+    useEffect(() => {
+      fetchEvento();
+    }, []);
+    useEffect(() => {
+      const intervalId = setInterval(fetchEvento, 1000);
+      return () => clearInterval(intervalId);
+    }, []); 
+
+
   return (
     <>
     
