@@ -23,6 +23,7 @@ CREATE TABLE `usuario` (
   `roltutor` varchar(100) DEFAULT NULL,
   `lugar` varchar(100) DEFAULT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
-  `citutor` int(8) DEFAULT NULL
+  `citutor` int(8) DEFAULT NULL,
+'contrasena' varchar (255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 COMMIT;
