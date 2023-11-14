@@ -227,6 +227,10 @@ width: 80px;
 display: none;
 }
 
+.fileSelected {
+    background-color: #c0c0c0;
+}
+
 
 /*------form batns--------*/
 .agrega .form .div_btns{

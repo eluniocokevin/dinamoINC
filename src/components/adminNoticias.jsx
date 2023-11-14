@@ -70,7 +70,14 @@ function noticiasAdmins (){
       form.style.transform = 'translateX(-2000px)';
     }
   
+    const [fileSelected, setFileSelected] = useState(false);
 
+    const handleChange = (event) => {
+    
+      setArchivo(event.target.files[0]);
+    
+      setFileSelected(!!event.target.files.length);
+    };
 
 return(
     <>
@@ -132,10 +139,22 @@ return(
           <input className={`${stylesCrearNoticia.input}`} onChange={(e)=>{setFecha(e.target.value)}} type="date" />
 
 
-          <label className={`${stylesCrearNoticia.label} ${stylesCrearNoticia.custom_file_upload}`}htmlFor="file"> Subir imagen de portada
+
+
+
+
+
+          <label className={`${stylesCrearNoticia.label} ${stylesCrearNoticia.custom_file_upload} ${fileSelected ? stylesCrearNoticia.fileSelected : ''}`}htmlFor="file">
+            {fileSelected ? 'Archivo seleccionado' : 'Subir imagen de portada'}
               <img className={`${stylesCrearNoticia.img}`} src="/public/file-earmark.svg" alt="" />
           </label>
-          <input className={`${stylesCrearNoticia.hidden}`} onChange={(e)=>{setArchivo(e.target.files[0])}} type="file" accept="image/*"id="file"/>
+          <input className={`${stylesCrearNoticia.hidden}`} onChange={handleChange}  type="file" accept="image/*"id="file" required />
+
+
+
+
+
+
 
           {error && <span>{ErrorMsg}</span>}
 

@@ -31,10 +31,12 @@
     align-items: center;
     margin: auto;
     background-color: #5888cfdf;
-    padding: 40px;
     border-radius: 20px;
     box-shadow: 0 5px 30px 0px #000a;
     color: #eee;
+}
+.personales{
+    width: 90%;
 }
 .form .form_label,.form_input {
     display: flex;
@@ -79,7 +81,7 @@
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
 }
 
 .medico1{
@@ -91,7 +93,7 @@
     width: 20%;
 }
 .medico1 .form_input{
-    width: 40%;
+    min-width: 30px;
 }
 .medico1 .asis_medica{
     width: 100%;
@@ -114,7 +116,11 @@
     padding-bottom: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
+}
+.sexo .form_label{
+    width: 30%;
 }
 
 .enfermedades{
@@ -128,28 +134,30 @@
     width: auto;   
 }
 .enfermedades .form_input{
-    width: 1.9rem;
+    min-width: 30px;
+    margin: 0 4px;
 }
-.diabetes,.hipertension,.asma, .alergias{
+.diabetes,.hipertension,.asma, .alergias, .fracturas{
     display: flex;    
     align-items: center;
-    width: 50%;
     justify-content: space-around;
+    margin: 0 3px;
 }
 
 .otros{
     display: flex;
     width: 70%;
-    height: 2rem;
+    height: 1.5rem;
     align-items: center;
 }
 .otros .otros_input{
     width: 100%;
     background: transparent;
-    height: 2rem;
+    height: 1.4rem;
     border: none;
     border-bottom: 1px solid  #000;
     text-indent: 5px;
+    font-size: 1rem;
 }
 
 .otros_input:focus{
@@ -172,19 +180,20 @@
     justify-content: start;
 }
 .usa_lentes .p{
-    width: 25%;
+    width: 50%;
     align-self: center;
+    text-align: end;
 }
 .usa_lentes .form_input{
-    width: 1.9rem;
+    width: 30px;
+    justify-self: flex-start;
 }
-
 
 
 
 .tipo_lentes{
     display: flex;
-    width: 70%;
+    width: 90%;
 }
 .tipo_lentes .p{
     width: 30%;
@@ -193,7 +202,7 @@
 .tipo_lentes .input_tipo_lentes{
     width: 70%;
     background: transparent;
-    height: 2rem;
+    height: 1.4rem;
     border: none;
     border-bottom: 1px solid  #000;
     font-size: 1rem;
@@ -211,6 +220,7 @@
 
 
 
+
 /*lñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñlkjasdñlfkjñadlskjfñlaksdjflñasdkjfñlaksdjfñlkajsñflkjdsñlkjfñldskjfañlkjsdfñllñasdkjfñlak*/
 
 
@@ -220,37 +230,19 @@
     cursor: pointer;
     color: #484a4bc0;
     border-radius: 5px;
-    font-size:11px  !important;
+    font-size:12px  !important;
 }
 
-
-
-
-
-  /* Estilo oculto del elemento de entrada de archivo */
-  .hidden {
+/* Estilo oculto del elemento de entrada de archivo */
+.hidden {
     display: none;
-  }
+}
+/* estilo para cuando hay archivo seleccionado */
 
-
+.fileSelected {
+    background-color: #c0c0c0;
+}
 /*lñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñllñasdkjfñlaksdjfñlkajsdñflkjdsñlkjfñldskjfañlkjsdfñlkjasdñfkjñadlskjfñlaksdjflñasdkjfñlak*/
-
-
-.permiso{
-padding-top: 40px;
-padding-bottom: 10px;
-}
-.enunciado_permiso{
-padding-bottom: 30px;
-}
-
-.firmas .form_input{
-width: 100%;
-}
-.firmas{
-display: flex;
-flex-direction: column;
-}
 
 
 
@@ -261,7 +253,7 @@ flex-direction: column;
     height: 2rem;
     display: flex;
     justify-content: space-around;
-    margin-top: 5%;
+    margin: 5% 0;
     transition: transform 0.3s ease;
 }
 
@@ -295,6 +287,20 @@ flex-direction: column;
   }
  
 
+.permiso{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.enunciado_permiso{
+padding-bottom: 30px;
+}
+
+
+.firmas{
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media screen and (min-width:1200px) and (max-width:1450px){
 
@@ -308,12 +314,16 @@ flex-direction: column;
 
 
 @media screen and (min-width:700px) and (max-width:900px){
+
+
+
 .form_h1 {
     text-align: center;
     font-size: 50px;
 }
-
-
+.form{
+    width: 60%;
+}
 
 .form .form_label{
     margin-top: 1%;
@@ -322,17 +332,39 @@ flex-direction: column;
     width: 100%;
 }
 .volver .form_button{
-
     height: 4vh;
     width: 15vw;
     border-radius:10px ;
-    }
+}
+}
+.sexo .form_label{
+    width: 30%;
+    justify-content: end;
+}
+.sexo .form_input{
+    width: 30px;
+}
+.sexo .label{
+    width: 20%;
 }
 
 @media screen and (min-width:600px) and (max-width:700px){
 
 
-    
+
+.form{
+    width: 90%;
+}
+.form_input, .form_label{
+    margin: auto;
+}   
+
+.sexo .form_label, .from_input{
+    margin: auto;
+}
+
+
+
 .form_h1{
  font-size: 40px;
 }
@@ -343,14 +375,26 @@ flex-direction: column;
 
 .form .form_label{
     font-size: 15px;
-    width: 100%;
+    width: 90%;
 }
 
 .form .form_input{
     height:4vh;
     width: 90%;
-}  
-
+}
+.enunciado_permiso .form_input{
+    height: 1rem;
+}
+.sexo .form_label{
+    width: 30%;
+    justify-content: end;
+}
+.sexo .form_input{
+    width: 30px;
+}
+.sexo .label{
+    width: 20%;
+} 
 }
 
 
@@ -360,7 +404,7 @@ flex-direction: column;
 font-size: 27px;
 }
 .form{
-    width: 60%;
+    width: 80%;
 }
 
 .formuimg{
@@ -371,13 +415,26 @@ font-size: 27px;
 
 .form .form_label{
 font-size: 15px;
-width: 150%;
+width: 100%;
 }
 
 .form .form_input{
     height:4vh;
     width: 100%;
-}   
+}
+.sexo .form_label{
+    width: 30%;
+    justify-content: end;
+}
+.sexo .form_input{
+    width: 30px;
+}
+.sexo .label{
+    width: 20%;
+}
+.enunciado_permiso .form_input{
+    height: 1rem;
+}
 .form .form_button{
     width: 80px;
     margin-left: 5px;
@@ -389,7 +446,7 @@ width: 150%;
 
 @media screen and (min-width:0px) and (max-width:400px){
 .form{
-width: 60%;
+width: 90%;
 }
     
 .titulo{
@@ -408,16 +465,50 @@ margin-left: 15px;
 
 .form .form_label{
 font-size: 12px;
-width: 170%;
+width: 100%;
 }
     
 .form .form_input{
 height:4vh;
-width: 130%;
-}   
+width: 100%;
+}
+.sexo .form_label{
+    width: 30%;
+    justify-content: center;
+}
+.sexo .form_input{
+    width: 30px;
+}
+.sexo .label{
+    width: 20%;
+}
+.enunciado_permiso .form_input{
+    height: 1rem;
+}
 .form .form_button{
 width: 80px;
 margin-left: 5px;
 }
+
+
+
 }
-    
+
+@media screen and (min-width:0px) and (max-width:900px){
+.medico .radio_no, .radio_si{
+    margin: auto;
+}
+}
+@media screen and (min-width:0px) and (max-width:600px){
+
+
+.lentes .usa_lentes, .tipo_lentes{
+    width: 100%;
+    margin: 5px 0;
+}
+.usa_lentes .form_input{
+    width: 30px;
+    justify-self: start;
+}
+
+}

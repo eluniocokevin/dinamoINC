@@ -17,7 +17,14 @@ function noticiasAdmins (){
   const [ubicacion, setUbicacion] = useState('')
   
   
+  const [fileSelected, setFileSelected] = useState(false);
+
+  const handleChange = (event) => {
   
+    setArchivo(event.target.files[0]);
+  
+    setFileSelected(!!event.target.files.length);
+  };
   
   
   
@@ -168,10 +175,17 @@ return(
           </select>
 
 
-          <label className={`${stylesCrearDeporte.label} ${stylesCrearDeporte.custom_file_upload}`}htmlFor="file"> Subir imagen de portada
+          
+
+          <label className={`${stylesCrearDeporte.label} ${stylesCrearDeporte.custom_file_upload} ${fileSelected ? stylesCrearDeporte.fileSelected : ''}`}htmlFor="file">
+            {fileSelected ? 'Archivo seleccionado' : 'Subir imagen de portada'}
               <img className={`${stylesCrearDeporte.img}`} src="/public/file-earmark.svg" alt="" />
           </label>
-          <input className={`${stylesCrearDeporte.hidden}`} onChange={(e)=>{setArchivo(e.target.files[0])}} type="file" accept="image/*"id="file" required />
+          <input className={`${stylesCrearDeporte.hidden}`} onChange={handleChange}  type="file" accept="image/*"id="file" required />
+
+
+
+
 
 
 

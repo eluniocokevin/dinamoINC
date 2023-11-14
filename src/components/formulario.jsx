@@ -105,7 +105,23 @@ function Formulario () {
           };
 
 
+          const [fileSelected, setFileSelected] = useState(false);
 
+          const handleChange = (event) => {
+          
+            setCarnetfoto(event.target.files[0]);
+          
+            setFileSelected(!!event.target.files.length);
+          };
+
+          const [fileSelectede, setFileSelectede] = useState(false);
+
+          const handleChangee = (event) => {
+          
+            setCedulafoto(event.target.files[0]);
+          
+            setFileSelectede(!!event.target.files.length);
+          };
 
 
 return(
@@ -139,15 +155,31 @@ return(
   <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexoF" value="F" checked={sexo === 'F'} onChange={() => setSexo('F')} required />F
 </div>
 
-<label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`} htmlFor="cedulaImg"> Cargar imagen de cédula
-  <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="" />
-</label>
-<input className={`${stylesform.hidden}`} type="file" accept="image/*" name="cedula" id="cedulaImg" onChange={(e) => setCedulafoto(e.target.files[0])} required />
 
-<label className={`${stylesform.form_label} ${stylesform.custom_file_upload}`} htmlFor="carnet_salud">Cargar imagen de carnet de salud
-  <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="" />
-</label>
-<input className={`${stylesform.hidden}`} type="file" accept="image/*" name="carnet_salud" id="carnet_salud" onChange={(e) => setCarnetfoto(e.target.files[0])} required />
+
+
+<label className={`${stylesform.form_label} ${stylesform.custom_file_upload} ${fileSelected ? stylesform.fileSelected : ''}`}htmlFor="cedulaImg">
+            {fileSelected ? 'Archivo seleccionado' : 'Cargar imagen de cédula'}
+              <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="cedulaImg" />
+          </label>
+          <input className={`${stylesform.hidden}`} onChange={handleChange}  type="file" accept="image/*"id="cedulaImg" required />
+
+
+
+          <label className={`${stylesform.form_label} ${stylesform.custom_file_upload} ${fileSelectede ? stylesform.fileSelected : ''}`}htmlFor="carnet_salud">
+            {fileSelectede ? 'Archivo seleccionado' : 'Cargar imagen de carnet de salud'}
+              <img className={`${stylesform.img}`} src="/public/file-earmark.svg" alt="carnet_salud" />
+          </label>
+          <input className={`${stylesform.hidden}`} onChange={handleChangee}  type="file" accept="image/*"id="carnet_salud" required />
+
+
+
+
+
+
+
+
+
 
 <label className={`${stylesform.form_label}`} htmlFor="domicilio">Ingrese domicilio</label>
 <input className={`${stylesform.form_input}`} type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value={domicilio} onChange={(e) => setDomicilio(e.target.value)} required />

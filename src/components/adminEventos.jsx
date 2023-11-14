@@ -87,6 +87,14 @@ function adminEventos(){
 // }); 
 
 
+const [fileSelected, setFileSelected] = useState(false);
+
+const handleChange = (event) => {
+
+  setArchivo(event.target.files[0]);
+
+  setFileSelected(!!event.target.files.length);
+};
 
 
 
@@ -319,11 +327,11 @@ function adminEventos(){
             <option  className={`${stylesCrearEvento.option}`}value="villadarwin">Villa Darwin</option>
           </select>
 
-
-          <label className={`${stylesCrearEvento.label} ${stylesCrearEvento.custom_file_upload}`}htmlFor="file"> Subir imagen de portada
+          <label className={`${stylesCrearEvento.label} ${stylesCrearEvento.custom_file_upload} ${fileSelected ? stylesCrearEvento.fileSelected : ''}`}htmlFor="file">
+            {fileSelected ? 'Archivo seleccionado' : 'Subir imagen de portada'}
               <img className={`${stylesCrearEvento.img}`} src="/public/file-earmark.svg" alt="" />
           </label>
-          <input className={`${stylesCrearEvento.hidden}`} onChange={(e)=>{setArchivo(e.target.files[0])}} type="file" accept="image/*"id="file" required />
+          <input className={`${stylesCrearEvento.hidden}`} onChange={handleChange}  type="file" accept="image/*"id="file" required />
 
 
 
