@@ -16,13 +16,13 @@ function Formulario () {
         const [celular, setCelular] = useState('');
         const [asistencia, setAsistencia] = useState('');
         const [asistencianombre, setAsistencianombre] = useState('');
-        const [diabetes, setDiabetes] = useState(false);
-        const [hipertension, setHipertension] = useState(false);
-        const [asma, setAsma] = useState(false);
-        const [alergias, setAlergias] = useState(false);
-        const [fracturas, setFracturas] = useState(false);
+        const [diabetes, setDiabetes] = useState(null);
+        const [hipertension, setHipertension] = useState(null);
+        const [asma, setAsma] = useState(null);
+        const [alergias, setAlergias] = useState(null);
+        const [fracturas, setFracturas] = useState(null);
         const [otros, setOtros] = useState('');
-        const [lentes, setLentes] = useState(false);
+        const [lentes, setLentes] = useState(null);
         const [tipolentes, setTipolentes] = useState('');
         const [nombretutor, setNombretutor] = useState('');
         const [roltutor, setRoltutor] = useState('');
@@ -65,8 +65,7 @@ function Formulario () {
           
               if (response.ok) {
                 console.log('Noticia creada con éxito');
-          
-                // Reset form fields after successful submission
+       
                 setNombre('');
                 setApellido('');
                 setCi('');
@@ -78,13 +77,13 @@ function Formulario () {
                 setCelular('');
                 setAsistencia('');
                 setAsistencianombre('');
-                setDiabetes(false);
-                setHipertension(false);
-                setAsma(false);
-                setAlergias(false);
-                setFracturas(false);
+                setDiabetes('no');
+                setHipertension('no');
+                setAsma('');
+                setAlergias('');
+                setFracturas('');
                 setOtros('');
-                setLentes(false);
+                setLentes('');
                 setTipolentes('');
                 setNombretutor('');
                 setRoltutor('');
@@ -211,23 +210,23 @@ return(
   <div className={`${stylesform.enfermedades}`}>
     <div className={`${stylesform.diabetes}`}>
       <p className={`${stylesform.p}`}> Diabetes</p>
-      <input className={`${stylesform.form_input}`} type="checkbox" name="diabetes" id="enfermedadDiabetes" checked={diabetes} onChange={() => setDiabetes(!diabetes)} value="diabetes" />
+      <input className={`${stylesform.form_input}`} type="checkbox" name="diabetes" id="enfermedadDiabetes" checked={diabetes}  value="si" onChange={(e) =>  setDiabetes(e.target.value)}/>
     </div>
     <div className={`${stylesform.hipertension}`}>
       <p className={`${stylesform.p}`}> Hipertensión</p>
-      <input className={`${stylesform.form_input}`} type="checkbox" name="hipertension" id="enfermedadHipertension" checked={hipertension} onChange={() => setHipertension(!hipertension)} value="hipertension" />
+      <input className={`${stylesform.form_input}`} type="checkbox" name="hipertension" id="enfermedadHipertension" checked={hipertension}  value="si" onChange={(e) =>  setHipertension(e.target.value)} />
     </div>
     <div className={`${stylesform.asma}`}>
       <p className={`${stylesform.p}`}> Asma</p>
-      <input className={`${stylesform.form_input}`} type="checkbox" name="asma" id="enfermedadAsma" checked={asma} onChange={() => setAsma(!asma)} value="asma" />
+      <input className={`${stylesform.form_input}`} type="checkbox" name="asma" id="enfermedadAsma" checked={asma}  value="si" onChange={(e) =>  setAsma(e.target.value)} />
     </div>
     <div className={`${stylesform.alergias}`}>
       <p className={`${stylesform.p}`}> Alergias</p>
-      <input className={`${stylesform.form_input}`} type="checkbox" name="alergias" id="enfermedadAlergias" checked={alergias} onChange={() => setAlergias(!alergias)} value="alergias" />
+      <input className={`${stylesform.form_input}`} type="checkbox" name="alergias" id="enfermedadAlergias" checked={alergias}  value="si" onChange={(e) =>  setAlergias(e.target.value)} />
     </div>
     <div className={`${stylesform.fracturas}`}>
       <p className={`${stylesform.p}`}> Fracturas</p>
-      <input className={`${stylesform.form_input}`} type="checkbox" name="fractura" id="fractura" checked={fracturas} onChange={() => setFracturas(!fracturas)} value="fractura" />
+      <input className={`${stylesform.form_input}`} type="checkbox" name="fractura" id="fractura" checked={fracturas}  value="si" onChange={(e) =>  setFracturas(e.target.value)} />
     </div>
     <div className={`${stylesform.otros}`}>
       <p className={`${stylesform.p}`}> Otros: </p>
@@ -238,7 +237,7 @@ return(
   <div className={`${stylesform.lentes}`}>
     <div className={`${stylesform.usa_lentes}`}>
       <p className={`${stylesform.p}`}>Usa lentes:</p>
-      <input className={`${stylesform.form_input}`} type="checkbox" name="lentes" id="lentes" checked={lentes} onChange={() => setLentes(!lentes)} value="lentes" />
+      <input className={`${stylesform.form_input}`} type="checkbox" name="lentes" id="lentes" checked={lentes}  value="si" onChange={(e) =>  setLentes(e.target.value)}/>
     </div>
     <div className={`${stylesform.tipo_lentes}`}>
       <p className={`${stylesform.p}`}>De qué tipo?</p>
