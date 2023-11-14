@@ -2,13 +2,55 @@ import stylesHeader from "../css/header.module.css";
 import { useRef, useState} from "react";
 
 
-function LoginUsuarios() {
+function LoginUsuarios(props) {
 
 const [ErrorRegistro, setErrorRegistro] = useState(false);
 
 const [ErrorMsg, setErrorMsg] = useState(false);
 const [InputHide, setInputHide] = useState(true);
 
+
+
+const refCedula = useRef(null);
+const refContrasena = useRef(null);
+
+
+const url = "http://localhost/archivos2/usuarios/inscribirUsuario.php";
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const data = {
+    cedula: refCedula.current.value,
+    contrasena: refContrasena.current.value,
+    ActividadId: props.ActividadId,
+    
+  };
+
+
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (res.ok) {
+      const json = await res.json();
+      if (json.success) {
+        console.log("entrosisi");
+      } else {
+        console.log(json.error);
+        setErrorMsg(json.error);
+        setErrorRegistro(true);
+      }
+    } else {
+      console.log("Error en la solicitud");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
 
 
 
@@ -23,11 +65,11 @@ return(
         </div>
 
       </div>
-      <h2 className={`${stylesHeader.h2}`}>¡Ingrese como funcionario!</h2>
+      <h2 className={`${stylesHeader.h2}`}>¡Ingrese para Inscribirse!</h2>
       <form className={`${stylesHeader.form}`}>
 
         <div className={`${stylesHeader.input1}`} data-error={`${ErrorRegistro}`}>
-          <input className={`${stylesHeader.input}`} type="text"  required onChange={( ) => setErrorRegistro(false)}/>
+          <input className={`${stylesHeader.input}`} type="text" ref={refCedula} required onChange={( ) => setErrorRegistro(false)}/>
           <label className={`${stylesHeader.lbl_nombre}`}>
             <span className={`${stylesHeader.text_nomb}`}>Cedula</span>
           </label>
@@ -35,7 +77,7 @@ return(
         </div>
 
         <div className={`${stylesHeader.input2}`} data-error={`${ErrorRegistro}`}>
-          <input className={`${stylesHeader.input}`} type={InputHide ? 'password': 'text'}  required onChange={( ) => setErrorRegistro(false)}/>
+          <input className={`${stylesHeader.input}`} type={InputHide ? 'password': 'text'}  ref={refContrasena} required onChange={( ) => setErrorRegistro(false)}/>
           <label className={`${stylesHeader.lbl_nombre2}`}>
             <span className={`${stylesHeader.text_nomb2}`}>Contraseña</span>
           </label>
@@ -46,7 +88,7 @@ return(
         
         
         <div className={`${stylesHeader.cont_btn_login}`}>
-          <button className={`${stylesHeader.boton_login}`} type="submit">
+          <button className={`${stylesHeader.boton_login}`} type="submit"  onClick={handleSubmit} >
             Ingresar
           </button>
         </div>

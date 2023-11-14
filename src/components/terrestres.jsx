@@ -10,7 +10,7 @@ import Iconos from "./iconos";
 import { MapContainer } from 'react-leaflet/MapContainer';
 import { TileLayer } from 'react-leaflet/TileLayer';
 import { Popup,Marker } from 'react-leaflet';
-
+import LoginUsuarios from "./LoginUsuarios";
 
 
 
@@ -18,6 +18,8 @@ import { Popup,Marker } from 'react-leaflet';
 
 
 function Terrestres (){
+
+  const [ActividadId, setActividadId] = useState(true);
 
   /*mapa code */
   const center = [-33.505271, -57.808147];
@@ -64,13 +66,46 @@ function Terrestres (){
   }, [Localidad, Deportes]); 
   
 
+  useEffect(() => {
+    if (Localidad && Deportes) { 
+      const activApiUrl = `http://localhost/archivos2/deportes/recibirDeportestemp.php?localidad=${Localidad}&deporte=${Deportes}`;
+      fetch(activApiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          setActividades(data);
+        })
+        .catch((error) => console.error("Error al obtener los eventos:", error));
+    }
+  }, [Localidad, Deportes]); 
+
+  const [showLogin, setShowLogin] = useState(false);
+
+  const toggleLogin = () => {
+    setShowLogin((prevShowLogin) => !prevShowLogin);
+  };  
+
+  const closeLogin = ()=>{
+    setShowLogin((prevShowLogin) => !prevShowLogin);
+  }
+  
+
+
 
 
 return(
   <>
+  
+  <Header/>
+
+      <div className={`${stylesTerrestres.login_funcionarios} ${showLogin ? `${stylesTerrestres.show}` : ``}`} id="algo">
+        <div id="cerrar" onClick={closeLogin} className={`${stylesTerrestres.icon_close}`}>
+          <img src="/cross2.png" alt="cosa" className={`${stylesTerrestres.img} ${stylesTerrestres.close}`}/>
+        </div>
+        
+        <LoginUsuarios ActividadId={ActividadId}/>
+      </div>
 
 
-    <Header />
 
     <div className={`${stylesTerrestres.mapa}`}>
       <MapContainer center={[-33.505271, -55.808147]} zoom={9} scrollWheelZoom={false} {...mapOptions}>
@@ -241,6 +276,7 @@ return(
               deporte={actividad.deporte}
               descripcion={actividad.descripcion}
               ubicacion={actividad.ubicacion}
+              modal={() => {setActividadId(actividad.id); toggleLogin() } }
             />
           ))) : (<p>no has seleccionado ninguna localidad</p>)}
 

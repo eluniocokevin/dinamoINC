@@ -16,6 +16,7 @@ import LoginUsuarios from "./LoginUsuarios";
 
 function Acuaticos (){
 
+  const [ActividadId, setActividadId] = useState(true);
 
  /*mapa code */
   const center = [-33.505271, -57.808147];
@@ -83,7 +84,8 @@ return(
         <div id="cerrar" onClick={closeLogin} className={`${stylesAcuaticos.icon_close}`}>
           <img src="/cross2.png" alt="cosa" className={`${stylesAcuaticos.img} ${stylesAcuaticos.close}`}/>
         </div>
-        <LoginUsuarios/>
+        
+        <LoginUsuarios ActividadId={ActividadId}/>
       </div>
 
 
@@ -258,7 +260,7 @@ return(
               deporte={actividad.deporte}
               descripcion={actividad.descripcion}
               ubicacion={actividad.ubicacion}
-              modal={toggleLogin}
+              modal={() => {setActividadId(actividad.id); toggleLogin() } }
             />
           ))) : (<p>no has seleccionado ninguna localidad</p>)}
 
