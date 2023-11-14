@@ -26,13 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $celular = $_POST['celular'];
         $asistencia = $_POST['asistencia'];
         $asistencianombre = $_POST['asistencianombre'];
-        $diabetes = isset($_POST['diabetes']) ? 1 : 0;
-        $hipertension = isset($_POST['hipertension']) ? 1 : 0;
-        $asma = isset($_POST['asma']) ? 1 : 0;
-        $alergias = isset($_POST['alergias']) ? 1 : 0;
-        $fracturas = isset($_POST['fracturas']) ? 1 : 0;
+        $diabetes = $_POST['diabetes'] ;
+        $hipertension = $_POST['hipertension'];
+        $asma = $_POST['asma'];
+        $alergias = $_POST['alergias'];
+        $fracturas = $_POST['fracturas'];
         $otros = $_POST['otros'];
-        $lentes = isset($_POST['lentes']) ? 1 : 0;
+        $lentes = $_POST['lentes'];
         $tipolentes = $_POST['tipolentes'];
         $nombretutor = $_POST['nombretutor'];
         $roltutor = $_POST['roltutor'];
@@ -65,7 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':roltutor', $roltutor);
         $stmt->bindParam(':lugar', $lugar);
         $stmt->bindParam(':citutor', $citutor);
-
+        var_dump($diabetes, $hipertension, $asma, $alergias, $fracturas, $lentes);
+       
         $stmt->execute();
 
         $conn = null;
