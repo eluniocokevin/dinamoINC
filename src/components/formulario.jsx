@@ -28,7 +28,8 @@ function Formulario () {
         const [roltutor, setRoltutor] = useState('');
         const [lugar, setLugar] = useState('');
         const [citutor, setCitutor] = useState('');
-      
+        const [contrasena, setContrasena] = useState('');
+
         const handleFormSubmit = async (e) => {
             e.preventDefault();
           
@@ -56,7 +57,7 @@ function Formulario () {
             formData.append('roltutor', roltutor);
             formData.append('lugar', lugar);
             formData.append('citutor', citutor);
-          
+            formData.append('contrasena', contrasena);
             try {
               const response = await fetch('http://localhost/archivos2/usuarios/subirUsuario.php', {
                 method: 'POST',
@@ -89,6 +90,7 @@ function Formulario () {
                 setRoltutor('');
                 setLugar('');
                 setCitutor('');
+                setContrasena();
           
     
                 document.getElementById('file').value = '';
@@ -258,8 +260,11 @@ return(
 
   <label className={`${stylesform.form_label}`} htmlFor="ci_tutor">CI Tutor</label>
   <input className={`${stylesform.form_input}`} type="text" name="ci_tutor" id="ci_tutor" placeholder="CI tutor" value={citutor} onChange={(e) => setCitutor(e.target.value)} />
-</div>
 
+
+<label className={`${stylesform.form_label}`} htmlFor="ci_tutor">Coloque una contraseña</label>
+  <input className={`${stylesform.form_input}`} type="text" name="contrasena" id="contrasena" placeholder="contraseña" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
+</div>
 
             <div className={`${stylesform.form_btns}`}>
                 <button type="reset" className={`${stylesform.form_button}`}>
