@@ -2,26 +2,19 @@
     margin: 0;
     padding: 0;
    }
-
 /*mapa XD*/
 .mapa{padding-top: 13vh;}
-
-
-
 .titulo, .h2{
     width: 100%;
     text-align: center;
    font-size: xx-large;
 }
-
-
 .cuerpo{
     display: flex;
     width: 100%;
     height: auto;
     flex-direction: column;
 }
-
 .iconosa{
     display: flex;
     flex-wrap: wrap;
@@ -34,7 +27,6 @@
     height: auto;
     justify-content: flex-start;
 }
-
 .actividadesa{
     width: 70%;
     height: 100%;
@@ -42,17 +34,17 @@
     flex-direction: column;
     align-items: center;
 }
-
 .icono{
     display: flex;
     width: 200px;
 }
-
 .tarjetaactividad{
     background-color: rgb(245, 245, 245);
     margin-top: 10%;
     width: 90%;
     height: 35vh;
+    min-height: 35vh;
+    height: auto;
     border-radius: 20px;
     box-shadow: rgb(61, 62, 63) 0 0 10px 1px ;
     display: flex;
@@ -75,12 +67,11 @@
     height: 90%;
 }
 
-.boton{
+.botones{
     width:100%;
     height: 15%;
     display: flex;
     justify-content: space-evenly;
-
 }
 .btn{
     background-color: #27649e;
@@ -101,14 +92,14 @@
     text-decoration: none !important;
     font-size: 15px;
 }
-
 .izquierda{
     width: 45%;
     display: flex;
     flex-direction: column !important; 
     align-items: center !important;
 }
-.imagenac{
+
+.imagenac, .img{
     border-radius: 10px;
     width: 100%;
     height: 90%;
@@ -124,9 +115,6 @@
     align-items: center;
     text-align: center;
 }
-
-
-
 .eventos{
     width: 30%;
     height: 100%;
@@ -135,7 +123,6 @@
     flex-direction: column;
     margin: 0 0 2rem 0;
 }
-
 .tarjetaevento{
     border-radius: 5px;
     margin-top:22% ;
@@ -143,9 +130,7 @@
     height: auto;
     box-shadow: rgb(61, 62, 63) 3px 3px 6px 0px ;
     transition: all ease .4s;
-
 }
-
 .imagene{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -158,20 +143,16 @@
     opacity:0.5;
     font-size: 15px;
 }
-
 .textoe{
    
 margin: 5%;
 height:auto;
 }
-
 .fechae{
 text-align: end;
 margin-right: 5%;
 margin-bottom: 5%;
-
 }
-
 .btn:hover {
     transition: all linear .2s;
     transform: scale(1.1); /* Escala el ícono al 120% */
@@ -183,29 +164,72 @@ margin-bottom: 5%;
 .tarjetaevento:hover{
     transform: translateY(-15px);
 }
-
-
 /*----------mobile----------*/
-
 .a .p{
     color: #fff;
 }
-
-
-
-
 @media screen and (min-width:0px) and (max-width:900px){
+
+
+/* ------------actividad------------ */
+.actividadesa{
+    width: 100%;
+}
+
+.tarjetaactividad{
+    width: 90vw;
+    min-height: 50vh;
+    height: auto;
+    flex-direction: column;
+}
+.izquierda{
+    width: 100%;
+    min-height: 25vh;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.imagenac{
+    width: 90%;
+    min-height: 15vh;
+    margin: 5px auto;
+}
+
+.img{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+.fecha{
+    display: flex;
+    margin: 20px 0 0 15px;
+}
+
+.derecha{
+    width: 100%;
+    min-height: 25vh;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.derecha .texto{
+    min-height: 20vh;
+
+}
+.derecha .botones{
+    margin: 10px 0;
+}
+
 
 
 .titulo, .h1{
     font-size: larger;
 }
-
 .fila{
     width: 100%;
     flex-direction: column;
 }
 
+/* -------------eventos------------ */
 .eventos{
     width: 70%;
     align-self: center;
@@ -219,8 +243,6 @@ margin-bottom: 5%;
     box-shadow: rgb(61, 62, 63) 3px 3px 6px 0px ;
     margin-bottom:10% ;
 }
-
-
 .tarjetaevento .p{
     width: 100%;
 }
@@ -237,21 +259,25 @@ margin-bottom: 5%;
     opacity:0.5;
     font-size: 15px;
 }
-
 .textoe{ 
     margin: 5%;
     height:auto;
 }
-
 .fechae{
     text-align: center;
     margin-bottom: 5%;
 }
 }
-
 @media screen and (min-width: 0px) and (max-width: 500px){
-
 .eventos{
     width: 100%;
 }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px){
+
+.tarjetaactividad{
+    width: 70%;
+}
+
 }
