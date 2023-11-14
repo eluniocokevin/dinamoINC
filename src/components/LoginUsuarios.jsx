@@ -1,3 +1,4 @@
+import { popup } from "leaflet";
 import stylesHeader from "../css/header.module.css";
 import { useRef, useState} from "react";
 
@@ -8,11 +9,36 @@ const [ErrorRegistro, setErrorRegistro] = useState(false);
 
 const [ErrorMsg, setErrorMsg] = useState(false);
 const [InputHide, setInputHide] = useState(true);
-
-
+const [showPopup, setShowPopup] = useState(false);
+const [showLogin, setShowLogin] = useState(false);
 
 const refCedula = useRef(null);
 const refContrasena = useRef(null);
+
+const toggleLogin = () => {
+  setShowLogin((prevShowLogin) => !prevShowLogin);
+};
+
+
+
+const closeLogin = ()=>{
+setShowLogin((prevShowLogin) => !prevShowLogin);
+}
+
+
+
+function Popup({ message, onClose }) {
+  return (
+    
+    <div className={stylesHeader.popup}>
+      <p>{message}</p>
+      <button onClick={onClose}>Cerrar</button>
+    </div>
+     
+    
+   
+  );
+}
 
 
 const url = "http://localhost/archivos2/usuarios/inscribirUsuario.php";
@@ -38,7 +64,8 @@ const handleSubmit = async (e) => {
     if (res.ok) {
       const json = await res.json();
       if (json.success) {
-        console.log("entrosisi");
+        setShowPopup(true);
+        setErrorRegistro(false);
       } else {
         console.log(json.error);
         setErrorMsg(json.error);
@@ -58,7 +85,15 @@ const handleSubmit = async (e) => {
 
 return(
     <>
-    
+{/* Pop-up */}
+{showPopup && (
+        <Popup message= {`Has sido registrado en la actividad ${props.Nombre}`} onClose={() => setShowPopup(false)} />
+      )}
+
+<div id="cerrar"     onClick={  () => {closeLogin(); setShowPopup(false)} }  className={`${stylesHeader.icon_close}`}>
+          <img src="/cross2.png" alt="cosa" className={`${stylesHeader.img} ${stylesHeader.close}`}/>
+        </div>
+
     <div className={`${stylesHeader.cont_logo}`}>
         <div className={`${stylesHeader.cont_img}`}>
           <img className={`${stylesHeader.img}`} src="/sorianodeptofertil.png" alt="icono soriano" />
