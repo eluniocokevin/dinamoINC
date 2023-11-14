@@ -10,7 +10,7 @@ return(
     <div className={`${stylesActividad.tarjetaactividad}`}>
       <div className={`${stylesActividad.izquierda}`}>
         <div className={`${stylesActividad.imagenac}`}>
-          <img className={`${stylesActividad.imagenac}`} src={`${props.img}`} alt="imagen actividad" />
+          <img className={`${stylesActividad.img}`} src={`${props.img}`} alt="imagen actividad" />
         </div>
         <div className={`${stylesActividad.fecha}`}>
           <p className={`${stylesActividad.p}`}>{props.fecha}</p>
@@ -23,7 +23,7 @@ return(
             {props.descripcion}
           </p>
         </div>
-        <div className={`${stylesActividad.boton} ${stylesActividad.a}`}>
+        <div className={`${stylesActividad.botones} ${stylesActividad.a}`}>
           <a className={`${stylesActividad.btn} ${stylesActividad.a}`} href={props.ubicacion}>
             <p className={`${stylesActividad.p}`}>Ubicación</p>
             <svg
