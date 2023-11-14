@@ -86,7 +86,7 @@ return(
           <div className={`${stylesCrearNoticia.atributo} ${stylesCrearNoticia.agregar}`}>
             <div className={`${stylesCrearNoticia.btn_add}`}>
               <div onClick={abrirNoticia} className={`${stylesCrearNoticia.add}`}>
-                <svg className={`${stylesCrearNoticia.svg_add}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
+                <svg className={`${stylesCrearNoticia.svg_add}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" rx="0" ry="0">
                     <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
                       <g className={`${stylesCrearNoticia.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
@@ -203,7 +203,7 @@ return(
 
 
     <div onClick={abrirNoticia} className={`${stylesCrearNoticia.add_m}`}>
-      <svg className={`${stylesCrearNoticia.svg_add_m}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
+      <svg className={`${stylesCrearNoticia.svg_add_m}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
         <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" rx="0" ry="0">
           <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
             <g className={`${stylesCrearNoticia.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">

@@ -22,7 +22,7 @@ return(
           <div className={`${stylesEditarUsuarios.atributo} ${stylesEditarUsuarios.agregar}`}>
             <div className={`${stylesEditarUsuarios.btn_add}`}>
               <div className={`${stylesEditarUsuarios.add}`}>
-                <svg className={`${stylesEditarUsuarios.svg_add}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
+                <svg className={`${stylesEditarUsuarios.svg_add}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" version="1.1" viewBox="2352 447.621 30 31.558">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c39b0" rx="0" ry="0">
                     <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
                       <g className={`${stylesEditarUsuarios.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87cc3c9636">
@@ -53,7 +53,7 @@ return(
           <div className={`${stylesEditarUsuarios.actividad}`}>
             <div className={`${stylesEditarUsuarios.btns}`}>
               <div className={`${stylesEditarUsuarios.btn_edit}`}>
-                <svg className={`${stylesEditarUsuarios.edit}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="40" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef8780c8ae42" version="1.1" viewBox="2341.048 584.263 17.9 18.739" height="40">
+                <svg className={`${stylesEditarUsuarios.edit}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="40" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef8780c8ae42" version="1.1" viewBox="2341.048 584.263 17.9 18.739" height="40">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef8780c8ae42" rx="0" ry="0">
                     <g id="shape-ef9f8d7b-7ae6-8023-8002-ef8780c90535" rx="0" ry="0">
                       <g id="shape-ef9f8d7b-7ae6-8023-8002-ef8780c9d58f">
@@ -73,7 +73,7 @@ return(
                 </svg>
               </div>
               <div className={`${stylesEditarUsuarios.btn_del}`}>
-                <svg className={`${stylesEditarUsuarios.del}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="17.901" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3" version="1.1" viewBox="2381.054 585.184 17.901 16.865" height="16.865">
+                <svg className={`${stylesEditarUsuarios.del}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="17.901" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3" version="1.1" viewBox="2381.054 585.184 17.901 16.865" height="16.865">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">
                     <g className={`${stylesEditarUsuarios.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">
                       <path rx="0" ry="0" d="M2398.454,600.997L2391.444,600.997L2398.064,594.034C2398.622,593.454,2398.935,592.663,2398.934,591.839C2398.935,591.027,2398.621,590.249,2398.064,589.686L2394.644,586.073C2393.499,584.884,2391.654,584.888,2390.514,586.084L2381.934,595.086C2380.801,596.291,2380.801,598.229,2381.934,599.434L2383.414,600.999L2381.554,600.999C2381.278,600.999,2381.054,601.234,2381.054,601.524C2381.054,601.814,2381.278,602.049,2381.554,602.049L2398.454,602.049C2398.731,602.049,2398.955,601.814,2398.955,601.523C2398.955,601.232,2398.731,600.997,2398.454,600.997ZZM2391.214,586.819C2391.974,586.041,2393.184,586.041,2393.944,586.819L2397.364,590.431C2397.730,590.803,2397.936,591.315,2397.934,591.849C2397.934,592.389,2397.729,592.907,2397.364,593.288L2391.724,599.211L2385.574,592.742ZM2390.024,600.997L2384.824,600.997L2382.644,598.686C2381.897,597.896,2381.897,596.620,2382.644,595.830L2384.874,593.488L2391.024,599.947Z">
@@ -96,7 +96,7 @@ return(
           <div className={`${stylesEditarUsuarios.actividad}`}>
             <div className={`${stylesEditarUsuarios.btns}`}>
               <div className={`${stylesEditarUsuarios.btn_edit}`}>
-                <svg className={`${stylesEditarUsuarios.edit}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="40" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef8780c8ae42" version="1.1" viewBox="2341.048 584.263 17.9 18.739" height="40">
+                <svg className={`${stylesEditarUsuarios.edit}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="40" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef8780c8ae42" version="1.1" viewBox="2341.048 584.263 17.9 18.739" height="40">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef8780c8ae42" rx="0" ry="0">
                     <g id="shape-ef9f8d7b-7ae6-8023-8002-ef8780c90535" rx="0" ry="0">
                       <g id="shape-ef9f8d7b-7ae6-8023-8002-ef8780c9d58f">
@@ -116,7 +116,7 @@ return(
                 </svg>
               </div>
               <div className={`${stylesEditarUsuarios.btn_del}`}>
-                <svg className={`${stylesEditarUsuarios.del}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="17.901" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3" version="1.1" viewBox="2381.054 585.184 17.901 16.865" height="16.865">
+                <svg className={`${stylesEditarUsuarios.del}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="17.901" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3" version="1.1" viewBox="2381.054 585.184 17.901 16.865" height="16.865">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">
                     <g className={`${stylesEditarUsuarios.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">
                       <path rx="0" ry="0" d="M2398.454,600.997L2391.444,600.997L2398.064,594.034C2398.622,593.454,2398.935,592.663,2398.934,591.839C2398.935,591.027,2398.621,590.249,2398.064,589.686L2394.644,586.073C2393.499,584.884,2391.654,584.888,2390.514,586.084L2381.934,595.086C2380.801,596.291,2380.801,598.229,2381.934,599.434L2383.414,600.999L2381.554,600.999C2381.278,600.999,2381.054,601.234,2381.054,601.524C2381.054,601.814,2381.278,602.049,2381.554,602.049L2398.454,602.049C2398.731,602.049,2398.955,601.814,2398.955,601.523C2398.955,601.232,2398.731,600.997,2398.454,600.997ZZM2391.214,586.819C2391.974,586.041,2393.184,586.041,2393.944,586.819L2397.364,590.431C2397.730,590.803,2397.936,591.315,2397.934,591.849C2397.934,592.389,2397.729,592.907,2397.364,593.288L2391.724,599.211L2385.574,592.742ZM2390.024,600.997L2384.824,600.997L2382.644,598.686C2381.897,597.896,2381.897,596.620,2382.644,595.830L2384.874,593.488L2391.024,599.947Z">
@@ -276,25 +276,25 @@ return(
 <form className={`${stylesEditarUsuarios.form}`} action="">
   <h1 className={`${stylesEditarUsuarios.h1}`}>Añadir deporte</h1>
 
-  <label className={`${stylesEditarUsuarios.label}`} for="">Fecha</label>
+  <label className={`${stylesEditarUsuarios.label}`}htmlFor="">Fecha</label>
   <input className={`${stylesEditarUsuarios.input}`} type="text" placeholder="XX/XX/XXXX" />
 
-  <label className={`${stylesEditarUsuarios.label}`} for="">Nombre</label>
+  <label className={`${stylesEditarUsuarios.label}`}htmlFor="">Nombre</label>
   <input className={`${stylesEditarUsuarios.input}`} type="text" placeholder="Nombre" />
 
-  <label className={`${stylesEditarUsuarios.label}`} for="">Lugar</label>
+  <label className={`${stylesEditarUsuarios.label}`}htmlFor="">Lugar</label>
   <input className={`${stylesEditarUsuarios.input}`} type="text" placeholder="Lugar" />
 
-  <label className={`${stylesEditarUsuarios.label}`} for="">Horario</label>
+  <label className={`${stylesEditarUsuarios.label}`}htmlFor="">Horario</label>
   <input className={`${stylesEditarUsuarios.input}`} type="text" placeholder="Horario" />
 
 
-  <label className={`${stylesEditarUsuarios.label}`} for="">Localidad</label>
+  <label className={`${stylesEditarUsuarios.label}`}htmlFor="">Localidad</label>
   <input className={`${stylesEditarUsuarios.input}`} type="text" placeholder="Localidad" />
 
   <div className={`${stylesEditarUsuarios.div_btns}`}>
     <button className={`${stylesEditarUsuarios.btn_cancelar} ${stylesEditarUsuarios.button}`}>
-      Cancelar <svg className={`${stylesEditarUsuarios.svg}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef9151833b03" version="1.1" viewBox="1401.652 2681 30 30" height="30">
+      Cancelar <svg className={`${stylesEditarUsuarios.svg}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="30" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef9151833b03" version="1.1" viewBox="1401.652 2681 30 30" height="30">
         <g id="shape-c5eece6e-48df-8016-8002-ef9151833b03">
           <g className="fills" id="fills-c5eece6e-48df-8016-8002-ef9151833b03">
             <path rx="0" ry="0" d="M1416.652,2681.000C1408.369,2681.000,1401.652,2687.717,1401.652,2696.000C1401.652,2704.283,1408.369,2711.000,1416.652,2711.000C1424.936,2711.000,1431.652,2704.283,1431.652,2696.000C1431.652,2687.717,1424.936,2681.000,1416.652,2681.000ZZM1422.190,2701.699L1419.981,2701.689L1416.652,2697.721L1413.328,2701.685L1411.114,2701.695C1410.967,2701.695,1410.847,2701.578,1410.847,2701.427C1410.847,2701.364,1410.870,2701.304,1410.910,2701.253L1415.266,2696.064L1410.910,2690.877C1410.870,2690.828,1410.847,2690.767,1410.847,2690.703C1410.847,2690.556,1410.967,2690.435,1411.114,2690.435L1413.328,2690.445L1416.652,2694.413L1419.977,2690.449L1422.187,2690.439C1422.334,2690.439,1422.455,2690.556,1422.455,2690.706C1422.455,2690.770,1422.431,2690.830,1422.391,2690.881L1418.042,2696.067L1422.395,2701.257C1422.435,2701.307,1422.458,2701.367,1422.458,2701.431C1422.458,2701.578,1422.338,2701.699,1422.190,2701.699ZZ">
@@ -304,7 +304,7 @@ return(
       </svg>
     </button>
     <button className={`${stylesEditarUsuarios.btn_agregar} ${stylesEditarUsuarios.button}`}>
-      Agregar <svg className={`${stylesEditarUsuarios.svg}`} xmlns: xlink="http://www.w3.org/1999/xlink" fill="none" width="29.023" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef8dfd3e07c1" version="1.1" viewBox="1726.792 2678 29.023 30" height="30">
+      Agregar <svg className={`${stylesEditarUsuarios.svg}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="29.023" xmlns="http://www.w3.org/2000/svg" id="screenshot-c5eece6e-48df-8016-8002-ef8dfd3e07c1" version="1.1" viewBox="1726.792 2678 29.023 30" height="30">
         <g id="shape-c5eece6e-48df-8016-8002-ef8dfd3e07c1" rx="0" ry="0">
           <g id="shape-c5eece6e-48df-8016-8002-ef8dfd3e07c0">
             <g className="fills" id="fills-c5eece6e-48df-8016-8002-ef8dfd3e07c0">

@@ -174,7 +174,7 @@ function CrearDeporte( props ){
   
   <div className={`${stylesCrearDeporte.fila1}`}>
     <div className={`${stylesCrearDeporte.actividad_mobile}` } id={props.id}>
-      <p className={`${stylesCrearDeporte.p}`}>{props.titulo}</p>
+      <p className={`${stylesCrearDeporte.p}`}>{props.deporte}</p>
     </div>
   </div>
 
