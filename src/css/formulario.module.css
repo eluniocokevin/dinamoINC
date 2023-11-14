@@ -245,10 +245,11 @@ padding-bottom: 30px;
 }
 
 .firmas .form_input{
-width: 130px;
+width: 100%;
 }
 .firmas{
 display: flex;
+flex-direction: column;
 }
 
 
