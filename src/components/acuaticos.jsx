@@ -10,6 +10,8 @@ import Iconos from "./iconos";
 import { MapContainer } from 'react-leaflet/MapContainer';
 import { TileLayer } from 'react-leaflet/TileLayer';
 import { Popup,Marker } from 'react-leaflet';
+import LoginFuncionarios from "./LoginFuncionarios";
+import LoginUsuarios from "./LoginUsuarios";
 
 
 function Acuaticos (){
@@ -58,10 +60,16 @@ function Acuaticos (){
     }
   }, [Localidad, Deportes]); 
 
+  const [showLogin, setShowLogin] = useState(false);
 
+  const toggleLogin = () => {
+    setShowLogin((prevShowLogin) => !prevShowLogin);
+  };  
 
-
-
+  const closeLogin = ()=>{
+    setShowLogin((prevShowLogin) => !prevShowLogin);
+  }
+  
 
 
 
@@ -70,6 +78,14 @@ return(
   <>
   
   <Header/>
+
+      <div className={`${stylesAcuaticos.login_funcionarios} ${showLogin ? `${stylesAcuaticos.show}` : ``}`} id="algo">
+        <div id="cerrar" onClick={closeLogin} className={`${stylesAcuaticos.icon_close}`}>
+          <img src="/cross2.png" alt="cosa" className={`${stylesAcuaticos.img} ${stylesAcuaticos.close}`}/>
+        </div>
+        <LoginUsuarios/>
+      </div>
+
 
 
   <div className={`${stylesAcuaticos.mapa}`}>
@@ -242,6 +258,7 @@ return(
               deporte={actividad.deporte}
               descripcion={actividad.descripcion}
               ubicacion={actividad.ubicacion}
+              modal={toggleLogin}
             />
           ))) : (<p>no has seleccionado ninguna localidad</p>)}
 
