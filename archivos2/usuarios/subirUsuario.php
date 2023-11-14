@@ -38,8 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $roltutor = $_POST['roltutor'];
         $lugar = $_POST['lugar'];
         $citutor = $_POST['citutor'];
+        $contrasena = $_POST['contrasena'];
 
-        $sql = "INSERT INTO usuario (nombre, apellido, ci, nacimiento, sexo, cedulafoto, carnetfoto, domicilio, celular, asistencia, asistencianombre, diabetes, hipertension, asma, alergias, fracturas, otros, lentes, tipolentes, nombretutor, roltutor, lugar, citutor) VALUES (:nombre, :apellido, :ci, :nacimiento, :sexo, :cedulafoto, :carnetfoto, :domicilio, :celular, :asistencia, :asistencianombre, :diabetes, :hipertension, :asma, :alergias, :fracturas, :otros, :lentes, :tipolentes, :nombretutor, :roltutor, :lugar, :citutor)";
+        $sql = "INSERT INTO usuario (nombre, apellido, ci, nacimiento, sexo, cedulafoto, carnetfoto, domicilio, celular, asistencia, asistencianombre, diabetes, hipertension, asma, alergias, fracturas, otros, lentes, tipolentes, nombretutor, roltutor, lugar, citutor, contrasena) VALUES (:nombre, :apellido, :ci, :nacimiento, :sexo, :cedulafoto, :carnetfoto, :domicilio, :celular, :asistencia, :asistencianombre, :diabetes, :hipertension, :asma, :alergias, :fracturas, :otros, :lentes, :tipolentes, :nombretutor, :roltutor, :lugar, :citutor, :contrasena)";
         $stmt = $conn->prepare($sql);
 
         $stmt->bindParam(':nombre', $nombre);
@@ -65,7 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':roltutor', $roltutor);
         $stmt->bindParam(':lugar', $lugar);
         $stmt->bindParam(':citutor', $citutor);
-        var_dump($diabetes, $hipertension, $asma, $alergias, $fracturas, $lentes);
+        $stmt->bindParam(':contrasena', $contrasena);
+      
        
         $stmt->execute();
 

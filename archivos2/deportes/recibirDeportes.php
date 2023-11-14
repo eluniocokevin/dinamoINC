@@ -16,7 +16,7 @@ try {
     $localidad = $_GET['localidad'];
     $deporte = $_GET['deporte'];
    
-    $sql = "SELECT id,deporte, descripcion,  fecha, ubicacion, loclidad, TO_BASE64(imagen) AS imagen_base64 FROM deporte where option1='anual' and localidad= '$localidad' and deporte='$deporte'";
+    $sql = "SELECT id,deporte, descripcion,  fecha, ubicacion, localidad, TO_BASE64(imagen) AS imagen_base64 FROM deporte where option1='anual' and localidad= '$localidad' and deporte='$deporte'";
 
     $stmt = $conn->query($sql);
     $eventos = $stmt->fetchAll(PDO::FETCH_ASSOC);
