@@ -124,7 +124,7 @@ return(
 
       {/* Pop-up */}
       {showPopup && (
-              <Popup message= { <p className={`${stylesLoginUsuario.p}`}>Has sido registrado en la actividad {`${props.Nombre}`}</p> } onClose={() => setShowPopup(false)} className={`${stylesLoginUsuario.popup}`} />
+              <Popup message= { <p className={`${stylesLoginUsuario.p}`}>Has sido registrado en la actividad {`${props.Nombre}`}! </p> } onClose={() => setShowPopup(false)} className={`${stylesLoginUsuario.popup}`} />
             )}
             
       </form>
