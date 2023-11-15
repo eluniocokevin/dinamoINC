@@ -10,6 +10,7 @@ import EditarUsuarios from "./editarUsuarios";
 import AdminNoticias from "./adminNoticias";
 import AdminDeportes from "./adminDeportes";
 import AdminEventos from "./adminEventos";
+import VerMasDeporte from "./VerMasDeporte";
 
 
 function Funcionarios() {
@@ -145,6 +146,7 @@ function Funcionarios() {
       const intervalId = setInterval(fetchDeporte, 1000);
       return () => clearInterval(intervalId);
     }, []); 
+    
 
     const fetchEvento = async () => {
       try {
