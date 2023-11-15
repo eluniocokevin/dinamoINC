@@ -52,6 +52,7 @@
   padding: 0 5px;
 }
 .popup .p{
+  color: #185727;
   font-weight: bold;
   margin: 0 0 10px 0;
 }
@@ -61,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f00;
+  background-color: rgba(25, 155, 34, 0.829);
   color: white;
   border: none;
   border-radius: 10px;
