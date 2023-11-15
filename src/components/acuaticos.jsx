@@ -82,8 +82,9 @@ return(
   <Header/>
 
       <div className={`${stylesAcuaticos.login_funcionarios} ${showLogin ? `${stylesAcuaticos.show}` : ``}`} id="algo">
-
-        
+      <div id="cerrar" onClick={toggleLogin} className={`${stylesAcuaticos.icon_close}`}>
+          <img src="/cross2.png" alt="cosa" className={`${stylesAcuaticos.img} ${stylesAcuaticos.close}`}/>
+        </div>
         <LoginUsuarios ActividadId={ActividadId} Nombre={ActividadNombre}/>
       </div>
 

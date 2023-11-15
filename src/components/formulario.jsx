@@ -151,9 +151,9 @@ return(
 <input className={`${stylesform.form_input}`} type="number" max="99999999" name="cedula" id="cedula" placeholder="12345678" value={ci} onChange={(e) => setCi(e.target.value)} required />
 
 <div className={`${stylesform.sexo}`}>
-  <label className={`${stylesform.form_label}`} htmlFor="sexo">Sexo</label>
-  <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexoM" value="M" checked={sexo === 'M'} onChange={() => setSexo('M')} required />M
-  <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexoF" value="F" checked={sexo === 'F'} onChange={() => setSexo('F')} required />F
+  <label className={`${stylesform.form_label}`} htmlFor="sexo">Sexo:</label>
+  <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexoM" value="M" checked={sexo === 'M'} onChange={() => setSexo('M')} required /> <label className={`${stylesform.label}`} htmlFor="">M</label>
+  <input className={`${stylesform.form_input}`} type="radio" name="sexo" id="sexoF" value="F" checked={sexo === 'F'} onChange={() => setSexo('F')} required /> <label className={`${stylesform.label}`} htmlFor="">F</label>
 </div>
 
 
