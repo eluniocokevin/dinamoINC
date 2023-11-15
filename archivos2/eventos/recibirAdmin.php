@@ -13,9 +13,9 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $localidad = $_GET['localidad'];
+
    
-    $sql = "SELECT id, titulo,deporte, info, fecha,localidad, TO_BASE64(imagen) AS imagen_base64 FROM evento  where localidad='$localidad' order by fecha desc";
+    $sql = "SELECT id, titulo,deporte, info, fecha,localidad, TO_BASE64(imagen) AS imagen_base64 FROM evento   order by fecha desc";
 
     $stmt = $conn->query($sql);
     $eventos = $stmt->fetchAll(PDO::FETCH_ASSOC);
