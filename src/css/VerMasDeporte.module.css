@@ -1,0 +1,79 @@
+.ver_mas{
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: ease 1s;
+    z-index: 100;
+    margin: auto;
+}
+.ver_mas .cerrar{
+    height: 3em;
+    width: 3em;
+    background-color: red;
+    cursor: pointer;
+    transition: all 1s;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-self: end;
+}
+.cerrar .img_cerrar{
+    height: 100%;
+    width: 100%;
+}
+.ver_mas .form_m{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    background-color: #efefef;
+}
+
+.form_m .h1{
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.form_m .input,.label_m, .textarea{
+    width: 80%;
+    margin: auto;
+    border-radius: 15px;
+}
+.form_m .input{
+    height: 2rem;
+    font-size: 20px;
+    margin-top: 1%;
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 1px 0px #000;
+    text-indent: 10px;
+}
+.form_m .label_m{
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.form_m .textarea{
+    margin: auto;
+    font-size: 20px;
+    margin-top: 1%;
+    outline: none;
+    border: none;
+    text-indent: 10px;
+}
+
+.form_m .select{
+    width: 80%;
+    height: 2rem;
+    font-size: 20px;
+    margin: 1% auto 0;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 15px;
+    text-indent: 10px;
+}

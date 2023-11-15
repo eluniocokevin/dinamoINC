@@ -1,3 +1,40 @@
+.modal {
+    width: 100vw;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-1000px);
+    transition: all 1s;
+  
+  }
+  .modal.show {
+    width: 100vw;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    background: #efefef;
+    transform: translate(0px, 0px);
+    transition: all 1s ease;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+  }
+.icon_close{
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+    cursor: pointer;
+    transition: all 1s;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-self: end;
+}
+.icon_close .img{
+    height: 100%;
+    width: 100%;
+}
+
 
 body{
     background-color: #fff;
