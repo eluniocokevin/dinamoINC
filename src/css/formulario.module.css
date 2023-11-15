@@ -339,7 +339,7 @@ padding-bottom: 30px;
 }
 .sexo .form_label{
     width: 30%;
-    justify-content: end;
+    justify-content: center;
 }
 .sexo .form_input{
     width: 30px;
@@ -424,7 +424,7 @@ width: 100%;
 }
 .sexo .form_label{
     width: 30%;
-    justify-content: end;
+    justify-content: center;
 }
 .sexo .form_input{
     width: 30px;

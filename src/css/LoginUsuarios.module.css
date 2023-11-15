@@ -24,6 +24,54 @@
     margin: 5px;
   }
   
+  .icon_close {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background: #284369;
+    color: #ffffff;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+  }
+  .close {
+    width: 50%;
+    height: 50%;
+  }
+
+
+.popup{
+  margin: 0 0 20px 0;
+  padding: 0 5px;
+}
+.popup .p{
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+.popup button{
+  width: 6rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f00;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: 0 0 10px 0px #fff;
+  cursor: pointer;
+  margin: auto;
+}
+
+
   .cont_logo{
     height: 20vh;
     width: 70%;
