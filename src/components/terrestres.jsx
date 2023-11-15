@@ -37,7 +37,7 @@ function Terrestres (){
   }
   /**/
   
-  const [Localidad,setLocalidad] = useState('mercedes');
+  const [Localidad,setLocalidad] = useState('Mercedes');
   const [Eventos, setEventos] = useState([]);
   const [Deportes,setDeporte] = useState([]);
   const [Actividades,setActividades] = useState(['']);
@@ -68,17 +68,6 @@ function Terrestres (){
   }, [Localidad, Deportes]); 
   
 
-  useEffect(() => {
-    if (Localidad && Deportes) { 
-      const activApiUrl = `http://localhost/archivos2/deportes/recibirDeportestemp.php?localidad=${Localidad}&deporte=${Deportes}`;
-      fetch(activApiUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          setActividades(data);
-        })
-        .catch((error) => console.error("Error al obtener los eventos:", error));
-    }
-  }, [Localidad, Deportes]); 
 
   const [showLogin, setShowLogin] = useState(false);
 
@@ -117,91 +106,91 @@ return(
 
         <Marker position={[-33.250953044554095, -58.0295996290304]} >
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('mercedes')} className='boton'>Mercedes</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Mercedes')} className='boton'>Mercedes</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.5300, -58.2170]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('dolores')} className='boton'>Dolores</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Dolores')} className='boton'>Dolores</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.62241826051648, -57.57199068758437]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('risso')} className='boton'>Risso</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Risso')} className='boton'>Risso</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.601577148845024, -57.626995878335535]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('egaña')} className='boton'>Egaña</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Egaña')} className='boton'>Egaña</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.8650252848595, -57.37303854222891]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('cardona')} className='boton'>Cardona</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Cardona')} className='boton'>Cardona</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.79039122144177, -57.48958745651217]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('santacatalina')} className='boton'>Santa Catalina</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Santacatalina')} className='boton'>Santa Catalina</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.6967784000407, -57.53376805212432]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('rodo')} className='boton'>Rodó</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Rodo')} className='boton'>Rodó</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.50933235235269, -57.800851050023084]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('palmitas')} className='boton'>Palmitas</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Palmitas')} className='boton'>Palmitas</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.398101058564684, -58.31770708137367]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('villasoriano')} className='boton'>Villa Soriano</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Villasoriano')} className='boton'>Villa Soriano</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.69900269672159, -58.111733824090244]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('cañadanieto')} className='boton'>Cañada Nieto</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Cañadanieto')} className='boton'>Cañada Nieto</div>
           </Popup>
         </Marker>
 
-        <Marker position={[-33.06136836232029, -57.45812142654608]}>
+        <Marker position={[-33.09136836232029, -57.45812142654608]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('palmar')} className='boton'>Palmar</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Palmar')} className='boton'>Palmar</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.82986631876721, -57.789428536832816]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('laresyperseverano')} className='boton'>Lares y Perseverano</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Laresyperseverano')} className='boton'>Lares y Perseverano</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.809577519404506, -58.26537095818607]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('agraciada')} className='boton'>Agraciada</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Agraciada')} className='boton'>Agraciada</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.828728, -58.022985]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('palosolo')} className='boton'>Palo Solo</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Palosolo')} className='boton'>Palo Solo</div>
           </Popup>
         </Marker>
 
         <Marker position={[-33.119399, -57.632369]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('villadarwin')} className='boton'>Villa Darwin</div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Pilladarwin')} className='boton'>Villa Darwin</div>
           </Popup>
         </Marker>
 
@@ -217,47 +206,47 @@ return(
 
       <div className={`${stylesTerrestres.iconosa}`}>
 
-        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('futbol')}>
+        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('Futbol')}>
           <Iconos
             deporte='FÚTBOL'
             img='futbol.png'
           />
         </div>
 
-        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('natacion')}>
+        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('Natacion')}>
           <Iconos
             deporte='NATACIÓN'
             img='natacion.png'
           />
         </div>
 
-        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('remo')}>
+        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('Remo')}>
           <Iconos
             deporte='REMO'
             img='remo.png'
           />
         </div>
 
-        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('canotaje')}>
+        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('Canotaje')}>
           <Iconos
             deporte='CANOTAJE'
             img='canoa.png'
           />
         </div>
 
-        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('baile')}>
+        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('Baile')}>
           <Iconos
             deporte='BAILE'
             img='baile.png'
           /></div>
 
-        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('yoga')}>
+        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('Yoga')}>
           <Iconos
             deporte='YOGA'
             img='yoga.png'
           /></div>
 
-        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('karate')}>
+        <div className={`${stylesTerrestres.icono}`} onClick={() => setDeporte('Karate')}>
           <Iconos
             deporte='KARATE'
             img='karate.png'

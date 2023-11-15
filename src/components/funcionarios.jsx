@@ -84,7 +84,7 @@ function Funcionarios() {
     }, []);
 
     useEffect(() => {
-      fetch('http://localhost/archivos2/eventos/recibirEvento.php')
+      fetch('http://localhost/archivos2/eventos/recibirAdmin.php')
         .then((response) => response.json())
         .then((dataEvento) => setDataEvento(dataEvento))
         .catch((error) => console.error("Error al obtener los datos:", error));

@@ -157,21 +157,21 @@ return(
           <label className={`${stylesCrearDeporte.label}`} htmlFor="">Localidad</label>
           <select className={`${stylesCrearDeporte.select}`} name="Localidad" id="localidad">
             <option  className={`${stylesCrearDeporte.option}`}value="s">select</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="mercedes">Mercedes</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="dolores">Dolores</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="risso">Risso</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="egaña">Egaña</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="cardona">Cardona</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="santacatalina">Santa Catalina</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="rodo">Rodó</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="palmitas">Palmitas</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="villasoriano">Villa Soriano</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="cañadanieto">Cañada Nieto</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="palmar">Palmar</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="laresyperseverano">Lares y Perseverano</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="agraciada">Agraciada</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="palosolo">Palo Solo</option>
-            <option  className={`${stylesCrearDeporte.option}`}value="villadarwin">Villa Darwin</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Mercedes">Mercedes</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Dolores">Dolores</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Risso">Risso</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Egaña">Egaña</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Cardona">Cardona</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Santacatalina">Santa Catalina</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Rodo">Rodó</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Palmitas">Palmitas</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Villasoriano">Villa Soriano</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Cañadanieto">Cañada Nieto</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Palmar">Palmar</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Laresyperseverano">Lares y Perseverano</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Agraciada">Agraciada</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Palosolo">Palo Solo</option>
+            <option  className={`${stylesCrearDeporte.option}`}value="Villadarwin">Villa Darwin</option>
           </select>
 
 

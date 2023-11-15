@@ -310,21 +310,21 @@ const handleChange = (event) => {
           <label className={`${stylesCrearEvento.label}`} htmlFor="">Localidad</label>
           <select className={`${stylesCrearEvento.select}`} name="Localidad" id="localidad">
             <option  className={`${stylesCrearEvento.option}`}value="s">select</option>
-            <option  className={`${stylesCrearEvento.option}`}value="mercedes">Mercedes</option>
-            <option  className={`${stylesCrearEvento.option}`}value="dolores">Dolores</option>
-            <option  className={`${stylesCrearEvento.option}`}value="risso">Risso</option>
-            <option  className={`${stylesCrearEvento.option}`}value="egaña">Egaña</option>
-            <option  className={`${stylesCrearEvento.option}`}value="cardona">Cardona</option>
-            <option  className={`${stylesCrearEvento.option}`}value="santacatalina">Santa Catalina</option>
-            <option  className={`${stylesCrearEvento.option}`}value="rodo">Rodó</option>
-            <option  className={`${stylesCrearEvento.option}`}value="palmitas">Palmitas</option>
-            <option  className={`${stylesCrearEvento.option}`}value="villasoriano">Villa Soriano</option>
-            <option  className={`${stylesCrearEvento.option}`}value="cañadanieto">Cañada Nieto</option>
-            <option  className={`${stylesCrearEvento.option}`}value="palmar">Palmar</option>
-            <option  className={`${stylesCrearEvento.option}`}value="laresyperseverano">Lares y Perseverano</option>
-            <option  className={`${stylesCrearEvento.option}`}value="agraciada">Agraciada</option>
-            <option  className={`${stylesCrearEvento.option}`}value="palosolo">Palo Solo</option>
-            <option  className={`${stylesCrearEvento.option}`}value="villadarwin">Villa Darwin</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Mercedes">Mercedes</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Dolores">Dolores</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Risso">Risso</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Egaña">Egaña</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Cardona">Cardona</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Santacatalina">Santa Catalina</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Rodo">Rodó</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Palmitas">Palmitas</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Villasoriano">Villa Soriano</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Cañadanieto">Cañada Nieto</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Palmar">Palmar</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Laresyperseverano">Lares y Perseverano</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Agraciada">Agraciada</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Palosolo">Palo Solo</option>
+            <option  className={`${stylesCrearEvento.option}`}value="Villadarwin">Villa Darwin</option>
           </select>
 
           <label className={`${stylesCrearEvento.label} ${stylesCrearEvento.custom_file_upload} ${fileSelected ? stylesCrearEvento.fileSelected : ''}`}htmlFor="file">

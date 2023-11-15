@@ -94,7 +94,7 @@ return(
         </div>
 
       </div>
-      <h2 className={`${stylesLoginUsuario.h2}`}>¡Ingrese para Inscribirse!</h2>
+      <h2 className={`${stylesLoginUsuario.h2}`}>¡Confirme la Inscripción!</h2>
       <form className={`${stylesLoginUsuario.form}`}>
 
         <div className={`${stylesLoginUsuario.input1}`} data-error={`${ErrorRegistro}`}>
@@ -118,7 +118,7 @@ return(
         
         <div className={`${stylesLoginUsuario.cont_btn_login}`}>
           <button className={`${stylesLoginUsuario.boton_login}`} type="submit"  onClick={handleSubmit} >
-            Ingresar
+            Confirmar
           </button>
         </div>
 
