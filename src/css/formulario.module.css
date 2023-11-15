@@ -1,3 +1,31 @@
+
+.popup{
+    margin: 0 0 20px 0;
+    padding: 0 5px;
+  }
+  .popup .p{
+    color: #185727;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+  }
+  .popup button{
+    width: 6rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(25, 155, 34, 0.829);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: 0 0 10px 0px #fff;
+    cursor: pointer;
+    margin: auto;
+  }
+  
+
+
 .titulo{
     padding-top: 180px;
     display: flex;
