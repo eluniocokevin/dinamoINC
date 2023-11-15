@@ -5,6 +5,20 @@ import React, { useState } from 'react';
 
 function Formulario () {
 
+
+  function Popup({ message, onClose }) {
+    return (
+      
+      <div className={stylesform.popup}>
+        <p>{message}</p>
+        <button onClick={onClose}>Cerrar</button>
+      </div>
+       
+      
+     
+    );
+  }
+
         const [nombre, setNombre] = useState('');
         const [apellido, setApellido] = useState('');
         const [ci, setCi] = useState('');
@@ -65,7 +79,9 @@ function Formulario () {
               });
           
               if (response.ok) {
-                console.log('Noticia creada con éxito');
+                setShowPopup(true);
+                setErrorRegistro(false);
+                console.log('Registrado con exito');
        
                 setNombre('');
                 setApellido('');
@@ -123,7 +139,7 @@ function Formulario () {
           
             setFileSelectede(!!event.target.files.length);
           };
-
+          const [showPopup, setShowPopup] = useState(false);
 
 return(
     <>
@@ -131,7 +147,7 @@ return(
 
         <div className={`${stylesform.formulario}`}>
         <div className={`${stylesform.titulo}`}>
-            <h1 className={`${stylesform.form_h1}`}>Formulario de actividad</h1>
+            <h1 className={`${stylesform.form_h1}`}>Registro de Usuario</h1>
             <img className={`${stylesform.formuimg}`} src="/formu.png" alt="formulario icono" />
         </div>
         <form className={`${stylesform.form}`} id="form" onSubmit={handleFormSubmit} >
@@ -292,6 +308,13 @@ return(
                     </svg>
                 </button>
             </div>
+
+      {/* Pop-up */}
+      {showPopup && (
+              <Popup message= { <p className={`${stylesform.p}`}>Has sido registrado con éxito! </p> } onClose={() => setShowPopup(false)} className={`${stylesform.popup}`} />
+            )}
+
+
         </form>
     </div>
 

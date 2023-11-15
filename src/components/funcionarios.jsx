@@ -5,6 +5,7 @@ import stylesFuncionarios from "../css/funcionarios.module.css";
 import CrearNoticia from "./crearNoticia";
 import CrearEvento from "./crearEvento";
 import CrearDeporte from "./crearDeporte";
+import CrearUsuario from "./crearUsuario";
 import EditarUsuarios from "./editarUsuarios";
 import AdminNoticias from "./adminNoticias";
 import AdminDeportes from "./adminDeportes";
@@ -28,7 +29,7 @@ function Funcionarios() {
   const [mostrarCrearEvento, setMostrarCrearEvento] = useState(false);
   const [mostrarCrearNoticia, setMostrarCrearNoticia] = useState(false);
   const [mostrarUsuario, setMostrarUsuarios] = useState(false);
-
+  const [mostrarCrearUsuario, setMostrarCrearUsuario] = useState(false);
 
 
 
@@ -232,6 +233,16 @@ function Funcionarios() {
         )) }
         
         {mostrarUsuario && <EditarUsuarios/>}
+        {mostrarCrearUsuario && dataUsuario.map((usuario) => (
+          <CrearUsuario
+            id={deporte.id}
+            deporte={deporte.deporte}
+            descripcion={deporte.descripcion}
+            fecha={deporte.fecha}
+            imagen_base64={deporte.imagen_base64}
+            localidad={deporte.localidad}
+          />
+        )) }
       </div>
 
     </div>
