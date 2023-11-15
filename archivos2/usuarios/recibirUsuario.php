@@ -14,13 +14,24 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $sql = "SELECT nombre,apellido FROM usuario";
+        $sql = " SELECT 
+        u.ci,
+        u.nombre,
+        u.apellido,
+        u.celular,
+        u.nacimiento,
+        r.deporteid
+    FROM 
+        usuario u
+    JOIN 
+        realiza r ON u.ci = r.cedula;";
+
         $stmt = $conn->query($sql);
 
-        $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $usuario = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         http_response_code(200);
-        echo json_encode(['success' => true, 'usuarios' => $usuarios]);
+        echo json_encode(['success' => true, 'usuario' => $usuario]);
     } else {
         http_response_code(405);
         echo json_encode(['success' => false, 'message' => 'Método no permitido']);
