@@ -59,6 +59,7 @@ function Funcionarios() {
       setMostrarCrearNoticia(false);
       setMostrarUsuarios(!mostrarUsuario);
     }
+    
 
 
 
@@ -69,6 +70,7 @@ function Funcionarios() {
     const [dataNoticia, setDataNoticia] = useState([]);
     const [dataDeporte, setDataDeporte] = useState([]);
     const [dataEvento, setDataEvento] = useState([]);
+    const [dataUsuario, setDataUsuario] = useState([]);
 
     useEffect(() => {
       fetch('http://localhost/archivos2/noticias/recibirNoticia.php')
@@ -91,6 +93,12 @@ function Funcionarios() {
         .catch((error) => console.error("Error al obtener los datos:", error));
     }, []);
 
+    useEffect(() => {
+      fetch('http://localhost/archivos2/usuarios/recibirUsuario.php')
+        .then((response) => response.json())
+        .then((dataUsuario) => setDataUsuario(dataUsuario))
+        .catch((error) => console.error("Error al obtener los datos:", error));
+    }, []);
 
 
     const fetchNoticia = async () => {
@@ -235,12 +243,9 @@ function Funcionarios() {
         {mostrarUsuario && <EditarUsuarios/>}
         {mostrarCrearUsuario && dataUsuario.map((usuario) => (
           <CrearUsuario
-            id={deporte.id}
-            deporte={deporte.deporte}
-            descripcion={deporte.descripcion}
-            fecha={deporte.fecha}
-            imagen_base64={deporte.imagen_base64}
-            localidad={deporte.localidad}
+            ci={usuario.ci}
+            nombre={usuario.nombre}
+            apellido={usuario.apellido}
           />
         )) }
       </div>

@@ -14,49 +14,10 @@ function CrearUsuario( props ){
 
 
 
-  const [titulo, setTitulo] = useState('');
-  const [Descripcion, setDescripcion] = useState('');
-  const [fecha, setFecha] = useState('');
-  const [archivo, setArchivo] = useState(null);
-  const [deporte, setDeporte] = useState('')
-  const [ubicacion, setUbicacion] = useState('')
+
  
- const handleSubmitForm = async(e)=>{
-  e.preventDefault();
-  const localidad = document.getElementById('localidad').value;
-  const option = document.getElementById('option').value;
-  const formData = new FormData();
-  formData.append('deporte', deporte);
-  formData.append('descripcion', Descripcion);
-  formData.append('fecha', fecha);
-  formData.append('archivo', archivo);
-  formData.append('localidad',localidad);
-  formData.append('ubicacion',ubicacion);
-  formData.append('option1',option);
 
-  try {
-    const response = await fetch('http://localhost/archivos2/usuarios/recibirUsuarios.php', {
-      method: 'POST',
-      body: formData,
-    });
 
-    if (response.ok) {
-      console.log('Actividad creada con éxito');
-
-      setDeporte('');
-      setDescripcion('');
-      setFecha('');
-      setArchivo(null);
-       
-      document.getElementById('file').value = '';
-    } else {
-
-      console.error('Error al crear la actividad');
-    }
-  } catch (error) {
-    console.error('Error en la solicitud:', error);
-  }
- }
   /*  */
   const abrirDeporte =()=>{
    const form = document.getElementById('agregar');
@@ -75,35 +36,6 @@ function CrearUsuario( props ){
 
 
 
-  
-  const handleFormDelete = async (id) => {
-
-
-    const confirmDelete = window.confirm("¿Estás seguro de que deseas eliminar este deporte?");
-  
-    if (!confirmDelete) {
-      return;
-    }
-  
-    try {
-      const response = await fetch(`http://localhost/archivos2/deportes/borrarDeporte.php?id=${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        console.log('Deporte eliminada con éxito');
-        const updatedNoticias = noticias.filter((noticia) => noticia.id !== id);
-        setNoticias(updatedNoticias);
-      } else {
-        const errorData = await response.json();
-        setError(true);
-        setErrorMsg(errorData.response);
-        console.error('Error al eliminar el deporte');
-      }
-    } catch (error) {
-      console.error('Error en la solicitud:', error);
-    }
-  };
 
 
     return(<>
@@ -115,11 +47,11 @@ function CrearUsuario( props ){
       <div className={`${stylesCrearDeporte.tabla}`}>
 
 
-        <div className={`${stylesCrearDeporte.actividades}`} id={props.id}>
-          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.deporte}</h2></div>
-          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.descripcion}</h2></div>
-          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.fecha}</h2></div>
-          <div className={`${stylesCrearDeporte.actividad}`}><img className={`${stylesCrearDeporte.img}`} src={`data:image/jpeg;base64,${props.imagen_base64}`}alt="Imagen"/> </div>
+        <div className={`${stylesCrearDeporte.actividades}`} >
+          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}></h2></div>
+          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.nombre}</h2></div>
+          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.apellido}</h2></div>
+          <div className={`${stylesCrearDeporte.actividad}`}>                                                            </div>
           <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.localidad}</h2></div>
           <div className={`${stylesCrearDeporte.actividad}`}>
             <div className={`${stylesCrearDeporte.btns}`}>
