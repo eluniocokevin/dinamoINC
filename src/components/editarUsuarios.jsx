@@ -26,11 +26,12 @@ return(
         <div className={`${stylesCrearDeporte.cont_h1}`}><h1 className={`${stylesCrearDeporte.h1}`}>Usuarios</h1></div>
 
         <div className={`${stylesCrearDeporte.atributos}`}>
-          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.fecha}`}> <h2 className={`${stylesCrearDeporte.h2}`}>DEPORTE</h2></div>
-          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.nombre}`}> <h2 className={`${stylesCrearDeporte.h2}`}>DESCRIPCION</h2></div>
-          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.docente}`}> <h2 className={`${stylesCrearDeporte.h2}`}>FECHA</h2></div>
-          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>IMAGEN</h2></div>
-          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.lugar}`}> <h2 className={`${stylesCrearDeporte.h2}`}>LOCALIDAD</h2></div>
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.fecha}`}> <h2 className={`${stylesCrearDeporte.h2}`}>CI</h2></div>
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.nombre}`}> <h2 className={`${stylesCrearDeporte.h2}`}>NOMBRE</h2></div>
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.docente}`}> <h2 className={`${stylesCrearDeporte.h2}`}>APELLIDO</h2></div>
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>CELULAR</h2></div>
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>NACIMIENTO</h2></div>    
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.lugar}`}> <h2 className={`${stylesCrearDeporte.h2}`}>ACTIVIDAD</h2></div>
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.agregar}`}>
             <div className={`${stylesCrearDeporte.btn_add}`}>
               <div onClick={abrirDeporte} className={`${stylesCrearDeporte.add}`}>

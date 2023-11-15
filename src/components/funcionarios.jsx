@@ -29,7 +29,7 @@ function Funcionarios() {
   const [mostrarCrearEvento, setMostrarCrearEvento] = useState(false);
   const [mostrarCrearNoticia, setMostrarCrearNoticia] = useState(false);
   const [mostrarUsuario, setMostrarUsuarios] = useState(false);
-  const [mostrarCrearUsuario, setMostrarCrearUsuario] = useState(false);
+
 
 
 
@@ -96,7 +96,7 @@ function Funcionarios() {
     useEffect(() => {
       fetch('http://localhost/archivos2/usuarios/recibirUsuario.php')
         .then((response) => response.json())
-        .then((dataUsuario) => setDataUsuario(dataUsuario))
+        .then((dataUsuario) => setDataUsuario(dataUsuario.usuario))
         .catch((error) => console.error("Error al obtener los datos:", error));
     }, []);
 
@@ -168,10 +168,64 @@ function Funcionarios() {
     }, []); 
 
 
+
+
+
+
+    const [Id, setId] = useState('');
+    const [Deporte, setDeporte] = useState('');
+    const [Descripcion, setDescripcion] = useState('');
+    const [Fecha, setFecha] = useState('');
+    const [Img, setImg] = useState('');
+    const [Localidad, setLocalidad] = useState('');
+
+    const algo = (Id, Deporte, Descripcion, Fecha, Localidad, Img) =>{
+      setId(Id);
+      setDeporte(Deporte);
+      setDescripcion(Descripcion);
+      setFecha(Fecha);
+      setLocalidad(Localidad);
+      setImg(Img);
+
+      toggleLogin()
+    }
+
+
+
+
+    const [showModal, setshowModal] = useState(false);
+
+    const toggleLogin = () => {
+      setshowModal((prevshowModal) => !prevshowModal);
+    };
+
+
+
+
+
+
   return (
     <>
     
 
+
+
+
+    <div className={`${stylesFuncionarios.modal} ${showModal ? `${stylesFuncionarios.show}` : ``}`} id="algo">
+      <div id="cerrar" onClick={toggleLogin} className={`${stylesFuncionarios.icon_close}`}>
+          <img src="/cross2.png" alt="cosa" className={`${stylesFuncionarios.img} ${stylesFuncionarios.close}`}/>
+        </div>
+        {
+          <VerMasDeporte
+          id={Id}
+          deporte={Deporte}
+          descripcion={Descripcion}
+          fecha={Fecha}
+          localidad={Localidad}
+          imagen_base64={Img}
+        />}
+      </div>
+      
     <div className={stylesFuncionarios.fila}>
 
       <aside className={stylesFuncionarios.barra}>
@@ -235,17 +289,29 @@ function Funcionarios() {
             deporte={deporte.deporte}
             descripcion={deporte.descripcion}
             fecha={deporte.fecha}
-            imagen_base64={deporte.imagen_base64}
             localidad={deporte.localidad}
+            imagen_base64={deporte.imagen_base64}
+            modal={() => {algo(
+              deporte.Id,
+              deporte.deporte,
+              deporte.descripcion,
+              deporte.fecha,
+              deporte.localidad,
+              deporte.imagen_base64
+              )} }
           />
         )) }
+  
         
         {mostrarUsuario && <EditarUsuarios/>}
-        {mostrarCrearUsuario && dataUsuario.map((usuario) => (
+        {mostrarUsuario && dataUsuario.map((usuario) => (
           <CrearUsuario
             ci={usuario.ci}
             nombre={usuario.nombre}
             apellido={usuario.apellido}
+            celular={usuario.celular}
+            nacimiento={usuario.nacimiento}
+            deporteid={usuario.deporteid}
           />
         )) }
       </div>
