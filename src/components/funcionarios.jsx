@@ -102,6 +102,12 @@ function Funcionarios() {
     }, []);
 
 
+
+
+
+
+
+
     const fetchNoticia = async () => {
       try {
         const response = await fetch('http://localhost/archivos2/noticias/recibirNoticia.php');
@@ -174,6 +180,13 @@ function Funcionarios() {
 
 
 
+
+
+
+
+
+
+
     const [Id, setId] = useState('');
     const [Deporte, setDeporte] = useState('');
     const [Descripcion, setDescripcion] = useState('');
@@ -223,18 +236,40 @@ function Funcionarios() {
     const [Lugar, setLugar] = useState('');
     const [FechaUsuario, setFechaUsuario] = useState('');
     const [CITutor, setCITutor] = useState('');
-
-  
+    const [DeporteId, setDeporteId] = useState('');
+    const [deporte, setdeporte] = useState('');
 
 
 
 const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, CarnetFoto, Domicilio, Celular, Asistencia, AsistenciaNombre, Diabetes,
-  Hipertension, Asma, Alergias, Fracturas, Otros, Lentes, TipoLentes, NombreTutor, RolTutor, Lugar, FechaUsuario, CITutor)=>{
+  Hipertension, Asma, Alergias, Fracturas, Otros, Lentes, TipoLentes, NombreTutor, RolTutor, Lugar, FechaUsuario, CITutor,DeporteId,deporte)=>{
 
     setCI(CI);
     setNombre(Nombre)
-
-
+    setApellido(Apellido);
+    setNacimiento(Nacimiento);
+    setSexo(Sexo);
+    setCedulaFoto(CedulaFoto);
+    setCarnetFoto(CarnetFoto);
+    setDomicilio(Domicilio);
+    setCelular(Celular);
+    setAsistencia(Asistencia);
+    setAsistenciaNombre(AsistenciaNombre);
+    setDiabetes(Diabetes);
+    setHipertension(Hipertension);
+    setAsma(Asma);
+    setAlergias(Alergias);
+    setFracturas(Fracturas);
+    setOtros(Otros);
+    setLentes(Lentes);
+    setTipoLentes(TipoLentes);
+    setNombreTutor(NombreTutor);
+    setRolTutor(RolTutor);
+    setLugar(Lugar);
+    setFechaUsuario(FechaUsuario);
+    setCITutor(CITutor);
+    setDeporteId(DeporteId);
+    setdeporte(deporte);
 
 
   toggleUser()
@@ -289,15 +324,31 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
     <div className={`${stylesFuncionarios.modalUser} ${showModalUser ? `${stylesFuncionarios.showUser}` : ``}`}>
       {
             <VerMasUsuario
-              id={Id}
+              ci={CI}
               nombre={Nombre}
-              descripcion={Descripcion}
-              fecha={Fecha}
-              localidad={Localidad}
+              apellido={Apellido}
+              nacimiento={Nacimiento}
+              asistencia={Asistencia}
               imagen_base64={Img}
-              ubicacion={Ubicacion}
-              option1={Option1}
-
+              celular={Celular}
+              asistencianombre={AsistenciaNombre}
+              sexo={Sexo}
+              domicilio={Domicilio}
+              diabetes={Diabetes}
+              hipertension={Hipertension}
+              asma={Asma}
+              alergias={Alergias}
+              fracturas={Fracturas}
+              otros={Otros}
+              lentes={Lentes}
+              tipoLentes={TipoLentes}
+              nombreTutor={NombreTutor}
+              rolTutor={RolTutor}
+              lugar={Lugar}
+              fechaUsuario={FechaUsuario}
+              ciTutor={CITutor}
+              deporteId={DeporteId}
+              deporte={deporte}
               cerrar={() => {InfoUsuarioModal(toggleUser)}}
             />}
     </div>
@@ -394,7 +445,7 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
             apellido={usuario.apellido}
             celular={usuario.celular}
             nacimiento={usuario.nacimiento}
-            deporteid={usuario.deporteid}
+      
             modal={
               () => {InfoUsuarioModal(
                 usuario.ci,
@@ -420,7 +471,9 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
                 usuario.roltutor,
                 usuario.lugar,
                 usuario.fecha,
-                usuario.citutor
+                usuario.citutor,
+                usuario.deporteid
+            
                 )} 
             }
           />
