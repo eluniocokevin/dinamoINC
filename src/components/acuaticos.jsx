@@ -191,7 +191,7 @@ return(
     </div>
 
   <div className={`${stylesAcuaticos.titulo}`}>
-    <h1>Actividades Temporales</h1>
+    <h1>Actividades Temporales</h1> <a className={`${stylesAcuaticos.a}`} href="formulario">Registrarse</a> <a className={`${stylesAcuaticos.a}`} href="consultasUser">¿En que estoy registrado?</a>
   </div>
 <div className={`${stylesAcuaticos.cuerpo}`}>
 
