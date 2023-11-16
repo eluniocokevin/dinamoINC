@@ -1,5 +1,5 @@
 .ver_mas{
-    width: 100vw;
+    width: 110vw;
     height: auto;
     display: flex;
     position: absolute;
@@ -70,4 +70,17 @@
     margin-bottom: 20px;
     border: 2px solid #000;
     border-radius: 10px;
+}
+.enfermedades{
+
+    display: flex;
+    flex-direction: row;
+}
+
+.enfermedades,.enfermedades2,.enfermedades3 .label_m{
+ display: flex;
+ justify-content: space-around;
+padding: 4px;
+    margin: auto;
+    border-radius: 15px;
 }
