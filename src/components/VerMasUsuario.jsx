@@ -15,6 +15,9 @@ return(
           <div id="cerrar" className={`${stylesVerMasUsuario.icon_close}`} onClick={() =>{props.cerrar()}}>
             <img src="/cross2.png" alt="cosa" className={`${stylesVerMasUsuario.img} ${stylesVerMasUsuario.close}`}/>
           </div>
+          <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Ci:</label>
+          <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.ci}</label>
+
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Nombre:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.nombre}</label>
           

@@ -38,9 +38,7 @@ function CrearUsuario( props ){
 
 
   
-  const handleFormDelete = async (ci) => {
-
-
+  const handleFormDelete = async (ci, deporteid) => {
     const confirmDelete = window.confirm("¿Estás seguro de que deseas eliminar este usuario?");
   
     if (!confirmDelete) {
@@ -48,13 +46,13 @@ function CrearUsuario( props ){
     }
   
     try {
-      const response = await fetch(`http://localhost/archivos2/usuarios/borrarusuario.php?ci=${ci}`, {
+      const response = await fetch(`http://localhost/archivos2/usuarios/borrarusuario.php?ci=${ci}&deporteid=${deporteid}`, {
         method: 'DELETE',
       });
   
       if (response.ok) {
         console.log('Usuario eliminado con éxito');
-        const updatedEvento = evento.filter((Evento) => Evento.ci !== ci);
+        const updatedEvento = evento.filter((Evento) => Evento.ci !== ci || Evento.deporteid !== deporteid);
         setEvento(updatedEvento);
       } else {
         const errorData = await response.json();
@@ -66,8 +64,6 @@ function CrearUsuario( props ){
       console.error('Error en la solicitud:', error);
     }
   };
-  
-
 
 
 
@@ -81,7 +77,7 @@ function CrearUsuario( props ){
       <div className={`${stylesCrearUsuario.tabla}`}>
 
 
-        <div className={`${stylesCrearUsuario.actividades}`} ci={props.ci}>
+        <div className={`${stylesCrearUsuario.actividades}`} ci={props.ci} deporteid={props.deporteid}>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.ci}</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.nombre}</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.apellido}</h2></div>
@@ -110,7 +106,7 @@ function CrearUsuario( props ){
                   </g>
                 </svg>
               </div>
-              <div className={`${stylesCrearUsuario.btn_del}`} onClick={() => handleFormDelete(props.ci)}>
+              <div className={`${stylesCrearUsuario.btn_del}`} onClick={() => handleFormDelete(props.ci, props.deporteid)}>
                 <svg className={`${stylesCrearUsuario.del}`} xmlnsXlink="http://www.w3.org/1999/xlink" fill="none" width="17.901" xmlns="http://www.w3.org/2000/svg" id="screenshot-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3" version="1.1" viewBox="2381.054 585.184 17.901 16.865" height="16.865">
                   <g id="shape-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">
                     <g className={`${stylesCrearUsuario.fills}`} id="fills-ef9f8d7b-7ae6-8023-8002-ef87828ab5a3">

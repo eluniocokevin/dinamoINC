@@ -394,6 +394,7 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
             apellido={usuario.apellido}
             celular={usuario.celular}
             nacimiento={usuario.nacimiento}
+            deporteid={usuario.deporteid}
             modal={
               () => {InfoUsuarioModal(
                 usuario.ci,
