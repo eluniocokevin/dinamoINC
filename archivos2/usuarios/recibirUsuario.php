@@ -20,8 +20,26 @@ try {
         u.nombre,
         u.apellido,
         u.nacimiento,  
-                      
+        u.sexo,
+        u.domicilio,
+        u.celular,
+        u.asistencia,
+        u.asistencianombre,
+        u.diabetes,
+        u.hipertension,
+        u.asma,
+        u.alergias,
+        u.fracturas,
+        u.otros,
+        u.lentes,
+        u.tipolentes,
+        u.nombretutor,
+        u.roltutor,
+        u.lugar,
+        u.fecha,
+        u.citutor,                       
         r.deporteid
+        
     FROM 
         usuario u
     JOIN 
