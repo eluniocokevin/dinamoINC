@@ -198,7 +198,9 @@ return(
     </div>
 
     <div className={`${stylesTerrestres.titulo}`}>
-      <h1>Actividades Anuales</h1>    <a  href="formulario">Registrarse</a> <a  href="consultasUser">¿En que estoy registrado?</a>
+      <h1>Actividades Anuales</h1>    
+      <a className={`${stylesTerrestres.a}`} href="formulario">Registrarse</a> 
+      <a className={`${stylesTerrestres.a}`} href="consultasUser">¿En que estoy registrado?</a>
     </div>
     <div className={`${stylesTerrestres.cuerpo}`}>
 
