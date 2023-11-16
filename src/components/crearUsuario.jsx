@@ -83,13 +83,11 @@ function CrearUsuario( props ){
 
         <div className={`${stylesCrearUsuario.actividades}`} ci={props.ci}>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.ci}</h2></div>
-          <div className={`${stylesCrearUsuario.nombre}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.nombre}</h2></div>
-          <div className={`${stylesCrearUsuario.apellido}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.apellido}</h2></div>
-          <div className={`${stylesCrearUsuario.celular}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.celular}</h2></div>
-          <div className={`${stylesCrearUsuario.nacimiento}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.nacimiento}</h2></div>
-          <div className={`${stylesCrearUsuario.deporteid}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.deporteid}</h2></div>
-          <div className={`${stylesCrearUsuario.actividad}`}>                                                            </div>
-          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}></h2></div>
+          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.nombre}</h2></div>
+          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.apellido}</h2></div>
+          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.celular}</h2></div>
+          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.nacimiento}</h2></div>
+          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`} onClick={() =>{props.modal()}}>Ver mas...</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}>
             <div className={`${stylesCrearUsuario.btns}`}>
               <div className={`${stylesCrearUsuario.btn_edit}`}>

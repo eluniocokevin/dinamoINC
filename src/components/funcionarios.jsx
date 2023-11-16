@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useAsyncValue, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import stylesFuncionarios from "../css/funcionarios.module.css";
 import CrearNoticia from "./crearNoticia";
@@ -11,7 +11,7 @@ import AdminNoticias from "./adminNoticias";
 import AdminDeportes from "./adminDeportes";
 import AdminEventos from "./adminEventos";
 import VerMasDeporte from "./VerMasDeporte";
-
+import VerMasUsuario from "./VerMasUsuario";
 
 function Funcionarios() {
   const location = useLocation();
@@ -180,17 +180,68 @@ function Funcionarios() {
     const [Fecha, setFecha] = useState('');
     const [Img, setImg] = useState('');
     const [Localidad, setLocalidad] = useState('');
+    const [Ubicacion, setUbicacion] = useState('');
+    const [Option1, setOption1] = useState('');
 
-    const algo = (Id, Deporte, Descripcion, Fecha, Localidad, Img) =>{
+    const InfoDeporteModal = (Id, Deporte, Descripcion, Fecha, Localidad, Img, Ubicacion, Option1) =>{
       setId(Id);
       setDeporte(Deporte);
       setDescripcion(Descripcion);
       setFecha(Fecha);
       setLocalidad(Localidad);
       setImg(Img);
+      setUbicacion(Ubicacion)
+      setOption1(Option1);
+
 
       toggleLogin()
     }
+
+
+
+    const [CI, setCI] = useState('');
+    const [Nombre, setNombre] = useState('');
+    const [Apellido, setApellido] = useState('');
+    const [Nacimiento, setNacimiento] = useState('');
+    const [Sexo, setSexo] = useState('');
+    const [CedulaFoto, setCedulaFoto] = useState('');
+    const [CarnetFoto, setCarnetFoto] = useState('');
+    const [Domicilio, setDomicilio] = useState('');
+    const [Celular, setCelular] = useState('');
+    const [Asistencia, setAsistencia] = useState('');
+    const [AsistenciaNombre, setAsistenciaNombre] = useState('');
+    const [Diabetes, setDiabetes] = useState('');
+    const [Hipertension, setHipertension] = useState('');
+    const [Asma, setAsma] = useState('');
+    const [Alergias, setAlergias] = useState('');
+    const [Fracturas, setFracturas] = useState('');
+    const [Otros, setOtros] = useState('');
+    const [Lentes, setLentes] = useState('');
+    const [TipoLentes, setTipoLentes] = useState('');
+    const [NombreTutor, setNombreTutor] = useState('');
+    const [RolTutor, setRolTutor] = useState('');
+    const [Lugar, setLugar] = useState('');
+    const [FechaUsuario, setFechaUsuario] = useState('');
+    const [CITutor, setCITutor] = useState('');
+
+  
+
+
+
+const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, CarnetFoto, Domicilio, Celular, Asistencia, AsistenciaNombre, Diabetes,
+  Hipertension, Asma, Alergias, Fracturas, Otros, Lentes, TipoLentes, NombreTutor, RolTutor, Lugar, FechaUsuario, CITutor)=>{
+
+    setCI(CI);
+    setNombre(Nombre)
+
+
+
+
+  toggleUser()
+
+}
+
+
 
 
 
@@ -199,6 +250,13 @@ function Funcionarios() {
 
     const toggleLogin = () => {
       setshowModal((prevshowModal) => !prevshowModal);
+    };
+
+
+    const [showModalUser, setshowModalUser] = useState(false);
+
+    const toggleUser = () => {
+      setshowModalUser((prevshowModalUser) => !prevshowModalUser);
     };
 
 
@@ -214,9 +272,7 @@ function Funcionarios() {
 
 
     <div className={`${stylesFuncionarios.modal} ${showModal ? `${stylesFuncionarios.show}` : ``}`} id="algo">
-      <div id="cerrar" onClick={toggleLogin} className={`${stylesFuncionarios.icon_close}`}>
-          <img src="/cross2.png" alt="cosa" className={`${stylesFuncionarios.img} ${stylesFuncionarios.close}`}/>
-        </div>
+
         {
           <VerMasDeporte
           id={Id}
@@ -225,7 +281,30 @@ function Funcionarios() {
           fecha={Fecha}
           localidad={Localidad}
           imagen_base64={Img}
+          ubicacion={Ubicacion}
+          option1={Option1}
+
+          cerrar={() => {InfoDeporteModal(toggleLogin)}}
         />}
+    <div className={`${stylesFuncionarios.modalUser} ${showModalUser ? `${stylesFuncionarios.showUser}` : ``}`}>
+      {
+            <VerMasUsuario
+              id={Id}
+              nombre={Nombre}
+              descripcion={Descripcion}
+              fecha={Fecha}
+              localidad={Localidad}
+              imagen_base64={Img}
+              ubicacion={Ubicacion}
+              option1={Option1}
+
+              cerrar={() => {InfoUsuarioModal(toggleUser)}}
+            />}
+    </div>
+          
+
+
+
       </div>
       
     <div className={stylesFuncionarios.fila}>
@@ -293,13 +372,15 @@ function Funcionarios() {
             fecha={deporte.fecha}
             localidad={deporte.localidad}
             imagen_base64={deporte.imagen_base64}
-            modal={() => {algo(
+            modal={() => {InfoDeporteModal(
               deporte.Id,
               deporte.deporte,
               deporte.descripcion,
               deporte.fecha,
               deporte.localidad,
-              deporte.imagen_base64
+              deporte.imagen_base64,
+              deporte.ubicacion,
+              deporte.option1
               )} }
           />
         )) }
@@ -313,7 +394,34 @@ function Funcionarios() {
             apellido={usuario.apellido}
             celular={usuario.celular}
             nacimiento={usuario.nacimiento}
-            deporteid={usuario.deporteid}
+            modal={
+              () => {InfoUsuarioModal(
+                usuario.ci,
+                usuario.nombre,
+                usuario.apellido,
+                usuario.nacimiento,
+                usuario.sexo,
+                usuario.cedulafoto,
+                usuario.carnetfoto,
+                usuario.domicilio,
+                usuario.celular,
+                usuario.asistencia,
+                usuario.asistencianombre,
+                usuario.diabetes,
+                usuario.hipertension,
+                usuario.asma,
+                usuario.alergias,
+                usuario.fracturas,
+                usuario.otros,
+                usuario.lentes,
+                usuario.tipolentes,
+                usuario.nombretutor,
+                usuario.roltutor,
+                usuario.lugar,
+                usuario.fecha,
+                usuario.citutor
+                )} 
+            }
           />
         )) }
       </div>

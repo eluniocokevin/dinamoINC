@@ -31,7 +31,7 @@ return(
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.docente}`}> <h2 className={`${stylesCrearDeporte.h2}`}>APELLIDO</h2></div>
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>CELULAR</h2></div>
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>NACIMIENTO</h2></div>    
-          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.lugar}`}> <h2 className={`${stylesCrearDeporte.h2}`}>ACTIVIDAD</h2></div>
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.lugar}`}> <h2 className={`${stylesCrearDeporte.h2}`}>VER MAS</h2></div>
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.agregar}`}>
             <div className={`${stylesCrearDeporte.btn_add}`}>
               <div onClick={abrirDeporte} className={`${stylesCrearDeporte.add}`}>
