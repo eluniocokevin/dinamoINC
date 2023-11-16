@@ -14,12 +14,13 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+          
         $sql = " SELECT 
         u.ci,
         u.nombre,
         u.apellido,
-        u.celular,
-        u.nacimiento,
+        u.nacimiento,  
+                      
         r.deporteid
     FROM 
         usuario u
