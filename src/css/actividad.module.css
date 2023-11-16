@@ -4,10 +4,20 @@
    }
 /*mapa XD*/
 .mapa{padding-top: 13vh;}
-.titulo, .h2{
+.titulo{
     width: 100%;
     text-align: center;
-   font-size: xx-large;
+    font-size: xx-large;
+}
+.titulo .a{
+    color: #fff;
+    background-color: #2191af;
+    text-decoration: none;
+    font-size: x-large;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+    flex-wrap: wrap;
 }
 .cuerpo{
     display: flex;
@@ -76,6 +86,7 @@
 .btn{
     background-color: #27649e;
     height: 80%;
+    max-height: 2rem;
     width: auto;
     border-radius:3px;
     text-align: left;
@@ -222,19 +233,6 @@ margin-bottom: 5%;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cosa{
     width: 100vw;
     height: 30vh;
@@ -310,6 +308,9 @@ margin-bottom: 5%;
 .titulo, .h1{
     font-size: larger;
 }
+
+
+
 .fila{
     width: 100%;
     flex-direction: column;
@@ -358,12 +359,32 @@ margin-bottom: 5%;
 .eventos{
     width: 100%;
 }
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+}
+.titulo .a{
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 5px auto;
+}
 }
 
 @media screen and (min-width: 500px) and (max-width: 900px){
 
 .tarjetaactividad{
     width: 70%;
+}
+
+}
+@media screen and (min-width: 0px) and (max-width: 250px){
+.btn .p{
+    display: none;
+}
+.btn{
+    width: 20%;
+    justify-content: center;
 }
 
 }
