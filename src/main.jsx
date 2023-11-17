@@ -5,6 +5,7 @@ import './index.css'
 import Acuaticos from './components/acuaticos.jsx'
 import Terrestres from './components/terrestres.jsx'
 import Preguntas from './components/preguntas.jsx'
+import ConsultasUser from './components/consultasUser.jsx'
 import Eventos from './components/eventos.jsx'
 import Funcionarios from './components/funcionarios.jsx'
 import Formulario from './components/formulario.jsx'
@@ -33,7 +34,12 @@ const router = createBrowserRouter([
   {
     path:'/formulario',
     element:<Formulario/>
+  },
+  {
+    path:'/consultasUser',
+    element:<ConsultasUser/>
   }
+  
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -200,7 +200,7 @@ return(
     <div className={`${stylesTerrestres.titulo}`}>
       <h1>Actividades Anuales</h1>    
       <a className={`${stylesTerrestres.a}`} href="formulario">Registrarse</a> 
-      <a className={`${stylesTerrestres.a}`} href="consultasUser">¿En que estoy registrado?</a>
+      <a className={`${stylesTerrestres.a}`} href="consultasUser">¿En qué estoy anotado?</a>
     </div>
     <div className={`${stylesTerrestres.cuerpo}`}>
 
