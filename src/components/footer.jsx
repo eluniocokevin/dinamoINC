@@ -41,7 +41,7 @@ function Footer() {
         </div>
         <div className={`${stylesFooter.contacto}`}>
           <h3>CONTACTO </h3>
-          <h3>Mercedes-Soriano, Eusebio Giménez 643.</h3>
+          <h3>Estadio Luis Köster, Mercedes</h3>
           <h3>intendencia@soriano.gub.uy</h3>
           <h3>(+598) 4532 2201</h3>
           <h3>8:00 a 14:00 horas</h3>
