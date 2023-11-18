@@ -156,7 +156,7 @@ function Funcionarios() {
 
     const fetchEvento = async () => {
       try {
-        const response = await fetch('http://localhost/archivos2/eventos/recibirEvento.php');
+        const response = await fetch('http://localhost/archivos2/eventos/recibirAdmin.php');
         if (response.ok) {
           const data = await response.json();
           setDataEvento(data);
@@ -423,6 +423,7 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
             fecha={deporte.fecha}
             localidad={deporte.localidad}
             imagen_base64={deporte.imagen_base64}
+            option1={Option1}
             modal={() => {InfoDeporteModal(
               deporte.Id,
               deporte.deporte,
