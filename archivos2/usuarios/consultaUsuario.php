@@ -14,6 +14,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['ci'])) {
         $ci = $_GET['ci'];
+        $contrasena = $_GET['contrasena'];
         $sql = "SELECT 
                     u.ci,
                     u.nombre,
@@ -43,10 +44,11 @@ try {
                 JOIN 
                     realiza r ON u.ci = r.cedula
                 WHERE 
-                    u.ci = :ci";
+                    u.ci = :ci and u.contrasena = :contrasena";
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':ci', $ci, PDO::PARAM_STR);
+        $stmt->bindParam(':contrasena', $contrasena, PDO::PARAM_STR);
         $stmt->execute();
 
         $usuario = $stmt->fetchAll(PDO::FETCH_ASSOC);
