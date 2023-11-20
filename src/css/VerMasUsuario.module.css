@@ -1,0 +1,127 @@
+.ver_mas{
+    width: 110vw;
+    height: auto;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: ease 1s;
+    z-index: 100;
+}
+.ver_mas .icon_close{
+    height: 3em;
+    width: 3em;
+    background-color: red;
+    cursor: pointer;
+    transition: all 1s;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-self: end;
+}
+.icon_close .img{
+    height: 100%;
+    width: 100%;
+}
+.ver_mas .form_m{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+    border: #000 solid 2px;
+    border-radius: 10px;
+    background-color: #efefef;
+}
+
+.form_m .h1{
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+
+
+.form_m .label_m{
+    font-size: 25px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    border-radius: 15px;
+}
+
+
+.form_m .label{
+    width: 70%;
+    min-height: 1.5rem;
+    font-size: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: auto;
+}
+
+
+
+.form_m .img_m{
+    max-width: 90%;
+    min-height: 20vh;
+    max-height: 40vh;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+.enfermedades, .enfermedades2, .enfermedades3{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+}
+
+.enfermedades .label, .enfermedades2 .label, .enfermedades3 .label{
+    width: fit-content;
+    padding: 0 5px;
+}
+.enfermedades .label_m, .enfermedades2 .label_m, .enfermedades3 .label_m{
+    padding: 0 5px;
+    width: fit-content;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+.ver_mas{
+    width: 100vw;
+}
+
+.ver_mas .form_m{
+    width: 50%;
+}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px){
+.ver_mas{
+    width: 100vw;
+}
+
+.ver_mas .form_m{
+    width: 60%;
+}
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px){
+.ver_mas{
+    width: 100vw;
+}
+
+.ver_mas .form_m{
+    width: 70%;
+}
+}
+@media screen and (min-width: 0px) and (max-width: 500px){
+.ver_mas{
+    width: 100vw;
+}
+
+.ver_mas .form_m{
+    width: 90%;
+}
+}
