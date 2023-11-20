@@ -35,6 +35,11 @@ function ConsultasUser() {
   }
 
 
+  const [searchContrasena, setSearchContrasena] = useState(''); 
+
+  const handleContrasena = (e) => {
+    setSearchContrasena(e.target.value);
+  }
 
 
 
@@ -70,16 +75,28 @@ function ConsultasUser() {
     const [dataUsuario, setDataUsuario] = useState([]);
 
     const buscarUsuarioPorCi = () => {
-      fetch(`http://localhost/archivos2/usuarios/consultaUsuario.php?ci=${searchCi}`)
+  
+      const url = `http://localhost/archivos2/usuarios/consultaUsuario.php?ci=${searchCi}&contrasena=${searchContrasena}`;
+    
+      fetch(url)
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
-          return response.json();
+          return response.text();
         })
-        .then((dataUsuario) => setDataUsuario(dataUsuario.usuario))
-        .catch((error) => console.error("Error al obtener los datos:", error));
+        .then((textResponse) => {
+          try {
+            const dataUsuario = JSON.parse(textResponse);
+            setDataUsuario(dataUsuario.usuario);
+          } catch (error) {
+            console.error("Error parsing JSON:", error);
+          }
+        })
+        .catch((error) => console.error("Error fetching data:", error));
     };
+    
+
 
 
     const [CI, setCI] = useState('');
@@ -255,12 +272,12 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
           </div>
 
           <div className={`${stylesFuncionarios.contra}`}>
-            <label className={`${stylesFuncionarios.label}`} htmlFor="ciInput">Ingresar contraseña:</label>
+            <label className={`${stylesFuncionarios.label}`} htmlFor="contrasena">Ingresar contraseña:</label>
             <input className={`${stylesFuncionarios.input}`}
               type="text"
-              id="ciInput"
-              value={searchCi}
-              onChange={handleCiChange}
+              id="contrasena"
+              value={searchContrasena}
+              onChange={handleContrasena}
             />
           <button className={`${stylesFuncionarios.btn}`} onClick={buscarUsuarioPorCi}><img className={`${stylesFuncionarios.img}`} src="/search.svg" alt="" /></button>
           </div>
