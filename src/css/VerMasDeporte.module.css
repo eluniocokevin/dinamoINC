@@ -38,16 +38,15 @@
     margin-bottom: 10%;
 }
 
-.form_m .label_m{
-    width: 80%;
-    margin: auto;
-    border-radius: 15px;
-}
+
 
 .form_m .label_m{
     font-size: 25px;
     margin-bottom: 0;
     text-align: center;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    border-radius: 15px;
 }
 
 
@@ -77,10 +76,10 @@
     flex-direction: row;
 }
 
-.enfermedades,.enfermedades2,.enfermedades3 .label_m{
- display: flex;
- justify-content: space-around;
-padding: 4px;
+.enfermedades,.enfermedades2,.enfermedades3 .label{
+    display: flex;
+    justify-content: space-around;
+    padding: 4px;
     margin: auto;
     border-radius: 15px;
 }

@@ -3,7 +3,6 @@
 .tabla{
     display: flex;
     width: 80vw;
-    min-height: 100vh;
     flex-direction: column;
 }
 .tabla .cont_h1{
@@ -28,6 +27,7 @@
     align-self: center;
     border-radius: 10px;
     justify-content: space-around;
+    margin-top: 50px;
 }
 .atributo{
     width: 20%;

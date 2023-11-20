@@ -1,0 +1,328 @@
+body{height: 100%;}
+html {height: 100%;}
+
+
+.modal {
+    width: 100vw;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-2000px);
+    transition: all 1s;
+  
+  }
+  .modal.show {
+    width: 100vw;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    background: #efefef;
+    transform: translate(0px, 0px);
+    transition: all 1s ease;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+  }
+.icon_close{
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    background-color: red;
+    cursor: pointer;
+    transition: all 1s;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-self: end;
+}
+.icon_close .img{
+    height: 100%;
+    width: 100%;
+}
+
+.modalUser {
+    width: 100vw;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-2000px);
+    transition: all 1s;
+  
+  }
+  .modalUser.showUser {
+    width: 100vw;
+    height: auto;
+    z-index: 400;
+    position: absolute;
+    background: #efefef;
+    transform: translateX(2000px);
+    transition: all 1s ease;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5px;
+  }
+
+
+
+
+body{
+    background-color: #fff;
+}
+
+.fila{
+    display: flex;
+}
+
+.crear{
+    display: flex;
+    height: auto;
+    width: 80vw;
+    flex-direction: column;
+}
+.cont_tabla{
+    display: none;
+}
+
+
+.barra{
+    background: #000;
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+svg{
+    fill: #fff;
+}
+
+.logo{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo .img{
+  width: 90%;
+  background-color: #fff;
+  position: relative;
+  margin: 5% auto;
+  border-radius: 50%;
+}
+
+
+.cont_mueve{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+}
+.mini_cont{
+    width: 100%;
+    height: 5rem;
+}
+
+.cosas{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cosas :first-child{
+    margin-top: 5rem;
+}
+.cosas .elem{
+    display: flex;
+    height: 5rem;
+    width: 100%;
+}
+.cosas .elem .h1{
+    font-size: 30px;
+    margin: auto;
+    cursor: pointer;
+}
+.cosas{
+    color: #fff;
+}
+.cosas .activo{
+    background-color: #fff;
+    border-radius: 40px;
+}
+
+.cosas .activo >h1>.btn_aside{
+   color:#000;
+}
+
+
+.zoom{
+    display: none;
+}
+.dropdown_content{
+    display: none;
+}
+
+
+.buscar{
+    position: absolute;
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+
+}
+
+.contra{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+
+}
+
+.buscar .label{
+    height: 2rem;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+.buscar .input{
+    height: 1rem;
+    padding: 3px;
+    border-radius: 8px;
+    margin: 0 5px;
+    border: solid 1px #888;
+}
+.buscar .input:focus{
+    outline: none;
+    border-radius: 0px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #000;
+}
+
+.buscar .btn{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #efefef;
+}
+.btn .img{
+    margin: auto;
+}
+
+
+
+
+@media screen and (min-width:0px) and (max-width: 1200px){
+
+.fila{
+    flex-wrap: wrap;
+    height: auto;
+}
+.barra{
+    width: 100%;
+    max-width: none;
+    height: 20vh;
+    flex-direction: row;
+
+}
+.logo{
+    min-width: 175px;
+    max-width: 175px;
+}
+
+.cosas{
+    width: 80vw;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cosas .elem{
+    width: 23%;
+}
+.cosas :first-child{
+    margin-top: 0;
+}
+
+.crear{
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+}
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+.cosas{
+    display: none;
+}
+
+
+.barra{
+    justify-content: space-between  ;
+}
+
+
+.menu .zoom{
+    width: 80px;
+    display: flex;
+    margin-right: 20px;
+}
+.menu .dropdown_content{
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+  
+  }
+
+  .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 110;
+  }
+  
+  .dropdown_content .a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .menu:hover .dropdown_content {
+    display: block;
+  }
+  
+
+.zoom .img{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    height: 90%;
+    width: auto;
+}
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 350px){
+
+
+.barra{
+    justify-content: space-between;
+}
+.menu .zoom{
+    width: 70px;
+    margin: 0 10px;
+}
+
+}
