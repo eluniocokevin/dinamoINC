@@ -1,4 +1,4 @@
-import stylesVerMasUsuario from "../css/VerMasDeporte.module.css"
+import stylesVerMasUsuario from "../css/VerMasUsuario.module.css"
 const VerMasDeporte = (props) =>{
 return(
 
@@ -37,36 +37,45 @@ return(
 
 
 <div className={`${stylesVerMasUsuario.enfermedades}`}>
-
+        <div>
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Asistencia:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.asistencia}</label>
-
+        </div>
+        <div>
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Diabetes:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.diabetes}</label>
+        </div>
 
+        <div>
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Hipertension:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.hipertension}</label>
+        </div>
 
      
 </div>
        
 <div className={`${stylesVerMasUsuario.enfermedades2}`}>  
 
+        <div>
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Asma:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.asma}</label>
-
+        </div>
+        <div>
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Alergias:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.alergias}</label>
-
+        </div>
+        <div>
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Fracturas:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.fracturas}</label>
+        </div>
        
 </div>
 
  <div className={`${stylesVerMasUsuario.enfermedades3}`}>  
-
+        <div>
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Lentes:</label>
-          <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.lentes}</label>
+          <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.lentes}</label> 
+        </div>
  </div>
 
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Otros:</label>
