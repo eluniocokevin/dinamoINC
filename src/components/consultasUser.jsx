@@ -1,7 +1,7 @@
 import React from "react";
 import { useAsyncValue, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import stylesFuncionarios from "../css/funcionarios.module.css";
+import stylesFuncionarios from "../css/consultasUser.module.css";
 import CrearNoticia from "./crearNoticia";
 import CrearEvento from "./crearEvento";
 import CrearDeporte from "./crearDeporte";
@@ -221,20 +221,6 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
     <div className={stylesFuncionarios.fila}>
 
 
-    <div className={`${stylesFuncionarios.espacio}`}></div>
-        <div className={`${stylesFuncionarios.espacio}`}>
-          <label htmlFor="ciInput">Ingresar CI:</label>
-          <input
-            type="text"
-            id="ciInput"
-            value={searchCi}
-            onChange={handleCiChange}
-          />
-        </div>
-        <div className={`${stylesFuncionarios.espacio}`}>
-          <button onClick={buscarUsuarioPorCi}>Buscar por CI</button>
-        </div>
-        <div className={`${stylesFuncionarios.espacio}`}></div>
   
 
 
@@ -254,9 +240,33 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
 
 
       </aside>
+    
 
       <div id="crear" className={`${stylesFuncionarios.crear}`}>
-      
+        <div className={`${stylesFuncionarios.buscar}`}>
+          <div className={`${stylesFuncionarios.ci}`}>
+            <label className={`${stylesFuncionarios.label}`} htmlFor="ciInput">Ingresar CI:</label>
+            <input className={`${stylesFuncionarios.input}`}
+              type="text"
+              id="ciInput"
+              value={searchCi}
+              onChange={handleCiChange}
+            />
+          </div>
+
+          <div className={`${stylesFuncionarios.contra}`}>
+            <label className={`${stylesFuncionarios.label}`} htmlFor="ciInput">Ingresar contraseña:</label>
+            <input className={`${stylesFuncionarios.input}`}
+              type="text"
+              id="ciInput"
+              value={searchCi}
+              onChange={handleCiChange}
+            />
+          <button className={`${stylesFuncionarios.btn}`} onClick={buscarUsuarioPorCi}><img className={`${stylesFuncionarios.img}`} src="/search.svg" alt="" /></button>
+          </div>
+
+          
+        </div>
         
         {mostrarUsuario && <EditarUsuarios/>}
         {mostrarUsuario && dataUsuario && dataUsuario.map((usuario) => (

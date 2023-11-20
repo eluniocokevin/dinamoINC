@@ -1,4 +1,4 @@
-import stylesCrearDeporte from "../css/CrearDeporte.module.css";
+import stylesCrearDeporte from "../css/editarUsuarios.module.css";
 import React, { useState,useEffect } from 'react';
 
 
