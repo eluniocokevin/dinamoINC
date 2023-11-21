@@ -15,7 +15,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-    $sql = "SELECT id, nombre,email, telefono, asunto, mensaje FROM contacto order by fecha desc";
+    $sql = "SELECT nombre,email, telefono, asunto, mensaje FROM contacto order by fecha desc";
 
 
     $stmt = $conn->query($sql);
