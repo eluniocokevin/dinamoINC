@@ -82,7 +82,7 @@ function CrearUsuario( props ){
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.nombre}</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.apellido}</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.celular}</h2></div>
-          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.nacimiento}</h2></div>
+          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.deporteid}</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`} onClick={() =>{props.modal()}}>Ver mas...</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}>
             <div className={`${stylesCrearUsuario.btns}`}>
@@ -148,7 +148,7 @@ function CrearUsuario( props ){
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Ci:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.ci}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Nacimiento:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.nacimiento}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Celular:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.celular}</p></div>
-    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Asistencia nombre:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.asistencianombre}</p></div>
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Nombre asistencia:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.asistencianombre}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Asistencia:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.asistencia}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Diabetes:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.diabetes}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Hipertension:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.hipertencio}</p></div>
@@ -156,11 +156,14 @@ function CrearUsuario( props ){
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Alergias:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.alergias}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Fracturas:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.fracturas}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Lentes:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.lentes}</p></div>
-    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Otros:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.otros}</p></div>
     <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Tipo de Lentes:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.tipolentes}</p></div>
-  
-  
-  
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Otros:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.otros}</p></div>
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Lugar:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.lugar}</p></div>
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Fecha del registro:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.fecha}</p></div>
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>CI del tutor:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.citutor}</p></div>
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Nombre tutor:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.nombretutor}</p></div>
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Rol tutor:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.roltutor}</p></div>
+    <div className={`${stylesCrearUsuario.actividad_m}`}><p className={`${stylesCrearUsuario.izquierda} ${stylesCrearUsuario.p}`}>Deporte:</p> <p className={`${stylesCrearUsuario.derecha} ${stylesCrearUsuario.p}`}>{props.deporteid}</p></div>
   </div>
 
 

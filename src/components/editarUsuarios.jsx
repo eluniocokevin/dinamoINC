@@ -30,7 +30,7 @@ return(
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.nombre}`}> <h2 className={`${stylesCrearDeporte.h2}`}>NOMBRE</h2></div>
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.docente}`}> <h2 className={`${stylesCrearDeporte.h2}`}>APELLIDO</h2></div>
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>CELULAR</h2></div>
-          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>NACIMIENTO</h2></div>    
+          <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.horario}`}> <h2 className={`${stylesCrearDeporte.h2}`}>DEPORTE</h2></div>    
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.lugar}`}> <h2 className={`${stylesCrearDeporte.h2}`}>VER MAS</h2></div>
           <div className={`${stylesCrearDeporte.atributo} ${stylesCrearDeporte.agregar}`}>
           

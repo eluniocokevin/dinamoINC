@@ -249,8 +249,34 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
 
 
         <div className={`${stylesFuncionarios.cosas}`}>
+
+        <div className={`${stylesFuncionarios.buscar_m}`}>
+          <div className={`${stylesFuncionarios.ci_m}`}>
+            <label className={`${stylesFuncionarios.label_m}`} htmlFor="ciInput">Ingresar CI:</label>
+            <input className={`${stylesFuncionarios.input_m}`}
+              type="text"
+              id="ciInput"
+              value={searchCi}
+              onChange={handleCiChange}
+            />
+          </div>
+
+          <div className={`${stylesFuncionarios.contra_m}`}>
+            <label className={`${stylesFuncionarios.label_m}`} htmlFor="contrasena">Ingresar contraseña:</label>
+            <input className={`${stylesFuncionarios.input_m }`}
+              type="text"
+              id="contrasena"
+              value={searchContrasena}
+              onChange={handleContrasena}
+            />
+          <button className={`${stylesFuncionarios.btn_m}`} onClick={buscarUsuarioPorCi}><img className={`${stylesFuncionarios.img_m}`} src="/search.svg" alt="" /></button>
+          </div>
+
+          
+        </div>
+
         
-              <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
+          <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
         </div>
         
     
@@ -291,8 +317,28 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
     ci={usuario.ci}
     nombre={usuario.nombre}
     apellido={usuario.apellido}
-    celular={usuario.celular}
     nacimiento={usuario.nacimiento}
+    
+    sexo={usuario.sexo}
+    cedulafoto={usuario.cedulafoto}
+    carnetfoto={usuario.carnetfoto}
+    domicilio={usuario.domicilio}
+    celular={usuario.celular}
+    asistencia={usuario.asistencia}
+    asistencianombre={usuario.asistencianombre}
+    diabetes={usuario.diabetes}
+    hipertension={usuario.hipertension}
+    asma={usuario.asma}
+    alergias={usuario.alergias}
+    fracturas={usuario.fracturas}
+    otros={usuario.otros}
+    lentes={usuario.lentes}
+    tipolentes={usuario.tipolentes}
+    nombretutor={usuario.nombretutor}
+    rolTutor={usuario.roltutor}
+    lugar={usuario.lugar}
+    fecha={usuario.fecha}
+    citutor={usuario.citutor}
     deporteid={usuario.deporteid}
     modal={() => {
       InfoUsuarioModal(
