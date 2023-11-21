@@ -12,6 +12,8 @@ import AdminDeportes from "./adminDeportes";
 import AdminEventos from "./adminEventos";
 import VerMasDeporte from "./VerMasDeporte";
 import VerMasUsuario from "./VerMasUsuario";
+import Consultas from "./consultas";
+import Consulta from "./consulta";
 
 function Funcionarios() {
   const location = useLocation();
@@ -30,6 +32,7 @@ function Funcionarios() {
   const [mostrarCrearEvento, setMostrarCrearEvento] = useState(false);
   const [mostrarCrearNoticia, setMostrarCrearNoticia] = useState(false);
   const [mostrarUsuario, setMostrarUsuarios] = useState(false);
+  const [mostrarConsulta, setMostrarConsulta] = useState(false);
 
 
 
@@ -40,18 +43,21 @@ function Funcionarios() {
       setMostrarCrearEvento(false);
       setMostrarCrearNoticia(!mostrarCrearNoticia);
       setMostrarUsuarios(false);
+      setMostrarConsulta(false)
     }
     const handleEvento=()=>{
       setMostrarCrearDeporte(false);
       setMostrarCrearEvento(!mostrarCrearEvento);
       setMostrarCrearNoticia(false);
       setMostrarUsuarios(false);
+      setMostrarConsulta(false)
     }
     const handleDeporte=()=>{
       setMostrarCrearDeporte(!mostrarCrearDeporte);
       setMostrarCrearEvento(false);
       setMostrarCrearNoticia(false);
       setMostrarUsuarios(false);
+      setMostrarConsulta(false)
     }
 
     const handleUsuario=()=>{
@@ -59,8 +65,16 @@ function Funcionarios() {
       setMostrarCrearEvento(false);
       setMostrarCrearNoticia(false);
       setMostrarUsuarios(!mostrarUsuario);
+      setMostrarConsulta(false)
     }
     
+    const handleConsulta=()=>{
+      setMostrarCrearDeporte(false);
+      setMostrarCrearEvento(false);
+      setMostrarCrearNoticia(false);
+      setMostrarUsuarios(false);
+      setMostrarConsulta(!mostrarConsulta)
+    }
 
 
 
@@ -72,6 +86,7 @@ function Funcionarios() {
     const [dataDeporte, setDataDeporte] = useState([]);
     const [dataEvento, setDataEvento] = useState([]);
     const [dataUsuario, setDataUsuario] = useState([]);
+    const [dataConsulta, setDataConsulta] = useState([]);
 
     useEffect(() => {
       fetch('http://localhost/archivos2/noticias/recibirNoticia.php')
@@ -101,7 +116,12 @@ function Funcionarios() {
         .catch((error) => console.error("Error al obtener los datos:", error));
     }, []);
 
-
+    useEffect(() => {
+      fetch('http://localhost/archivos2/contacto/recibirContacto.php')
+        .then((response) => response.json())
+        .then((dataConsulta) => setDataConsulta(dataConsulta))
+        .catch((error) => console.error("Error al obtener los datos:", error));
+    }, []);
 
 
 
@@ -371,6 +391,7 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
               <div className={`${stylesFuncionarios.eventos} ${stylesFuncionarios.elem} ${mostrarCrearEvento ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleEvento}>Eventos</a></h1></div>
               <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarCrearNoticia ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleNoticia}>Noticias</a></h1></div>
               <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarUsuario ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleUsuario}>Usuarios</a></h1></div>
+              <div className={`${stylesFuncionarios.noticias} ${stylesFuncionarios.elem} ${mostrarConsulta ? stylesFuncionarios.activo : ''}`}><h1 className={`${stylesFuncionarios.h1}`}><a className={`${stylesFuncionarios.btn_aside}`} onClick={handleConsulta}>Consultas</a></h1></div>
         </div>
         
         <div className={`${stylesFuncionarios.menu}`}>
@@ -380,6 +401,7 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
             <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleEvento}>Eventos</a>
             <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleNoticia}>Noticias</a>
             <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleUsuario}>Usuarios</a>
+            <a className={`${stylesFuncionarios.btn_menu} ${stylesFuncionarios.a}`} onClick={handleConsulta}>Consultas</a>
           </div>
         </div>
       
@@ -480,6 +502,20 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
             }
           />
         )) }
+
+
+{mostrarConsulta && <Consultas/>}
+{mostrarConsulta && dataConsulta.map((consulta) => (
+          <Consulta
+            nombre={consulta.nombre}
+            email={consulta.email}
+            telefono={consulta.telefono}
+            asunto={consulta.asunto}
+            mensaje={consulta.mensaje}
+          />
+        )) }
+
+
 
 
 
