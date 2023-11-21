@@ -173,6 +173,11 @@ svg{
     margin-top: 15vh;
 }
 
+.ci{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+}
 .contra{
     width: 80vw;
     display: flex;
@@ -215,7 +220,9 @@ svg{
     margin: auto;
 }
 
-
+.buscar_m{
+    display: none;
+}
 
 
 @media screen and (min-width:0px) and (max-width: 1200px){
@@ -242,11 +249,71 @@ svg{
     justify-content: end;
 }
 .cosas .elem{
-    width: 23%;
+    width: fit-content;
+    padding: 0 10px;
 }
 .cosas :first-child{
     margin-top: 0;
 }
+
+
+.buscar_m{
+    width: 60vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+}
+
+.ci_m{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+}
+.contra_m{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+
+}
+
+.buscar_m .label_m{
+    height: 2rem;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+.buscar_m .input_m{
+    height: 1rem;
+    padding: 3px;
+    border-radius: 8px;
+    margin: 0 5px;
+    border: solid 1px #888;
+}
+.buscar_m .input_m:focus{
+    outline: none;
+    background-color: #eee;
+    box-shadow: #ccc 0 0  2px;
+}
+
+.buscar_m .btn_m{
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.btn_m:active{
+    background-color: #ccc;
+}
+.btn_m .img_m{
+    margin: auto;
+}
+
 
 .crear{
     width: 100vw;
@@ -256,28 +323,37 @@ svg{
 
 
 .buscar{
-    width: 100vw;
-    margin: -12vh auto;
-    align-items: center;
-    color: #fff;
-}
-.buscar .contra{
-    justify-content: center;
+    display: none;
 }
 
 }
 
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
-.cosas{
+.cosas .elem{
     display: none;
 }
 
+.buscar{
+    width: 100vw;
+    margin: -12vh auto;
+    align-items: end;
+    color: #fff;
+}
+.buscar .ci{
+    justify-content: center;
+}
+.buscar .contra{
+    justify-content: center;
+}
 
 .barra{
     justify-content: space-between  ;
 }
 
+.buscar_m{
+    width: 80vw;
+}
 
 .menu .zoom{
     width: 80px;
@@ -326,15 +402,32 @@ svg{
 
 }
 
-@media screen and (min-width: 0px) and (max-width: 350px){
 
-
-.barra{
-    justify-content: space-between;
+@media screen and (min-width: 0px) and (max-width: 620px) {
+.logo{
+    display: none;
 }
-.menu .zoom{
-    width: 70px;
-    margin: 0 10px;
+.cosas{
+    width: 100vw;
+    justify-content: center ;
+}
+.ci_m, .contra_m{
+    justify-content: center;
 }
 
+}
+
+@media screen and (min-width: 0px) and (max-width: 560px){
+.buscar_m{
+    height: auto;
+}
+.ci_m, .contra_m{
+    flex-direction: column;
+}
+}
+
+@media screen and (min-width: 0px) and (max-width: 315px){
+.buscar_m .label_m{
+    font-size: large;
+}
 }

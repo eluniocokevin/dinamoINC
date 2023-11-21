@@ -34,13 +34,7 @@
     text-align: center;
 }
 
-.agregar{
-    width: 20vw ;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .btn_add{
     width: 90px;
     height: 90px;
