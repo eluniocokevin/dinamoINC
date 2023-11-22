@@ -73,7 +73,7 @@
 
 
 
- /*-------------------------------------Las tablas que se veen-----------------------------------------------------------*/
+/*-------------------------------------Las tablas que se veen-----------------------------------------------------------*/
 
 .actividades{
     color: #000;
@@ -95,6 +95,9 @@
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.vermas{
+    cursor: pointer;
 }
 .btns{
     width: 7vw;

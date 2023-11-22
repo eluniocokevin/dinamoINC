@@ -96,6 +96,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.vermas{
+    cursor: pointer;
+}
 .btns{
     width: 7vw;
     height: 8vh;
