@@ -31,7 +31,7 @@ if ($method === "POST") {
 
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        if ($contrasena = $row["contrasena"]  && $row["rol"] === "administrador"){
+        if ($contrasena == $row["contrasena"]  && $row["rol"] === "administrador"){
             session_start();
             $_SESSION["usuario"] = $cedula;
             $usuarioRol = $row['rol'];
