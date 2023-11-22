@@ -147,7 +147,7 @@ return(
 
 
 
-          <label className={`${stylesCrearDeporte.label}`} htmlFor="">Seleccione si el evento es temporal o anual</label>
+          <label className={`${stylesCrearDeporte.label}`} htmlFor="">Seleccione si el deporte es temporal o anual</label>
           <select className={`${stylesCrearDeporte.select}`} id="option">
             <option className={`${stylesCrearDeporte.option}`} value="s">select</option>
             <option className={`${stylesCrearDeporte.option}`} value="temporal">Temporal</option>

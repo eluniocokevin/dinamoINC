@@ -14,7 +14,7 @@ function LoginFuncionarios() {
 
   const [InputHide, setInputHide] = useState(true);
 
-  const url = "http://localhost/archivos/registrar.php";
+  const url = "http://localhost/archivos2/admin/registrar.php";
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
