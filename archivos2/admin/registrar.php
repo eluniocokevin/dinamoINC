@@ -9,7 +9,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $servidor = "localhost";
 $usuario = "root";
 $password = "";
-$bd = "administrador";
+$bd = "prueba";
 
 $conexion = mysqli_connect($servidor, $usuario, $password, $bd);
 
@@ -26,7 +26,7 @@ if ($method === "POST") {
     $cedula = $data["cedula"];
     $contrasena = $data["contrasena"];
 
-    $sql = "SELECT * FROM tabla WHERE cedula = '$cedula'";
+    $sql = "SELECT * FROM administrador WHERE cedula = '$cedula'";
     $result = mysqli_query($conexion, $sql);
 
     if ($result && mysqli_num_rows($result) > 0) {
