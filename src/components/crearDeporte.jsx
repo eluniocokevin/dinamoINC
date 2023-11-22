@@ -120,7 +120,7 @@ function CrearDeporte( props ){
           <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.fecha}</h2></div>
           <div className={`${stylesCrearDeporte.actividad}`}><img className={`${stylesCrearDeporte.img}`} src={`data:image/jpeg;base64,${props.imagen_base64}`}alt="Imagen"/> </div>
           <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}>{props.localidad}</h2></div>
-          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2}`}onClick={() =>{props.modal()}}>ver mas</h2></div>
+          <div className={`${stylesCrearDeporte.actividad}`}> <h2 className={`${stylesCrearDeporte.h2} ${stylesCrearDeporte.vermas}`}onClick={() =>{props.modal()}}>ver mas</h2></div>
           <div className={`${stylesCrearDeporte.actividad}`}>
             <div className={`${stylesCrearDeporte.btns}`}>
               <div className={`${stylesCrearDeporte.btn_edit}`}>

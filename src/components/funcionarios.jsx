@@ -196,7 +196,26 @@ function Funcionarios() {
     }, []); 
 
 
-
+    const fetchConsulta = async () => {
+      try {
+        const response = await fetch('http://localhost/archivos2/contacto/recibirContacto.php');
+        if (response.ok) {
+          const data = await response.json();
+          setDataConsulta(data);
+        } else {
+          console.error('Error al obtener del evento');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
+      }
+    };
+    useEffect(() => {
+      fetchConsulta();
+    }, []);
+    useEffect(() => {
+      const intervalId = setInterval(fetchConsulta, 1000);
+      return () => clearInterval(intervalId);
+    }, []); 
 
 
 
@@ -316,7 +335,11 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
 
 
 
-
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        toggleUser();
+      }
+    });
 
 
   return (

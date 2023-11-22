@@ -83,7 +83,7 @@ function CrearUsuario( props ){
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.apellido}</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.celular}</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`}>{props.deporteid}</h2></div>
-          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2}`} onClick={() =>{props.modal()}}>Ver mas...</h2></div>
+          <div className={`${stylesCrearUsuario.actividad}`}> <h2 className={`${stylesCrearUsuario.h2} ${stylesCrearUsuario.vermas}`} onClick={() =>{props.modal()}}>Ver mas...</h2></div>
           <div className={`${stylesCrearUsuario.actividad}`}>
             <div className={`${stylesCrearUsuario.btns}`}>
               <div className={`${stylesCrearUsuario.btn_edit}`}>
