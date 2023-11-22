@@ -183,7 +183,7 @@ return(
 
         <Marker position={[-33.119399, -57.632369]}>
           <Popup>
-            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Pilladarwin')} className='boton'><a className="a" href="#titulo">Villa Darwin</a></div>
+            <div className='texto_deportes'>Deportes en</div> <div onClick={() => setLocalidad('Villadarwin')} className='boton'><a className="a" href="#titulo">Villa Darwin</a></div>
           </Popup>
         </Marker>
 
