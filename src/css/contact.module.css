@@ -24,11 +24,13 @@
   border-radius: 20px;
   background-color: #0002;
   border: none;
+  text-indent: 10px;
 }
 .input:focus{
   border: none;
   outline: none;
   background-color: #efefef;
+  text-indent: 0;
   padding-left: 10px;
 }
 
