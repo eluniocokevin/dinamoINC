@@ -11,7 +11,7 @@ return(
           <div className={`${stylesConsulta.actividad}`}> <h2 className={`${stylesConsulta.h2}`}>{props.telefono}</h2></div>
           <div className={`${stylesConsulta.actividad}`}> <h2 className={`${stylesConsulta.h2}`}>{props.asunto}</h2></div>
           <div className={`${stylesConsulta.actividad}`}> <h2 className={`${stylesConsulta.h2}`}>{props.mensaje}</h2></div>
-          <div className={`${stylesConsulta.actividad}`}> <h2 className={`${stylesConsulta.h2}`}>Ver mas...</h2></div>
+          <div className={`${stylesConsulta.actividad}`}> <h2 className={`${stylesConsulta.h2}`} onClick={() =>{props.modal()}}>Ver mas...</h2></div>
 
         </div>
 

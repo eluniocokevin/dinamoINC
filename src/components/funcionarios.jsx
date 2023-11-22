@@ -14,6 +14,7 @@ import VerMasDeporte from "./VerMasDeporte";
 import VerMasUsuario from "./VerMasUsuario";
 import Consultas from "./consultas";
 import Consulta from "./consulta";
+import VerMasConsultas from "./VerMasConsultas";
 
 function Funcionarios() {
   const location = useLocation();
@@ -318,6 +319,25 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
 
 
 
+const [nombreConsulta, setNombreConsulta] =useState ('')
+const [emailConsulta, setEmailConsulta] = useState ('');
+const [telefonoConsulta, setTelefonoConsulta] = useState ('');
+const [asuntoConsulta, setAsuntoConsulta] = useState ('');
+const [mensajeConsulta, setMensajeConsulta] = useState ('');
+
+
+const infoConsulta = ( nombreConsulta, emailConsulta, telefonoConsulta, asuntoConsulta, mensajeConsulta) => {
+  
+  setNombreConsulta(nombreConsulta);
+  setEmailConsulta(emailConsulta);
+  setTelefonoConsulta(telefonoConsulta);
+  setAsuntoConsulta(asuntoConsulta);
+  setMensajeConsulta(mensajeConsulta);
+
+  toggleConsulta()
+}
+
+
 
 
     const [showModal, setshowModal] = useState(false);
@@ -332,6 +352,15 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
     const toggleUser = () => {
       setshowModalUser((prevshowModalUser) => !prevshowModalUser);
     };
+
+
+    const [showConsulta, setShowConsulta] = useState(false);
+
+    const toggleConsulta = ( ) =>{
+      setShowConsulta((prevshowConsulta) => !prevshowConsulta)
+
+    }
+
 
 
 
@@ -394,8 +423,28 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
               deporte={deporte}
               cerrar={() => {InfoUsuarioModal(toggleUser)}}
             />}
-    </div>
+
+</div>
+    <div className={`${stylesFuncionarios.modalConsulta} ${showConsulta ? `${stylesFuncionarios.showConsulta}` : ``}`}>
+
+        {
+          <VerMasConsultas
+          nombre={nombreConsulta}
+          email={emailConsulta}
+          telefono={telefonoConsulta}
+          asunto={asuntoConsulta}
+          mensaje={mensajeConsulta}
           
+          cerrar={() => {infoConsulta(toggleConsulta)}}
+          />}
+    </div>
+
+
+
+          
+
+
+
 
 
 
@@ -535,6 +584,18 @@ const InfoUsuarioModal = (CI, Nombre, Apellido, Nacimiento, Sexo, CedulaFoto, Ca
             telefono={consulta.telefono}
             asunto={consulta.asunto}
             mensaje={consulta.mensaje}
+
+            modal={
+              () => {
+                infoConsulta(
+                  consulta.nombre,
+                  consulta.email,
+                  consulta.telefono,
+                  consulta.asunto,
+                  consulta.mensaje
+                )
+              }
+            }
           />
         )) }
 
