@@ -20,12 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $localidad = $_POST['localidad'];
         $titulo = $_POST['titulo'];
         $deporte = $_POST['deporte'];
-        $descripcion = $_POST['descripcion'];
+        $info = $_POST['info'];
         $fecha = $_POST['fecha'];
         $archivo = file_get_contents($_FILES['archivo']['tmp_name']); 
 
         
-            $sql = "INSERT INTO evento (localidad,titulo,deporte, info, fecha, imagen) VALUES (:localidad,:titulo, :deporte, :descripcion, :fecha, :archivo) ";
+            $sql = "INSERT INTO evento (localidad,titulo,deporte, info, fecha, imagen) VALUES (:localidad,:titulo, :deporte, :info, :fecha, :archivo) ";
             $stmt = $conn->prepare($sql);
      
     
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':localidad', $localidad);
         $stmt->bindParam(':titulo', $titulo);
         $stmt->bindParam(':deporte', $deporte);
-        $stmt->bindParam(':descripcion', $descripcion);
+        $stmt->bindParam(':info', $info);
         $stmt->bindParam(':fecha', $fecha);
         $stmt->bindParam(':archivo', $archivo, PDO::PARAM_LOB);
 
