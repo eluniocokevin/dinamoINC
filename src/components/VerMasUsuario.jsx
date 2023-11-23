@@ -102,8 +102,12 @@ return(
           <label className={`${stylesVerMasUsuario.label_m}`} htmlFor="">Deporte que realiza:</label>
           <label htmlFor="" className={`${stylesVerMasUsuario.label}`}>{props.deporteId} </label>
 
-          <label className={`${stylesVerMasUsuario.label_m}`}>imagen:</label>
-          <img className={`${stylesVerMasUsuario.img_m}`} src={`data:image/jpeg;base64,${props.imagen_base64}`}></img>
+          <label className={`${stylesVerMasUsuario.label_m}`}>Cedula:</label>
+          <img className={`${stylesVerMasUsuario.img_m}`} src={`data:image/jpeg;base64,${props.cedulafoto}`}></img>
+
+          
+          <label className={`${stylesVerMasUsuario.label_m}`}>Carnet de salud:</label>
+          <img className={`${stylesVerMasUsuario.img_m}`} src={`data:image/jpeg;base64,${props.carnetfoto}`}></img>
 
         </form>
       </div>
