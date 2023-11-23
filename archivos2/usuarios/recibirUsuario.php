@@ -22,7 +22,7 @@ try {
         u.nacimiento,  
         u.sexo,
         TO_BASE64(u.cedulafoto) as cedulafoto,
-        TO_BASE64(u.cedulafoto) as carnetfoto,
+        TO_BASE64(u.carnetfoto) as carnetfoto,
         u.domicilio,
         u.celular,
         u.asistencia,
